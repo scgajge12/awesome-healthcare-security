@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+
+# ローカルのツール設定
+.claude/
+CLAUDE.local.md
+
+# 一時ファイル
+*.tmp
+*.log
+tmp/
