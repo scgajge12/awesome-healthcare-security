@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-label="医療機関の攻撃対象領域。外部からの侵入口は VPN やリモートアクセス、委託事業者との接続、フィッシング、患者向けの公開サービス。内部には電子カルテ、部門システム、医療機器、バックアップがあり、それぞれ本リポジトリの対応する章に結び付く。">
+  <title>医療機関の攻撃対象領域</title>
+  <style>
+    .zone { fill: none; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .box { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .box-in { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .box-core { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .box-ext { fill: #ffebe9; stroke: #ff8182; stroke-width: 1.5; }
+    .t { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13px; }
+    .t-b { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 14px; font-weight: 700; }
+    .t-sm { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    .zone-label { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 600; }
+    .arrow { stroke: #fa8c8c; stroke-width: 2; fill: none; marker-end: url(#ah); }
+    @media (prefers-color-scheme: dark) {
+      .zone { stroke: #6e7681; }
+      .box { fill: #161b22; stroke: #6e7681; }
+      .box-in { fill: #121d2f; stroke: #316dca; }
+      .box-core { fill: #12261e; stroke: #2ea043; }
+      .box-ext { fill: #25171c; stroke: #da3633; }
+      .t, .t-b { fill: #e6edf3; }
+      .t-sm, .zone-label { fill: #9198a1; }
+    }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fa8c8c"/>
+    </marker>
+  </defs>
+
+  <text class="zone-label" x="20" y="24">外部</text>
+  <rect class="zone" x="14" y="32" width="240" height="330" rx="6"/>
+  <rect class="box-ext" x="30" y="48" width="208" height="52" rx="4"/>
+  <text class="t" x="44" y="70">VPN、リモートアクセス</text>
+  <text class="t-sm" x="44" y="88">未パッチの境界機器、MFA なし</text>
+
+  <rect class="box-ext" x="30" y="112" width="208" height="52" rx="4"/>
+  <text class="t" x="44" y="134">委託事業者との接続</text>
+  <text class="t-sm" x="44" y="152">給食、検査、保守、地域連携</text>
+
+  <rect class="box-ext" x="30" y="176" width="208" height="52" rx="4"/>
+  <text class="t" x="44" y="198">メール</text>
+  <text class="t-sm" x="44" y="216">フィッシング、悪意ある添付</text>
+
+  <rect class="box-ext" x="30" y="240" width="208" height="52" rx="4"/>
+  <text class="t" x="44" y="262">患者向け公開サービス</text>
+  <text class="t-sm" x="44" y="280">ポータル、オンライン診療、予約</text>
+
+  <rect class="box-ext" x="30" y="304" width="208" height="44" rx="4"/>
+  <text class="t" x="44" y="331">メーカーの保守回線</text>
+
+  <path class="arrow" d="M 246 74 L 300 120"/>
+  <path class="arrow" d="M 246 138 L 300 150"/>
+  <path class="arrow" d="M 246 202 L 300 190"/>
+  <path class="arrow" d="M 246 266 L 300 220"/>
+  <path class="arrow" d="M 246 326 L 300 250"/>
+
+  <text class="zone-label" x="316" y="24">院内ネットワーク</text>
+  <rect class="zone" x="310" y="32" width="290" height="330" rx="6"/>
+  <rect class="box-in" x="326" y="100" width="258" height="170" rx="4"/>
+  <text class="t-b" x="342" y="126">侵入後の水平展開</text>
+  <text class="t" x="342" y="152">認証情報の窃取</text>
+  <text class="t" x="342" y="176">Active Directory の掌握</text>
+  <text class="t" x="342" y="200">RDP、SMB による拡散</text>
+  <text class="t" x="342" y="224">仮想化基盤の掌握</text>
+  <text class="t-sm" x="342" y="250">この期間に気付けるかどうかが被害を決める</text>
+
+  <path class="arrow" d="M 592 185 L 646 185"/>
+
+  <text class="zone-label" x="662" y="24">守るべき対象</text>
+  <rect class="zone" x="656" y="32" width="230" height="330" rx="6"/>
+  <rect class="box-core" x="672" y="48" width="198" height="46" rx="4"/>
+  <text class="t" x="686" y="76">電子カルテ、HIS</text>
+
+  <rect class="box-core" x="672" y="106" width="198" height="46" rx="4"/>
+  <text class="t" x="686" y="134">部門システム、PACS</text>
+
+  <rect class="box-core" x="672" y="164" width="198" height="46" rx="4"/>
+  <text class="t" x="686" y="192">医療機器、IoMT</text>
+
+  <rect class="box-core" x="672" y="222" width="198" height="46" rx="4"/>
+  <text class="t" x="686" y="250">バックアップ</text>
+
+  <rect class="box" x="672" y="280" width="198" height="68" rx="4"/>
+  <text class="t-b" x="686" y="306">停止した結果</text>
+  <text class="t-sm" x="686" y="326">診療の停止、救急の受入不能</text>
+  <text class="t-sm" x="686" y="342">手術延期、転院、患者への危害</text>
+
+  <text class="t-sm" x="20" y="392">攻撃者は最短の経路を選ぶ。どの入口も、最終的に同じ場所へつながる。</text>
+  <text class="t-sm" x="20" y="414">医療機関が単独で制御できるのは、入口の一部と、内部での広がり方である。</text>
+</svg>
