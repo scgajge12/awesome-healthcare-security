@@ -337,6 +337,8 @@ awesome-healthcare-security/
 │   └── GLOSSARY.md          Glossary
 ├── monthly-reports/         Monthly reports (YYYY/YYYY-MM.md)
 ├── skills/                  Review skill for the documents
+├── scripts/                 Link check script
+├── .githooks/               Git hooks run before commit
 └── assets/                  Diagrams (SVG)
 ```
 

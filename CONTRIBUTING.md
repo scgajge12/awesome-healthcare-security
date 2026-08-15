@@ -119,7 +119,35 @@ CVE 番号を書く場合は、NVD で実在と内容を確認してほしい。
 2. ブランチを作成する（例：`add/incident-example`）
 3. 該当するページを編集する。事例の追加には [`docs/_templates/`](docs/_templates/) のテンプレートを使う
 4. 出典を明記する
-5. Pull Request を作成する
+5. リンク切れを確認する（次節）
+6. Pull Request を作成する
+
+### リンク切れをローカルで確認する
+
+リンクの確認は CI ではなく手元で実行する。
+[lychee](https://github.com/lycheeverse/lychee) を使う。
+
+```sh
+brew install lychee
+```
+
+コミット前に自動で確認したい場合は、フックを有効にする。
+
+```sh
+git config core.hooksPath .githooks
+```
+
+有効にすると、コミット対象の Markdown だけが確認される。
+手動で実行する場合は次のとおり。
+
+```sh
+./scripts/link-check.sh              # 追跡下の全 Markdown
+./scripts/link-check.sh README.md    # ファイルを指定
+```
+
+政府機関や医療機関のサイトは自動アクセスに 403 や 429 を返すことがある。
+そのため既定では、リンク切れを検出してもコミットは中断せず、警告のみを表示する。
+検出時に中断させたい場合は `LINK_CHECK_STRICT=1 git commit` として実行する。
 
 ### コミットメッセージ
 

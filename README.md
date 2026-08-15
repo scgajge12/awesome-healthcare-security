@@ -332,6 +332,8 @@ awesome-healthcare-security/
 │   └── GLOSSARY.md          用語集
 ├── monthly-reports/         月報（YYYY/YYYY-MM.md）
 ├── skills/                  文書レビュー用のスキル
+├── scripts/                 リンク切れ確認のスクリプト
+├── .githooks/               コミット前に走らせるフック
 └── assets/                  図（SVG）
 ```
 
