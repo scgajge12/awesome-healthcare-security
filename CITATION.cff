@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "awesome-healthcare-security"
+message: "本リポジトリを引用する場合は、以下のメタデータを使用してください。"
+type: dataset
+authors:
+  - given-names: "Yuta"
+    family-names: "Morioka"
+    alias: "morioka12"
+    website: "https://scgajge12.github.io/"
+repository-code: "https://github.com/scgajge12/awesome-healthcare-security"
+url: "https://github.com/scgajge12/awesome-healthcare-security"
+abstract: >-
+  医療業界とサイバーセキュリティの交差領域に関する知見をまとめたキュレーションリポジトリ。
+  国内外の医療機関に対するインシデント事例、オープンソース医療情報システムの脆弱性、
+  医療機器（IoMT / PACS）固有のリスクと検証手法、患者用ポータルの Web 脆弱性、
+  ガイドラインと法規制、医療を標的とするランサムウェアグループの TTPs を扱う。
+keywords:
+  - healthcare security
+  - medical device security
+  - IoMT
+  - DICOM
+  - PACS
+  - ransomware
+  - HIPAA
+  - medical cybersecurity
+license: CC-BY-4.0
