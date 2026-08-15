@@ -1,0 +1,46 @@
+name: 情報を追加する
+description: インシデント事例、脆弱性、ツール、ガイドラインなどの追加を提案する
+title: "[Add] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: カテゴリ
+      options:
+        - インシデント事例（国内）
+        - インシデント事例（海外）
+        - OSS 医療情報システムの脆弱性
+        - 医療機器のセキュリティ
+        - Web アプリケーションのセキュリティ
+        - ガイドライン, 法規制
+        - 脅威アクター, TTPs
+        - ラボ, コミュニティ
+        - ツール, 学習リソース
+        - 月報
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 追加したい内容
+      description: 何を追加すべきか、なぜ有用かを書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 一次情報
+      description: 公表資料、行政文書、CVE、ベンダアドバイザリなどの URL を記載してください。報道記事のみの場合はその旨を書いてください。
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 確認事項
+      options:
+        - label: 公表されている情報のみを含んでいる（未公表のインシデント情報を含まない）
+          required: true
+        - label: 実在する患者の情報を含んでいない
+          required: true

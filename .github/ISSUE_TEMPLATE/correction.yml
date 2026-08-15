@@ -1,0 +1,27 @@
+name: 誤りを報告する
+description: 事実誤認、誤解を招く表現、リンク切れを報告する
+title: "[Fix] "
+labels: ["bug"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: 該当ページ
+      description: ファイルパスまたは URL
+      placeholder: docs/incidents/japan.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 問題のある記述
+      description: 該当箇所を引用してください。
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 正しい内容
+      description: 訂正案と、その根拠となる出典を記載してください。
+    validations:
+      required: true

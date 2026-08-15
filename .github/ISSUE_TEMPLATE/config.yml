@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 掲載内容に関する非公開の連絡
+    url: https://github.com/scgajge12
+    about: 実在する患者情報や未公表情報が含まれている場合は、公開 Issue ではなくこちらから連絡してください。
+  - name: コントリビューションガイド
+    url: https://github.com/scgajge12/awesome-healthcare-security/blob/main/CONTRIBUTING.md
+    about: 追加, 修正の方針と手順を確認できます。
