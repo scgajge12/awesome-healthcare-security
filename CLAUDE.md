@@ -91,6 +91,8 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `docs/_templates/` | 事例追加用のテンプレート |
 | `monthly-reports/` | 月報。`YYYY/YYYY-MM.md` の形式で追加する |
 | `skills/` | 本リポジトリ用のレビュースキル |
+| `scripts/` | リンク切れ確認のスクリプト（`link-check.sh`） |
+| `.githooks/` | コミット前に走らせるフック（`git config core.hooksPath .githooks` で有効化） |
 | `assets/` | 図（SVG） |
 
 新しいページを追加したら、`README.md` と `README-en.md` の両方にリンクを追加する。

@@ -15,3 +15,6 @@ CLAUDE.local.md
 *.tmp
 *.log
 tmp/
+
+# lychee のキャッシュ
+.lycheecache
