@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" role="img" aria-label="DICOM ポリグロットの構造。同じファイルが、DICOM パーサからは正常な医用画像として、Windows からは実行ファイルとして解釈される。プリアンブルに実行ファイルのヘッダを置くことで成立し、マルウェアを削除すると診療記録としての画像が壊れるというジレンマが生じる。">
+  <title>DICOM ポリグロットの構造</title>
+  <style>
+    .box { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .box-warn { fill: #fff5f5; stroke: #e5534b; stroke-width: 2; }
+    .box-ok { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .t { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13px; }
+    .t-b { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 14px; font-weight: 700; }
+    .t-sm { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    .arrow { stroke: #8b949e; stroke-width: 1.5; fill: none; marker-end: url(#a2); }
+    @media (prefers-color-scheme: dark) {
+      .box { fill: #161b22; stroke: #6e7681; }
+      .box-warn { fill: #2d1618; stroke: #f85149; }
+      .box-ok { fill: #12261e; stroke: #2ea043; }
+      .t, .t-b { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b949e"/>
+    </marker>
+  </defs>
+
+  <rect class="box-warn" x="300" y="30" width="280" height="60" rx="4"/>
+  <text class="t-b" x="320" y="55">一つのファイル</text>
+  <text class="t-sm" x="320" y="76">プリアンブルに実行ファイルのヘッダを置く</text>
+
+  <path class="arrow" d="M 380 94 L 210 140"/>
+  <path class="arrow" d="M 500 94 L 670 140"/>
+
+  <rect class="box-ok" x="40" y="146" width="300" height="80" rx="4"/>
+  <text class="t-b" x="60" y="172">DICOM パーサから見ると</text>
+  <text class="t" x="60" y="196">正常な医用画像として読み込める</text>
+  <text class="t-sm" x="60" y="216">PACS に取り込まれ、診療記録として保存される</text>
+
+  <rect class="box-warn" x="540" y="146" width="300" height="80" rx="4"/>
+  <text class="t-b" x="560" y="172">Windows から見ると</text>
+  <text class="t" x="560" y="196">実行可能なファイルとして扱われる</text>
+  <text class="t-sm" x="560" y="216">エンドポイント対策の検査対象から外れやすい</text>
+
+  <rect class="box" x="180" y="248" width="520" height="40" rx="4"/>
+  <text class="t" x="200" y="274">マルウェアを削除すると、診療記録としての画像が壊れる</text>
+</svg>
