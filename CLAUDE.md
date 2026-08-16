@@ -84,7 +84,9 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `docs/technology/dx-ax/` | 医療 DX と AX（国の基盤と接続点、医療における AI のセキュリティ） |
 | `docs/practice/pentest/` | セキュリティ診断とペネトレーションテスト（医療機関、製薬企業、医療機器） |
 | `docs/practice/bug-bounty/` | バグバウンティと脆弱性開示（医療分野） |
+| `docs/response/` | インシデント対応と事業継続（初動、ダウンタイム運用、届出、復旧） |
 | `docs/guidelines/` | ガイドラインと法規制 |
+| `docs/governance/` | 経営とガバナンス（体制、経営層への報告、予算、リスク移転） |
 | `docs/reference/pharma/` | 製薬企業のセキュリティ（治験と研究データ、製造 OT、原薬と受託製造） |
 | `docs/reference/labs-communities/` | ラボ, コミュニティ |
 | `docs/reference/resources/` | ツール, 論文, 学習リソース |
@@ -96,11 +98,13 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `.githooks/` | コミット前に走らせるフック（`git config core.hooksPath .githooks` で有効化） |
 | `assets/` | 図（SVG） |
 
-`docs/` は五つの群に分かれる。
+`docs/` は七つの群に分かれる。
 **threats**：脅威を知る。
 **technology**：守る対象と攻撃面を、システムの種類ごとに扱う。
 **practice**：検証と報告の実務を扱う。
+**response**：侵害が起きたあとの初動、診療の継続、届出、復旧を扱う。
 **guidelines**：規制と業界ガイドラインを扱う。
+**governance**：体制、権限、予算、経営層への報告を扱う。
 **reference**：製薬固有の領域と、横断して引く参照材を置く。
 
 各群の直下に README.md を置き、その群が何を扱うかと配下へのリンクを示す。

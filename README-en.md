@@ -18,7 +18,9 @@ A curated knowledge base of **healthcare × cybersecurity**, organized from prim
 [**Threats**](docs/threats/) |
 [**Technology**](docs/technology/) |
 [**Practice**](docs/practice/) |
+[**Response**](docs/response/) |
 [**Guidelines**](docs/guidelines/) |
+[**Governance**](docs/governance/) |
 [**Reference**](docs/reference/) |
 [**Monthly**](monthly-reports/)
 
@@ -158,7 +160,7 @@ This repository is written for the people on the other side of that equation: se
 
 ## 📚 Contents
 
-`docs/` is split into five groups: understand the threat, understand what you are defending, test it, check the regulation, and look things up.
+`docs/` is split into seven groups: understand the threat, understand what you are defending, test it, respond when it happens, check the regulation, decide who owns it, and look things up.
 
 ### 🎯 [Threats](docs/threats/)
 
@@ -270,12 +272,22 @@ Bug bounty and vulnerability disclosure in healthcare: what is in scope, where t
 </tr>
 </table>
 
+### 🚑 [Incident Response and Continuity](docs/response/)
+
+What happens after a breach: the first decisions, keeping care running while the EHR is down, statutory reporting deadlines, and the order in which systems come back.
+Individual pages are being added.
+
 ### ⚖️ [Guidelines and Regulation](docs/guidelines/)
 
 From Japan's "three-ministry, two-guideline" framework to HIPAA, FDA, EU MDR, and NIS2.
 
 - [Japan](docs/guidelines/japan.md)
 - [International](docs/guidelines/global.md)
+
+### 🏛️ [Governance and Management](docs/governance/)
+
+Who decides, and how: the CISO role and reporting lines, reporting to the board, maturity assessment, budget and staffing, risk transfer, and where to start with no dedicated staff.
+Individual pages are being added.
 
 ### 📚 [Reference](docs/reference/)
 
@@ -343,7 +355,9 @@ awesome-healthcare-security/
 │   ├── practice/                    Assessment and practice
 │   │   ├── pentest/                 Security assessment and penetration testing
 │   │   └── bug-bounty/              Bug bounty and vulnerability disclosure
+│   ├── response/                    Incident response and continuity
 │   ├── guidelines/                  Guidelines and regulation
+│   ├── governance/                  Governance and management
 │   └── reference/                   Reference
 │       ├── pharma/                  Pharmaceutical security
 │       ├── labs-communities/        Labs and communities
