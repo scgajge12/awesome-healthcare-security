@@ -87,7 +87,7 @@ grep -rn -A6 "^\*\*事実\*\*" --include="*.md" docs/ monthly-reports/ | grep -c
 **指摘の書き方**
 
 ```
-docs/threats/incidents/global.md:42
+docs/threats/incidents/global/2024-timeline.md:42
 記述：「約 1 億人分の情報が影響を受けた」
 問題：出所が示されていない。
 対応：当事者の公表資料または規制当局の報告を出典として併記する。確認できない場合は「報道ベース」と明記する。
