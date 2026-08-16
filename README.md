@@ -168,8 +168,8 @@ AI の導入（AX）は、この差をさらに広げる。
 
 国内外の医療機関に対する攻撃事例。侵入経路、侵害範囲、診療への影響、再発防止策まで追跡する。
 
-- [国内の事例](docs/threats/incidents/japan.md)
-- [海外の事例](docs/threats/incidents/global.md)
+- [国内の事例](docs/threats/incidents/japan/)（年ごとの履歴とサマリー）
+- [海外の事例](docs/threats/incidents/global/)（年ごとの履歴とサマリー）
 
 </td>
 <td width="50%" valign="top">
@@ -342,7 +342,7 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 awesome-healthcare-security/
 ├── docs/
 │   ├── threats/                     脅威
-│   │   ├── incidents/               インシデント事例（国内、海外）
+│   │   ├── incidents/               インシデント事例（japan/、global/ に年別の履歴とサマリー）
 │   │   └── actors/                  脅威アクターと TTPs、防御プレイブック
 │   ├── technology/                  技術領域
 │   │   ├── medical-devices/         医療機器（IoMT、PACS）のセキュリティ

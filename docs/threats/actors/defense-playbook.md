@@ -158,7 +158,7 @@ flowchart LR
 | [HHS CPGs](https://hphcyber.hhs.gov/) | 優先順位づけされた性能目標 |
 | [CISA Cross-Sector Cybersecurity Performance Goals](https://www.cisa.gov/cross-sector-cybersecurity-performance-goals) | 分野横断の基礎的な目標 |
 | [NIST CSF 2.0](https://www.nist.gov/cyberframework) | 全体像の整理とギャップ分析 |
-| [HSE 事後レビュー](../incidents/global.md) | 実際の失敗から学ぶための一次資料 |
+| [HSE 事後レビュー](../incidents/global/2021-timeline.md#GL-2021-01) | 実際の失敗から学ぶための一次資料 |
 
 ---
 

@@ -172,8 +172,8 @@ This repository is written for the people on the other side of that equation: se
 
 Attacks on healthcare providers in Japan and abroad, tracked through initial access, scope of compromise, clinical impact, and remediation.
 
-- [Japan](docs/threats/incidents/japan.md)
-- [Rest of the world](docs/threats/incidents/global.md)
+- [Japan](docs/threats/incidents/japan/) (per-year timelines and summaries)
+- [Rest of the world](docs/threats/incidents/global/) (per-year timelines and summaries)
 
 </td>
 <td width="50%" valign="top">
@@ -344,7 +344,7 @@ A month-by-month record of the sector: incidents, vulnerabilities, regulatory ch
 awesome-healthcare-security/
 ├── docs/
 │   ├── threats/                     Threats
-│   │   ├── incidents/               Incident case studies (Japan, global)
+│   │   ├── incidents/               Incident case studies (japan/, global/ with per-year pages)
 │   │   └── actors/                  Threat actors, TTPs, defense playbook
 │   ├── technology/                  Technology domains
 │   │   ├── medical-devices/         Medical device security (IoMT, PACS)
