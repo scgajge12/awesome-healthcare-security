@@ -183,6 +183,7 @@ Who targets healthcare and why, plus TTPs of ransomware groups mapped to MITRE A
 - [Threat actors and risks](docs/threats/actors/actors-and-risks.md)
 - [TTPs by group](docs/threats/actors/ransomware-groups.md)
 - [Defense playbook](docs/threats/actors/defense-playbook.md)
+- [Organizational vulnerabilities: hospitals and pharma](docs/threats/actors/organizational-vulnerabilities.md)
 
 </td>
 </tr>

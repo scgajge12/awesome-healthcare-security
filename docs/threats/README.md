@@ -17,6 +17,7 @@
 そのため、[脅威アクターとリスク](actors/actors-and-risks.md) はアクターの分類ではなく入り口の数を出発点に置いている。
 
 事例から入るなら [インシデント事例集](incidents/) を、対策から入るなら [防御プレイブック](actors/defense-playbook.md) を先に読むとよい。
+自組織のどこが弱いかを棚卸しする段階では、[組織の脆弱性の分類](actors/organizational-vulnerabilities.md) が対応する。
 
 技術領域ごとの攻撃面は [技術領域](../technology/)、検証の手順は [検証と実務](../practice/) にまとめている。
 

@@ -179,6 +179,7 @@ AI の導入（AX）は、この差をさらに広げる。
 - [脅威アクターとリスク](docs/threats/actors/actors-and-risks.md)
 - [グループ別 TTPs](docs/threats/actors/ransomware-groups.md)
 - [防御プレイブック](docs/threats/actors/defense-playbook.md)
+- [組織の脆弱性の分類](docs/threats/actors/organizational-vulnerabilities.md)
 
 </td>
 </tr>
