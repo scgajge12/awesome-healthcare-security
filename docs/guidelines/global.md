@@ -160,8 +160,8 @@ IMDRF は各国規制当局が参加する枠組みであり、日本の手引�
 ## 関連ページ
 
 - [国内のガイドラインと法規制](japan.md)
-- [医療機器のセキュリティ](../medical-devices/)
-- [海外のインシデント事例](../incidents/global.md)
+- [医療機器のセキュリティ](../technology/medical-devices/)
+- [海外のインシデント事例](../threats/incidents/global.md)
 
 ---
 

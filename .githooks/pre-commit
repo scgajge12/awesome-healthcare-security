@@ -5,7 +5,7 @@ set -uo pipefail
 
 files=()
 while IFS= read -r f; do files+=("$f"); done < <(
-  git diff --cached --name-only --diff-filter=ACMR -- '*.md' ':!:docs/_templates/*'
+  git diff --cached --name-only --diff-filter=ACMR -- '*.md' ':!:docs/reference/_templates/*'
 )
 
 [ "${#files[@]}" -eq 0 ] && exit 0

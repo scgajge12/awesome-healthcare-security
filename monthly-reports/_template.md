@@ -72,4 +72,4 @@
 
 ---
 
-<sub>[月報一覧](../README.md) | [トップへ](../../README.md)</sub>
+<sub>[月報一覧](../README.md) | [トップへ](../README.md)</sub>

@@ -14,13 +14,13 @@ targets=()
 if [ "$#" -gt 0 ]; then
   for f in "$@"; do
     case "$f" in
-      docs/_templates/*) continue ;;
+      docs/reference/_templates/*) continue ;;
       *.md) [ -f "$f" ] && targets+=("$f") ;;
     esac
   done
 else
   while IFS= read -r f; do targets+=("$f"); done < <(
-    git ls-files '*.md' ':!:docs/_templates/*'
+    git ls-files '*.md' ':!:docs/reference/_templates/*'
   )
 fi
 

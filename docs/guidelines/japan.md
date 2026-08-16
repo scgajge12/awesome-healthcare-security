@@ -148,7 +148,7 @@ flowchart LR
 
 **事実**：2026 年 5 月 18 日、内閣官房国家サイバー統括室ほか 8 機関の連名で、重要インフラ事業者等に対する注意喚起「AI 性能の高度化を踏まえたサイバーセキュリティ対策の強化について」が発出され、政府全体の対策パッケージ **Project YATA-Shield** が取りまとめられた。
 厚生労働省は 2026 年 5 月 27 日に、医療機関等に向けた注意喚起を発出している。
-要請の内容と、医療にとっての意味は [AX：医療における AI のセキュリティ](../dx-ax/ai-security.md) に整理した。
+要請の内容と、医療にとっての意味は [AX：医療における AI のセキュリティ](../technology/dx-ax/ai-security.md) に整理した。
 
 ---
 
@@ -212,8 +212,8 @@ flowchart LR
 ## 関連ページ
 
 - [海外のガイドラインと法規制](global.md)
-- [医療機器のセキュリティ](../medical-devices/)
-- [防御プレイブック](../threat-actors/defense-playbook.md)
+- [医療機器のセキュリティ](../technology/medical-devices/)
+- [防御プレイブック](../threats/actors/defense-playbook.md)
 
 ---
 

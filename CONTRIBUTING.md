@@ -117,7 +117,7 @@ CVE 番号を書く場合は、NVD で実在と内容を確認してほしい。
 
 1. リポジトリをフォークする
 2. ブランチを作成する（例：`add/incident-example`）
-3. 該当するページを編集する。事例の追加には [`docs/_templates/`](docs/_templates/) のテンプレートを使う
+3. 該当するページを編集する。事例の追加には [`docs/reference/_templates/`](docs/reference/_templates/) のテンプレートを使う
 4. 出典を明記する
 5. リンク切れを確認する（次節）
 6. Pull Request を作成する

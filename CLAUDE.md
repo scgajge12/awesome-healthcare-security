@@ -75,27 +75,36 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | パス | 内容 |
 |---|---|
 | `README.md` / `README-en.md` | 日本語版と英語版のトップページ。両方を同期させる |
-| `docs/incidents/` | インシデント事例 |
-| `docs/oss-vulnerabilities/` | OSS 医療情報システムの脆弱性 |
-| `docs/medical-devices/` | 医療機器（IoMT, PACS）のセキュリティ |
-| `docs/web-security/` | 医療系 Web アプリケーションのセキュリティ |
-| `docs/bug-bounty/` | バグバウンティと脆弱性開示（医療分野） |
-| `docs/pentest/` | セキュリティ診断とペネトレーションテスト（医療機関、製薬企業、医療機器） |
-| `docs/pharma/` | 製薬企業のセキュリティ（治験と研究データ、製造 OT、原薬と受託製造） |
-| `docs/cloud/` | クラウド事業者と医療（AWS、Google Cloud、Azure、さくらインターネット） |
-| `docs/dx-ax/` | 医療 DX と AX（国の基盤と接続点、医療における AI のセキュリティ） |
+| `docs/threats/incidents/` | インシデント事例 |
+| `docs/threats/actors/` | 脅威アクターと TTPs |
+| `docs/technology/medical-devices/` | 医療機器（IoMT, PACS）のセキュリティ |
+| `docs/technology/oss-vulnerabilities/` | OSS 医療情報システムの脆弱性 |
+| `docs/technology/web-security/` | 医療系 Web アプリケーションのセキュリティ |
+| `docs/technology/cloud/` | クラウド事業者と医療（AWS、Google Cloud、Azure、さくらインターネット） |
+| `docs/technology/dx-ax/` | 医療 DX と AX（国の基盤と接続点、医療における AI のセキュリティ） |
+| `docs/practice/pentest/` | セキュリティ診断とペネトレーションテスト（医療機関、製薬企業、医療機器） |
+| `docs/practice/bug-bounty/` | バグバウンティと脆弱性開示（医療分野） |
 | `docs/guidelines/` | ガイドラインと法規制 |
-| `docs/threat-actors/` | 脅威アクターと TTPs |
-| `docs/labs-communities/` | ラボ, コミュニティ |
-| `docs/resources/` | ツール, 論文, 学習リソース |
-| `docs/_templates/` | 事例追加用のテンプレート |
+| `docs/reference/pharma/` | 製薬企業のセキュリティ（治験と研究データ、製造 OT、原薬と受託製造） |
+| `docs/reference/labs-communities/` | ラボ, コミュニティ |
+| `docs/reference/resources/` | ツール, 論文, 学習リソース |
+| `docs/reference/GLOSSARY.md` | 用語集 |
+| `docs/reference/_templates/` | 事例追加用のテンプレート |
 | `monthly-reports/` | 月報。`YYYY/YYYY-MM.md` の形式で追加する |
 | `skills/` | 本リポジトリ用のレビュースキル |
 | `scripts/` | リンク切れ確認のスクリプト（`link-check.sh`） |
 | `.githooks/` | コミット前に走らせるフック（`git config core.hooksPath .githooks` で有効化） |
 | `assets/` | 図（SVG） |
 
-新しいページを追加したら、`README.md` と `README-en.md` の両方にリンクを追加する。
+`docs/` は五つの群に分かれる。
+**threats**：脅威を知る。
+**technology**：守る対象と攻撃面を、システムの種類ごとに扱う。
+**practice**：検証と報告の実務を扱う。
+**guidelines**：規制と業界ガイドラインを扱う。
+**reference**：製薬固有の領域と、横断して引く参照材を置く。
+
+各群の直下に README.md を置き、その群が何を扱うかと配下へのリンクを示す。
+新しいページを追加したら、群の README.md と、`README.md` と `README-en.md` の両方にリンクを追加する。
 
 ## コミットメッセージ
 

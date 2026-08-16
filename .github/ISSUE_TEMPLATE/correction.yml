@@ -8,7 +8,7 @@ body:
     attributes:
       label: 該当ページ
       description: ファイルパスまたは URL
-      placeholder: docs/incidents/japan.md
+      placeholder: docs/threats/incidents/japan.md
     validations:
       required: true
   - type: textarea

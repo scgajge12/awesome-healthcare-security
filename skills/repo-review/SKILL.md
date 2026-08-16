@@ -44,7 +44,7 @@ cat skills/japanese-tech-writing/SKILL.md
 
 ```bash
 bash skills/repo-review/scripts/check.sh              # リポジトリ全体
-bash skills/repo-review/scripts/check.sh docs/incidents  # 対象を絞る
+bash skills/repo-review/scripts/check.sh docs/threats/incidents  # 対象を絞る
 ```
 
 スクリプトが実行できない場合は、個別に実行する。
@@ -87,7 +87,7 @@ grep -rn -A6 "^\*\*事実\*\*" --include="*.md" docs/ monthly-reports/ | grep -c
 **指摘の書き方**
 
 ```
-docs/incidents/global.md:42
+docs/threats/incidents/global.md:42
 記述：「約 1 億人分の情報が影響を受けた」
 問題：出所が示されていない。
 対応：当事者の公表資料または規制当局の報告を出典として併記する。確認できない場合は「報道ベース」と明記する。
@@ -295,7 +295,7 @@ Mermaid を選ぶ。
 - [`scripts/check.sh`](scripts/check.sh)：機械的な検出をまとめて実行する
 - [CONTRIBUTING.md](../../CONTRIBUTING.md)：貢献者向けの規範
 - [CLAUDE.md](../../CLAUDE.md)：執筆方針
-- [docs/_templates/](../../docs/_templates/)：事例追加のテンプレート
+- [docs/reference/_templates/](../../docs/reference/_templates/)：事例追加のテンプレート
 
 ## このスキルを使う理由
 

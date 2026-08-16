@@ -15,19 +15,12 @@ A curated knowledge base of **healthcare × cybersecurity**, organized from prim
 
 <br>
 
-[**Incidents**](docs/incidents/) |
-[**OSS Vulnerabilities**](docs/oss-vulnerabilities/) |
-[**Medical Devices**](docs/medical-devices/) |
-[**Pharma**](docs/pharma/) |
-[**Web**](docs/web-security/) |
-[**Bug Bounty**](docs/bug-bounty/) |
-[**Pentest**](docs/pentest/) |
-[**Cloud**](docs/cloud/) |
-[**DX / AX**](docs/dx-ax/) |
-[**Regulation**](docs/guidelines/) |
-[**Threat Actors**](docs/threat-actors/) |
-[**Monthly**](monthly-reports/) |
-[**Resources**](docs/resources/)
+[**Threats**](docs/threats/) |
+[**Technology**](docs/technology/) |
+[**Practice**](docs/practice/) |
+[**Guidelines**](docs/guidelines/) |
+[**Reference**](docs/reference/) |
+[**Monthly**](monthly-reports/)
 
 </div>
 
@@ -114,8 +107,8 @@ That expected value is why healthcare and pharma keep getting targeted.
 These six are not independent.
 Trust in the closed network licenses weak asset management and segmentation, and once a supplier connection is abused in that state, the systems that cannot go down go down.
 Attacker motives differ (money, espionage, political messaging), but the entry points they use overlap.
-Defensive design is therefore driven by the number of entry points, not by the taxonomy of actors ([threat actors and risks](docs/threat-actors/actors-and-risks.md)).
-Actual intrusion paths and how far the damage spread are collected in the [incident case studies](docs/incidents/).
+Defensive design is therefore driven by the number of entry points, not by the taxonomy of actors ([threat actors and risks](docs/threats/actors/actors-and-risks.md)).
+Actual intrusion paths and how far the damage spread are collected in the [incident case studies](docs/threats/incidents/).
 
 ### How fast the assumptions break: DX and AX
 
@@ -150,7 +143,7 @@ That lag grows with how slowly a sector can change.
 - **If the output reaches a clinical decision, treat it as an integrity problem.** Tampered input data or a poisoned model is a patient safety event, not a disclosure event.
 
 On 18 May 2026, the Japanese government issued an advisory to critical infrastructure operators on this exact lag, jointly signed by the National Cyber Office and eight other bodies, alongside a government-wide package named Project YATA-Shield.
-What it asks for is asset inventory and a triage process built on the assumption that the window between disclosure and exploitation is shrinking ([AI security in healthcare](docs/dx-ax/ai-security.md)).
+What it asks for is asset inventory and a triage process built on the assumption that the window between disclosure and exploitation is shrinking ([AI security in healthcare](docs/technology/dx-ax/ai-security.md)).
 
 This repository is written for the people on the other side of that equation: security teams at care providers and pharmaceutical companies, medical device manufacturers, security researchers, bug bounty hunters, and compliance professionals.
 
@@ -165,82 +158,116 @@ This repository is written for the people on the other side of that equation: se
 
 ## 📚 Contents
 
+`docs/` is split into five groups: understand the threat, understand what you are defending, test it, check the regulation, and look things up.
+
+### 🎯 [Threats](docs/threats/)
+
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🚨 [Incident Case Studies](docs/incidents/)
+#### 🚨 [Incident Case Studies](docs/threats/incidents/)
 
 Attacks on healthcare providers in Japan and abroad, tracked through initial access, scope of compromise, clinical impact, and remediation.
 
-- [Japan](docs/incidents/japan.md)
-- [Rest of the world](docs/incidents/global.md)
+- [Japan](docs/threats/incidents/japan.md)
+- [Rest of the world](docs/threats/incidents/global.md)
 
 </td>
 <td width="50%" valign="top">
 
-### 🧬 [Open Source Health IT Vulnerabilities](docs/oss-vulnerabilities/)
+#### 🎯 [Threat Actors and TTPs](docs/threats/actors/)
 
-Vulnerabilities and CVEs in open source EHR systems and medical imaging software. An entry point for research.
+Who targets healthcare and why, plus TTPs of ransomware groups mapped to MITRE ATT&CK and paired with defenses.
 
-- [OSS EHR / HIS](docs/oss-vulnerabilities/ehr-systems.md)
-- [Medical imaging OSS (PACS/DICOM)](docs/oss-vulnerabilities/imaging-pacs.md)
+- [Threat actors and risks](docs/threats/actors/actors-and-risks.md)
+- [TTPs by group](docs/threats/actors/ransomware-groups.md)
+- [Defense playbook](docs/threats/actors/defense-playbook.md)
 
 </td>
 </tr>
+</table>
+
+### 🧩 [Technology](docs/technology/)
+
+<table>
 <tr>
 <td width="50%" valign="top">
 
-### 🩺 [Medical Device Security](docs/medical-devices/)
+#### 🩺 [Medical Device Security](docs/technology/medical-devices/)
 
 Risks specific to IoMT and PACS/DICOM, and how to test them safely.
 
-- [IoMT risks](docs/medical-devices/iomt.md)
-- [PACS / DICOM security](docs/medical-devices/pacs-dicom.md)
-- [Testing methodology](docs/medical-devices/testing-methodology.md)
+- [IoMT risks](docs/technology/medical-devices/iomt.md)
+- [PACS / DICOM security](docs/technology/medical-devices/pacs-dicom.md)
+- [Testing methodology](docs/technology/medical-devices/testing-methodology.md)
 
 </td>
 <td width="50%" valign="top">
 
-### 🌐 [Healthcare Web Application Security](docs/web-security/)
+#### 🧬 [Open Source Health IT Vulnerabilities](docs/technology/oss-vulnerabilities/)
 
-Vulnerabilities that tend to show up in patient portals and telehealth.
+Vulnerabilities and CVEs in open source EHR systems and medical imaging software. An entry point for research.
 
-- [Patient portal vulnerabilities](docs/web-security/patient-portal.md)
+- [OSS EHR / HIS](docs/technology/oss-vulnerabilities/ehr-systems.md)
+- [Medical imaging OSS (PACS/DICOM)](docs/technology/oss-vulnerabilities/imaging-pacs.md)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 🎯 [Bug Bounty × Healthcare](docs/bug-bounty/)
+#### 🌐 [Healthcare Web Application Security](docs/technology/web-security/)
+
+Vulnerabilities that tend to show up in patient portals and telehealth.
+
+- [Patient portal vulnerabilities](docs/technology/web-security/patient-portal.md)
+
+</td>
+<td width="50%" valign="top">
+
+#### ☁️ [Cloud Providers and Healthcare](docs/technology/cloud/)
+
+How responsibility is split across AWS, Google Cloud, Azure, and Sakura Internet, and the paths by which cloud-hosted health systems are compromised.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🔄 [Healthcare DX and AX](docs/technology/dx-ax/)
+
+The connection points added by Japan's national health data platform, and the threats that come with putting AI into clinical and back-office work.
+
+- [Healthcare DX: national platforms and connection points](docs/technology/dx-ax/medical-dx.md)
+- [AX: AI security in healthcare](docs/technology/dx-ax/ai-security.md)
+
+</td>
+<td width="50%" valign="top">
+</td>
+</tr>
+</table>
+
+### 🛡️ [Practice](docs/practice/)
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🛡️ [Security Assessment and Penetration Testing](docs/practice/pentest/)
+
+Testing scopes for hospitals and pharma, separated by domain: people, perimeter, web, cloud, internal, medical devices, and manufacturing OT.
+
+</td>
+<td width="50%" valign="top">
+
+#### 🎯 [Bug Bounty × Healthcare](docs/practice/bug-bounty/)
 
 Bug bounty and vulnerability disclosure in healthcare: what is in scope, where to report, and how to stand up a VDP. (Japanese)
 
 </td>
-<td width="50%" valign="top">
-
-### 🔬 [Labs and Communities](docs/labs-communities/)
-
-Research labs, ISACs, and communities in Japan and abroad.
-
-- [Biohacking Village (DEF CON)](docs/labs-communities/biohacking-village.md)
-
-</td>
 </tr>
-<tr>
-<td width="50%" valign="top">
-
-### 💊 [Pharmaceutical Security](docs/pharma/)
-
-Theft of trial data and intellectual property, manufacturing equipment under GMP, and the API and contract manufacturing supply chain.
-
-- [Clinical trials and research data](docs/pharma/clinical-trials.md)
-- [Manufacturing and OT](docs/pharma/manufacturing-ot.md)
-- [API, contract manufacturing, distribution](docs/pharma/supply-chain.md)
-
-</td>
-<td width="50%" valign="top">
+</table>
 
 ### ⚖️ [Guidelines and Regulation](docs/guidelines/)
 
@@ -249,69 +276,52 @@ From Japan's "three-ministry, two-guideline" framework to HIPAA, FDA, EU MDR, an
 - [Japan](docs/guidelines/japan.md)
 - [International](docs/guidelines/global.md)
 
+### 📚 [Reference](docs/reference/)
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 💊 [Pharmaceutical Security](docs/reference/pharma/)
+
+Theft of trial data and intellectual property, manufacturing equipment under GMP, and the API and contract manufacturing supply chain.
+
+- [Clinical trials and research data](docs/reference/pharma/clinical-trials.md)
+- [Manufacturing and OT](docs/reference/pharma/manufacturing-ot.md)
+- [API, contract manufacturing, distribution](docs/reference/pharma/supply-chain.md)
+
+</td>
+<td width="50%" valign="top">
+
+#### 🔬 [Labs and Communities](docs/reference/labs-communities/)
+
+Research labs, ISACs, and communities in Japan and abroad.
+
+- [Biohacking Village (DEF CON)](docs/reference/labs-communities/biohacking-village.md)
+
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### ☁️ [Cloud Providers and Healthcare](docs/cloud/)
+#### 🧰 [Tools and Learning Resources](docs/reference/resources/)
 
-How responsibility is split across AWS, Google Cloud, Azure, and Sakura Internet, and the paths by which cloud-hosted health systems are compromised.
+- [Tools](docs/reference/resources/tools.md)
+- [Papers and reports](docs/reference/resources/research.md)
+- [Learning resources](docs/reference/resources/learning.md)
+- [Glossary](docs/reference/GLOSSARY.md)
 
 </td>
 <td width="50%" valign="top">
-
-### 🔄 [Healthcare DX and AX](docs/dx-ax/)
-
-The connection points added by Japan's national health data platform, and the threats that come with putting AI into clinical and back-office work.
-
-- [Healthcare DX: national platforms and connection points](docs/dx-ax/medical-dx.md)
-- [AX: AI security in healthcare](docs/dx-ax/ai-security.md)
-
 </td>
 </tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🎯 [Threat Actors and TTPs](docs/threat-actors/)
-
-Who targets healthcare and why, plus TTPs of ransomware groups mapped to MITRE ATT&CK and paired with defenses.
-
-- [Threat actors and risks](docs/threat-actors/actors-and-risks.md)
-- [TTPs by group](docs/threat-actors/ransomware-groups.md)
-- [Defense playbook](docs/threat-actors/defense-playbook.md)
-
-</td>
-<td width="50%" valign="top">
+</table>
 
 ### 📅 [Monthly Reports](monthly-reports/)
 
 A month-by-month record of the sector: incidents, vulnerabilities, regulatory changes, and threat activity.
 
 - [Index](monthly-reports/README.md)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🧰 [Tools and Learning Resources](docs/resources/)
-
-- [Tools](docs/resources/tools.md)
-- [Papers and reports](docs/resources/research.md)
-- [Learning resources](docs/resources/learning.md)
-- [Glossary](docs/GLOSSARY.md)
-
-</td>
-<td width="50%" valign="top">
-
-### 🛡️ [Security Assessment and Penetration Testing](docs/pentest/)
-
-Testing scopes for hospitals and pharma, separated by domain: people, perimeter, web, cloud, internal, medical devices, and manufacturing OT.
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -320,26 +330,30 @@ Testing scopes for hospitals and pharma, separated by domain: people, perimeter,
 ```
 awesome-healthcare-security/
 ├── docs/
-│   ├── incidents/           Incident case studies (Japan, global)
-│   ├── oss-vulnerabilities/ Open source health IT vulnerabilities
-│   ├── medical-devices/     Medical device (IoMT, PACS) security
-│   ├── web-security/        Healthcare web application security
-│   ├── bug-bounty/          Bug bounty and vulnerability disclosure in healthcare
-│   ├── pentest/             Security assessment and penetration testing
-│   ├── pharma/              Pharmaceutical security (trials, manufacturing OT, supply chain)
-│   ├── cloud/               Cloud providers and healthcare (AWS, Google Cloud, Azure, Sakura)
-│   ├── dx-ax/               Healthcare DX and AX (national platforms, AI security)
-│   ├── guidelines/          Guidelines and regulation
-│   ├── threat-actors/       Threat actors and TTPs
-│   ├── labs-communities/    Labs and communities
-│   ├── resources/           Tools, papers, learning resources
-│   ├── _templates/          Templates for adding new entries
-│   └── GLOSSARY.md          Glossary
-├── monthly-reports/         Monthly reports (YYYY/YYYY-MM.md)
-├── skills/                  Review skill for the documents
-├── scripts/                 Link check script
-├── .githooks/               Git hooks run before commit
-└── assets/                  Diagrams (SVG)
+│   ├── threats/                     Threats
+│   │   ├── incidents/               Incident case studies (Japan, global)
+│   │   └── actors/                  Threat actors, TTPs, defense playbook
+│   ├── technology/                  Technology domains
+│   │   ├── medical-devices/         Medical device security (IoMT, PACS)
+│   │   ├── oss-vulnerabilities/     Open source health IT vulnerabilities
+│   │   ├── web-security/            Healthcare web application security
+│   │   ├── cloud/                   Cloud providers and healthcare
+│   │   └── dx-ax/                   Healthcare DX and AX
+│   ├── practice/                    Assessment and practice
+│   │   ├── pentest/                 Security assessment and penetration testing
+│   │   └── bug-bounty/              Bug bounty and vulnerability disclosure
+│   ├── guidelines/                  Guidelines and regulation
+│   └── reference/                   Reference
+│       ├── pharma/                  Pharmaceutical security
+│       ├── labs-communities/        Labs and communities
+│       ├── resources/               Tools, papers, learning resources
+│       ├── _templates/              Templates for new entries
+│       └── GLOSSARY.md              Glossary
+├── monthly-reports/                 Monthly reports (YYYY/YYYY-MM.md)
+├── skills/                          Review skills for this repository
+├── scripts/                         Link check script
+├── .githooks/                       Pre-commit hook
+└── assets/                          Diagrams (SVG)
 ```
 
 ## ✍️ Editorial principles
