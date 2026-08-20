@@ -95,8 +95,6 @@ flowchart LR
 
 **MDS2（Manufacturer Disclosure Statement for Medical Device Security）**：医療機器のセキュリティ仕様をメーカーが開示するための標準様式。調達時に提出を求める。
 
-**SBOM（Software Bill of Materials）**：ソフトウェア部品表。製品に含まれるコンポーネントとそのバージョンの一覧。脆弱性が公表されたときに影響範囲を判断するための前提になる。
-
 **市販後（Postmarket）対応**：製品出荷後の脆弱性監視、報告、アップデート提供。医療機器規制で明示的に求められる。
 
 **Legacy Device**：メーカーのサポートが終了しているか、セキュリティ更新を提供できない医療機器。IMDRF が定義と対応方針を示している。
@@ -124,6 +122,8 @@ flowchart LR
 **IOC（Indicator of Compromise）**：侵害の痕跡。IP アドレス、ハッシュ値、ドメイン名など。
 
 **TTPs（Tactics, Techniques, and Procedures）**：攻撃者の戦術、技術、手順。IOC より変化しにくく、防御設計の基礎になる。
+
+**SBOM（Software Bill of Materials）**：ソフトウェア部品表。製品に含まれるコンポーネントとそのバージョンの一覧。脆弱性が公表されたときに影響範囲を判断するための前提になる。
 
 **CVD（Coordinated Vulnerability Disclosure）**：発見者、開発者、調整機関が公表の時期を調整して脆弱性を開示する枠組み。医療機器では、薬事上の手続きを含むため猶予期間が長くなりやすい。
 
