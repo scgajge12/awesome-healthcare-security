@@ -4,6 +4,7 @@
 一般の Web サービスと違うのは、報告する相手と、触れてよい対象の線引きである。
 患者が接続された機器や、実在の診療データが載った本番系は、報奨金の有無にかかわらず検証の対象外になる。
 その線を引いたうえで、患者ポータル、オンライン診療、医療 SaaS、機器のクラウド側といった資産は、通常の Web 標的と同じ手法で検証できる。
+海外では、外部の研究者による報告を防御の一層として制度に組み込む動きが進んでおり、その位置づけは[バグハンターとサイバー防衛](#バグハンターとサイバー防衛)にまとめる。
 
 > [!NOTE]
 > **表記ルール**：本ページでは、**事実**（一次情報で確認できる内容。出典を併記する）、**報道ベース**（報道のみで確認でき、当事者の公表資料では裏付けが取れていない内容）、**分析**（筆者の解釈）を書き分ける。
@@ -58,7 +59,94 @@ flowchart TD
 
 日本の窓口は、[IPA の脆弱性関連情報の届出受付](https://www.ipa.go.jp/security/todokede/vuln/uketsuke.html)である。
 ソフトウェア製品とウェブアプリケーションの届出を受け付け、[情報セキュリティ早期警戒パートナーシップガイドライン](https://www.ipa.go.jp/security/renkei/rk20250909.html)に沿って IPA と JPCERT/CC が調整を行う（事実、出典：IPA）。
-米国の医療機器については、メーカーの CVD 窓口に加えて [CISA](https://www.cisa.gov/report) が調整に入る。
+米国の医療機器については、メーカーの CVD 窓口に加えて [CISA](https://myservices.cisa.gov/irf) が調整に入る。
+
+---
+
+## バグハンターとサイバー防衛
+
+バグハンターの成果物は、報告書ではなく、塞がれた穴である。
+報告先が一企業でも、塞がれる対象は、その企業を経由して患者と診療にたどり着く経路である。
+海外では、この働きを個人の善意ではなく制度の一部として扱う動きが進み、法令, 政府の指令, 分野別のガイダンスに書き込まれている。
+
+### 「能動的サイバー防御」が指すもの
+
+「能動的サイバー防御（active cyber defence）」という語は、二つの異なるものを指して使われる。
+
+一つは、防御側が先回りして穴を潰す取り組みである。
+英国 NCSC の Active Cyber Defence は、政府が無償で提供する防御サービス群の名称であり、Vulnerability Disclosure がその構成要素として並んでいる（事実、出典：[NCSC](https://www.ncsc.gov.uk/section/active-cyber-defence/services)）。
+NCSC は ACD の目標を "Protect the majority of people in the UK from the majority of the harm caused by the majority of the cyber attacks the majority of the time" と述べている（事実、出典：[NCSC](https://www.ncsc.gov.uk/section/active-cyber-defence/introduction)）。
+
+もう一つは、攻撃基盤への侵入と無害化である。
+これは法的権限を持つ政府機関の作用であり、民間の研究者が担う領域ではない。
+
+**分析**：バグハンターの活動は前者に属する。
+自分の側の穴を先に見つけて塞ぐ行為であって、攻撃者の資産に手を出す行為ではない。
+この区別を曖昧にしたまま「攻めの防御」と語ると、どこまで触れてよいかという交戦規則の議論が成立しなくなる。
+
+### 制度が研究者を防衛の担い手として位置づけた経緯
+
+| 制度、文書 | 時期 | 研究者に関する内容 |
+|---|---|---|
+| [米国防総省 VDP（DC3 が運営）](https://www.dc3.mil/Missions/Vulnerability-Disclosure/Vulnerability-Disclosure-Program-VDP/) | 2016 年〜 | 外部公開資産で 16,000 件超の脆弱性を受領し、緩和まで追跡したと記載。DC3 は VDP を、外部攻撃面に対する "hacker's view" を得る費用対効果の高い手段と説明する。2022 年の試行を経て、防衛産業基盤（DIB）向けにも展開 |
+| [CISA BOD 20-01](https://www.cisa.gov/news-events/directives/bod-20-01-develop-and-publish-vulnerability-disclosure-policy) | 2020 年 9 月 | 米国の連邦民生行政機関（FCEB）全機関に、VDP の策定と公開を義務付けた。善意の脆弱性調査を歓迎し許可する旨を明記させ、インターネットから到達できる全資産をスコープに含めることを求める |
+| [CISA VDP Platform](https://www.cisa.gov/resources-tools/services/vulnerability-disclosure-policy-vdp-platform) | 2021 年 7 月 | BOD 20-01 の実装として、各機関が研究者からの報告を受け取る共通基盤を CISA が提供する |
+| [米 DOJ の CFAA 訴追方針](https://www.justice.gov/archives/opa/pr/department-justice-announces-new-policy-charging-cases-under-computer-fraud-and-abuse-act) | 2022 年 5 月 | 善意のセキュリティ調査（good-faith security research）を CFAA で訴追しない方針を初めて明文化した。個人や公衆への危害を避ける形で行われ、得た情報が対象の安全向上に用いられることを条件とする |
+| [EU NIS2 指令 第 12 条](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32022L2555) | 2022 年 12 月 | 加盟国に CVD の国内方針の策定と公表を求め（期限 2024 年 10 月 17 日）、ENISA が [European Vulnerability Database](https://euvd.enisa.europa.eu/) を運用する。医療提供者は NIS2 の対象分野に含まれる |
+| [ベルギー CCB の CVD 制度](https://ccb.belgium.be/regulation/cvdp) | 2023 年 2 月〜 | 対象組織が CVD ポリシーやバグバウンティを持たない場合でも、条件を満たす脆弱性の調査と報告を合法とする枠組み。条件は、詐欺的意図と悪意がないこと、行為が必要かつ比例的な範囲にとどまること、当該組織と CCB の双方へ報告することである |
+| [EU サイバーレジリエンス法（規則 (EU) 2024/2847）](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng) | 2024 年 12 月発効 | 製造者に脆弱性取扱いの要求（附属書 I）を課す。悪用が確認された脆弱性は 24 時間以内に早期警告、72 時間以内に通知、修正提供後 14 日以内に最終報告。報告基盤 Single Reporting Platform の適用開始は 2026 年 9 月 11 日（出典：[欧州委員会](https://digital-strategy.ec.europa.eu/en/policies/cra-reporting)） |
+| [CISA ほかの共同ガイダンス](https://www.cisa.gov/resources-tools/resources/establishing-coordinated-vulnerability-disclosure-program-work-security-researchers) | 2026 年 7 月 | CISA、NSA、JPCERT/CC、NCSC-NL、NCSC-UK が共同で、外部研究者と協働する CVD プログラムの設計手順を示した。VDP の明文化、トリアージ、修正、CVE 採番までを一連の手続きとして扱う |
+
+医療機器は、EU では CRA ではなく医療機器規則（MDR、規則 (EU) 2017/745）と体外診断用医療機器規則（IVDR、規則 (EU) 2017/746）の側で扱われ、CRA の適用範囲から除かれている（事実、出典：[EUR-Lex](https://eur-lex.europa.eu/EN/legal-content/summary/horizontal-cybersecurity-requirements-for-products-with-digital-elements-cyber-resilience-act.html)）。
+医療分野に固有の位置づけとしては、次がある。
+
+- **米 FDA**：FD&C Act 第 524B 条が、Cyber Device の市販前提出に、第三者からの報告を扱う調整型の脆弱性開示を含む計画を求める（後述の[規制側から見た脆弱性開示](#規制側から見た脆弱性開示)）。
+- **米 HHS の HPH Cybersecurity Performance Goals**：Enhanced Goals に「Third Party Vulnerability Disclosure」と「Cybersecurity Testing」が置かれている（事実、出典：[HHS](https://hhscyber.hhs.gov/cybersecurity-performance-goals.html)）。任意の目標群であり、義務ではない。
+- **I Am The Cavalry の Hippocratic Oath for Connected Medical Devices**：2016 年 1 月に公開された五つの能力の第二に Third-Party Collaboration を置き、"Invite disclosure of potential safety or security issues, reported in good faith" と記す（事実、出典：[I Am The Cavalry](https://iamthecavalry.org/issues/medical/oath/)）。
+- **Biohacking Village（DEF CON）**：FDA との連携のもと #WeHeartHackers を掲げ、"Working with the FDA to improve medical device security through coordinated disclosure" と説明する（事実、出典：[Biohacking Village](https://villageb.io/)）。
+
+**分析**：これらに共通するのは、研究者を歓迎する姿勢の表明ではなく、報告を受け取ってから修正が配布されるまでの手順を組織側に書かせている点である。
+研究者の側から見れば、報告先の制度がどの段階にあるかで、報告後に何が起きるかが決まる。
+
+### 攻撃者視点が防御に足すもの
+
+脆弱性は、混入してから修正が適用されるまでのあいだ、露出したままになる。
+誰が先に見つけるかで、その先の分岐が変わる。
+
+```mermaid
+flowchart LR
+    A["脆弱性が入る<br>実装、設定、統合、機器の追加"] --> B{"先に見つけるのは誰か"}
+
+    B -- 攻撃者 --> C["悪用<br>診療停止、データ流出"]
+    B -- 内部の診断 --> D["修正の設計と適用"]
+    B -- 外部の研究者 --> E["CVD 窓口へ報告"]
+
+    E --> D
+    D --> F["露出期間が短くなる"]
+    C --> G["インシデント対応<br>規制当局への報告、診療の継続"]
+```
+
+**分析**：内部の点検は、資産台帳に載っている対象を、想定した経路でたどる。
+攻撃者は、台帳から漏れた資産と、想定していない経路を使う。
+外部の研究者が埋めるのはこの差であり、DC3 が VDP を "hacker's view of its external attack surface" と説明するのは、この差を指している。
+
+医療で台帳から漏れやすいのは、次のような資産である。
+
+- 統合や事業譲渡の前に運用していた旧ドメイン、旧患者ポータル
+- 機器ベンダが保守用に置いた管理画面とリモート接続
+- 研究部門や個別の診療科が独自に立てた検体管理, 治験系のアプリケーション
+- 印刷用画面, PDF 生成, 通知メールのように、画面と別の経路で同じデータを出す機能
+
+### 律する責任
+
+攻撃側に近い技術と視点を扱う以上、制約は外から与えられる前に自分で置く必要がある。
+
+- **法的保護は自動では付かない**：米 DOJ の方針は連邦検察の訴追裁量に関するものであり、民事上の請求や州法, 各国法を排除しない。ベルギーのように条件付きで合法化した国もあるが、条件を外れれば保護は及ばない。
+- **医療では危害の可能性が制約を強める**：DOJ が善意の要件として挙げる「個人や公衆への危害を避ける形で行うこと」は、医療標的では、稼働中の機器と実患者データを含む本番系から手を引くことを実質的に意味する。
+- **検証環境を自分で用意する**：メーカー提供のシミュレータ、中古機材、[Biohacking Village の Device Lab](../../reference/labs-communities/biohacking-village.md) のように、患者から切り離された環境を優先する。
+- **報告後の期間も自分の責任範囲に含める**：修正が配布されるまでのあいだ、手元の再現手順は攻撃に使える情報である。保管期間と保管場所を、報告時点で決めておく。
+
+具体的な行動規範は、後述の[医療標的での交戦規則](#医療標的での交戦規則)に置く。
 
 ---
 
@@ -79,6 +167,25 @@ HackerOne の医療ページは、医療のデータ侵害の平均コストを 
 **分析**：欧州のプラットフォームでは、大学病院（UZ Leuven、Universitäts Spital Zürich）や医療 SaaS が実名で挙がっている。
 医療機関そのものがプログラムを持つ形は、欧州で先行している。
 国内の医療機関、医療 SaaS が運用する公開バグバウンティプログラムは、本ページの執筆時点では確認できなかった（未確認）。
+
+---
+
+## プラットフォーム運営視点からのサイバー防衛
+
+三社とも、単発の診断の置き換えではなく、防御の一層として継続的に働く仕組みとして自社を説明している。
+以下は各社の公開ページの記載であり、第三者が検証した内容ではない（事実、出典：各社サイト）。
+
+| プラットフォーム | 掲げ方 | 公開ページの記載 |
+|---|---|---|
+| [HackerOne](https://www.hackerone.com/solutions/healthcare) | 多層防御の一部として、攻撃に先んじて潰す | 医療ページで "finds, prioritizes, and helps remediate these threats before an attack can ever occur"、"always-on vulnerability disclosure, from report to remediated risk"、"Pentest-grade signal across your attack surface, continuously" と記載。[ブログの分類](https://www.hackerone.com/blog)でも Defense in Depth と Offensive Security を並置している |
+| [Bugcrowd](https://www.bugcrowd.com/solutions/healthcare/) | プロアクティブな発見 | 会社紹介で "proactively keep your digital business one step ahead of cyberthreats" を掲げる。医療ページでは "Identify hidden, critical vulnerabilities" とし、顧客の言として "The advantage of having crowdsourced security as part of our program is the continuous testing. Security researchers can actually spend time testing to find critical flaws, rather than being time bound in a traditional pen test." を掲載 |
+| [Intigriti](https://www.intigriti.com/solutions/healthcare) | 継続的な評価 | 医療ページで "Continuous care for clinical systems"、"uncover critical vulnerabilities before exploitation" と記載。対象として電子カルテ、接続された医療機器、患者ポータルと遠隔医療、クラウド診断を挙げる |
+
+**分析**：三社の主張は「点の診断から継続する評価へ」で一致しており、差は強調点にとどまる。
+医療では、この継続性が二つの意味を持つ。
+医療 DX の進行とともに攻撃面が増え続けることと、診療を止められないために修正の適用が遅れ、露出期間が長くなることである。
+後者がある以上、報告を受け取る速さより、受け取ったあとに緩和策を現場へ届ける速さが結果を決める。
+プラットフォームが担うのは前者までであり、後者は受け入れ側の設計に残る。
 
 ---
 
@@ -163,7 +270,17 @@ DEF CON 34 の Device Lab では、9 社の 19 機器が研究対象として公
 |---|---|
 | [IPA 脆弱性関連情報の届出受付](https://www.ipa.go.jp/security/todokede/vuln/uketsuke.html) | 国内の届出制度の窓口 |
 | [JPCERT/CC 脆弱性関連情報の取扱い](https://www.jpcert.or.jp/vh/) | 調整機関としての手続き |
-| [CISA Report a Vulnerability](https://www.cisa.gov/report) | 米国の調整窓口 |
+| [CISA Report a Vulnerability](https://myservices.cisa.gov/irf) | 米国の調整窓口 |
+| [Establishing a Coordinated Vulnerability Disclosure Program to Work With Security Researchers](https://www.cisa.gov/resources-tools/resources/establishing-coordinated-vulnerability-disclosure-program-work-security-researchers) | CISA、NSA、JPCERT/CC、NCSC-NL、NCSC-UK の共同ガイダンス（2026 年 7 月） |
+| [CISA BOD 20-01](https://www.cisa.gov/news-events/directives/bod-20-01-develop-and-publish-vulnerability-disclosure-policy) | 米連邦機関に VDP を義務付けた指令 |
+| [DC3 Vulnerability Disclosure Program](https://www.dc3.mil/Missions/Vulnerability-Disclosure/Vulnerability-Disclosure-Program-VDP/) | 米国防総省の VDP と防衛産業基盤向けの展開 |
+| [DOJ CFAA Charging Policy（2022 年）](https://www.justice.gov/archives/opa/pr/department-justice-announces-new-policy-charging-cases-under-computer-fraud-and-abuse-act) | 善意のセキュリティ調査を訴追対象外とする方針 |
+| [NCSC Active Cyber Defence](https://www.ncsc.gov.uk/section/active-cyber-defence/services) | 英国政府が無償提供する防御サービス群。Vulnerability Disclosure を含む |
+| [CCB Coordinated Vulnerability Disclosure（ベルギー）](https://ccb.belgium.be/regulation/cvdp) | 条件付きで脆弱性調査を合法とする国内制度 |
+| [European Vulnerability Database（ENISA）](https://euvd.enisa.europa.eu/) | NIS2 第 12 条に基づく EU の脆弱性データベース |
+| [Cyber Resilience Act の報告義務](https://digital-strategy.ec.europa.eu/en/policies/cra-reporting) | 悪用が確認された脆弱性の報告期限と報告基盤 |
+| [HPH Cybersecurity Performance Goals（HHS）](https://hhscyber.hhs.gov/cybersecurity-performance-goals.html) | 米国の医療分野向け目標群。Enhanced Goals に脆弱性開示を含む |
+| [Hippocratic Oath for Connected Medical Devices](https://iamthecavalry.org/issues/medical/oath/) | 接続された医療機器に求める五つの能力 |
 | ISO/IEC 29147（Vulnerability disclosure） | 脆弱性開示の手続きを定めた国際規格 |
 | ISO/IEC 30111（Vulnerability handling processes） | 受け取った脆弱性を処理する社内プロセスの国際規格 |
 | [国際的なバグバウンティ制度の活用状況について（2025 年）](https://scgajge12.hatenablog.com/entry/bugbountyplatform_2025) | プラットフォームごとの運用状況の整理 |
