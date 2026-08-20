@@ -108,7 +108,7 @@
 そのため防御の設計は、アクターの分類ではなく入り口の数で決まる（[脅威アクターとリスク](docs/threats/actors/actors-and-risks.md)）。
 実際の侵入経路と被害の広がりは、[インシデント事例集](docs/threats/incidents/)にまとめている。
 
-### 前提が崩れる速度：DX と AX
+### DX と AX が前提を崩す速度
 
 オンライン資格確認や電子処方箋のように、外部ネットワークとの接続を前提とする仕組みの導入が進んでいる。
 一方で、接続点の棚卸し、権限設計、通信の監視、事故時の運用は、後から追いかける形になりやすい。
@@ -158,6 +158,22 @@ AI の導入（AX）は、この差をさらに広げる。
 `docs/` は七つの群に分かれている。
 脅威を知り、守る対象を把握し、検証し、起きたときに動き、規制を確認し、体制を決め、参照材を引く、という順に並べた。
 
+### 立場ごとの読み始め
+
+全部を順に読む必要はない。
+手元の役割に近いところから入ると、必要な判断材料に早く着く。
+
+```mermaid
+flowchart LR
+    R1["医療機関の<br>情報システム部門"] --> A1["組織の脆弱性の分類"] --> A2["防御プレイブック"] --> A3["インシデント対応と事業継続"]
+    R2["医療機器メーカー"] --> B1["医療機器のセキュリティ"] --> B2["医療機器の検証手法"] --> B3["ガイドラインと法規制"]
+    R3["セキュリティ研究者<br>診断の実務者"] --> C1["技術領域"] --> C2["診断とペネトレーションテスト"] --> C3["バグバウンティと脆弱性開示"]
+    R4["製薬企業"] --> D1["製薬企業のセキュリティ"] --> D2["製造設備と OT"] --> D3["経営とガバナンス"]
+    R5["経営層への説明"] --> E1["統計から読む脅威"] --> E2["インシデント事例集"] --> E3["経営とガバナンス"]
+```
+
+セキュリティの用語や枠組みから確認したい場合は、[セキュリティの基礎](docs/reference/security-basics.md) が各ページの前提をまとめている。
+
 ### 🎯 [脅威](docs/threats/)
 
 <table>
@@ -166,7 +182,9 @@ AI の導入（AX）は、この差をさらに広げる。
 
 #### 🚨 [インシデント事例集](docs/threats/incidents/)
 
-国内外の医療機関に対する攻撃事例。侵入経路、侵害範囲、診療への影響、再発防止策まで追跡する。
+国内外の医療機関の事例。
+サイバー攻撃を主として、侵入経路、侵害範囲、診療への影響、再発防止策まで追跡する。
+サポート詐欺、システム障害、内部不正、記憶媒体の紛失と盗難などの事案も副として収録する。
 
 - [国内の事例](docs/threats/incidents/japan/)（年ごとの履歴とサマリー）
 - [海外の事例](docs/threats/incidents/global/)（年ごとの履歴とサマリー）
@@ -180,9 +198,26 @@ AI の導入（AX）は、この差をさらに広げる。
 
 - [脅威アクターとリスク](docs/threats/actors/actors-and-risks.md)
 - [グループ別 TTPs](docs/threats/actors/ransomware-groups.md)
+- [連鎖するランサムウェア攻撃](docs/threats/actors/ransomware-chain.md)
 - [防御プレイブック](docs/threats/actors/defense-playbook.md)
 - [組織の脆弱性の分類](docs/threats/actors/organizational-vulnerabilities.md)
+- [ダークウェブと医療情報](docs/threats/actors/dark-web-medical-data.md)
 
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 📊 [統計から読む脅威](docs/threats/statistics/)
+
+警察庁、IPA、個人情報保護委員会、厚生労働省と、FBI IC3、HHS OCR、ENISA の統計を集め、医療分野がどの位置に現れるかを読む。
+数え方の違いと、被害が統計に現れるまでの経路も扱う。
+
+- [日本の統計](docs/threats/statistics/japan.md)
+- [海外の統計](docs/threats/statistics/global.md)
+
+</td>
+<td width="50%" valign="top">
 </td>
 </tr>
 </table>
@@ -206,8 +241,12 @@ IoMT、PACS/DICOM 固有のリスクと、安全に検証するための手法�
 
 #### 🧬 [OSS 医療情報システムの脆弱性](docs/technology/oss-vulnerabilities/)
 
-OSS 電子カルテ、医用画像 OSS の脆弱性事例と CVE。研究対象としての入口。
+医療で使われる OSS の一覧と、報告された脆弱性の事例。
+SCA と SBOM による既知脆弱性への対処。
 
+- [医療で使われる OSS の一覧](docs/technology/oss-vulnerabilities/oss-catalog.md)
+- [報告された脆弱性の事例（CVE）](docs/technology/oss-vulnerabilities/cve-cases.md)
+- [SCA と SBOM で既知脆弱性に対処する](docs/technology/oss-vulnerabilities/sca-sbom.md)
 - [OSS 電子カルテ、HIS](docs/technology/oss-vulnerabilities/ehr-systems.md)
 - [医用画像 OSS（PACS/DICOM 実装）](docs/technology/oss-vulnerabilities/imaging-pacs.md)
 
@@ -218,9 +257,10 @@ OSS 電子カルテ、医用画像 OSS の脆弱性事例と CVE。研究対象�
 
 #### 🌐 [医療系 Web アプリのセキュリティ](docs/technology/web-security/)
 
-患者ポータル、オンライン診療で狙われやすい脆弱性。
+患者ポータル、オンライン診療で狙われやすい脆弱性と、医療情報連携の API の攻撃面。
 
 - [患者用ポータルの脆弱性](docs/technology/web-security/patient-portal.md)
+- [HL7 v2 と FHIR の攻撃面](docs/technology/web-security/hl7-fhir.md)
 
 </td>
 <td width="50%" valign="top">
@@ -236,10 +276,13 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 
 #### 🔄 [医療 DX と AX](docs/technology/dx-ax/)
 
-国の基盤で増える接続点と、医療に AI を組み込むときの脅威。前提が崩れる速度を扱う。
+国の基盤で増える接続点と、医療に AI を組み込むときの脅威。
+前提が崩れる速度を扱う。
 
 - [医療 DX：国の基盤と接続点](docs/technology/dx-ax/medical-dx.md)
+- [地域医療情報連携ネットワーク](docs/technology/dx-ax/regional-networks.md)
 - [AX：医療における AI のセキュリティ](docs/technology/dx-ax/ai-security.md)
+- [現場主導の DX と AX](docs/technology/dx-ax/field-led.md)
 
 </td>
 <td width="50%" valign="top">
@@ -262,7 +305,8 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 
 #### 🎯 [Bug Bounty × 医療、ヘルスケア](docs/practice/bug-bounty/)
 
-医療分野でのバグバウンティと脆弱性開示。触れてよい対象の線引き、報告経路、受け入れ側の始め方。
+医療分野でのバグバウンティと脆弱性開示。
+触れてよい対象の線引き、報告経路、サイバー防衛としての位置づけ、受け入れ側の始め方。
 
 </td>
 </tr>
@@ -285,6 +329,9 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 
 誰がどう決めるかを扱う。
 CISO の役割と体制、経営層への報告、成熟度の把握、予算と人材、リスク移転、小規模組織での進め方。
+
+- [調査データから読む、備えの穴](docs/governance/readiness-gaps.md)
+
 個別のページは順次追加する。
 
 ### 📚 [リファレンス](docs/reference/)
@@ -308,7 +355,7 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 
 医療セキュリティの研究室、ISAC、国内外のコミュニティ。
 
-- [Biohacking Village（DEF CON）](docs/reference/labs-communities/biohacking-village.md)
+- [Biohacking Village（DEF CON、CODE BLUE）](docs/reference/labs-communities/biohacking-village.md)
 
 </td>
 </tr>
@@ -324,13 +371,20 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 
 </td>
 <td width="50%" valign="top">
+
+#### 🧭 [セキュリティの基礎](docs/reference/security-basics.md)
+
+各ページが前提として使う語彙と枠組みを一通り並べる。
+情報セキュリティの 7 要素、守るべきものからの逆算、リスクベースの考え方、設計の原則（多層防御、最小権限、ゼロトラスト、セキュリティ・バイ・デザイン）、脅威モデリング、診断とペネトレーションテスト、検知と対応、DevSecOps、OWASP、ハードニング。
+
 </td>
 </tr>
 </table>
 
 ### 📅 [月報](monthly-reports/)
 
-医療分野の動向を月単位で記録する。インシデント、脆弱性、規制の動き、脅威動向。
+医療分野の動向を月単位で記録する。
+インシデント、脆弱性、規制の動き、脅威動向。
 
 - [月報一覧](monthly-reports/README.md)
 
@@ -342,14 +396,15 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 awesome-healthcare-security/
 ├── docs/
 │   ├── threats/                     脅威
-│   │   ├── incidents/               インシデント事例（japan/、global/ に年別の履歴とサマリー）
-│   │   └── actors/                  脅威アクターと TTPs、防御プレイブック
+│   │   ├── incidents/               インシデント事例（japan/、global/ に年別の履歴とサマリー。サイバー攻撃を主、それ以外の事案を副として収録）
+│   │   ├── actors/                  脅威アクターと TTPs、防御プレイブック
+│   │   └── statistics/              公的統計から読む脅威（japan.md、global.md）
 │   ├── technology/                  技術領域
 │   │   ├── medical-devices/         医療機器（IoMT、PACS）のセキュリティ
 │   │   ├── oss-vulnerabilities/     OSS 医療情報システムの脆弱性
 │   │   ├── web-security/            医療系 Web アプリケーションのセキュリティ
 │   │   ├── cloud/                   クラウド事業者と医療（AWS、Google Cloud、Azure、さくら）
-│   │   └── dx-ax/                   医療 DX と AX（国の基盤、医療 AI のセキュリティ）
+│   │   └── dx-ax/                   医療 DX と AX（国の基盤、地域医療連携、医療 AI、現場主導の導入）
 │   ├── practice/                    検証と実務
 │   │   ├── pentest/                 セキュリティ診断とペネトレーションテスト
 │   │   └── bug-bounty/              バグバウンティと脆弱性開示（医療分野）
@@ -361,6 +416,7 @@ awesome-healthcare-security/
 │       ├── labs-communities/        ラボ、コミュニティ
 │       ├── resources/               ツール、論文、学習リソース
 │       ├── _templates/              事例追加のテンプレート
+│       ├── security-basics.md       セキュリティの基礎（7 要素、設計の原則、脅威モデリング、検知と対応）
 │       └── GLOSSARY.md              用語集
 ├── monthly-reports/                 月報（YYYY/YYYY-MM.md）
 ├── skills/                          文書レビュー用のスキル
@@ -406,7 +462,7 @@ awesome-healthcare-security/
 
 **Yuta Morioka / morioka12**
 
-Security Engineer・Ethical Hacker
+Security Engineer, Ethical Hacker
 
 [![GitHub](https://img.shields.io/badge/GitHub-scgajge12-181717?style=flat-square&logo=github)](https://github.com/scgajge12)
 [![X](https://img.shields.io/badge/X-@scgajge12-000000?style=flat-square&logo=x)](https://x.com/scgajge12)

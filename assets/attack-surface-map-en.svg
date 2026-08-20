@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-label="Attack surface of a healthcare provider. External entry points are VPN and remote access, third-party supplier connections, email, patient-facing services, and vendor maintenance lines. Inside are the EHR, departmental systems, medical devices, and backups, each tied to the corresponding chapter of this repository.">
+  <title>Attack surface of a healthcare provider</title>
+  <style>
+    .zone { fill: none; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .box { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .box-in { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .box-core { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .box-ext { fill: #ffebe9; stroke: #ff8182; stroke-width: 1.5; }
+    .t { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; }
+    .t-b { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; }
+    .t-sm { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; }
+    .zone-label { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 600; }
+    .arrow { stroke: #fa8c8c; stroke-width: 2; fill: none; marker-end: url(#ah); }
+    @media (prefers-color-scheme: dark) {
+      .zone { stroke: #6e7681; }
+      .box { fill: #161b22; stroke: #6e7681; }
+      .box-in { fill: #121d2f; stroke: #316dca; }
+      .box-core { fill: #12261e; stroke: #2ea043; }
+      .box-ext { fill: #25171c; stroke: #da3633; }
+      .t, .t-b { fill: #e6edf3; }
+      .t-sm, .zone-label { fill: #9198a1; }
+    }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fa8c8c"/>
+    </marker>
+  </defs>
+
+  <text class="zone-label" x="20" y="24">External</text>
+  <rect class="zone" x="14" y="32" width="240" height="330" rx="6"/>
+  <rect class="box-ext" x="30" y="48" width="208" height="52" rx="4"/>
+  <text class="t" x="44" y="70">VPN, remote access</text>
+  <text class="t-sm" x="44" y="88">Unpatched edge devices, no MFA</text>
+
+  <rect class="box-ext" x="30" y="112" width="208" height="52" rx="4"/>
+  <text class="t" x="44" y="134">Third-party connections</text>
+  <text class="t-sm" x="44" y="152">Catering, labs, maintenance, HIE</text>
+
+  <rect class="box-ext" x="30" y="176" width="208" height="52" rx="4"/>
+  <text class="t" x="44" y="198">Email</text>
+  <text class="t-sm" x="44" y="216">Phishing, malicious attachments</text>
+
+  <rect class="box-ext" x="30" y="240" width="208" height="52" rx="4"/>
+  <text class="t" x="44" y="262">Patient-facing services</text>
+  <text class="t-sm" x="44" y="280">Portals, telemedicine, booking</text>
+
+  <rect class="box-ext" x="30" y="304" width="208" height="44" rx="4"/>
+  <text class="t" x="44" y="331">Vendor maintenance lines</text>
+
+  <path class="arrow" d="M 246 74 L 300 120"/>
+  <path class="arrow" d="M 246 138 L 300 150"/>
+  <path class="arrow" d="M 246 202 L 300 190"/>
+  <path class="arrow" d="M 246 266 L 300 220"/>
+  <path class="arrow" d="M 246 326 L 300 250"/>
+
+  <text class="zone-label" x="316" y="24">Internal network</text>
+  <rect class="zone" x="310" y="32" width="290" height="330" rx="6"/>
+  <rect class="box-in" x="326" y="100" width="258" height="170" rx="4"/>
+  <text class="t-b" x="342" y="126">Lateral movement after entry</text>
+  <text class="t" x="342" y="152">Credential theft</text>
+  <text class="t" x="342" y="176">Active Directory takeover</text>
+  <text class="t" x="342" y="200">Spread over RDP and SMB</text>
+  <text class="t" x="342" y="224">Virtualization platform takeover</text>
+  <text class="t-sm" x="342" y="250">Detection in this window decides the damage</text>
+
+  <path class="arrow" d="M 592 185 L 646 185"/>
+
+  <text class="zone-label" x="662" y="24">Assets to protect</text>
+  <rect class="zone" x="656" y="32" width="230" height="330" rx="6"/>
+  <rect class="box-core" x="672" y="48" width="198" height="46" rx="4"/>
+  <text class="t" x="686" y="76">EHR, HIS</text>
+
+  <rect class="box-core" x="672" y="106" width="198" height="46" rx="4"/>
+  <text class="t" x="686" y="134">Departmental systems, PACS</text>
+
+  <rect class="box-core" x="672" y="164" width="198" height="46" rx="4"/>
+  <text class="t" x="686" y="192">Medical devices, IoMT</text>
+
+  <rect class="box-core" x="672" y="222" width="198" height="46" rx="4"/>
+  <text class="t" x="686" y="250">Backups</text>
+
+  <rect class="box" x="672" y="280" width="198" height="68" rx="4"/>
+  <text class="t-b" x="686" y="306">When these stop</text>
+  <text class="t-sm" x="686" y="326">Care halted, no emergency intake</text>
+  <text class="t-sm" x="686" y="342">Surgery delays, transfers, harm</text>
+
+  <text class="t-sm" x="20" y="392">Attackers take the shortest path. Every entry point leads to the same place.</text>
+  <text class="t-sm" x="20" y="414">A provider controls only some of its entry points, and how far an intrusion spreads.</text>
+</svg>

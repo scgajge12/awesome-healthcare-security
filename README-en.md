@@ -150,17 +150,30 @@ What it asks for is asset inventory and a triage process built on the assumption
 This repository is written for the people on the other side of that equation: security teams at care providers and pharmaceutical companies, medical device manufacturers, security researchers, bug bounty hunters, and compliance professionals.
 
 <p align="center">
-  <img src="assets/attack-surface-map.svg" alt="Attack surface of a healthcare provider: external entry points (VPN and remote access, third-party supplier connections, email, patient-facing services, vendor maintenance lines) lead through internal lateral movement to the EHR, departmental systems, medical devices, and backups, ending in disrupted care." width="100%">
+  <img src="assets/attack-surface-map-en.svg" alt="Attack surface of a healthcare provider: external entry points (VPN and remote access, third-party supplier connections, email, patient-facing services, vendor maintenance lines) lead through internal lateral movement to the EHR, departmental systems, medical devices, and backups, ending in disrupted care." width="100%">
 </p>
-
-> [!NOTE]
-> The labels in the diagram are in Japanese. Its structure follows the sections listed below.
 
 ---
 
 ## 📚 Contents
 
 `docs/` is split into seven groups: understand the threat, understand what you are defending, test it, respond when it happens, check the regulation, decide who owns it, and look things up.
+
+### Where to start, by role
+
+You do not have to read it in order.
+Starting from the role closest to your own gets you to the decisions you need faster.
+
+```mermaid
+flowchart LR
+    R1["Hospital IT<br>and security teams"] --> A1["Organizational weaknesses"] --> A2["Defense playbook"] --> A3["Incident response and continuity"]
+    R2["Medical device<br>manufacturers"] --> B1["Medical device security"] --> B2["Device testing methodology"] --> B3["Guidelines and regulations"]
+    R3["Security researchers<br>and testers"] --> C1["Technology domains"] --> C2["Pentesting"] --> C3["Bug bounty and disclosure"]
+    R4["Pharmaceutical<br>companies"] --> D1["Pharma security"] --> D2["Manufacturing OT"] --> D3["Governance"]
+    R5["Briefing the board"] --> E1["Threat statistics"] --> E2["Incident case studies"] --> E3["Governance"]
+```
+
+If you want the shared vocabulary first, [Security fundamentals](docs/reference/security-basics.md) collects the concepts the other pages assume.
 
 ### 🎯 [Threats](docs/threats/)
 
@@ -170,7 +183,7 @@ This repository is written for the people on the other side of that equation: se
 
 #### 🚨 [Incident Case Studies](docs/threats/incidents/)
 
-Attacks on healthcare providers in Japan and abroad, tracked through initial access, scope of compromise, clinical impact, and remediation.
+Incidents at healthcare providers in Japan and abroad. Cyber attacks come first, tracked through initial access, scope of compromise, clinical impact, and remediation; non-attack events (tech support scams, system failures, insider misuse, lost or stolen media) are collected as a secondary category.
 
 - [Japan](docs/threats/incidents/japan/) (per-year timelines and summaries)
 - [Rest of the world](docs/threats/incidents/global/) (per-year timelines and summaries)
@@ -184,9 +197,25 @@ Who targets healthcare and why, plus TTPs of ransomware groups mapped to MITRE A
 
 - [Threat actors and risks](docs/threats/actors/actors-and-risks.md)
 - [TTPs by group](docs/threats/actors/ransomware-groups.md)
+- [How ransomware attacks on hospitals cascade](docs/threats/actors/ransomware-chain.md)
 - [Defense playbook](docs/threats/actors/defense-playbook.md)
 - [Organizational vulnerabilities: hospitals and pharma](docs/threats/actors/organizational-vulnerabilities.md)
+- [The dark web and medical data](docs/threats/actors/dark-web-medical-data.md)
 
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 📊 [Reading the Threat from Official Statistics](docs/threats/statistics/)
+
+Statistics from the National Police Agency, IPA, the Personal Information Protection Commission and MHLW, alongside FBI IC3, HHS OCR and ENISA, read for where the health sector actually lands. Covers what each figure counts and how an incident travels before it shows up in a statistic.
+
+- [Japan](docs/threats/statistics/japan.md)
+- [Rest of the world](docs/threats/statistics/global.md)
+
+</td>
+<td width="50%" valign="top">
 </td>
 </tr>
 </table>
@@ -210,8 +239,11 @@ Risks specific to IoMT and PACS/DICOM, and how to test them safely.
 
 #### 🧬 [Open Source Health IT Vulnerabilities](docs/technology/oss-vulnerabilities/)
 
-Vulnerabilities and CVEs in open source EHR systems and medical imaging software. An entry point for research.
+A catalog of open source software used in healthcare, reported CVEs, and how SCA and SBOM address known vulnerabilities.
 
+- [OSS catalog used in healthcare](docs/technology/oss-vulnerabilities/oss-catalog.md)
+- [Reported vulnerabilities (CVE)](docs/technology/oss-vulnerabilities/cve-cases.md)
+- [SCA and SBOM for known vulnerabilities](docs/technology/oss-vulnerabilities/sca-sbom.md)
 - [OSS EHR / HIS](docs/technology/oss-vulnerabilities/ehr-systems.md)
 - [Medical imaging OSS (PACS/DICOM)](docs/technology/oss-vulnerabilities/imaging-pacs.md)
 
@@ -222,9 +254,10 @@ Vulnerabilities and CVEs in open source EHR systems and medical imaging software
 
 #### 🌐 [Healthcare Web Application Security](docs/technology/web-security/)
 
-Vulnerabilities that tend to show up in patient portals and telehealth.
+Vulnerabilities that tend to show up in patient portals and telehealth, plus the attack surface of healthcare interoperability APIs.
 
 - [Patient portal vulnerabilities](docs/technology/web-security/patient-portal.md)
+- [HL7 v2 and FHIR attack surface](docs/technology/web-security/hl7-fhir.md)
 
 </td>
 <td width="50%" valign="top">
@@ -243,7 +276,9 @@ How responsibility is split across AWS, Google Cloud, Azure, and Sakura Internet
 The connection points added by Japan's national health data platform, and the threats that come with putting AI into clinical and back-office work.
 
 - [Healthcare DX: national platforms and connection points](docs/technology/dx-ax/medical-dx.md)
+- [Regional health information exchange networks](docs/technology/dx-ax/regional-networks.md)
 - [AX: AI security in healthcare](docs/technology/dx-ax/ai-security.md)
+- [Frontline-led DX and AX](docs/technology/dx-ax/field-led.md)
 
 </td>
 <td width="50%" valign="top">
@@ -266,7 +301,7 @@ Testing scopes for hospitals and pharma, separated by domain: people, perimeter,
 
 #### 🎯 [Bug Bounty × Healthcare](docs/practice/bug-bounty/)
 
-Bug bounty and vulnerability disclosure in healthcare: what is in scope, where to report, and how to stand up a VDP. (Japanese)
+Bug bounty and vulnerability disclosure in healthcare: what is in scope, where to report, how researchers fit into national cyber defence frameworks, and how to stand up a VDP. (Japanese)
 
 </td>
 </tr>
@@ -287,6 +322,9 @@ From Japan's "three-ministry, two-guideline" framework to HIPAA, FDA, EU MDR, an
 ### 🏛️ [Governance and Management](docs/governance/)
 
 Who decides, and how: the CISO role and reporting lines, reporting to the board, maturity assessment, budget and staffing, risk transfer, and where to start with no dedicated staff.
+
+- [Reading survey data as an attacker would](docs/governance/readiness-gaps.md)
+
 Individual pages are being added.
 
 ### 📚 [Reference](docs/reference/)
@@ -310,7 +348,7 @@ Theft of trial data and intellectual property, manufacturing equipment under GMP
 
 Research labs, ISACs, and communities in Japan and abroad.
 
-- [Biohacking Village (DEF CON)](docs/reference/labs-communities/biohacking-village.md)
+- [Biohacking Village (DEF CON, CODE BLUE)](docs/reference/labs-communities/biohacking-village.md)
 
 </td>
 </tr>
@@ -326,6 +364,11 @@ Research labs, ISACs, and communities in Japan and abroad.
 
 </td>
 <td width="50%" valign="top">
+
+#### 🧭 [Security Fundamentals](docs/reference/security-basics.md)
+
+The vocabulary and frameworks the rest of this repository assumes: the seven elements of information security, working backwards from what must be protected, risk-based prioritisation, design principles (defence in depth, least privilege, zero trust, secure by design), threat modeling, assessment versus penetration testing, detection and response, DevSecOps, OWASP, and hardening.
+
 </td>
 </tr>
 </table>
@@ -344,14 +387,15 @@ A month-by-month record of the sector: incidents, vulnerabilities, regulatory ch
 awesome-healthcare-security/
 ├── docs/
 │   ├── threats/                     Threats
-│   │   ├── incidents/               Incident case studies (japan/, global/ with per-year pages)
-│   │   └── actors/                  Threat actors, TTPs, defense playbook
+│   │   ├── incidents/               Incident case studies (japan/, global/ with per-year pages; cyber attacks first, other events secondary)
+│   │   ├── actors/                  Threat actors, TTPs, defense playbook
+│   │   └── statistics/              Official statistics on cyber attacks (japan.md, global.md)
 │   ├── technology/                  Technology domains
 │   │   ├── medical-devices/         Medical device security (IoMT, PACS)
 │   │   ├── oss-vulnerabilities/     Open source health IT vulnerabilities
 │   │   ├── web-security/            Healthcare web application security
 │   │   ├── cloud/                   Cloud providers and healthcare
-│   │   └── dx-ax/                   Healthcare DX and AX
+│   │   └── dx-ax/                   Healthcare DX and AX (platforms, regional networks, AI, frontline-led adoption)
 │   ├── practice/                    Assessment and practice
 │   │   ├── pentest/                 Security assessment and penetration testing
 │   │   └── bug-bounty/              Bug bounty and vulnerability disclosure
@@ -363,6 +407,7 @@ awesome-healthcare-security/
 │       ├── labs-communities/        Labs and communities
 │       ├── resources/               Tools, papers, learning resources
 │       ├── _templates/              Templates for new entries
+│       ├── security-basics.md       Security fundamentals (7 elements, design principles, threat modeling, detection)
 │       └── GLOSSARY.md              Glossary
 ├── monthly-reports/                 Monthly reports (YYYY/YYYY-MM.md)
 ├── skills/                          Review skills for this repository
