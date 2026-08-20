@@ -140,4 +140,4 @@ Ascension への攻撃で、全米規模の医療グループの電子カルテ�
 
 ---
 
-<sub>[← 脅威アクターとリスク](actors-and-risks.md) | [防御プレイブック →](defense-playbook.md) | [トップへ](../../../README.md)</sub>
+<sub>[← 脅威アクターとリスク](actors-and-risks.md) | [連鎖するランサムウェア攻撃 →](ransomware-chain.md) | [トップへ](../../../README.md)</sub>

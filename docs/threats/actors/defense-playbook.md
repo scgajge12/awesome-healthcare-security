@@ -162,4 +162,4 @@ flowchart LR
 
 ---
 
-<sub>[← ランサムウェアグループ別の TTPs](ransomware-groups.md) | [組織の脆弱性の分類 →](organizational-vulnerabilities.md) | [脅威アクターと TTPs](README.md) | [トップへ](../../../README.md)</sub>
+<sub>[← 医療機関で連鎖するランサムウェア攻撃](ransomware-chain.md) | [組織の脆弱性の分類 →](organizational-vulnerabilities.md) | [脅威アクターと TTPs](README.md) | [トップへ](../../../README.md)</sub>

@@ -21,8 +21,10 @@
 
 - [脅威アクターとリスク](actors-and-risks.md)
 - [ランサムウェアグループ別の TTPs](ransomware-groups.md)
+- [医療機関で連鎖するランサムウェア攻撃](ransomware-chain.md)
 - [医療機関向け防御プレイブック](defense-playbook.md)
 - [組織の脆弱性の分類](organizational-vulnerabilities.md)
+- [ダークウェブと医療情報](dark-web-medical-data.md)
 
 ## 医療が狙われる理由
 
