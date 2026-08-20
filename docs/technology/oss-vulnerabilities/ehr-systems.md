@@ -6,8 +6,9 @@
 > **表記ルール**：本ページでは、**事実**（一次情報で確認できる内容。出典を併記する）、**報道ベース**（報道のみで確認でき、当事者の公表資料では裏付けが取れていない内容）、**分析**（筆者の解釈）を書き分ける。
 > 出典は、当事者の公表資料、行政文書、CVE、ベンダアドバイザリなどの一次情報を優先して示す。
 >
-> 個別の CVE 番号は、誤記を避けるため列挙していない。
-> 製品ごとに NVD の検索リンクを用意しているので、最新の一覧は一次情報で確認してほしい。
+> 本ページは製品ごとの傾向を扱う。
+> 個別の CVE 番号と内容は [報告された脆弱性の事例（CVE）](cve-cases.md) に、製品の一覧は [医療で使われる OSS の一覧](oss-catalog.md) にまとめた。
+> 最新の状況は、各製品の NVD 検索リンクで一次情報を確認してほしい。
 
 ---
 
@@ -15,17 +16,17 @@
 
 | 製品 | 技術スタック | 用途 | 一次情報 |
 |---|---|---|---|
-| **OpenEMR** | PHP / MySQL | 電子カルテ＋診療所管理。OSS 医療システムで最も広く使われている | [公式](https://www.open-emr.org/) | [GitHub](https://github.com/openemr/openemr) | [NVD](https://nvd.nist.gov/vuln/search/results?query=openemr) |
-| **OpenMRS** | Java / Spring | 新興国の医療現場で広く導入されているモジュール型 EMR プラットフォーム | [公式](https://openmrs.org/) | [GitHub](https://github.com/openmrs) | [NVD](https://nvd.nist.gov/vuln/search/results?query=openmrs) |
-| **Bahmni** | OpenMRS ベース | 病院情報システム（EMR + LIS + 会計 + 画像連携） | [公式](https://www.bahmni.org/) | [GitHub](https://github.com/Bahmni) |
+| **OpenEMR** | PHP / MySQL | 電子カルテ＋診療所管理。OSS 医療システムで最も広く使われている | [公式](https://www.open-emr.org/)、[GitHub](https://github.com/openemr/openemr)、[NVD](https://nvd.nist.gov/vuln/search/results?query=openemr) |
+| **OpenMRS** | Java / Spring | 新興国の医療現場で広く導入されているモジュール型 EMR プラットフォーム | [公式](https://openmrs.org/)、[GitHub](https://github.com/openmrs)、[NVD](https://nvd.nist.gov/vuln/search/results?query=openmrs) |
+| **Bahmni** | OpenMRS ベース | 病院情報システム（EMR + LIS + 会計 + 画像連携） | [公式](https://www.bahmni.org/)、[GitHub](https://github.com/Bahmni) |
 | **GNU Health** | Python / Tryton | 病院情報システム＋公衆衛生。国際機関でも採用実績あり | [公式](https://www.gnuhealth.org/) |
-| **LibreHealth EHR** | PHP | OpenEMR からのフォーク | [公式](https://librehealth.io/) | [GitHub](https://github.com/LibreHealthIO) |
-| **OpenClinic GA** | Java | 病院情報システム。過去に多数の脆弱性が報告されている | [SourceForge](https://sourceforge.net/projects/open-clinic/) | [NVD](https://nvd.nist.gov/vuln/search/results?query=openclinic) |
-| **HospitalRun** | JavaScript / Node | オフライン優先設計の病院システム | [公式](https://hospitalrun.io/) | [GitHub](https://github.com/HospitalRun) |
+| **LibreHealth EHR** | PHP | OpenEMR からのフォーク | [公式](https://librehealth.io/)、[GitHub](https://github.com/LibreHealthIO) |
+| **OpenClinic GA** | Java | 病院情報システム。過去に多数の脆弱性が報告されている | [SourceForge](https://sourceforge.net/projects/open-clinic/)、[NVD](https://nvd.nist.gov/vuln/search/results?query=openclinic) |
+| **HospitalRun** | JavaScript / Node | オフライン優先設計の病院システム | [公式](https://hospitalrun.io/)、[GitHub](https://github.com/HospitalRun) |
 | **GNUmed** | Python | 電子カルテクライアント | [公式](https://www.gnumed.de/) |
 | **OpenHIM / OpenHIE** | Node.js | 医療情報連携基盤（インターオペラビリティレイヤ） | [公式](https://openhim.org/) |
-| **HAPI FHIR** | Java | FHIR サーバ／クライアントの参照実装。多数の医療 API の基盤 | [公式](https://hapifhir.io/) | [GitHub](https://github.com/hapifhir/hapi-fhir) |
-| **Mirth Connect / NextGen Connect** | Java | HL7 連携エンジン。医療機関の統合基盤として広く使われる | [GitHub](https://github.com/nextgenhealthcare/connect) | [NVD](https://nvd.nist.gov/vuln/search/results?query=mirth+connect) |
+| **HAPI FHIR** | Java | FHIR サーバ／クライアントの参照実装。多数の医療 API の基盤 | [公式](https://hapifhir.io/)、[GitHub](https://github.com/hapifhir/hapi-fhir) |
+| **Mirth Connect / NextGen Connect** | Java | HL7 連携エンジン。医療機関の統合基盤として広く使われる | [GitHub](https://github.com/nextgenhealthcare/connect)、[NVD](https://nvd.nist.gov/vuln/search/results?query=mirth+connect) |
 
 ---
 
@@ -72,12 +73,51 @@ flowchart LR
 - 連携エンジンは、その役割上、あらゆる部門システムに到達できる位置にある。ここが陥落すると、電子カルテ、検査、画像、会計のすべてに影響が及ぶ。
 - 「内部システムだから」とインターネットに露出したまま放置されているケースが実際に存在する。
 
+該当する CVE と、CISA KEV に掲載された経緯は [報告された脆弱性の事例（CVE）](cve-cases.md#mirth-connect) にまとめた。
+
 ### OpenClinic GA
 
 **事実**
 
 - 認証バイパス、SQL インジェクション、パストラバーサル、任意ファイルアップロードなど、多数の CVE が公開されている。
 - 公開されている PoC も多く、医療システムの脆弱性を学ぶ教材として使える。
+
+---
+
+## 導入後に確認する構成
+
+報告されてきた脆弱性の多くは、認証、ファイルの取り扱い、権限の三箇所に集まる。
+更新の適用とは別に、導入時の構成で塞げる面がある。
+
+| 項目 | 確認すること |
+|---|---|
+| セットアップ経路 | インストーラとセットアップ用のディレクトリが、導入後に削除または到達不能になっているか。残っていると、再インストールによる乗っ取りが成立する |
+| 管理インタフェースの露出 | 管理コンソールと連携エンジンの管理ポートが、インターネットと業務ネットワークの双方から直接到達できない位置にあるか |
+| 初期の認証情報 | 既定の管理者アカウントを変更したか。導入手順書に記載された値が残っていないか |
+| アップロード先 | 添付文書の保存先が、Web が配信するディレクトリの外にあるか。拡張子の検証だけに頼っていないか |
+| API と画面の権限 | 後から追加された REST / FHIR API に、画面側と同じ認可判定が適用されているか（[患者用ポータルで狙われやすい脆弱性](../web-security/patient-portal.md)） |
+| データベースの権限 | アプリケーションが使う権限が、スキーマ変更やファイル出力まで持っていないか |
+
+**分析**：この六つのうち、外部からの到達性に関わる二つを先に確認する。
+認証の不備や SQL インジェクションが残っていても、到達できなければ悪用されない。
+逆に、到達できる位置に置かれた連携エンジンは、更新が一度遅れるだけで侵入口になる。
+
+---
+
+## 検知
+
+| 監視対象 | 検知したい事象 | 緩和策 |
+|---|---|---|
+| 認証 | 同一アカウントへの試行の集中、初期の利用者名での認証成功、業務時間外のログイン | 試行回数の制限、初期アカウントの無効化 |
+| 患者情報の参照 | 1 利用者が短時間に参照した患者数、担当外の患者への参照 | 参照を患者単位で記録し、想定量を超えたら通知する |
+| 検索とレポート | 応答時間の異常、エラー応答の急増、結果件数が通常と桁違いになる要求 | 入力の検査、結果件数の上限、エラー内容を応答に含めない |
+| ファイル | 保存先ディレクトリへの想定外の書き込み、実行可能な拡張子の出現 | 保存先を配信経路から分離し、書き込み可能な範囲を限定する |
+| 連携エンジン | チャネルの追加と変更、スクリプトの編集、管理コンソールへの外部からの接続 | 変更を記録して通知する。管理コンソールの接続元を限定する |
+| 権限 | 管理者ロールの付与、ロール定義の変更 | 変更の承認記録と突き合わせる |
+
+**分析**：連携エンジンの行を最後にせず、優先して扱う。
+連携エンジンは、部門システムへ届く経路と認証情報を集約しているため、ここでのチャネル追加やスクリプト編集は、それ自体が他システムへの到達を意味する。
+アプリケーションのログだけを見ていると、この変更は視野に入らない。
 
 ---
 
@@ -108,6 +148,9 @@ docker compose up -d
 
 ## 関連ページ
 
+- [医療で使われる OSS の一覧](oss-catalog.md)
+- [報告された脆弱性の事例（CVE）](cve-cases.md)
+- [SCA と SBOM で既知脆弱性に対処する](sca-sbom.md)
 - [医用画像 OSS（PACS/DICOM 実装）の脆弱性](imaging-pacs.md)
 - [患者用ポータルで狙われやすい脆弱性](../web-security/patient-portal.md)
 - [ツール](../../reference/resources/tools.md)

@@ -15,10 +15,10 @@
 
 | 製品 | 種別 | 特徴 | 一次情報 |
 |---|---|---|---|
-| **Orthanc** | PACS サーバ | 軽量。REST API を備え、研究、小規模施設で広く利用 | [公式](https://www.orthanc-server.com/) | [NVD](https://nvd.nist.gov/vuln/search/results?query=orthanc) |
-| **dcm4che / dcm4chee** | ツールキット / アーカイブ | Java 製。エンタープライズ級の PACS アーカイブ | [公式](https://www.dcm4che.org/) | [GitHub](https://github.com/dcm4che) |
+| **Orthanc** | PACS サーバ | 軽量。REST API を備え、研究、小規模施設で広く利用 | [公式](https://www.orthanc-server.com/)、[NVD](https://nvd.nist.gov/vuln/search/results?query=orthanc) |
+| **dcm4che / dcm4chee** | ツールキット / アーカイブ | Java 製。エンタープライズ級の PACS アーカイブ | [公式](https://web.dcm4che.org/)、[GitHub](https://github.com/dcm4che) |
 | **DCMTK** | ツールキット | C++ 製の DICOM 実装。多くの製品の基盤 | [公式](https://dicom.offis.de/dcmtk) |
-| **OHIF Viewer** | Web ビューア | ブラウザベースの医用画像ビューア | [公式](https://ohif.org/) | [GitHub](https://github.com/OHIF/Viewers) |
+| **OHIF Viewer** | Web ビューア | ブラウザベースの医用画像ビューア | [公式](https://ohif.org/)、[GitHub](https://github.com/OHIF/Viewers) |
 | **Weasis** | ビューア | Java 製の医用画像ビューア | [GitHub](https://github.com/nroduit/Weasis) |
 | **Conquest DICOM** | PACS サーバ | 小規模施設、研究で利用される軽量サーバ | [公式](https://www.image-systems.biz/) |
 | **pydicom** | ライブラリ | Python の DICOM 処理ライブラリ | [GitHub](https://github.com/pydicom/pydicom) |
@@ -83,6 +83,79 @@
 
 ---
 
+## 攻撃面がどこに現れるか
+
+OSS の PACS は、DICOM の受信口、REST API、Web の管理画面、ビューアが同じ製品に同居する。
+脆弱性の種類は、この構成要素のどこに触れるかで決まる。
+
+```mermaid
+flowchart TD
+    subgraph OUT["外部に向く面"]
+        WEB["管理 Web UI<br>Orthanc Explorer、dcm4chee-arc UI"]
+        API["REST / DICOMweb API<br>QIDO-RS、WADO-RS、STOW-RS"]
+        VIEW["Web ビューア<br>OHIF、埋め込みビューア"]
+    end
+
+    subgraph NET["DICOM の受信口"]
+        SCP["C-STORE SCP<br>104 / 11112"]
+    end
+
+    subgraph CORE["処理と保存"]
+        PARSE["DICOM パーサ<br>タグの解釈、ピクセルデータの展開"]
+        STORE["ファイル保存<br>UID にもとづくパス生成"]
+        DB["索引データベース"]
+    end
+
+    WEB --> CORE
+    API --> CORE
+    VIEW --> API
+    SCP --> PARSE --> STORE --> DB
+
+    V1["認証の欠落、初期認証情報"] -.- WEB
+    V2["認可の不備、IDOR、SSRF"] -.- API
+    V3["XSS、埋め込み画像経由の入力"] -.- VIEW
+    V4["メモリ破壊、無限ループ"] -.- PARSE
+    V5["パストラバーサル"] -.- STORE
+```
+
+**分析**：この図で注意がいるのは、左下の受信口から入る経路である。
+管理画面と API は認証を後から足せるが、C-STORE の受信口は、画像を受け取ることが役割であるため閉じられない。
+送信元を限定する設定が唯一の入口制御になり、そこを緩めると、パーサとファイル保存の実装がそのまま外部入力にさらされる。
+
+---
+
+## 運用側で決めておく構成
+
+コードの脆弱性は更新で塞ぐことになるが、構成で減らせる面もある。
+OSS の PACS を自組織で運用する場合、次を導入時に決めておく。
+
+| 項目 | 決めること |
+|---|---|
+| 受信の許可 | 受け入れる AE Title と送信元 IP を明示的に列挙する。既定の「すべて受け入れる」設定のまま運用しない |
+| 管理画面の到達範囲 | 管理 UI と REST API を、業務ネットワークから直接到達できない位置に置く。初期の認証情報を変更する |
+| 保存先の分離 | 画像の保存先を、Web が配信するディレクトリから分ける。パストラバーサルが成立しても配信されない構成にする |
+| 実行権限 | サービスを専用の低権限アカウントで動かし、保存先以外への書き込みを禁じる |
+| 更新の追随 | 採用した実装の脆弱性情報を購読する。NVD の検索と GitHub のリリース通知を、担当者に紐づける |
+| 取り込み経路 | 外部から持ち込まれた DICOM ファイルを、直接 PACS に投入しない。検査と正規化を挟む経路を決める |
+
+---
+
+## 検知
+
+| 監視対象 | 検知したい事象 | 緩和策 |
+|---|---|---|
+| 受信口 | 許可していない AE Title と送信元からの接続試行、接続の急増 | 拒否を記録し、繰り返す送信元を遮断する |
+| パーサの異常 | 特定の送信元からの受信でプロセスが再起動する、処理が終わらない | 受信をキューで分離し、異常なファイルを隔離する |
+| REST / DICOMweb | 認証を伴わない要求の急増、参照範囲を超えた取得、外部 URL を含むパラメータ | 認証を必須にし、URL を受け取る機能を無効化するか許可先を限定する |
+| 管理画面 | 初期の利用者名での認証成功、設定変更、新規利用者の追加 | 管理操作を記録し、変更を通知する |
+| 保存領域 | 想定するディレクトリ構成から外れたパスへの書き込み | 保存処理が生成するパスを検査し、範囲外を拒否する |
+
+**分析**：この表の二行目は、可用性の問題として扱われやすい。
+組込みのパーサに不正な入力を与えて落とす行為は、攻撃の準備段階でも起こる。
+「特定の送信元から受け取ると落ちる」という現象は、機器の不具合ではなく検知の材料として扱う。
+
+---
+
 ## 検証環境の作り方
 
 ```bash
@@ -105,6 +178,8 @@ echoscu -v localhost 4242
 
 ## 関連ページ
 
+- [報告された脆弱性の事例（CVE）](cve-cases.md)
+- [医療で使われる OSS の一覧](oss-catalog.md)
 - [PACS / DICOM のセキュリティ](../medical-devices/pacs-dicom.md)
 - [医療機器の検証手法](../medical-devices/testing-methodology.md)
 - [ツール](../../reference/resources/tools.md)
