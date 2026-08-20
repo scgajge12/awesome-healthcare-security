@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-label="警察庁に報告されたランサムウェア被害件数の半期別推移。令和2年下半期21件から令和4年上半期114件まで急増し、その後は半期あたり94件から116件の範囲で高止まりしている。ノーウェアランサムは令和5年下半期の21件をピークに減少している。">
+  <title>ランサムウェア被害報告件数の半期別推移（警察庁）</title>
+  <style>
+    .bg     { fill: #ffffff; stroke: #d1d9e0; stroke-width: 1.5; }
+    .grid   { stroke: #d1d9e0; stroke-width: 1; }
+    .axis   { stroke: #8b949e; stroke-width: 1.5; }
+    .bar1   { fill: #316dca; }
+    .bar2   { fill: #bf8700; }
+    .band   { fill: #f6f8fa; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t      { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; }
+    .t-val  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; font-weight: 700; }
+    .t-sm   { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    @media (prefers-color-scheme: dark) {
+      .bg   { fill: #0d1117; stroke: #30363d; }
+      .grid { stroke: #30363d; }
+      .axis { stroke: #6e7681; }
+      .bar1 { fill: #58a6ff; }
+      .bar2 { fill: #d29922; }
+      .band { fill: #161b22; }
+      .t-title, .t, .t-val { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="bg" x="1" y="1" width="958" height="428" rx="8"/>
+  <text class="t-title" x="24" y="32">ランサムウェア被害報告件数の推移（半期別）</text>
+  <text class="t-sm" x="24" y="50">出典：警察庁「令和7年におけるサイバー空間をめぐる脅威の情勢等について」統計データ（統計編P120）</text>
+
+  <!-- 凡例 -->
+  <rect class="bar1" x="640" y="26" width="12" height="12" rx="2"/>
+  <text class="t" x="658" y="36">ランサムウェア</text>
+  <rect class="bar2" x="760" y="26" width="12" height="12" rx="2"/>
+  <text class="t" x="778" y="36">ノーウェアランサム</text>
+
+  <!-- 目盛 -->
+  <line class="grid" x1="80" y1="320" x2="930" y2="320"/>
+  <line class="grid" x1="80" y1="255" x2="930" y2="255"/>
+  <line class="grid" x1="80" y1="190" x2="930" y2="190"/>
+  <line class="grid" x1="80" y1="125" x2="930" y2="125"/>
+  <line class="grid" x1="80" y1="60"  x2="930" y2="60"/>
+  <text class="t-sm" x="72" y="324" text-anchor="end">0</text>
+  <text class="t-sm" x="72" y="259" text-anchor="end">30</text>
+  <text class="t-sm" x="72" y="194" text-anchor="end">60</text>
+  <text class="t-sm" x="72" y="129" text-anchor="end">90</text>
+  <text class="t-sm" x="72" y="64"  text-anchor="end">120 件</text>
+  <line class="axis" x1="80" y1="60" x2="80" y2="320"/>
+
+  <!-- R2下 -->
+  <rect class="bar1" x="94" y="274" width="26" height="46" rx="2"/>
+  <text class="t-val" x="107" y="268" text-anchor="middle">21</text>
+  <text class="t-sm" x="122" y="338" text-anchor="middle">R2下</text>
+  <!-- R3上 -->
+  <rect class="bar1" x="171" y="188" width="26" height="132" rx="2"/>
+  <text class="t-val" x="184" y="182" text-anchor="middle">61</text>
+  <text class="t-sm" x="199" y="338" text-anchor="middle">R3上</text>
+  <!-- R3下 -->
+  <rect class="bar1" x="248" y="136" width="26" height="184" rx="2"/>
+  <text class="t-val" x="261" y="130" text-anchor="middle">85</text>
+  <text class="t-sm" x="276" y="338" text-anchor="middle">R3下</text>
+  <!-- R4上 -->
+  <rect class="bar1" x="325" y="73" width="26" height="247" rx="2"/>
+  <text class="t-val" x="338" y="67" text-anchor="middle">114</text>
+  <text class="t-sm" x="353" y="338" text-anchor="middle">R4上</text>
+  <!-- R4下 -->
+  <rect class="bar1" x="402" y="69" width="26" height="251" rx="2"/>
+  <text class="t-val" x="415" y="63" text-anchor="middle">116</text>
+  <text class="t-sm" x="430" y="338" text-anchor="middle">R4下</text>
+  <!-- R5上 -->
+  <rect class="bar1" x="479" y="97" width="26" height="223" rx="2"/>
+  <text class="t-val" x="492" y="91" text-anchor="middle">103</text>
+  <rect class="bar2" x="509" y="300" width="26" height="20" rx="2"/>
+  <text class="t-val" x="522" y="294" text-anchor="middle">9</text>
+  <text class="t-sm" x="507" y="338" text-anchor="middle">R5上</text>
+  <!-- R5下 -->
+  <rect class="bar1" x="556" y="116" width="26" height="204" rx="2"/>
+  <text class="t-val" x="569" y="110" text-anchor="middle">94</text>
+  <rect class="bar2" x="586" y="274" width="26" height="46" rx="2"/>
+  <text class="t-val" x="599" y="268" text-anchor="middle">21</text>
+  <text class="t-sm" x="584" y="338" text-anchor="middle">R5下</text>
+  <!-- R6上 -->
+  <rect class="bar1" x="633" y="73" width="26" height="247" rx="2"/>
+  <text class="t-val" x="646" y="67" text-anchor="middle">114</text>
+  <rect class="bar2" x="663" y="290" width="26" height="30" rx="2"/>
+  <text class="t-val" x="676" y="284" text-anchor="middle">14</text>
+  <text class="t-sm" x="661" y="338" text-anchor="middle">R6上</text>
+  <!-- R6下 -->
+  <rect class="bar1" x="710" y="86" width="26" height="234" rx="2"/>
+  <text class="t-val" x="723" y="80" text-anchor="middle">108</text>
+  <rect class="bar2" x="740" y="303" width="26" height="17" rx="2"/>
+  <text class="t-val" x="753" y="297" text-anchor="middle">8</text>
+  <text class="t-sm" x="738" y="338" text-anchor="middle">R6下</text>
+  <!-- R7上 -->
+  <rect class="bar1" x="787" y="69" width="26" height="251" rx="2"/>
+  <text class="t-val" x="800" y="63" text-anchor="middle">116</text>
+  <rect class="bar2" x="817" y="303" width="26" height="17" rx="2"/>
+  <text class="t-val" x="830" y="297" text-anchor="middle">8</text>
+  <text class="t-sm" x="815" y="338" text-anchor="middle">R7上</text>
+  <!-- R7下 -->
+  <rect class="bar1" x="864" y="82" width="26" height="238" rx="2"/>
+  <text class="t-val" x="877" y="76" text-anchor="middle">110</text>
+  <rect class="bar2" x="894" y="300" width="26" height="20" rx="2"/>
+  <text class="t-val" x="907" y="294" text-anchor="middle">9</text>
+  <text class="t-sm" x="892" y="338" text-anchor="middle">R7下</text>
+
+  <!-- 年の帯 -->
+  <rect class="band" x="84" y="348" width="77" height="26" rx="4"/>
+  <text class="t-sm" x="122" y="365" text-anchor="middle">2020</text>
+  <rect class="band" x="161" y="348" width="154" height="26" rx="4"/>
+  <text class="t-sm" x="238" y="365" text-anchor="middle">2021（R3）計146件</text>
+  <rect class="band" x="315" y="348" width="154" height="26" rx="4"/>
+  <text class="t-sm" x="392" y="365" text-anchor="middle">2022（R4）計230件</text>
+  <rect class="band" x="469" y="348" width="154" height="26" rx="4"/>
+  <text class="t-sm" x="546" y="365" text-anchor="middle">2023（R5）計197件</text>
+  <rect class="band" x="623" y="348" width="154" height="26" rx="4"/>
+  <text class="t-sm" x="700" y="365" text-anchor="middle">2024（R6）計222件</text>
+  <rect class="band" x="777" y="348" width="154" height="26" rx="4"/>
+  <text class="t-sm" x="854" y="365" text-anchor="middle">2025（R7）計226件</text>
+
+  <text class="t-sm" x="24" y="398">ノーウェアランサム（暗号化を伴わないデータ窃取型の恐喝）は令和5年から集計が始まっている。</text>
+  <text class="t-sm" x="24" y="416">件数は都道府県警察が把握した報告数であり、被害の実数ではない。</text>
+</svg>

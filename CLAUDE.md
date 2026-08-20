@@ -77,6 +77,7 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `README.md` / `README-en.md` | 日本語版と英語版のトップページ。両方を同期させる |
 | `docs/threats/incidents/` | インシデント事例 |
 | `docs/threats/actors/` | 脅威アクターと TTPs |
+| `docs/threats/statistics/` | 公的統計から読む脅威（日本、海外） |
 | `docs/technology/medical-devices/` | 医療機器（IoMT, PACS）のセキュリティ |
 | `docs/technology/oss-vulnerabilities/` | OSS 医療情報システムの脆弱性 |
 | `docs/technology/web-security/` | 医療系 Web アプリケーションのセキュリティ |

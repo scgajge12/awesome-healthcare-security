@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="警察庁のランサムウェア被害報告件数の業種別内訳を令和3年から令和7年まで並べた表。製造業が一貫して首位で、医療・福祉は令和4年の20件で3位に入ったのを除き6位から7位で推移し、令和7年は上位に掲載されずその他に含まれている。">
+  <title>ランサムウェア被害の業種別内訳における医療・福祉の位置（警察庁）</title>
+  <style>
+    .bg     { fill: #ffffff; stroke: #d1d9e0; stroke-width: 1.5; }
+    .col    { fill: #f6f8fa; stroke: #d1d9e0; stroke-width: 1; }
+    .cell   { fill: #ffffff; stroke: #d1d9e0; stroke-width: 1; }
+    .hl     { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .other  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1; }
+    .miss   { fill: none; stroke: #bf8700; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13px; font-weight: 700; }
+    .t      { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; }
+    .t-b    { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 700; }
+    .t-sm   { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    .t-rank { fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    @media (prefers-color-scheme: dark) {
+      .bg    { fill: #0d1117; stroke: #30363d; }
+      .col   { fill: #161b22; stroke: #30363d; }
+      .cell  { fill: #0d1117; stroke: #30363d; }
+      .hl    { fill: #341a00; stroke: #d29922; }
+      .other { fill: #161b22; stroke: #6e7681; }
+      .miss  { stroke: #d29922; }
+      .t-title, .t-head, .t, .t-b { fill: #e6edf3; }
+      .t-sm, .t-rank { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="bg" x="1" y="1" width="958" height="538" rx="8"/>
+  <text class="t-title" x="24" y="32">ランサムウェア被害の業種別内訳と医療・福祉の位置</text>
+  <text class="t-sm" x="24" y="50">出典：警察庁「サイバー空間をめぐる脅威の情勢等について」各年版（令和3年は本文図表、令和4年以降は公表統計データ）</text>
+
+  <!-- 列 -->
+  <rect class="col" x="45" y="64" width="165" height="392" rx="6"/>
+  <text class="t-head" x="127" y="84" text-anchor="middle">2021（R3）</text>
+  <text class="t-sm" x="127" y="100" text-anchor="middle">計 146 件</text>
+  <rect class="col" x="225" y="64" width="165" height="392" rx="6"/>
+  <text class="t-head" x="307" y="84" text-anchor="middle">2022（R4）</text>
+  <text class="t-sm" x="307" y="100" text-anchor="middle">計 230 件</text>
+  <rect class="col" x="405" y="64" width="165" height="392" rx="6"/>
+  <text class="t-head" x="487" y="84" text-anchor="middle">2023（R5）</text>
+  <text class="t-sm" x="487" y="100" text-anchor="middle">計 197 件</text>
+  <rect class="col" x="585" y="64" width="165" height="392" rx="6"/>
+  <text class="t-head" x="667" y="84" text-anchor="middle">2024（R6）</text>
+  <text class="t-sm" x="667" y="100" text-anchor="middle">計 222 件</text>
+  <rect class="col" x="765" y="64" width="165" height="392" rx="6"/>
+  <text class="t-head" x="847" y="84" text-anchor="middle">2025（R7）</text>
+  <text class="t-sm" x="847" y="100" text-anchor="middle">計 226 件</text>
+
+  <!-- 2021 -->
+  <rect class="cell" x="55" y="110" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="64" y="131">1</text><text class="t" x="80" y="131">製造</text><text class="t-b" x="190" y="131" text-anchor="end">55</text>
+  <rect class="cell" x="55" y="152" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="64" y="173">2</text><text class="t" x="80" y="173">卸売・小売</text><text class="t-b" x="190" y="173" text-anchor="end">21</text>
+  <rect class="cell" x="55" y="194" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="64" y="215">3</text><text class="t" x="80" y="215">サービス</text><text class="t-b" x="190" y="215" text-anchor="end">20</text>
+  <rect class="cell" x="55" y="236" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="64" y="257">4</text><text class="t" x="80" y="257">建設</text><text class="t-b" x="190" y="257" text-anchor="end">10</text>
+  <rect class="cell" x="55" y="278" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="64" y="299">5</text><text class="t" x="80" y="299">情報通信</text><text class="t-b" x="190" y="299" text-anchor="end">9</text>
+  <rect class="cell" x="55" y="320" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="64" y="341">6</text><text class="t" x="80" y="341">運輸・郵便</text><text class="t-b" x="190" y="341" text-anchor="end">7</text>
+  <rect class="hl" x="55" y="362" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="64" y="383">7</text><text class="t-b" x="80" y="383">医療・福祉</text><text class="t-b" x="190" y="383" text-anchor="end">7</text>
+  <rect class="other" x="55" y="404" width="145" height="34" rx="4"/>
+  <text class="t" x="80" y="425">その他</text><text class="t-b" x="190" y="425" text-anchor="end">17</text>
+
+  <!-- 2022 -->
+  <rect class="cell" x="235" y="110" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="244" y="131">1</text><text class="t" x="260" y="131">製造</text><text class="t-b" x="370" y="131" text-anchor="end">75</text>
+  <rect class="cell" x="235" y="152" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="244" y="173">2</text><text class="t" x="260" y="173">サービス</text><text class="t-b" x="370" y="173" text-anchor="end">49</text>
+  <rect class="hl" x="235" y="194" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="244" y="215">3</text><text class="t-b" x="260" y="215">医療・福祉</text><text class="t-b" x="370" y="215" text-anchor="end">20</text>
+  <rect class="cell" x="235" y="236" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="244" y="257">4</text><text class="t" x="260" y="257">卸売・小売</text><text class="t-b" x="370" y="257" text-anchor="end">17</text>
+  <rect class="cell" x="235" y="278" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="244" y="299">5</text><text class="t" x="260" y="299">建設</text><text class="t-b" x="370" y="299" text-anchor="end">15</text>
+  <rect class="cell" x="235" y="320" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="244" y="341">6</text><text class="t" x="260" y="341">情報通信</text><text class="t-b" x="370" y="341" text-anchor="end">15</text>
+  <rect class="cell" x="235" y="362" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="244" y="383">7</text><text class="t" x="260" y="383">教育・学習支援</text><text class="t-b" x="370" y="383" text-anchor="end">14</text>
+  <rect class="other" x="235" y="404" width="145" height="34" rx="4"/>
+  <text class="t" x="260" y="425">その他</text><text class="t-b" x="370" y="425" text-anchor="end">25</text>
+
+  <!-- 2023 -->
+  <rect class="cell" x="415" y="110" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="424" y="131">1</text><text class="t" x="440" y="131">製造</text><text class="t-b" x="550" y="131" text-anchor="end">67</text>
+  <rect class="cell" x="415" y="152" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="424" y="173">2</text><text class="t" x="440" y="173">卸売・小売</text><text class="t-b" x="550" y="173" text-anchor="end">33</text>
+  <rect class="cell" x="415" y="194" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="424" y="215">3</text><text class="t" x="440" y="215">サービス</text><text class="t-b" x="550" y="215" text-anchor="end">27</text>
+  <rect class="cell" x="415" y="236" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="424" y="257">4</text><text class="t" x="440" y="257">情報通信</text><text class="t-b" x="550" y="257" text-anchor="end">15</text>
+  <rect class="cell" x="415" y="278" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="424" y="299">5</text><text class="t" x="440" y="299">建設</text><text class="t-b" x="550" y="299" text-anchor="end">12</text>
+  <rect class="hl" x="415" y="320" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="424" y="341">6</text><text class="t-b" x="440" y="341">医療・福祉</text><text class="t-b" x="550" y="341" text-anchor="end">10</text>
+  <rect class="cell" x="415" y="362" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="424" y="383">7</text><text class="t" x="440" y="383">金融・保険</text><text class="t-b" x="550" y="383" text-anchor="end">8</text>
+  <rect class="other" x="415" y="404" width="145" height="34" rx="4"/>
+  <text class="t" x="440" y="425">その他</text><text class="t-b" x="550" y="425" text-anchor="end">25</text>
+
+  <!-- 2024 -->
+  <rect class="cell" x="595" y="110" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="604" y="131">1</text><text class="t" x="620" y="131">製造</text><text class="t-b" x="730" y="131" text-anchor="end">65</text>
+  <rect class="cell" x="595" y="152" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="604" y="173">2</text><text class="t" x="620" y="173">卸売・小売</text><text class="t-b" x="730" y="173" text-anchor="end">43</text>
+  <rect class="cell" x="595" y="194" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="604" y="215">3</text><text class="t" x="620" y="215">サービス</text><text class="t-b" x="730" y="215" text-anchor="end">33</text>
+  <rect class="cell" x="595" y="236" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="604" y="257">4</text><text class="t" x="620" y="257">建設</text><text class="t-b" x="730" y="257" text-anchor="end">20</text>
+  <rect class="cell" x="595" y="278" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="604" y="299">5</text><text class="t" x="620" y="299">運輸・郵便</text><text class="t-b" x="730" y="299" text-anchor="end">11</text>
+  <rect class="cell" x="595" y="320" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="604" y="341">6</text><text class="t" x="620" y="341">情報通信</text><text class="t-b" x="730" y="341" text-anchor="end">11</text>
+  <rect class="hl" x="595" y="362" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="604" y="383">7</text><text class="t-b" x="620" y="383">医療・福祉</text><text class="t-b" x="730" y="383" text-anchor="end">10</text>
+  <rect class="other" x="595" y="404" width="145" height="34" rx="4"/>
+  <text class="t" x="620" y="425">その他</text><text class="t-b" x="730" y="425" text-anchor="end">29</text>
+
+  <!-- 2025 -->
+  <rect class="cell" x="775" y="110" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="784" y="131">1</text><text class="t" x="800" y="131">製造</text><text class="t-b" x="910" y="131" text-anchor="end">91</text>
+  <rect class="cell" x="775" y="152" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="784" y="173">2</text><text class="t" x="800" y="173">卸売・小売</text><text class="t-b" x="910" y="173" text-anchor="end">34</text>
+  <rect class="cell" x="775" y="194" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="784" y="215">3</text><text class="t" x="800" y="215">サービス</text><text class="t-b" x="910" y="215" text-anchor="end">24</text>
+  <rect class="cell" x="775" y="236" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="784" y="257">4</text><text class="t" x="800" y="257">情報通信</text><text class="t-b" x="910" y="257" text-anchor="end">24</text>
+  <rect class="cell" x="775" y="278" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="784" y="299">5</text><text class="t" x="800" y="299">建設</text><text class="t-b" x="910" y="299" text-anchor="end">18</text>
+  <rect class="cell" x="775" y="320" width="145" height="34" rx="4"/>
+  <text class="t-rank" x="784" y="341">6</text><text class="t" x="800" y="341">教育・学習支援</text><text class="t-b" x="910" y="341" text-anchor="end">11</text>
+  <rect class="other" x="775" y="362" width="145" height="34" rx="4"/>
+  <text class="t" x="800" y="383">その他</text><text class="t-b" x="910" y="383" text-anchor="end">24</text>
+  <rect class="miss" x="775" y="404" width="145" height="34" rx="4"/>
+  <text class="t-b" x="800" y="419">医療・福祉</text>
+  <text class="t-sm" x="800" y="433">上位に掲載なし</text>
+
+  <text class="t-sm" x="24" y="480">日本標準産業分類の「医療，福祉」は、病院と診療所に加えて介護施設なども含む。医療機関だけの件数ではない。</text>
+  <text class="t-sm" x="24" y="500">令和7年は上位6業種のみが公表されており、医療・福祉は「その他」24件の内側にある。最下位掲載の教育・学習支援が11件であることから、11件以下と読める。</text>
+  <text class="t-sm" x="24" y="520">令和3年の運輸・郵便と医療・福祉はいずれも7件で同数である。順位は公表資料の記載順に従った。</text>
+</svg>

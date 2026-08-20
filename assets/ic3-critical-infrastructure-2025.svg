@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 670" role="img" aria-label="FBI IC3 に2025年に寄せられた重要インフラ16分野別のランサムウェアとデータ侵害の申告件数。医療・公衆衛生分野がランサムウェア460件、データ侵害182件で16分野中最多であり、2位の重要製造業355件を大きく上回る。">
+  <title>米国 IC3 に寄せられた重要インフラ分野別の申告件数（2025年）</title>
+  <style>
+    .bg     { fill: #ffffff; stroke: #d1d9e0; stroke-width: 1.5; }
+    .hlrow  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .bar1   { fill: #316dca; }
+    .bar2   { fill: #4ac26b; }
+    .grid   { stroke: #d1d9e0; stroke-width: 1; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t      { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; }
+    .t-b    { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 700; }
+    .t-val  { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    .t-sm   { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    @media (prefers-color-scheme: dark) {
+      .bg    { fill: #0d1117; stroke: #30363d; }
+      .hlrow { fill: #341a00; stroke: #d29922; }
+      .bar1  { fill: #58a6ff; }
+      .bar2  { fill: #3fb950; }
+      .grid  { stroke: #30363d; }
+      .t-title, .t, .t-b { fill: #e6edf3; }
+      .t-val, .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="bg" x="1" y="1" width="958" height="668" rx="8"/>
+  <text class="t-title" x="24" y="32">米国：重要インフラ16分野に対するランサムウェアとデータ侵害の申告件数（2025年）</text>
+  <text class="t-sm" x="24" y="50">出典：FBI Internet Crime Complaint Center「2025 Internet Crime Report」16頁の図を数値化</text>
+
+  <rect class="bar1" x="620" y="60" width="12" height="12" rx="2"/>
+  <text class="t" x="638" y="70">ランサムウェア</text>
+  <rect class="bar2" x="760" y="60" width="12" height="12" rx="2"/>
+  <text class="t" x="778" y="70">データ侵害</text>
+
+  <!-- 医療・公衆衛生（強調） -->
+  <rect class="hlrow" x="20" y="88" width="920" height="30" rx="4"/>
+  <text class="t-b" x="210" y="107" text-anchor="end">医療・公衆衛生</text>
+  <rect class="bar1" x="220" y="93" width="658" height="11" rx="2"/>
+  <text class="t-val" x="884" y="102">460</text>
+  <rect class="bar2" x="220" y="106" width="260" height="11" rx="2"/>
+  <text class="t-val" x="486" y="115">182</text>
+
+  <!-- 重要製造業 -->
+  <text class="t" x="210" y="143" text-anchor="end">重要製造業</text>
+  <rect class="bar1" x="220" y="125" width="508" height="11" rx="2"/>
+  <text class="t-val" x="734" y="134">355</text>
+  <rect class="bar2" x="220" y="138" width="74" height="11" rx="2"/>
+  <text class="t-val" x="300" y="147">52</text>
+
+  <!-- 金融 -->
+  <text class="t" x="210" y="175" text-anchor="end">金融</text>
+  <rect class="bar1" x="220" y="157" width="369" height="11" rx="2"/>
+  <text class="t-val" x="595" y="166">258</text>
+  <rect class="bar2" x="220" y="170" width="270" height="11" rx="2"/>
+  <text class="t-val" x="496" y="179">189</text>
+
+  <!-- 政府施設 -->
+  <text class="t" x="210" y="207" text-anchor="end">政府施設</text>
+  <rect class="bar1" x="220" y="189" width="333" height="11" rx="2"/>
+  <text class="t-val" x="559" y="198">233</text>
+  <rect class="bar2" x="220" y="202" width="249" height="11" rx="2"/>
+  <text class="t-val" x="475" y="211">174</text>
+
+  <!-- 情報技術 -->
+  <text class="t" x="210" y="239" text-anchor="end">情報技術</text>
+  <rect class="bar1" x="220" y="221" width="332" height="11" rx="2"/>
+  <text class="t-val" x="558" y="230">232</text>
+  <rect class="bar2" x="220" y="234" width="285" height="11" rx="2"/>
+  <text class="t-val" x="511" y="243">199</text>
+
+  <!-- 商業施設 -->
+  <text class="t" x="210" y="271" text-anchor="end">商業施設</text>
+  <rect class="bar1" x="220" y="253" width="235" height="11" rx="2"/>
+  <text class="t-val" x="461" y="262">164</text>
+  <rect class="bar2" x="220" y="266" width="120" height="11" rx="2"/>
+  <text class="t-val" x="346" y="275">84</text>
+
+  <!-- 食料・農業 -->
+  <text class="t" x="210" y="303" text-anchor="end">食料・農業</text>
+  <rect class="bar1" x="220" y="285" width="127" height="11" rx="2"/>
+  <text class="t-val" x="353" y="294">89</text>
+  <rect class="bar2" x="220" y="298" width="73" height="11" rx="2"/>
+  <text class="t-val" x="299" y="307">51</text>
+
+  <!-- 運輸 -->
+  <text class="t" x="210" y="335" text-anchor="end">運輸</text>
+  <rect class="bar1" x="220" y="317" width="114" height="11" rx="2"/>
+  <text class="t-val" x="340" y="326">80</text>
+  <rect class="bar2" x="220" y="330" width="117" height="11" rx="2"/>
+  <text class="t-val" x="343" y="339">82</text>
+
+  <!-- 化学 -->
+  <text class="t" x="210" y="367" text-anchor="end">化学</text>
+  <rect class="bar1" x="220" y="349" width="84" height="11" rx="2"/>
+  <text class="t-val" x="310" y="358">59</text>
+  <rect class="bar2" x="220" y="362" width="11" height="11" rx="2"/>
+  <text class="t-val" x="237" y="371">8</text>
+
+  <!-- エネルギー -->
+  <text class="t" x="210" y="399" text-anchor="end">エネルギー</text>
+  <rect class="bar1" x="220" y="381" width="77" height="11" rx="2"/>
+  <text class="t-val" x="303" y="390">54</text>
+  <rect class="bar2" x="220" y="394" width="44" height="11" rx="2"/>
+  <text class="t-val" x="270" y="403">31</text>
+
+  <!-- 通信 -->
+  <text class="t" x="210" y="431" text-anchor="end">通信</text>
+  <rect class="bar1" x="220" y="413" width="73" height="11" rx="2"/>
+  <text class="t-val" x="299" y="422">51</text>
+  <rect class="bar2" x="220" y="426" width="40" height="11" rx="2"/>
+  <text class="t-val" x="266" y="435">28</text>
+
+  <!-- 防衛産業基盤 -->
+  <text class="t" x="210" y="463" text-anchor="end">防衛産業基盤</text>
+  <rect class="bar1" x="220" y="445" width="49" height="11" rx="2"/>
+  <text class="t-val" x="275" y="454">34</text>
+  <rect class="bar2" x="220" y="458" width="13" height="11" rx="2"/>
+  <text class="t-val" x="239" y="467">9</text>
+
+  <!-- 上下水道 -->
+  <text class="t" x="210" y="495" text-anchor="end">上下水道</text>
+  <rect class="bar1" x="220" y="477" width="36" height="11" rx="2"/>
+  <text class="t-val" x="262" y="486">25</text>
+  <rect class="bar2" x="220" y="490" width="16" height="11" rx="2"/>
+  <text class="t-val" x="242" y="499">11</text>
+
+  <!-- 緊急サービス -->
+  <text class="t" x="210" y="527" text-anchor="end">緊急サービス</text>
+  <rect class="bar1" x="220" y="509" width="34" height="11" rx="2"/>
+  <text class="t-val" x="260" y="518">24</text>
+  <rect class="bar2" x="220" y="522" width="24" height="11" rx="2"/>
+  <text class="t-val" x="250" y="531">17</text>
+
+  <!-- 原子力 -->
+  <text class="t" x="210" y="559" text-anchor="end">原子力</text>
+  <rect class="bar2" x="220" y="547" width="4" height="11" rx="2"/>
+  <text class="t-val" x="230" y="556">1</text>
+
+  <!-- ダム -->
+  <text class="t" x="210" y="591" text-anchor="end">ダム</text>
+  <rect class="bar2" x="220" y="579" width="4" height="11" rx="2"/>
+  <text class="t-val" x="230" y="588">1</text>
+
+  <line class="grid" x1="24" y1="612" x2="936" y2="612"/>
+  <text class="t-sm" x="24" y="632">件数は IC3 に寄せられた申告の数であり、実際の被害件数ではない。重要インフラに属さない組織からのランサムウェア申告は別に1,400件超ある。</text>
+  <text class="t-sm" x="24" y="652">分野名は CISA の重要インフラ16分野の日本語訳。原子力とダムは図中に1件のみ示されており、内訳は判別できないためデータ侵害として扱った。</text>
+</svg>
