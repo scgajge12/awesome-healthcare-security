@@ -16,7 +16,7 @@
 |---|---|---|
 | ランサムウェア被害の報告件数（業種別、半期ごと） | [警察庁 サイバー空間をめぐる脅威の情勢等](https://www.npa.go.jp/publications/statistics/cybersecurity/index.html) | 未集計 |
 | 個人情報の漏えい等報告 | [個人情報保護委員会](https://www.ppc.go.jp/) | 未集計 |
-| 医療分野のインシデント動向 | [IPA 情報セキュリティ白書](https://www.ipa.go.jp/security/publications/hakusyo/index.html) | 未集計 |
+| 医療分野のインシデント動向 | [IPA 情報セキュリティ白書](https://www.ipa.go.jp/publish/wp-security/index.html) | 未集計 |
 
 ## 収録事例の集計
 

@@ -76,7 +76,7 @@ timeline
 > [!TIP]
 > 国内の事例を継続的に追跡するときは、次の情報源が使える。
 > - [厚生労働省 医療分野のサイバーセキュリティ対策](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/johoka/index.html)
-> - [IPA 情報セキュリティ白書](https://www.ipa.go.jp/security/publications/hakusyo/index.html)
+> - [IPA 情報セキュリティ白書](https://www.ipa.go.jp/publish/wp-security/index.html)
 > - [JPCERT/CC](https://www.jpcert.or.jp/)
 > - [警察庁 サイバー空間をめぐる脅威の情勢等](https://www.npa.go.jp/publications/statistics/cybersecurity/index.html)
 > - [一般社団法人医療 ISAC](https://m-isac.jp/)

@@ -71,7 +71,7 @@ flowchart LR
 **事実**：インターネットから認証なしで到達できる PACS サーバが世界中に多数存在することが、複数の調査で報告されている。
 露出した管理画面と既定の認証情報の組み合わせに到達するのに、高度な技術は要らない。
 
-**出典**：[PACS と DICOM のセキュリティ](../../technology/medical-devices/pacs-dicom.md)に一次情報を整理している。[CISA ICS Medical Advisories](https://www.cisa.gov/news-events/ics-medical-advisories)
+**出典**：[PACS と DICOM のセキュリティ](../../technology/medical-devices/pacs-dicom.md)に一次情報を整理している。[CISA ICS Medical Advisories](https://www.cisa.gov/news-events/ics-advisories)
 
 **分析**：攻撃者の技量が低くても、防御側の露出が大きければ侵入は成立する。
 高度な組織だけを想定した対策は、最も安価な入り口を素通りさせる。

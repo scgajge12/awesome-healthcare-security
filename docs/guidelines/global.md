@@ -78,7 +78,7 @@ HHS が公表した医療分野向けのサイバーセキュリティ性能目�
 | NIST CSF 2.0 | 分野横断のサイバーセキュリティフレームワーク。ガバナンス機能が追加された |
 | NIST SP 1800-24 ほか | 患者モニタリングや輸液ポンプなど、医療機器を対象とした実装事例集 |
 
-**参照先**：[NIST Cybersecurity](https://www.nist.gov/cybersecurity)
+**参照先**：[NIST Cybersecurity](https://www.nist.gov/cybersecurity-and-privacy)
 
 ### FDA（医療機器）
 

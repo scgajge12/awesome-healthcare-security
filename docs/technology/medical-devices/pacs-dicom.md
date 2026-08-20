@@ -66,7 +66,7 @@ sequenceDiagram
 
 **事実**：複数の調査により、インターネットから認証なしで到達できる PACS サーバが世界中に多数存在し、数千万件規模の医用画像と患者情報が第三者から参照可能な状態にあったことが報告されている。
 
-**出典**：[Greenbone Networks の調査レポート](https://www.greenbone.net/en/)、[CISA ICS Medical Advisories](https://www.cisa.gov/news-events/ics-medical-advisories)
+**出典**：[Greenbone Networks の調査レポート](https://www.greenbone.net/en/)、[CISA ICS Medical Advisories](https://www.cisa.gov/news-events/ics-advisories)
 
 **確認すべきこと**
 - 自組織の外部 IP レンジで、104 / 11112 / 8042 などが開放されていないか
@@ -180,6 +180,7 @@ PACS の通信は、参照そのものが業務である。
 ## 関連ページ
 
 - [医用画像 OSS（PACS/DICOM 実装）の脆弱性](../oss-vulnerabilities/imaging-pacs.md)
+- [HL7 v2 と FHIR の攻撃面](../web-security/hl7-fhir.md)
 - [医療機器の検証手法](testing-methodology.md)
 - [ツール](../../reference/resources/tools.md)
 

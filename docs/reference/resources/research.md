@@ -13,11 +13,11 @@
 | 文献 | 概要 |
 |---|---|
 | [Pacemakers and Implantable Cardiac Defibrillators: Software Radio Attacks and Zero-Power Defenses](https://www.secure-medicine.org/hubfs/public/publications/icd-study.pdf) | 植込み型除細動器の無線通信に対する攻撃と、電力を消費しない防御手法を示した研究。この分野の出発点として参照される |
-| [On the (in)security of the Latest Generation Implantable Cardiac Defibrillators and How to Secure Them](https://www.esat.kuleuven.be/cosic/publications/article-2678.pdf) | 新しい世代の植込み型デバイスに対する解析と対策 |
+| [On the (in)security of the Latest Generation Implantable Cardiac Defibrillators and How to Secure Them](https://cosicdatabase.esat.kuleuven.be/backend/publications/files/conferencepaper/2678) | 新しい世代の植込み型デバイスに対する解析と対策 |
 | [Hacking Medical Devices for Fun and Insulin: Breaking the Human SCADA System](https://media.blackhat.com/bh-us-11/Radcliffe/BH_US_11_Radcliffe_Hacking_Medical_Devices_WP.pdf) | インスリンポンプに対する攻撃を示した Black Hat の研究 |
 | [Security and Privacy Qualities of Medical Devices: An Analysis of FDA Postmarket Surveillance](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0040200&type=printable) | FDA の市販後監視データから、医療機器のセキュリティ, プライバシー問題を分析した論文 |
 | [ANATOMY OF AN ATTACK: MEDJACK](https://securityledger.com/wp-content/uploads/2015/06/AOA_MEDJACK_LAYOUT_6-0_6-3-2015-1.pdf) | 医療機器を足場として院内に潜伏する攻撃手法の報告 |
-| [An Architecture for Analysis](https://www.cs.ucsb.edu/~jmcmahan/research/top_picks_18.pdf) | ペースメーカーを例に、組込み機器のセキュリティ設計を論じた研究 |
+| [An Architecture for Analysis](https://sites.cs.ucsb.edu/~jmcmahan/research/top_picks_18.pdf) | ペースメーカーを例に、組込み機器のセキュリティ設計を論じた研究 |
 
 ---
 
@@ -137,7 +137,7 @@ MITRE の Rubric は、この差を埋めるために作られている。
 |---|---|
 | [HHS OCR Breach Portal](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf) | 米国で報告された医療情報侵害の一次データ。傾向分析に使える |
 | [ENISA Threat Landscape: Health Sector](https://www.enisa.europa.eu/) | EU の医療分野脅威分析 |
-| [IPA 情報セキュリティ白書](https://www.ipa.go.jp/security/publications/hakusyo/index.html) | 国内の年次動向 |
+| [IPA 情報セキュリティ白書](https://www.ipa.go.jp/publish/wp-security/index.html) | 国内の年次動向 |
 | [警察庁 サイバー空間をめぐる脅威の情勢等](https://www.npa.go.jp/publications/statistics/cybersecurity/index.html) | 国内のランサムウェア被害統計（業種別の内訳を含む） |
 
 ---

@@ -20,7 +20,7 @@
 ## 第三者の製品の脆弱性について
 
 本リポジトリで言及している製品の脆弱性を発見した場合は、本リポジトリではなく、該当する製品のベンダまたはプロジェクトへ報告してほしい。
-調整が必要な場合は、[JPCERT/CC の脆弱性関連情報の届出](https://www.jpcert.or.jp/vh/) または [IPA](https://www.ipa.go.jp/security/vuln/report/) を通じた報告を検討してほしい。
+調整が必要な場合は、[JPCERT/CC の脆弱性関連情報の届出](https://www.jpcert.or.jp/vh/) または [IPA](https://www.ipa.go.jp/security/todokede/vuln/uketsuke.html) を通じた報告を検討してほしい。
 
 ---
 

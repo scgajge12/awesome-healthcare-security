@@ -118,7 +118,7 @@ BAA を締結しても、各サービスの設定を要件に適合させる責�
 
 **事実**：「医療機関向けクラウドサービス対応セキュリティリファレンス（2024 年度）」を日本マイクロソフトと富士ソフトが作成し、公開している。
 対応するガイドラインは、厚生労働省ガイドライン第 6.0 版（2023 年 5 月）と、事業者向けガイドライン第 1.1 版（2023 年 7 月）である。
-対象は Microsoft Azure、Microsoft 365、Microsoft Dynamics 365 と Microsoft Power Platform（[マイクロソフト業界別ブログ](https://www.microsoft.com/ja-jp/industry/blog/health/2024/10/16/microsoft_cloud_healthcare2024/)）。
+対象は Microsoft Azure、Microsoft 365、Microsoft Dynamics 365 と Microsoft Power Platform（[マイクロソフト業界別ブログ](https://www.microsoft.com/ja-jp/microsoft-cloud/blog/health/2024/10/16/microsoft_cloud_healthcare2024/)）。
 
 **事実**：医療データ向けには [Azure Health Data Services](https://learn.microsoft.com/ja-jp/azure/healthcare-apis/healthcare-apis-overview) があり、FHIR サービス、DICOM サービス、識別解除サービスを含む。
 先行していた Azure API for FHIR は 2026 年 9 月 30 日に廃止が予定されており、2025 年 4 月 1 日以降は新規顧客の展開が停止している。
@@ -140,7 +140,7 @@ BAA を締結しても、各サービスの設定を要件に適合させる責�
 **事実**：ガバメントクラウドについて、デジタル庁は 2023 年 11 月 28 日と 2026 年 3 月 27 日に対象クラウドサービスに関する公表を行っている（[デジタル庁 ガバメントクラウド](https://www.digital.go.jp/policies/gov_cloud)）。
 
 **報道ベース**：2023 年 11 月の採択は、2025 年度末までに技術要件を満たすことを条件とした条件付きのものであり、国内事業者としては最初の採択だったと報じられている。
-2026 年 3 月には全ての技術要件を満たしたとして正式に選定された（[ITmedia NEWS](https://www.itmedia.co.jp/news/articles/2603/27/news085.html)、[日経クロステック](https://xtech.nikkei.com/atcl/nxt/news/24/03153/)）。
+2026 年 3 月には全ての技術要件を満たしたとして正式に選定された（[ITmedia NEWS](https://www.itmedia.co.jp/news/article/2603/27/1260327085/)、[日経クロステック](https://xtech.nikkei.com/atcl/nxt/news/24/03153/)）。
 
 **事実**：2026 年 5 月 28 日、NEDO の事業「AI の安全性確保に関する研究開発, 検証等の推進事業／日本語版医療特化型 LLM の社会実装に向けた安全性検証, 実証」において、さくらインターネットを含む連名 10 者が医療業務支援向けの日本語 LLM を開発したと公表した。
 想定される運用環境は「医療機関のオンプレミス環境または医療機関が管理する国内クラウド環境などの患者情報を安全に管理できる環境」とされている（[さくらインターネット ニュースリリース](https://www.sakura.ad.jp/corporate/information/newsreleases/2026/05/28/1968224678/)）。
@@ -184,7 +184,7 @@ flowchart TD
 
 **抑え方**：長期鍵を発行せず、ワークロードには一時的な資格情報を割り当てる。
 AWS では IAM ロールと IAM Identity Center、Google Cloud ではサービスアカウントの権限借用と Workload Identity 連携、Azure ではマネージド ID と Entra ID の条件付きアクセスが対応する機能になる。
-運用者の恒常的な特権は外し、必要なときに限って昇格させる仕組みを使う（[Microsoft Entra Privileged Identity Management](https://learn.microsoft.com/ja-jp/entra/id-governance/privileged-identity-management/pim-configure)、[Google Cloud Privileged Access Manager](https://cloud.google.com/iam/docs/pam-overview)）。
+運用者の恒常的な特権は外し、必要なときに限って昇格させる仕組みを使う（[Microsoft Entra Privileged Identity Management](https://learn.microsoft.com/ja-jp/entra/id-governance/privileged-identity-management/pim-configure)、[Google Cloud Privileged Access Manager](https://docs.cloud.google.com/iam/docs/pam-overview)）。
 AWS では IAM Identity Center の権限セットで付与範囲を分け、恒久的なアクセスキーを配らない構成にする。
 
 **検知**：普段と異なる地域や自律システムからの API 呼び出し、短時間での列挙操作、権限の自己付与を検知対象にする。
@@ -308,7 +308,7 @@ AWS の S3 オブジェクトロックとバックアップボールトのロッ
 | 事業者 | 既定で記録される層 | 明示的に有効化しないと残らない層 |
 |---|---|---|
 | AWS | CloudTrail の管理イベント | S3 のオブジェクト操作などのデータイベント（[AWS ドキュメント](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)） |
-| Google Cloud | Admin Activity と System Event の監査ログ（無効化できない） | Data Access 監査ログ（BigQuery を除き既定で無効）（[Google Cloud ドキュメント](https://cloud.google.com/logging/docs/audit)） |
+| Google Cloud | Admin Activity と System Event の監査ログ（無効化できない） | Data Access 監査ログ（BigQuery を除き既定で無効）（[Google Cloud ドキュメント](https://docs.cloud.google.com/logging/docs/audit)） |
 | Microsoft Azure | アクティビティログ | リソースごとの診断設定で出力するデータ面のログ（[Microsoft Learn](https://learn.microsoft.com/ja-jp/azure/azure-monitor/essentials/diagnostic-settings)） |
 
 **分析**：これらはいずれもクラウド API の層の記録であり、アプリケーションの内部で誰がどの患者記録を開いたかは記録しない。
@@ -392,12 +392,12 @@ AWS の S3 オブジェクトロックとバックアップボールトのロッ
 |---|---|
 | AWS | [医療情報ガイドライン](https://aws.amazon.com/jp/local/health/medical-information-guidelines-on-aws0/) ／ [HIPAA 対象サービス](https://aws.amazon.com/compliance/hipaa-eligible-services-reference/) |
 | Google Cloud | [三省ガイドライン](https://cloud.google.com/security/compliance/3g3m?hl=ja) ／ [HIPAA](https://cloud.google.com/security/compliance/hipaa?hl=ja) ／ [Cloud Healthcare API](https://cloud.google.com/healthcare-api) |
-| Microsoft Azure | [医療機関向けクラウドサービス対応セキュリティリファレンス](https://www.microsoft.com/ja-jp/industry/blog/health/2024/10/16/microsoft_cloud_healthcare2024/) ／ [Azure Health Data Services](https://learn.microsoft.com/ja-jp/azure/healthcare-apis/healthcare-apis-overview) |
+| Microsoft Azure | [医療機関向けクラウドサービス対応セキュリティリファレンス](https://www.microsoft.com/ja-jp/microsoft-cloud/blog/health/2024/10/16/microsoft_cloud_healthcare2024/) ／ [Azure Health Data Services](https://learn.microsoft.com/ja-jp/azure/healthcare-apis/healthcare-apis-overview) |
 | さくらインターネット | [さくらのクラウドの ISMAP 登録範囲](https://manual.sakura.ad.jp/cloud/ismap/index.html) |
 
 ### 事業者横断のリファレンス
 
-- [医療機関向けクラウドサービス対応セキュリティリファレンス](https://www.mri.co.jp/service/digital015.html)（三菱総合研究所）
+- 医療機関向けクラウドサービス対応セキュリティリファレンス（三菱総合研究所）：クラウドサービスが 3省2ガイドラインの要求に適合するかを第三者として確認した資料。公開ページの所在が変わっているため、[三菱総合研究所](https://www.mri.co.jp/) のサイト内で表題を検索する。
 
 ### 関連ページ
 

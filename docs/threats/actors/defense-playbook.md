@@ -155,8 +155,8 @@ flowchart LR
 |---|---|
 | [厚生労働省 サイバーセキュリティ対策チェックリスト](../../guidelines/japan.md) | 国内の医療機関が最初に埋めるべき自己点検 |
 | [HHS HICP](https://405d.hhs.gov/) | 規模別の具体的な実践事項 |
-| [HHS CPGs](https://hphcyber.hhs.gov/) | 優先順位づけされた性能目標 |
-| [CISA Cross-Sector Cybersecurity Performance Goals](https://www.cisa.gov/cross-sector-cybersecurity-performance-goals) | 分野横断の基礎的な目標 |
+| [HHS CPGs](https://hhscyber.hhs.gov/) | 優先順位づけされた性能目標 |
+| [CISA Cross-Sector Cybersecurity Performance Goals](https://www.cisa.gov/cross-sector-cybersecurity-performance-goals/cross-sector-cybersecurity-performance-goals) | 分野横断の基礎的な目標 |
 | [NIST CSF 2.0](https://www.nist.gov/cyberframework) | 全体像の整理とギャップ分析 |
 | [HSE 事後レビュー](../incidents/global/2021-timeline.md#GL-2021-01) | 実際の失敗から学ぶための一次資料 |
 

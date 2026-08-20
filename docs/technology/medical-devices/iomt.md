@@ -33,7 +33,7 @@ IoMT（Internet of Medical Things）は、ネットワークに接続された�
 
 | 名称 | 年 | 対象 | 概要 | 一次情報 |
 |---|---|---|---|---|
-| **URGENT/11** | 2019 | VxWorks の IPnet TCP/IP スタック | リアルタイム OS の TCP/IP 実装に 11 件の脆弱性。患者モニタなど多数の医療機器が影響を受け、FDA が安全性通知を発出した（発見：Armis） | [FDA Safety Communication](https://www.fda.gov/medical-devices/safety-communications) ／ [CISA Advisory](https://www.cisa.gov/news-events/ics-advisories) |
+| **URGENT/11** | 2019 | VxWorks の IPnet TCP/IP スタック | リアルタイム OS の TCP/IP 実装に 11 件の脆弱性。患者モニタなど多数の医療機器が影響を受け、FDA が安全性通知を発出した（発見：Armis） | [FDA Safety Communication](https://www.fda.gov/medical-devices/medical-device-safety/safety-communications) ／ [CISA Advisory](https://www.cisa.gov/news-events/ics-advisories) |
 | **Ripple20** | 2020 | Treck TCP/IP スタック | 組込み機器に広く採用されたスタックに 19 件の脆弱性。輸液ポンプを含む医療機器が影響を受けた（発見：JSOF） | [JSOF 公表](https://www.jsof-tech.com/disclosures/ripple20/) |
 | **SweynTooth** | 2020 | 複数ベンダの BLE SoC | Bluetooth Low Energy の実装不備群。ペースメーカープログラマや血糖モニタなどが影響を受けた（発見：SUTD ASSET Research Group） | [ASSET 公表](https://asset-group.github.io/disclosures/sweyntooth/) |
 | **Access:7** | 2022 | PTC Axeda エージェント | 医療機器のリモート保守に使われるエージェントの脆弱性。多数のメーカー製品に影響（発見：Forescout, CyberMDX） | [CISA Advisory](https://www.cisa.gov/news-events/ics-advisories) |
@@ -49,7 +49,7 @@ IoMT（Internet of Medical Things）は、ネットワークに接続された�
 | 事例 | 年 | 概要 | 一次情報 |
 |---|---|---|---|
 | **Hospira 製輸液ポンプ** | 2015 | FDA が特定の輸液ポンプについて、サイバーセキュリティ上の理由から使用中止を推奨した初期の事例（研究：Billy Rios ほか） | [FDA Safety Communications](https://www.fda.gov/medical-devices/medical-device-safety/safety-communications) |
-| **Animas OneTouch Ping（インスリンポンプ）** | 2016 | リモコンとポンプ間の無線通信に認証と暗号化の不備があり、第三者がインスリン投与を指示できる可能性が示された（研究：Rapid7） | [Rapid7 の公表](https://blog.rapid7.com/2016/10/04/r7-2016-07-multiple-vulnerabilities-in-animas-onetouch-ping-insulin-pump/) |
+| **Animas OneTouch Ping（インスリンポンプ）** | 2016 | リモコンとポンプ間の無線通信に認証と暗号化の不備があり、第三者がインスリン投与を指示できる可能性が示された（研究：Rapid7） | [Rapid7 の公表](https://www.rapid7.com/blog/post/2016/10/04/r7-2016-07-multiple-vulnerabilities-in-animas-onetouch-ping-insulin-pump/) |
 | **St. Jude Medical（現 Abbott）の植込み型心臓デバイス** | 2016-2017 | 通信の脆弱性を理由に、FDA がファームウェア更新を伴うリコールを実施した | [FDA Safety Communications](https://www.fda.gov/medical-devices/medical-device-safety/safety-communications) |
 | **Medtronic の心臓デバイスとプログラマ** | 2018-2019 | テレメトリプロトコルとソフトウェア更新経路の脆弱性について、FDA が安全性通知を発出した | [FDA Safety Communications](https://www.fda.gov/medical-devices/medical-device-safety/safety-communications) |
 | **Medtronic MiniMed インスリンポンプ** | 2019 | 無線通信の脆弱性を理由に、FDA が特定モデルのリコールを発表した | [FDA Safety Communications](https://www.fda.gov/medical-devices/medical-device-safety/safety-communications) |
