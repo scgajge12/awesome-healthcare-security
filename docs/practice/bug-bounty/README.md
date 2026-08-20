@@ -226,7 +226,7 @@ HackerOne の医療ページは、医療のデータ侵害の平均コストを 
 | テナント境界 | 複数の医療機関が同居する医療 SaaS で、施設 ID の付け替えにより他施設のデータへ到達する | テナント識別子をリクエストの入力ではなくセッションから解決する。跨ぎアクセスをアラート対象にする |
 | API のスコープ設計 | FHIR、HL7 連携の API が、画面より広い範囲を返す。スコープが患者単位で絞られていない | API 側でも患者単位の認可を行う。画面の制限を認可と見なさない |
 | 印刷、出力経路 | 印刷用画面、PDF 生成、CSV 出力、通知メールに認可の適用が漏れる | 出力生成も同じ認可経路を通す。生成物の URL を推測可能な値にしない |
-| レガシー連携 | DICOM、HL7 v2 のエンドポイントが認証なしで公開される（[PACS / DICOM のセキュリティ](../../technology/medical-devices/pacs-dicom.md)） | 外部からの到達性を遮断し、接続元を限定する。公開範囲を定期的に外部から確認する |
+| レガシー連携 | DICOM、HL7 v2 のエンドポイントが認証なしで公開される（[PACS / DICOM のセキュリティ](../../technology/medical-devices/pacs-dicom.md)、[HL7 v2 と FHIR の攻撃面](../../technology/web-security/hl7-fhir.md)） | 外部からの到達性を遮断し、接続元を限定する。公開範囲を定期的に外部から確認する |
 | LLM を組み込んだ機能 | 問診票、紹介状の OCR テキスト、カルテ本文が LLM の入力になり、間接プロンプトインジェクションの経路になる（[AX：医療における AI のセキュリティ](../../technology/dx-ax/ai-security.md)） | モデルの出力を権限の判断に使わない。エージェントの操作に人手の確認を挟む |
 
 ---
@@ -236,7 +236,8 @@ HackerOne の医療ページは、医療のデータ侵害の平均コストを 
 医療機器を合法的に検証できる機会は限られる。
 DEF CON の [Biohacking Village](https://villageb.io/) は、メーカーが持ち込んだ実機を、CVD の合意に署名した研究者が検証できる Device Lab を運営している。
 DEF CON 34 の Device Lab では、9 社の 19 機器が研究対象として公開された（事実、出典：[Biohacking Village](https://www.villageb.io/DeviceList)）。
-参加の前提と、発見から開示までの流れは、[Biohacking Village（DEF CON）](../../reference/labs-communities/biohacking-village.md)にまとめている。
+国内では、同じ運営が CODE BLUE の併設ビレッジとして 2024 年から Device Lab と CTF を開催している（事実、出典：[CODE BLUE 2024 Biohacking Village](https://archive.codeblue.jp/2024/program/contests-workshops/biohackingvillage/)）。
+参加の前提と、発見から開示までの流れは、[Biohacking Village（DEF CON、CODE BLUE）](../../reference/labs-communities/biohacking-village.md)にまとめている。
 
 ---
 
@@ -262,7 +263,7 @@ DEF CON 34 の Device Lab では、9 社の 19 機器が研究対象として公
 - [OSS 医療情報システムの脆弱性](../../technology/oss-vulnerabilities/)
 - [ガイドラインと法規制](../../guidelines/)
 - [ラボ、コミュニティ](../../reference/labs-communities/)
-- [Biohacking Village（DEF CON）](../../reference/labs-communities/biohacking-village.md)
+- [Biohacking Village（DEF CON、CODE BLUE）](../../reference/labs-communities/biohacking-village.md)
 
 ## 参考リンク
 
