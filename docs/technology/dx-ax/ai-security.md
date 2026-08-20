@@ -208,6 +208,17 @@ YATA は Yielding Advanced Threat Awareness with AI の頭文字であり、「�
 
 **事実**：厚生労働省の「医療デジタルデータの AI 研究開発等への利活用に係るガイドライン」は、医療機関、学術研究機関、民間企業が共同研究を起点に医療情報を利活用する場合の法的根拠と、仮名加工情報の作成手順を整理している（[ガイドライン本文 PDF](https://www.mhlw.go.jp/content/001310044.pdf)）。
 
+**事実**：AI セーフティ・インスティテュート（AISI）のヘルスケアサブワーキンググループは、2026 年 4 月に「ヘルスケア領域における AI セーフティ評価観点ガイド（第 1.0 版）」を公表した。
+AISI が定めた AI セーフティ評価観点ガイドを土台に、AI ライフサイクルの 5 段階と 10 項目の評価観点を、ヘルスケア領域の機微性とリスクに当てはめた実務者向けの文書である。
+日本デジタルヘルス・アライアンス（JaDHA）をはじめとする事業者、団体が策定に参加している（[AISI 公表ページ](https://aisi.go.jp/output/output_information/260402/)、[IPA プレス発表](https://www.ipa.go.jp/pressrelease/2026/press20260403.html)）。
+
+**事実**：国際的には、世界保健機関（WHO）が 2024 年 1 月に、医療で用いる大規模マルチモーダルモデル（LMM）に関する指針を公表している（[Ethics and governance of artificial intelligence for health: Guidance on large multi-modal models](https://www.who.int/publications/i/item/9789240084759)）。
+EU では、AI 規則（Regulation (EU) 2024/1689）が、医療機器の安全構成要素として使われる AI を高リスクに位置づけ、MDR, IVDR の適合性評価と接続する構造をとる。
+
+**分析**：規範は「守るべき要求」と「評価の観点」に分かれる。
+薬機法や個人情報保護法は前者であり、AISI のガイドや WHO の指針は後者にあたる。
+後者は罰則を伴わないが、導入審査で何を確認したかを説明する材料になるため、[導入時に確認する項目](#導入時に確認する項目)の裏づけとして使える。
+
 **分析**：医療で AI を扱うとき、参照する規範は一つではない。
 情報の取扱いは個人情報保護法と医療情報ガイドライン、研究開発への利用は次世代医療基盤法と上記のガイドライン、機器に該当する場合は薬機法が、それぞれ別に掛かる。
 どの規範が掛かるかは技術ではなく用途で決まるため、導入の検討は用途の確定から始める。
@@ -243,7 +254,11 @@ YATA は Yielding Advanced Threat Awareness with AI の頭文字であり、「�
 | [医療デジタルデータの AI 研究開発等への利活用に係るガイドライン](https://www.mhlw.go.jp/content/001310044.pdf) | 厚生労働省 |
 | [プログラム医療機器の薬事開発, 承認申請に関する手引き](https://www.pmda.go.jp/files/000274829.pdf) | 医薬品医療機器総合機構（PMDA） |
 | [次世代医療基盤法](https://www8.cao.go.jp/iryou/index.html) | 内閣府 |
+| [ヘルスケア領域における AI セーフティ評価観点ガイド 第 1.0 版](https://aisi.go.jp/output/output_information/260402/) | AI セーフティ・インスティテュート（AISI） ヘルスケアサブワーキンググループ |
 | [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/) | OWASP Gen AI Security Project |
+| [Ethics and governance of artificial intelligence for health: Guidance on large multi-modal models](https://www.who.int/publications/i/item/9789240084759) | 世界保健機関（WHO） |
+| [AI Risk Management Framework（AI RMF 1.0）](https://www.nist.gov/itl/ai-risk-management-framework) | 米国国立標準技術研究所（NIST） |
+| [Regulation (EU) 2024/1689（AI 規則）](https://eur-lex.europa.eu/eli/reg/2024/1689/oj) | 欧州連合 |
 | [AI 性能の高度化を踏まえたサイバーセキュリティ対策の強化について（重要インフラ事業者等に対する注意喚起、2026 年 5 月 18 日）](https://www.mhlw.go.jp/content/10808000/001701517.pdf) | 内閣官房国家サイバー統括室ほか 8 機関 |
 | [対策パッケージ（Project YATA-Shield）及び関係機関への注意喚起](https://www.mhlw.go.jp/content/10808000/001703604.pdf) | 厚生労働省（内閣官房国家サイバー統括室作成資料より） |
 

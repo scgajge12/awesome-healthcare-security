@@ -107,11 +107,12 @@ HHS が公表した医療分野向けのサイバーセキュリティ性能目�
 | **GDPR** | 個人データ全般 | 健康データを特別カテゴリとして扱う。侵害通知は 72 時間以内 |
 | **Cyber Resilience Act** | デジタル要素を持つ製品 | 製品のライフサイクル全体でのセキュリティ要求。医療機器は MDR との整合が図られる |
 | **European Health Data Space** | 医療データの流通 | 医療データの一次利用と二次利用の枠組みを定める |
+| **AI 規則（2024/1689）** | AI システム | 医療機器の安全構成要素として使われる AI を高リスクに分類し、MDR, IVDR の適合性評価と接続する |
 
 NIS2 は、医療機関を「重要（Essential）」な事業体として扱い、対策の不備に対して制裁金と経営層の責任を規定した点で影響が大きい。
 加盟国ごとの国内法化の内容に差があるため、事業を行う国の実装を確認する必要がある。
 
-**参照先**：[ENISA Health](https://www.enisa.europa.eu/topics/critical-information-infrastructures-and-services/health)
+**参照先**：[ENISA Health](https://www.enisa.europa.eu/topics/cybersecurity-of-critical-sectors/health)
 
 ---
 
@@ -139,9 +140,24 @@ NIS2 は、医療機関を「重要（Essential）」な事業体として扱い
 | **ISO 27799** | ISO 27002 を医療分野に適用するための指針 |
 | **HITRUST CSF** | 米国医療業界で広く使われる統制フレームワークと認証制度 |
 | **MDS2（HIMSS / NEMA HN 1）** | 医療機器のセキュリティ仕様をメーカーが開示するための標準様式 |
+| **AAMI TIR57** | 医療機器のセキュリティリスクマネジメント。ISO 14971 のリスク管理にセキュリティを組み込む手順 |
+| **AAMI TIR97** | 医療機器の市販後セキュリティ管理 |
+| **UL 2900-2-1** | ネットワークに接続する医療機器のソフトウェアに対する試験要求 |
 
 IMDRF は各国規制当局が参加する枠組みであり、日本の手引書や FDA ガイダンスの基礎になっている。
 国際的に製品を展開する場合、IMDRF の文書から入ると各国要求の共通部分を把握しやすい。
+
+### 医療 AI に関する規範
+
+医療で AI を使う場合、セキュリティの要求とは別に、AI を対象とした規範が重なる。
+
+| 文書 | 発行 | 内容 |
+|---|---|---|
+| [Ethics and governance of artificial intelligence for health: Guidance on large multi-modal models](https://www.who.int/publications/i/item/9789240084759) | WHO | 医療で用いる大規模マルチモーダルモデルに関する指針（2024 年 1 月） |
+| [AI Risk Management Framework（AI RMF 1.0）](https://www.nist.gov/itl/ai-risk-management-framework) | NIST | 分野横断の AI リスク管理フレームワーク |
+| [Artificial Intelligence-Enabled Medical Devices](https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices) | FDA | AI を用いる医療機器の規制の考え方、承認済み機器の一覧、ライフサイクル管理と市販前提出に関するガイダンス |
+
+国内の規範との対応は [AX：医療における AI のセキュリティ](../technology/dx-ax/ai-security.md) に整理した。
 
 ---
 
@@ -154,6 +170,11 @@ IMDRF は各国規制当局が参加する枠組みであり、日本の手引�
 | [CISA](https://www.cisa.gov/) | 米国（ICS Medical Advisories を含む） |
 | [ENISA](https://www.enisa.europa.eu/) | EU |
 | [NCSC](https://www.ncsc.gov.uk/) | 英国 |
+| [HSCC Cybersecurity Working Group](https://healthsectorcouncil.org/) | 米国（官民連携。医療機器と医療 IT の共同セキュリティ計画などを公表） |
+| [HHS 405(d) Program](https://405d.hhs.gov/) | 米国（規模別の実践集 HICP と教材を提供） |
+| [ECRI](https://home.ecri.org/) | 国際（医療技術の安全性評価。年次の Top 10 Health Technology Hazards にサイバーセキュリティ項目を含む） |
+
+国内の窓口は [国内のガイドラインと法規制](japan.md#情報共有と支援の窓口) に整理した。
 
 ---
 
