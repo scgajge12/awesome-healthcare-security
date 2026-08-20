@@ -49,7 +49,8 @@ flowchart LR
 **事実**：欧州の GMP ガイドライン（EudraLex Volume 4）は、計算機化システムに対する要件を Annex 11 として定めている。
 出典：[EudraLex Volume 4](https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en)
 
-**事実**：PIC/S は、GMP ガイド（PE 009-17）を公開しており、Annex 11 の改訂ドラフトを 2025 年 7 月に「Documents for Industry」として掲載している。改訂の検討自体は 2022 年 11 月のコンセプトペーパーから続いている。
+**事実**：PIC/S は、GMP ガイド（PE 009-17）を公開しており、Annex 11 の改訂ドラフトを 2025 年 7 月に「Documents for Industry」として掲載している。
+改訂の検討自体は 2022 年 11 月のコンセプトペーパーから続いている。
 出典：[PIC/S Publications](https://picscheme.org/en/publications)
 
 **分析**：計算機化システムへの要件が GMP の一部として書かれている以上、セキュリティ対策は品質保証部門の管轄と重なる。

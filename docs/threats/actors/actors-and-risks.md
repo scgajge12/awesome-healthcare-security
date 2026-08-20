@@ -79,7 +79,8 @@ flowchart LR
 **事実**：日本では、他人の識別符号を用いてアクセス制御機能を回避する行為が、不正アクセス行為の禁止等に関する法律（平成 11 年法律第 128 号）第 3 条で禁じられている。
 年齢による適用除外はなく、未成年も捜査, 補導の対象となる。
 
-**出典**：同法第 3 条。検挙状況を含む国内の情勢は[警察庁の公表資料](https://www.npa.go.jp/publications/statistics/cybersecurity/index.html)にまとめられている。
+**出典**：同法第 3 条。
+検挙状況を含む国内の情勢は[警察庁の公表資料](https://www.npa.go.jp/publications/statistics/cybersecurity/index.html)にまとめられている。
 
 **分析**：好奇心を咎めるだけでは同種の行為は減らない。
 技術的関心の受け皿としては、[IPA の脆弱性関連情報の届出制度](https://www.ipa.go.jp/security/todokede/vuln/uketsuke.html)、CTF、[バグバウンティ](../../practice/bug-bounty/)といった合法な経路がある。
