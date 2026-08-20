@@ -75,11 +75,36 @@ FHIR は REST ベースの新しい規格であり、Web セキュリティの�
 
 | 名称 | 概要 |
 |---|---|
-| [Biohacking Village（DEF CON）](https://www.villageb.io/) | 実機の医療機器を対象とした Device Lab を開催する |
+| [Biohacking Village（DEF CON、CODE BLUE）](https://www.villageb.io/) | 実機の医療機器を対象とした Device Lab を開催する。日本では CODE BLUE の併設ビレッジとして開催される（[解説](../labs-communities/biohacking-village.md)） |
 | [CyberMed Summit](https://www.cybermedsummit.org/) | 医師とセキュリティ研究者による臨床シミュレーション形式の演習 |
 | [HIMSS Global Conference](https://www.himss.org/) | 医療 IT 全般。セキュリティのセッションを含む |
 | [S4](https://s4xevents.com/) | 制御システムセキュリティ。医療機器のセッションが含まれることがある |
-| [Black Hat / DEF CON](https://www.blackhat.com/) | 医療機器, 医療システムの研究発表が定期的に行われる |
+| [Black Hat / DEF CON](https://blackhat.com/) | 医療機器, 医療システムの研究発表が定期的に行われる |
+
+---
+
+## 研修, 教材
+
+講演で全体像をつかんだあと、組織内の教育に使える教材が国内外にある。
+
+### 国内
+
+| 提供元 | 内容 |
+|---|---|
+| [医療機関向けセキュリティ教育支援ポータルサイト（MIST）](https://mist.mhlw.go.jp/) | 厚生労働省の委託事業。経営者向け、システム管理者向け、初学者向けの研修と e-learning、動画教材、年度別の研修資料を提供する。サイバー攻撃発生時の初動対応支援窓口も置かれている |
+| [厚生労働省 医療分野のサイバーセキュリティ対策について](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/johoka/cyber-security.html) | ガイドライン、チェックリスト、注意喚起。研修の題材として使える |
+| [IPA 映像で知る情報セキュリティ](https://www.ipa.go.jp/security/videos/) | 分野横断の啓発動画。医療に限らない基礎の底上げに使う |
+| [特定非営利活動法人日本医療 AI リテラシー協会（JAMAIL）](https://jamail.or.jp/) | 医療 AI の教育と情報発信。無料のオンラインコミュニティ AcademiX Medical を運営 |
+| [一般社団法人医療サイバーセキュリティ協議会（MedCSC）](https://medcsc.org/) | セミナー, ワークショップ、実践的トレーニングとインシデント訓練 |
+
+### 国外
+
+| 提供元 | 内容 |
+|---|---|
+| [HHS 405(d) Program](https://405d.hhs.gov/) | 規模別の実践集 HICP と、医療従事者向けの啓発教材, 資料 |
+| [HHS HC3](https://www.hhs.gov/about/agencies/asa/ocio/hc3/index.html) | 医療分野の脅威分析レポートとブリーフィング資料 |
+| [CISA](https://www.cisa.gov/) | 重要インフラ向けの無償サービスと、医療機器の ICS Medical Advisory |
+| [Health-ISAC](https://health-isac.org/) | サミット、ワークショップ、ウェビナー。[日本語ページ](https://health-isac.org/ja/)がある |
 
 ---
 
