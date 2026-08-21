@@ -213,7 +213,7 @@ flowchart TD
 | [病院, 診療所のサイバーセキュリティ：医療機関の情報システムの管理体制に関する実態調査から（No.453）](https://www.jmari.med.or.jp/result/working/post-233/) | 日本医師会総合政策研究機構 |
 | [医療現場のサイバーセキュリティ確保に向けて：専門家インタビュー調査から（No.488）](https://www.jmari.med.or.jp/result/working/post-4657/) | 日本医師会総合政策研究機構 |
 | [医師会共同利用施設のサイバーセキュリティ：医師会病院と健診, 検査センター, 複合体の実態（No.501）](https://www.jmari.med.or.jp/result/working/post-5118/) | 日本医師会総合政策研究機構 |
-| [医療機関等におけるサイバーセキュリティ対策チェックリスト](https://www.mhlw.go.jp/content/10808000/001253950.pdf) | 厚生労働省 |
+| [令和 7 年度版 医療機関におけるサイバーセキュリティ対策チェックリスト](https://www.mhlw.go.jp/content/10808000/001703610.pdf) | 厚生労働省 |
 | [サイバー攻撃を想定した事業継続計画（BCP）策定の確認表](https://www.mhlw.go.jp/content/10808000/001261299.pdf) | 厚生労働省 |
 
 各資料の全体像は [論文, レポート](../reference/resources/research.md#業界団体系シンクタンクの調査) に整理している。
