@@ -446,8 +446,57 @@ This repository is written to be usable in real decisions, so every page follows
 > **Testing a live medical device or clinical system without authorization can put patients' lives at risk.**
 > Only test with written authorization, in an isolated lab or an approved test environment.
 
-- This repository is published for **educational and defensive purposes**. Do not apply anything here to systems you are not authorized to test.
+### Why this repository exists
+
+This repository is published to help the people who defend hospitals, medical device vendors, and pharmaceutical companies learn their own attack surface.
+Attack techniques appear here because detection and mitigation are impossible without knowing what an attack actually looks like.
+Every technique is therefore paired with detection and mitigation, and no directly weaponizable exploit code is included ([editorial policy](CLAUDE.md), in Japanese).
+
+The intended readers are hospital IT staff, developers and QA engineers at device manufacturers and vendors, security teams at pharmaceutical companies, and security engineers working on healthcare targets.
+
+### Scope of authorized use
+
+Apply what you read here only to systems you own, or to systems whose operator has given you written authorization.
+Pointing these techniques at systems you are not authorized to test is not a use this repository permits.
+"I only wanted to see if it worked" and "I had no intention of breaking anything" do not remove legal liability.
+In healthcare, the act of testing can itself halt clinical care or harm a patient: equipment and clinical systems can stop when they receive traffic or input they were never built to handle, and that stop lands in the middle of a procedure.
+
+Legal outlets for the same curiosity exist: coordinated vulnerability disclosure (in Japan, [IPA's reporting scheme](https://www.ipa.go.jp/security/todokede/vuln/uketsuke.html)), CTF competitions, and officially run [bug bounty programs](docs/practice/bug-bounty/).
+Environments you build yourself, or labs provided for training, are yours to experiment with.
+
+### Japanese law
+
+**Fact**: In Japan, acting against a system without authorization can fall under the following provisions.
+
+| Example conduct | Provision that may apply | Statutory penalty |
+|---|---|---|
+| Logging into an access-controlled server with someone else's ID and password; bypassing access control by exploiting a vulnerability | [Act on Prohibition of Unauthorized Computer Access](https://laws.e-gov.go.jp/law/411AC0000000128) (Act No. 128 of 1999), Article 3 | Up to 3 years' imprisonment or a fine of up to JPY 1,000,000 (Article 11) |
+| Improperly obtaining, storing, or phishing for someone else's identification code | Same Act, Articles 4, 6, and 7 | Up to 1 year's imprisonment or a fine of up to JPY 500,000 (Article 12) |
+| Providing someone else's identification code to a third party | Same Act, Article 5 | Fine of up to JPY 300,000 (Article 13); Article 12(ii) if provided knowing the recipient's intent |
+| Feeding improper commands to a computer used in business so that it behaves contrary to its purpose, thereby obstructing that business (ransomware encryption, denial of service) | [Penal Code](https://laws.e-gov.go.jp/law/140AC0000000045) Article 234-2 (obstruction of business by damaging a computer) | Up to 5 years' imprisonment or a fine of up to JPY 1,000,000 |
+| Creating or supplying malware, without justifiable grounds, for execution on another person's computer | Penal Code Article 168-2 (unauthorized commands / electromagnetic records) | Up to 3 years' imprisonment or a fine of up to JPY 500,000 |
+
+**Source**: current statutory text is available at [e-Gov Law Search](https://laws.e-gov.go.jp/) (Japanese).
+
+The Act on Prohibition of Unauthorized Computer Access has no minority exemption.
+Under its Article 14, the offenses in Article 11 and Article 12(i)–(iii) also apply to conduct committed outside Japan.
+Targeting a system abroad additionally exposes you to the law of the country where it sits.
+
+"Imprisonment" above renders 拘禁刑, the single custodial sentence that replaced the former imprisonment-with-work and imprisonment-without-work penalties when the relevant part of Act No. 67 of 2022 took effect on 1 June 2025.
+Material written before that date says 懲役 instead.
+
+The table lists conduct, not verdicts; whether an offense is established depends on the specific facts.
+Consult a lawyer when the answer matters.
+
+The Ministry of Internal Affairs and Communications maintains an overview of [cybersecurity-related laws and guidelines](https://www.soumu.go.jp/main_sosiki/cybersecurity/kokumin/basic/legal/) (Japanese).
+Healthcare adds the Act on the Protection of Personal Information (special-care-required personal information), the Ordinance for Enforcement of the Medical Care Act, and the Pharmaceuticals and Medical Devices Act on top of these. See [Japanese guidelines and regulations](docs/guidelines/japan.md).
+
+Readers outside Japan are subject to their own equivalents, such as the Computer Fraud and Abuse Act in the United States and the Computer Misuse Act in the United Kingdom.
+
+### Status of the content
+
 - Content reflects the state of knowledge at the time of writing and comes with no warranty of accuracy or completeness. For compliance work, always consult the original regulatory text and the responsible authority.
+- The legal summaries above describe statutory provisions; they are not legal advice.
 - Views expressed here are the author's own and do not represent those of any employer.
 
 ---
