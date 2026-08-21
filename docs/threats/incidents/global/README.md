@@ -29,7 +29,7 @@ timeline
     2017 : NHS（病院系）
     2020 : Universal Health Services（病院系） : デュッセルドルフ大学病院（病院系） : Vastaamo（病院系）
     2021 : HSE（病院系）
-    2022 : CommonSpirit Health（病院系） : Medibank（医療関連事業者）
+    2022 : Guy's and St Thomas'（病院系、システム障害） : CommonSpirit Health（病院系） : Medibank（医療関連事業者）
     2023 : Prospect Medical Holdings（病院系）
     2024 : Change Healthcare（医療関連事業者） : Ascension（病院系） : Synnovis（医療関連事業者）
 ```
@@ -50,7 +50,7 @@ timeline
 | 2025 | 0 | 0 | 0 | 0 | [サマリー](2025-summary.md) ／ [履歴](2025-timeline.md) |
 | 2024 | 1 | 0 | 2 | 0 | [サマリー](2024-summary.md) ／ [履歴](2024-timeline.md) |
 | 2023 | 1 | 0 | 0 | 0 | [サマリー](2023-summary.md) ／ [履歴](2023-timeline.md) |
-| 2022 | 1 | 0 | 1 | 0 | [サマリー](2022-summary.md) ／ [履歴](2022-timeline.md) |
+| 2022 | 1 | 0 | 1 | 1 | [サマリー](2022-summary.md) ／ [履歴](2022-timeline.md) |
 | 2021 | 1 | 0 | 0 | 0 | [サマリー](2021-summary.md) ／ [履歴](2021-timeline.md) |
 | 2020 | 3 | 0 | 0 | 0 | [サマリー](2020-summary.md) ／ [履歴](2020-timeline.md) |
 | 2019 以前 | 1 | 0 | 1 | 0 | [履歴](2019-earlier.md) |
