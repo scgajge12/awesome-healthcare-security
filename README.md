@@ -286,6 +286,12 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 
 </td>
 <td width="50%" valign="top">
+
+#### 🧱 [ネットワークの分離](docs/technology/segmentation.md)
+
+医療機関のゾーンモデル、分離が破れる典型的な構造、到達性の確認、例外の扱い。
+直せない資産を周囲から守るための設計。
+
 </td>
 </tr>
 </table>
@@ -404,7 +410,8 @@ awesome-healthcare-security/
 │   │   ├── oss-vulnerabilities/     OSS 医療情報システムの脆弱性
 │   │   ├── web-security/            医療系 Web アプリケーションのセキュリティ
 │   │   ├── cloud/                   クラウド事業者と医療（AWS、Google Cloud、Azure、さくら）
-│   │   └── dx-ax/                   医療 DX と AX（国の基盤、地域医療連携、医療 AI、現場主導の導入）
+│   │   ├── dx-ax/                   医療 DX と AX（国の基盤、地域医療連携、医療 AI、現場主導の導入）
+│   │   └── segmentation.md          ネットワークの分離（ゾーンモデル、到達性の確認、例外の管理）
 │   ├── practice/                    検証と実務
 │   │   ├── pentest/                 セキュリティ診断とペネトレーションテスト
 │   │   └── bug-bounty/              バグバウンティと脆弱性開示（医療分野）

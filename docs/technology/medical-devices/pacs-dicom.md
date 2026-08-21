@@ -181,6 +181,7 @@ PACS の通信は、参照そのものが業務である。
 
 - [医用画像 OSS（PACS/DICOM 実装）の脆弱性](../oss-vulnerabilities/imaging-pacs.md)
 - [HL7 v2 と FHIR の攻撃面](../web-security/hl7-fhir.md)
+- [ネットワークの分離](../segmentation.md)
 - [医療機器の検証手法](testing-methodology.md)
 - [ツール](../../reference/resources/tools.md)
 

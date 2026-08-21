@@ -208,6 +208,7 @@ flowchart TD
 
 - [医療機器の検証手法](testing-methodology.md)
 - [PACS / DICOM のセキュリティ](pacs-dicom.md)
+- [ネットワークの分離](../segmentation.md)
 - [ガイドラインと法規制](../../guidelines/)
 
 ---

@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 590" role="img" aria-label="医療機関のネットワークをゾーンに分けた図。上端にインターネットと外部網があり、そこから外部公開ゾーンと事務、情報系ゾーン、そして保守ゾーンと来客、設備ゾーンへ接続が入る。外部公開と事務、情報系は基幹ゾーンへ、基幹は連携ゾーンと医療機器ゾーンへつながる。管理ゾーンは全ゾーンに届く経路を持ち、保守ゾーンは境界の設計を迂回して基幹と医療機器へ到達しうる。来客、設備ゾーンは他のゾーンと接続しない。">
+  <title>医療機関のネットワークゾーン</title>
+  <style>
+    .frame { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .ext   { fill: #fff1e5; stroke: #bc4c00; stroke-width: 1.5; }
+    .edge  { fill: #ddf4ff; stroke: #54aeff; stroke-width: 1.5; }
+    .core  { fill: #b6e3ff; stroke: #316dca; stroke-width: 1.5; }
+    .med   { fill: #dafbe1; stroke: #4ac26b; stroke-width: 1.5; }
+    .adm   { fill: #fbefff; stroke: #8250df; stroke-width: 1.5; }
+    .iso   { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .flow  { fill: none; stroke: #57606a; stroke-width: 1.8; }
+    .bypass{ fill: none; stroke: #bc4c00; stroke-width: 1.8; stroke-dasharray: 6 4; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 14px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    .t-warn  { fill: #bc4c00; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    .ah      { fill: #57606a; }
+    .ah-w    { fill: #bc4c00; }
+    @media (prefers-color-scheme: dark) {
+      .frame { stroke: #6e7681; }
+      .ext   { fill: #2b1a10; stroke: #db6d28; }
+      .edge  { fill: #121d2f; stroke: #316dca; }
+      .core  { fill: #16305c; stroke: #4184e4; }
+      .med   { fill: #12261e; stroke: #2ea043; }
+      .adm   { fill: #21182f; stroke: #a371f7; }
+      .iso   { fill: #161b22; stroke: #6e7681; }
+      .flow  { stroke: #9198a1; }
+      .bypass{ stroke: #db6d28; }
+      .ah    { fill: #9198a1; }
+      .ah-w  { fill: #db6d28; }
+      .t-title, .t-head, .t { fill: #e6edf3; }
+      .t-sm  { fill: #9198a1; }
+      .t-warn{ fill: #db6d28; }
+    }
+  </style>
+
+  <rect class="frame" x="8" y="8" width="944" height="574" rx="8"/>
+
+  <!-- Z0 -->
+  <rect class="ext" x="24" y="26" width="912" height="46" rx="6"/>
+  <text class="t-head" x="44" y="47">Z0 インターネット、外部網</text>
+  <text class="t-sm" x="44" y="64">攻撃者はここから入る。分離は、ここを越えられた後に効く</text>
+
+  <!-- Z1 -->
+  <rect class="edge" x="64" y="104" width="258" height="76" rx="6"/>
+  <text class="t-head" x="78" y="126">Z1 外部公開（DMZ）</text>
+  <text class="t-sm" x="78" y="145">患者ポータル、オンライン診療</text>
+  <text class="t-sm" x="78" y="163">FHIR サーバ、リバースプロキシ</text>
+
+  <!-- Z2 -->
+  <rect class="edge" x="346" y="104" width="258" height="76" rx="6"/>
+  <text class="t-head" x="360" y="126">Z2 事務、情報系</text>
+  <text class="t-sm" x="360" y="145">職員端末、グループウェア</text>
+  <text class="t-sm" x="360" y="163">ファイルサーバ、印刷</text>
+
+  <!-- Z3 -->
+  <rect class="core" x="64" y="200" width="540" height="76" rx="6"/>
+  <text class="t-head" x="78" y="222">Z3 基幹</text>
+  <text class="t-sm" x="78" y="241">電子カルテ、部門システム、データベース</text>
+  <text class="t-sm" x="78" y="259">インターネットへの直接の外向き通信を置かない</text>
+
+  <!-- Z4 -->
+  <rect class="core" x="64" y="296" width="540" height="76" rx="6"/>
+  <text class="t-head" x="78" y="318">Z4 連携</text>
+  <text class="t-sm" x="78" y="337">統合エンジン、HL7 v2 受信口、SS-MIX2、地域連携、オンライン資格確認</text>
+  <text class="t-warn" x="78" y="355">外部との接続が前提になる。接続元と受けるメッセージ種別を限定する</text>
+
+  <!-- Z5 -->
+  <rect class="med" x="64" y="392" width="540" height="76" rx="6"/>
+  <text class="t-head" x="78" y="414">Z5 医療機器</text>
+  <text class="t-sm" x="78" y="433">PACS、生体情報モニタ、輸液ポンプ、検査装置</text>
+  <text class="t-sm" x="78" y="451">機器を直せないため、周囲の経路が唯一の制御点になる</text>
+
+  <!-- Z7 -->
+  <rect class="adm" x="636" y="104" width="268" height="106" rx="6"/>
+  <text class="t-head" x="650" y="126">Z7 保守</text>
+  <text class="t-sm" x="650" y="145">ベンダのリモート保守、踏み台</text>
+  <text class="t-sm" x="650" y="163">保守用端末</text>
+  <text class="t-warn" x="650" y="187">常時接続を、必要時開放に変える</text>
+
+  <!-- Z6 -->
+  <rect class="adm" x="636" y="230" width="268" height="106" rx="6"/>
+  <text class="t-head" x="650" y="252">Z6 管理</text>
+  <text class="t-sm" x="650" y="271">Active Directory、EDR 管理サーバ</text>
+  <text class="t-sm" x="650" y="289">バックアップ、監視、特権端末</text>
+  <text class="t-warn" x="650" y="313">全ゾーンに届く経路を持つ</text>
+
+  <!-- Z8 -->
+  <rect class="iso" x="636" y="356" width="268" height="92" rx="6"/>
+  <text class="t-head" x="650" y="378">Z8 来客、設備</text>
+  <text class="t-sm" x="650" y="397">来客用 Wi-Fi、入退室、空調、監視カメラ</text>
+  <text class="t-sm" x="650" y="421">他のゾーンとは接続しない</text>
+
+  <!-- Z0 -> Z1 -->
+  <path class="flow" d="M193 72 L193 98"/>
+  <polygon class="ah" points="193,104 189,96 197,96"/>
+  <!-- Z0 -> Z2 -->
+  <path class="flow" d="M475 72 L475 98"/>
+  <polygon class="ah" points="475,104 471,96 479,96"/>
+  <!-- Z0 -> Z7 -->
+  <path class="flow" d="M770 72 L770 98"/>
+  <polygon class="ah" points="770,104 766,96 774,96"/>
+  <!-- Z0 -> Z8 -->
+  <path class="flow" d="M924 72 L924 402 L910 402"/>
+  <polygon class="ah" points="904,402 912,398 912,406"/>
+
+  <!-- Z1 -> Z3 -->
+  <path class="flow" d="M193 180 L193 194"/>
+  <polygon class="ah" points="193,200 189,192 197,192"/>
+  <!-- Z2 -> Z3 -->
+  <path class="flow" d="M475 180 L475 194"/>
+  <polygon class="ah" points="475,200 471,192 479,192"/>
+  <!-- Z3 <-> Z4 -->
+  <path class="flow" d="M334 282 L334 290"/>
+  <polygon class="ah" points="334,296 330,288 338,288"/>
+  <polygon class="ah" points="334,276 330,284 338,284"/>
+  <!-- Z4 <-> Z5 -->
+  <path class="flow" d="M334 378 L334 386"/>
+  <polygon class="ah" points="334,392 330,384 338,384"/>
+  <polygon class="ah" points="334,372 330,380 338,380"/>
+
+  <!-- Z3 <-> Z5（左の迂回路） -->
+  <path class="flow" d="M64 238 L44 238 L44 430 L58 430"/>
+  <polygon class="ah" points="64,430 56,426 56,434"/>
+  <polygon class="ah" points="64,238 56,234 56,242"/>
+
+  <!-- Z7 -> Z3 -->
+  <path class="bypass" d="M636 172 L610 208"/>
+  <polygon class="ah-w" points="604,215 608,203 614,208"/>
+  <!-- Z7 -> Z5（右の迂回路） -->
+  <path class="bypass" d="M626 210 L626 444 L610 444"/>
+  <polygon class="ah-w" points="604,444 612,440 612,448"/>
+  <!-- Z6 -> Z3 -->
+  <path class="bypass" d="M636 268 L610 262"/>
+  <polygon class="ah-w" points="604,260 612,257 611,265"/>
+
+  <!-- 凡例 -->
+  <line class="flow" x1="64" y1="500" x2="104" y2="500"/>
+  <polygon class="ah" points="110,500 102,496 102,504"/>
+  <text class="t" x="120" y="504">設計として通す通信</text>
+
+  <line class="bypass" x1="300" y1="500" x2="340" y2="500"/>
+  <polygon class="ah-w" points="346,500 338,496 338,504"/>
+  <text class="t" x="356" y="504">ゾーンの境界を越えて届く経路。管理と保守がここに当たる</text>
+
+  <text class="t-sm" x="64" y="534">図の実線は、業務のために通す通信を表す。破線は、運用のために作られ、境界の設計を越えて届く経路を表す。</text>
+  <text class="t-sm" x="64" y="554">分離の設計で扱うのは、実線をどこまで絞るかではなく、破線に期限と経路の限定と記録を付けられるかである。</text>
+</svg>

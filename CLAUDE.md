@@ -83,6 +83,7 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `docs/technology/web-security/` | 医療系 Web アプリケーションのセキュリティ |
 | `docs/technology/cloud/` | クラウド事業者と医療（AWS、Google Cloud、Azure、さくらインターネット） |
 | `docs/technology/dx-ax/` | 医療 DX と AX（国の基盤と接続点、医療における AI のセキュリティ） |
+| `docs/technology/segmentation.md` | ネットワークの分離（ゾーンモデル、到達性の確認、例外の管理） |
 | `docs/practice/pentest/` | セキュリティ診断とペネトレーションテスト（医療機関、製薬企業、医療機器） |
 | `docs/practice/bug-bounty/` | バグバウンティと脆弱性開示（医療分野） |
 | `docs/response/` | インシデント対応と事業継続（初動、ダウンタイム運用、届出、復旧） |

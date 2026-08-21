@@ -282,6 +282,11 @@ The connection points added by Japan's national health data platform, and the th
 
 </td>
 <td width="50%" valign="top">
+
+#### 🧱 [Network Segmentation](docs/technology/segmentation.md)
+
+A zone model for hospitals, the structures that quietly defeat segmentation, how to verify reachability, and how to manage exceptions.
+
 </td>
 </tr>
 </table>
@@ -395,7 +400,8 @@ awesome-healthcare-security/
 │   │   ├── oss-vulnerabilities/     Open source health IT vulnerabilities
 │   │   ├── web-security/            Healthcare web application security
 │   │   ├── cloud/                   Cloud providers and healthcare
-│   │   └── dx-ax/                   Healthcare DX and AX (platforms, regional networks, AI, frontline-led adoption)
+│   │   ├── dx-ax/                   Healthcare DX and AX (platforms, regional networks, AI, frontline-led adoption)
+│   │   └── segmentation.md          Network segmentation (zone model, verification, exceptions)
 │   ├── practice/                    Assessment and practice
 │   │   ├── pentest/                 Security assessment and penetration testing
 │   │   └── bug-bounty/              Bug bounty and vulnerability disclosure
