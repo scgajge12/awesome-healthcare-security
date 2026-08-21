@@ -276,6 +276,7 @@ How responsibility is split across AWS, Google Cloud, Azure, and Sakura Internet
 The connection points added by Japan's national health data platform, and the threats that come with putting AI into clinical and back-office work.
 
 - [Healthcare DX: national platforms and connection points](docs/technology/dx-ax/medical-dx.md)
+- [Healthcare DX led by the Digital Agency](docs/technology/dx-ax/digital-agency.md)
 - [Regional health information exchange networks](docs/technology/dx-ax/regional-networks.md)
 - [AX: AI security in healthcare](docs/technology/dx-ax/ai-security.md)
 - [Frontline-led DX and AX](docs/technology/dx-ax/field-led.md)
@@ -404,7 +405,7 @@ awesome-healthcare-security/
 │   │   ├── oss-vulnerabilities/     Open source health IT vulnerabilities
 │   │   ├── web-security/            Healthcare web application security
 │   │   ├── cloud/                   Cloud providers and healthcare
-│   │   ├── dx-ax/                   Healthcare DX and AX (platforms, regional networks, AI, frontline-led adoption)
+│   │   ├── dx-ax/                   Healthcare DX and AX (platforms, Digital Agency, regional networks, AI, frontline-led adoption)
 │   │   └── segmentation.md          Network segmentation (zone model, verification, exceptions)
 │   ├── practice/                    Assessment and practice
 │   │   ├── pentest/                 Security assessment and penetration testing

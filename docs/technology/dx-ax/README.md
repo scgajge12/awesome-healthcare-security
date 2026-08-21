@@ -17,6 +17,7 @@ AX は、その接続点を通る情報を機械が解釈し、動作の根拠�
 ## このセクションの構成
 
 - [医療 DX：国の基盤と接続点](medical-dx.md)
+- [デジタル庁が担う医療 DX](digital-agency.md)
 - [地域医療情報連携ネットワーク](regional-networks.md)
 - [AX：医療における AI のセキュリティ](ai-security.md)
 - [現場主導の DX と AX](field-led.md)

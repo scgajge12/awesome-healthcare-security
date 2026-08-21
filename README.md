@@ -280,6 +280,7 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 前提が崩れる速度を扱う。
 
 - [医療 DX：国の基盤と接続点](docs/technology/dx-ax/medical-dx.md)
+- [デジタル庁が担う医療 DX](docs/technology/dx-ax/digital-agency.md)
 - [地域医療情報連携ネットワーク](docs/technology/dx-ax/regional-networks.md)
 - [AX：医療における AI のセキュリティ](docs/technology/dx-ax/ai-security.md)
 - [現場主導の DX と AX](docs/technology/dx-ax/field-led.md)
@@ -414,7 +415,7 @@ awesome-healthcare-security/
 │   │   ├── oss-vulnerabilities/     OSS 医療情報システムの脆弱性
 │   │   ├── web-security/            医療系 Web アプリケーションのセキュリティ
 │   │   ├── cloud/                   クラウド事業者と医療（AWS、Google Cloud、Azure、さくら）
-│   │   ├── dx-ax/                   医療 DX と AX（国の基盤、地域医療連携、医療 AI、現場主導の導入）
+│   │   ├── dx-ax/                   医療 DX と AX（国の基盤、デジタル庁、地域医療連携、医療 AI、現場主導の導入）
 │   │   └── segmentation.md          ネットワークの分離（ゾーンモデル、到達性の確認、例外の管理）
 │   ├── practice/                    検証と実務
 │   │   ├── pentest/                 セキュリティ診断とペネトレーションテスト
