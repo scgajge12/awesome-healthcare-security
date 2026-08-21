@@ -33,7 +33,8 @@ fi
 #
 # - m-isac.jp：サーバ証明書が *.xbiz.ne.jp のみを含み、ホスト名と一致しない。
 #   サイトは稼働しているため、証明書が直るまで除外する。
-# - imdrf.org：HTTP/2 の応答が lychee の実装と噛み合わず、毎回失敗する。
+# - imdrf.org, sophos.com：HTTP/2 の応答が lychee の実装と噛み合わず、毎回失敗する。
+#   ブラウザと WebFetch では開けるため、URL 側の問題ではない。
 # - fda.gov, mri.co.jp：自動アクセスを bot 検知に回し、ブラウザでは開くページに 404 や
 #   apology ページへの 302 を返す。URL の誤りと区別できないため除外し、これらのリンクは
 #   サイト改編の告知や検索結果で追う。
@@ -50,6 +51,7 @@ lychee \
   --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36" \
   --exclude '^https?://(www\.)?m-isac\.jp' \
   --exclude '^https?://(www\.)?imdrf\.org' \
+  --exclude '^https?://(www\.)?sophos\.com' \
   --exclude '^https?://(www\.)?fda\.gov' \
   --exclude '^https?://(www\.)?mri\.co\.jp' \
   --exclude '^https?://(www\.)?github\.com/[^/]+/[^/]+/stargazers/?$' \
