@@ -315,7 +315,11 @@ Bug bounty and vulnerability disclosure in healthcare: what is in scope, where t
 ### 🚑 [Incident Response and Continuity](docs/response/)
 
 What happens after a breach: the first decisions, keeping care running while the EHR is down, statutory reporting deadlines, and the order in which systems come back.
-Individual pages are being added.
+
+- [BCP for cyber attacks](docs/response/bcp-cyber.md) (Japanese)
+- [Infrastructure posture and external dependencies](docs/response/dependencies.md) (Japanese)
+
+Remaining topics are being added.
 
 ### ⚖️ [Guidelines and Regulation](docs/guidelines/)
 
@@ -405,7 +409,7 @@ awesome-healthcare-security/
 │   ├── practice/                    Assessment and practice
 │   │   ├── pentest/                 Security assessment and penetration testing
 │   │   └── bug-bounty/              Bug bounty and vulnerability disclosure
-│   ├── response/                    Incident response and continuity
+│   ├── response/                    Incident response and continuity (cyber BCP, infrastructure and dependencies, first response, reporting)
 │   ├── guidelines/                  Guidelines and regulation
 │   ├── governance/                  Governance and management
 │   └── reference/                   Reference

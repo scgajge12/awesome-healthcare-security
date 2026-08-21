@@ -322,7 +322,11 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 
 侵害が起きたあとを扱う。
 初動の判断、電子カルテが止まった状態で診療を続ける運用、届出の義務、復旧の優先順位。
-個別のページは順次追加する。
+
+- [サイバー攻撃を想定した BCP](docs/response/bcp-cyber.md)
+- [基盤の構えと、外部への依存](docs/response/dependencies.md)
+
+残りの主題は順次追加する。
 
 ### ⚖️ [ガイドラインと法規制](docs/guidelines/)
 
@@ -415,7 +419,7 @@ awesome-healthcare-security/
 │   ├── practice/                    検証と実務
 │   │   ├── pentest/                 セキュリティ診断とペネトレーションテスト
 │   │   └── bug-bounty/              バグバウンティと脆弱性開示（医療分野）
-│   ├── response/                    インシデント対応と事業継続（初動、ダウンタイム運用、届出）
+│   ├── response/                    インシデント対応と事業継続（サイバー BCP、基盤の構えと外部依存、初動、届出）
 │   ├── guidelines/                  ガイドラインと法規制
 │   ├── governance/                  経営とガバナンス（体制、報告、予算、リスク移転）
 │   └── reference/                   リファレンス

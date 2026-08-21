@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 600" role="img" aria-label="事業継続から見た三つの構え。オンプレミス、単一クラウド、複数クラウドについて、入口、診療業務、診療データ、アプリケーション、OS とミドルウェア、仮想化基盤、ハードウェア、施設と電源と回線の各層を、自組織が管理する層と事業者が管理する層に塗り分けて比較する。オンプレミスはほぼ全層が自組織、単一クラウドは仮想化基盤より下が事業者、複数クラウドは下層が二社に分かれる。下部に、復旧の主導権、止まる主な要因、固有の全損モードを並べる。">
+  <title>事業継続から見た三つの構え</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .own   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .prov  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .warn  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; }
+    .head  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 14px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer { stroke: #6e7681; }
+      .own   { fill: #121d2f; stroke: #4184e4; }
+      .prov  { fill: #161b22; stroke: #6e7681; }
+      .warn  { fill: #341a00; stroke: #d29922; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .head  { fill: #161b22; stroke: #6e7681; }
+      .t-title, .t-head, .t, .t-lab { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="970" height="580" rx="8"/>
+  <text class="t-title" x="495" y="38" text-anchor="middle">事業継続から見た三つの構え</text>
+
+  <!-- 凡例 -->
+  <rect class="own"  x="330" y="50" width="16" height="12" rx="2"/>
+  <text class="t-sm" x="352" y="60">自組織が管理し、自力で復旧できる層</text>
+  <rect class="prov" x="600" y="50" width="16" height="12" rx="2"/>
+  <text class="t-sm" x="622" y="60">事業者が管理し、待つしかない層</text>
+
+  <!-- 列見出し -->
+  <rect class="head" x="205" y="72" width="240" height="34" rx="4"/>
+  <text class="t-head" x="325" y="94" text-anchor="middle">オンプレミス</text>
+  <rect class="head" x="465" y="72" width="240" height="34" rx="4"/>
+  <text class="t-head" x="585" y="94" text-anchor="middle">クラウド（単一の事業者）</text>
+  <rect class="head" x="725" y="72" width="240" height="34" rx="4"/>
+  <text class="t-head" x="845" y="94" text-anchor="middle">クラウド（複数の事業者）</text>
+
+  <!-- 層ラベル -->
+  <text class="t-lab" x="30" y="137">入口（DNS、CDN、認証）</text>
+  <text class="t-lab" x="30" y="179">診療業務</text>
+  <text class="t-lab" x="30" y="221">診療データ</text>
+  <text class="t-lab" x="30" y="263">アプリケーション</text>
+  <text class="t-lab" x="30" y="305">OS、ミドルウェア</text>
+  <text class="t-lab" x="30" y="347">仮想化基盤</text>
+  <text class="t-lab" x="30" y="389">ハードウェア</text>
+  <text class="t-lab" x="30" y="431">施設、電源、回線</text>
+
+  <!-- オンプレミス列 -->
+  <rect class="own" x="205" y="114" width="240" height="34" rx="4"/><text class="t" x="325" y="136" text-anchor="middle">自組織</text>
+  <rect class="own" x="205" y="156" width="240" height="34" rx="4"/><text class="t" x="325" y="178" text-anchor="middle">自組織</text>
+  <rect class="own" x="205" y="198" width="240" height="34" rx="4"/><text class="t" x="325" y="220" text-anchor="middle">自組織</text>
+  <rect class="own" x="205" y="240" width="240" height="34" rx="4"/><text class="t" x="325" y="262" text-anchor="middle">自組織（ベンダ保守）</text>
+  <rect class="own" x="205" y="282" width="240" height="34" rx="4"/><text class="t" x="325" y="304" text-anchor="middle">自組織（ベンダ保守）</text>
+  <rect class="own" x="205" y="324" width="240" height="34" rx="4"/><text class="t" x="325" y="346" text-anchor="middle">自組織（ベンダ保守）</text>
+  <rect class="own" x="205" y="366" width="240" height="34" rx="4"/><text class="t" x="325" y="388" text-anchor="middle">自組織</text>
+  <rect class="own" x="205" y="408" width="240" height="34" rx="4"/><text class="t" x="325" y="430" text-anchor="middle">自組織</text>
+
+  <!-- 単一クラウド列 -->
+  <rect class="prov" x="465" y="114" width="240" height="34" rx="4"/><text class="t" x="585" y="136" text-anchor="middle">事業者</text>
+  <rect class="own"  x="465" y="156" width="240" height="34" rx="4"/><text class="t" x="585" y="178" text-anchor="middle">自組織</text>
+  <rect class="own"  x="465" y="198" width="240" height="34" rx="4"/><text class="t" x="585" y="220" text-anchor="middle">自組織</text>
+  <rect class="own"  x="465" y="240" width="240" height="34" rx="4"/><text class="t" x="585" y="262" text-anchor="middle">自組織（ベンダ）</text>
+  <rect class="own"  x="465" y="282" width="240" height="34" rx="4"/><text class="t" x="585" y="304" text-anchor="middle">自組織（ベンダ）</text>
+  <rect class="prov" x="465" y="324" width="240" height="34" rx="4"/><text class="t" x="585" y="346" text-anchor="middle">事業者</text>
+  <rect class="prov" x="465" y="366" width="240" height="34" rx="4"/><text class="t" x="585" y="388" text-anchor="middle">事業者</text>
+  <rect class="prov" x="465" y="408" width="240" height="34" rx="4"/><text class="t" x="585" y="430" text-anchor="middle">事業者</text>
+
+  <!-- 複数クラウド列 -->
+  <rect class="warn" x="725" y="114" width="240" height="34" rx="4"/><text class="t" x="845" y="136" text-anchor="middle">共通なら、ここが単一障害点</text>
+  <rect class="own"  x="725" y="156" width="240" height="34" rx="4"/><text class="t" x="845" y="178" text-anchor="middle">自組織</text>
+  <rect class="own"  x="725" y="198" width="240" height="34" rx="4"/><text class="t" x="845" y="220" text-anchor="middle">自組織（二重に同期）</text>
+  <rect class="own"  x="725" y="240" width="118" height="34" rx="4"/><text class="t" x="784" y="262" text-anchor="middle">自組織</text>
+  <rect class="own"  x="847" y="240" width="118" height="34" rx="4"/><text class="t" x="906" y="262" text-anchor="middle">自組織</text>
+  <rect class="own"  x="725" y="282" width="118" height="34" rx="4"/><text class="t" x="784" y="304" text-anchor="middle">自組織</text>
+  <rect class="own"  x="847" y="282" width="118" height="34" rx="4"/><text class="t" x="906" y="304" text-anchor="middle">自組織</text>
+  <rect class="prov" x="725" y="324" width="118" height="34" rx="4"/><text class="t" x="784" y="346" text-anchor="middle">A 社</text>
+  <rect class="prov" x="847" y="324" width="118" height="34" rx="4"/><text class="t" x="906" y="346" text-anchor="middle">B 社</text>
+  <rect class="prov" x="725" y="366" width="118" height="34" rx="4"/><text class="t" x="784" y="388" text-anchor="middle">A 社</text>
+  <rect class="prov" x="847" y="366" width="118" height="34" rx="4"/><text class="t" x="906" y="388" text-anchor="middle">B 社</text>
+  <rect class="prov" x="725" y="408" width="118" height="34" rx="4"/><text class="t" x="784" y="430" text-anchor="middle">A 社</text>
+  <rect class="prov" x="847" y="408" width="118" height="34" rx="4"/><text class="t" x="906" y="430" text-anchor="middle">B 社</text>
+
+  <!-- 下部の注記 -->
+  <text class="t-lab" x="30" y="478">復旧の主導権</text>
+  <text class="t-lab" x="30" y="516">止まる主な要因</text>
+  <text class="t-lab" x="30" y="562">固有の全損モード</text>
+
+  <rect class="note" x="205" y="458" width="240" height="112" rx="4"/>
+  <text class="t"    x="217" y="479">自組織。ただし人員の上限で決まる</text>
+  <text class="t-sm" x="217" y="503">電源、空調、水害、機器故障</text>
+  <text class="t-sm" x="217" y="521">保守期限切れ、ランサムウェア</text>
+  <text class="t-sm" x="217" y="551">仮想化基盤一台の暗号化で</text>
+  <text class="t-sm" x="217" y="566">全システムが同時に止まる</text>
+
+  <rect class="note" x="465" y="458" width="240" height="112" rx="4"/>
+  <text class="t"    x="477" y="479">事業者。自組織では動かせない</text>
+  <text class="t-sm" x="477" y="503">事業者障害、設定の誤り</text>
+  <text class="t-sm" x="477" y="521">資格情報の漏えい、アカウント停止</text>
+  <text class="t-sm" x="477" y="551">管理権限の奪取で、資源と</text>
+  <text class="t-sm" x="477" y="566">バックアップが同時に消える</text>
+
+  <rect class="note" x="725" y="458" width="240" height="112" rx="4"/>
+  <text class="t"    x="737" y="479">切替を訓練していれば自組織</text>
+  <text class="t-sm" x="737" y="503">上の二つに加え、切替の失敗</text>
+  <text class="t-sm" x="737" y="521">同期の遅延、運用負荷の倍化</text>
+  <text class="t-sm" x="737" y="551">前段の DNS、CDN、認証基盤が</text>
+  <text class="t-sm" x="737" y="566">共通なら、二重化は効かない</text>
+</svg>
