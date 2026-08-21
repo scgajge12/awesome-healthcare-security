@@ -146,6 +146,13 @@ flowchart LR
 | [Burp Suite](https://portswigger.net/burp) | Web アプリケーションの検証 | 低侵襲から侵襲 |
 | [OWASP ZAP](https://www.zaproxy.org/) | 同上（オープンソース） | 低侵襲から侵襲 |
 | [Caido](https://www.caido.io/) | Web プロキシツール | 低侵襲から侵襲 |
+| [Autorize](https://github.com/PortSwigger/autorize) | 記録した要求を別のセッションで再送し、認可の欠落を検出する Burp 拡張 | 低侵襲 |
+| [AuthMatrix](https://github.com/SecurityInnovation/AuthMatrix) | 立場と機能の行列を定義し、期待する可否と実測を突き合わせる Burp 拡張 | 低侵襲 |
+
+**分析**：医療系ポータルは立場の数が多く、手作業では組み合わせが抜ける。
+立場と機能の行列を先に定義し、その行列を機械的に通す形にすると、抜けを減らせる（[患者用ポータルで狙われやすい脆弱性](../../technology/web-security/patient-portal.md#確かめ方立場の行列で通す)）。
+再送は既存の要求をなぞる操作であり、更新系を含めると実データが書き換わる。
+対象を参照系に絞るか、合成データを載せた環境で行う。
 
 > [!IMPORTANT]
 > 自動巡回（クローラ, アクティブスキャン）は侵襲にあたる。
