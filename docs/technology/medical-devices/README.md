@@ -27,6 +27,7 @@
 - [IoMT（医療 IoT 機器）のリスク](iomt.md)
 - [PACS / DICOM のセキュリティ](pacs-dicom.md)
 - [医療機器の検証手法](testing-methodology.md)
+- [メーカー側の脆弱性受付と開示](psirt-cvd.md)
 
 ## 医療機器を取り巻く関係者
 
