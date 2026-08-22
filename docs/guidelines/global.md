@@ -52,10 +52,25 @@ Security Rule は技術中立的に書かれており、要求事項は「必須
 Addressable は「任意」を意味しない。
 実施しない場合は、その理由と代替措置を文書化する必要がある。
 
-なお HHS は、多要素認証や暗号化、資産の棚卸しなどを明確に求める方向で Security Rule の改正を進めており、改正案が公表されて議論が続いている。
+**事実**：HHS は Security Rule の改正案（NPRM）を 2024 年 12 月 27 日に公表し、2025 年 1 月 6 日に Federal Register へ掲載した。
+多要素認証の使用、保存時と転送時の暗号化、資産目録の作成などを、限定的な例外を除いて求める内容である。
+意見募集は 2025 年 3 月 7 日に締め切られた（[HHS ファクトシート](https://www.hhs.gov/hipaa/for-professionals/security/hipaa-security-rule-nprm/factsheet/index.html)、[Federal Register 2024-30983](https://www.federalregister.gov/documents/2025/01/06/2024-30983/hipaa-security-rule-to-strengthen-the-cybersecurity-of-electronic-protected-health-information)）。
+
+**事実**：2026 年 8 月時点で最終規則は公表されておらず、現行の Security Rule が引き続き適用される。
 最新の状況は HHS の公表資料で確認してほしい。
 
 **参照先**：[HHS HIPAA](https://www.hhs.gov/hipaa/index.html) ／ [OCR Breach Portal](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf)
+
+### 執行から読む、何が問われるか
+
+**事実**：HHS OCR は 2024 年 10 月にリスク分析に焦点を当てた執行の取り組みを開始し、リスク分析の未実施を理由とする解決を継続的に公表している。
+ランサムウェア被害に関する調査についても、複数の解決が公表されている。
+出典：[HHS Press Room](https://www.hhs.gov/press-room/ocr-settles-four-ransomware-investigations.html)
+
+**分析**：公表される解決の内容には、当該組織が何をしていなかったと認定されたかが具体的に書かれる。
+繰り返し現れるのは、リスク分析の未実施、通知の遅れ、監査記録の不足である。
+規則の条文より、この三点のほうが、自組織の点検項目としては使いやすい。
+国内でも、[医療機関等におけるサイバーセキュリティ対策チェックリスト](japan.md)の項目に、リスクの把握とログの確認が含まれている。
 
 ### 405(d) Program と HICP
 
@@ -85,12 +100,17 @@ HHS が公表した医療分野向けのサイバーセキュリティ性能目�
 2023 年から、市販前提出において医療機器のサイバーセキュリティ情報の提出が法的に義務づけられた（FD&C Act 第 524B 条）。
 対象となる機器（Cyber Device）については、次の提出が求められる。
 
-- 脆弱性の監視, 特定, 対処に関する計画
+- 脆弱性の監視、特定、対処に関する計画
 - 市販後にセキュリティを合理的に保証するためのプロセス（アップデートの提供を含む）
 - **SBOM（ソフトウェア部品表）**
-- 上記を満たすことを示す設計, 開発, ラベリングの情報
+- 上記を満たすことを示す設計、開発、ラベリングの情報
 
-関連するガイダンスとして、市販前サイバーセキュリティガイダンス（2023 年最終版）と、市販後ガイダンスが公表されている。
+**事実**：市販前のガイダンスは、2025 年 6 月 27 日に発出された最終ガイダンス "Cybersecurity in Medical Devices: Quality System Considerations and Content of Premarket Submissions" が現行版であり、2023 年 9 月 27 日付の最終ガイダンスを置き換えている。
+第 524B 条に関する FDA の考え方を扱う節が追加されている（[HHS Guidance Repository に掲載された本文（PDF）](https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/FDA/GUI00001825-final-PremarketCybersecurity-2025.pdf)）。
+市販後のガイダンスも別に公表されている。
+
+> [!IMPORTANT]
+> 2023 年版のガイダンスを前提に作成した設計文書や提出資料は、2025 年版との差分を確認する必要がある。
 
 **参照先**：[FDA Medical Device Cybersecurity](https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity)
 
