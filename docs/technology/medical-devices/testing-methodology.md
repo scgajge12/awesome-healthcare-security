@@ -211,8 +211,8 @@ flowchart LR
 
 | 文書 | 内容 |
 |---|---|
-| [OWASP Secure Medical Device Deployment Standard](https://cloudsecurityalliance.org/artifacts/owasp-secure-medical-devices-deployment-standard) | 医療機関側の導入, 運用基準 |
-| [MITRE Playbook for Threat Modeling Medical Devices](https://www.mitre.org/) | 医療機器の脅威モデリング |
+| [OWASP Secure Medical Device Deployment Standard](https://cloudsecurityalliance.org/artifacts/owasp-secure-medical-devices-deployment-standard) | 医療機関側の導入、運用基準 |
+| [Playbook for Threat Modeling Medical Devices](https://mdic.org/resources/playbook-for-threat-modeling-medical-devices/) | 医療機器の脅威モデリング（[医療の脅威モデリング](../../practice/threat-modeling.md)） |
 | [MITRE Rubric for Applying CVSS to Medical Devices](https://www.mitre.org/) | 医療機器向けの脆弱性評価 |
 | [FDA Cybersecurity in Medical Devices（市販前ガイダンス）](https://www.fda.gov/medical-devices/digital-health-center-excellence/cybersecurity) | メーカーが満たすべき要求 |
 | [IMDRF N60](https://www.imdrf.org/) | 医療機器サイバーセキュリティの国際的な原則 |

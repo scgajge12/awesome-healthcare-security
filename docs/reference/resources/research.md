@@ -94,22 +94,22 @@
 
 ### No.501：医師会共同利用施設の実態（2026 年）
 
-**事実**：医師会病院 65 施設、健診, 検査センター, 複合体 160 施設の計 225 施設を対象とした調査で、回答は 135 施設、回収率は 60% であった。
-調査対象期間にランサムウェア感染はなく、医師会病院の体制と対策は 2025 年に厚生労働省が調査した同規模病院と同等以上とされた一方、健診, 検査センターでは整備が遅れており、対策費用の準備がないと回答した施設が約 6 割弱にのぼった（[No.501](https://www.jmari.med.or.jp/result/working/post-5118/)）。
+**事実**：医師会病院 65 施設、健診・検査センター、複合体 160 施設の計 225 施設を対象とした調査で、回答は 135 施設、回収率は 60% であった。
+調査対象期間にランサムウェア感染はなく、医師会病院の体制と対策は 2025 年に厚生労働省が調査した同規模病院と同等以上とされた一方、健診・検査センターでは整備が遅れており、対策費用の準備がないと回答した施設が約 6 割弱にのぼった（[No.501](https://www.jmari.med.or.jp/result/working/post-5118/)）。
 
-**分析**：健診, 検査センターは、病院と同じ要配慮個人情報を扱いながら、病院ほど規制と補助の対象として扱われてこなかった。
+**分析**：健診・検査センターは、病院と同じ要配慮個人情報を扱いながら、病院ほど規制と補助の対象として扱われてこなかった。
 [委託と供給網の連鎖](../../threats/actors/ransomware-chain.md#委託と供給網の連鎖)で見たとおり、検査を受託する事業者の停止は複数の医療機関に同時に及ぶ。
-病院単体の成熟度ではなく、検査, 健診, 決済を含めた地域単位で見ないと、実際の弱点は見えない。
+病院単体の成熟度ではなく、検査、健診、決済を含めた地域単位で見ないと、実際の弱点は見えない。
 
 ---
 
-## 業界の指針, 枠組み
+## 業界の指針、枠組み
 
 | 文書 | 概要 |
 |---|---|
-| [OWASP Secure Medical Device Deployment Standard](https://cloudsecurityalliance.org/artifacts/owasp-secure-medical-devices-deployment-standard) | 医療機関が医療機器を安全に導入, 運用するための基準 |
+| [OWASP Secure Medical Device Deployment Standard](https://cloudsecurityalliance.org/artifacts/owasp-secure-medical-devices-deployment-standard) | 医療機関が医療機器を安全に導入、運用するための基準 |
 | [I Am The Cavalry: Hippocratic Oath for Connected Medical Devices](https://iamthecavalry.org/) | 接続された医療機器に対する五つの原則。設計思想として広く参照される |
-| [MITRE: Playbook for Threat Modeling Medical Devices](https://www.mitre.org/) | 医療機器の脅威モデリング手法 |
+| [Playbook for Threat Modeling Medical Devices](https://mdic.org/resources/playbook-for-threat-modeling-medical-devices/) | 医療機器の脅威モデリング手法（MDIC、MITRE、FDA） |
 | [MITRE: Medical Device Cybersecurity Regional Incident Preparedness and Response Playbook](https://www.mitre.org/) | 医療機器インシデントに対する、地域連携を含む対応計画 |
 | [MITRE: Rubric for Applying CVSS to Medical Devices](https://www.mitre.org/) | 医療機器の脆弱性評価に CVSS を適用する際の指針。患者への危害を評価に織り込む |
 | [MDS2（HIMSS / NEMA HN 1）](https://www.himss.org/) | 医療機器のセキュリティ仕様を開示するための標準様式 |
