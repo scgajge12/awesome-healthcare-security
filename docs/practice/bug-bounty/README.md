@@ -257,6 +257,8 @@ DEF CON 34 の Device Lab では、9 社の 19 機器が研究対象として公
 
 ## 関連ページ
 
+- [外部から見た自組織の攻撃面](../attack-surface.md)：受け取る側が、自分で数えられる範囲
+- [医療の脅威モデリング](../threat-modeling.md)：報告された経路を、設計の側に戻す
 - [医療系 Web アプリケーションのセキュリティ](../../technology/web-security/)
 - [患者用ポータルで狙われやすい脆弱性](../../technology/web-security/patient-portal.md)
 - [医療機器の検証手法](../../technology/medical-devices/testing-methodology.md)
