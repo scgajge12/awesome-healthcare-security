@@ -52,10 +52,12 @@ flowchart LR
 
 - [患者用ポータルで狙われやすい脆弱性](patient-portal.md)
 - [HL7 v2 と FHIR の攻撃面](hl7-fhir.md)
+- [患者向けサイトの第三者送信](tracking.md)：侵入を伴わずに情報が外部へ出る経路。タグの棚卸しと、制度上の整理
+- [PHR、健康アプリ、ウェアラブル](phr-apps.md)：医療機関の外に出た健康データと、そこに適用される枠組み
 
 ## 関連ページ
 
-- [OSS 電子カルテ, HIS の脆弱性](../oss-vulnerabilities/ehr-systems.md)
+- [OSS 電子カルテ、HIS の脆弱性](../oss-vulnerabilities/ehr-systems.md)
 - [地域医療情報連携ネットワーク](../dx-ax/regional-networks.md)
 - [ガイドラインと法規制](../../guidelines/)
 
