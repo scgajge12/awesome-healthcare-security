@@ -101,7 +101,7 @@ BAA を締結しても、各サービスの設定を要件に適合させる責�
 
 **事実**：日本の医療情報ガイドラインへの対応は、コンプライアンスページに整理されている（[Google Cloud 三省ガイドライン](https://cloud.google.com/security/compliance/3g3m?hl=ja)）。
 医療情報システム向けのセキュリティリファレンスは PwC Japan が作成し、2021 年 10 月 26 日に公開された（[Google Cloud 公式ブログ](https://cloud.google.com/blog/ja/products/identity-security/security-reference-for-medical-information-systems)、[PwC Japan](https://www.pwc.com/jp/ja/services/consulting/cloud-transformation/security-ref-hia.html)）。
-このリファレンスが対応しているのは、厚生労働省ガイドライン第 5.1 版（2021 年 1 月）と、統合前の総務省, 経済産業省ガイドラインである。
+このリファレンスが対応しているのは、厚生労働省ガイドライン第 5.1 版（2021 年 1 月）と、統合前の総務省および経済産業省のガイドラインである。
 
 **分析**：厚生労働省ガイドラインは第 6.0 版（2023 年 5 月）で構成が三編に再編され、事業者向けガイドラインも第 2.0 版で対象事業者の定義が変わっている。
 公開時点の版に対応したリファレンスを、そのまま現行版の適合証明として使うわけにはいかない。
