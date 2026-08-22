@@ -76,10 +76,16 @@ DEF CON と CODE BLUE の双方について、[Biohacking Village（DEF CON、CO
 
 ---
 
+## 隣接する領域
+
+- [サイバーバイオセキュリティ](cyberbiosecurity.md)：合成核酸の調達で供給側が行う確認、研究部門の情報システム、配列データの取り扱い
+
+---
+
 ## 関連ページ
 
 - [学習リソース](../resources/learning.md)
-- [論文, レポート](../resources/research.md)
+- [論文、レポート](../resources/research.md)
 
 ---
 
