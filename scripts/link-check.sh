@@ -28,6 +28,32 @@ if [ "${#targets[@]}" -eq 0 ]; then
   exit 0
 fi
 
+# 全 .md を対象にすると 2000 リンク超を数分かけて確認するため、何も出ないと
+# 停止しているのか進んでいるのか判断できない。端末なら進捗バーを出す。
+# Why not: 進捗バーと色を一つの判定でまとめない。進捗バーは標準エラーへ、結果は
+# 標準出力へ出るため、`link-check.sh | tee log` のときは前者を端末に出したまま
+# 後者だけを制御文字なしでログに残したい。判定はそれぞれの出力先で行う。
+# LINK_CHECK_VERBOSE=1 を付けると、1 リンクごとの結果も流れる。
+report_args=()
+if [ -t 2 ]; then
+  report_args+=(--no-progress=false)
+else
+  report_args+=(--no-progress)
+fi
+if [ -t 1 ]; then
+  report_args+=(--mode color)
+else
+  report_args+=(--mode plain)
+fi
+if [ "${LINK_CHECK_VERBOSE:-}" = "1" ]; then
+  report_args+=(--verbose)
+fi
+
+# Why not: 開始と終了の行は標準エラーではなく標準出力へ出す。`| tee log` としたとき、
+# 結果と同じログに残ってほしいのはこの二行だからである。
+started_at=$SECONDS
+echo "link-check: $(date '+%H:%M:%S') 開始、${#targets[@]} ファイルを確認する"
+
 # Why not: 次の五点は URL 側の問題ではないため、除外や許可で黙らせる。
 # 一律に除外を増やすと本当のリンク切れを見落とすので、理由を書けるものだけを対象にする。
 #
@@ -44,9 +70,18 @@ fi
 #
 # 政府機関や医療機関のサイトは自動アクセスに 403, 429 を返すことがあるため、
 # これらも到達可能として扱う。
-# 並列度を 4 に落としているのは、同時接続が多いと bot 検知に回すサイトがあるため。
+#
+# Why not: eur-lex.europa.eu, europol.europa.eu, picscheme.org, linddun.org のような
+# 公的機関や学術系のサイトは、URL が正しくてもタイムアウト、502、接続断で失敗する。
+# ブラウザでは開けるため URL 側の問題ではないが、除外すると本当のリンク切れまで
+# 見落とすので、除外ではなく待ち方の調整で対処する。
+# --host-concurrency 1 で同一ホストへの同時接続をやめ、--timeout と再試行を延ばす。
+# 同時接続が多いと bot 検知に回すサイトへの配慮は --host-concurrency 1 が担うため、
+# 全体の並列度は 8 まで戻して、ホストをまたぐ確認は速く進める。
+# lychee は失敗も .lycheecache に載せるため、一度の失敗が同じ URL の他の出現箇所へ
+# 「Error (cached)」として波及する。一時的な応答はキャッシュに残さない。
 lychee \
-  --no-progress \
+  "${report_args[@]}" \
   --accept 200,202,206,403,429 \
   --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36" \
   --exclude '^https?://(www\.)?m-isac\.jp' \
@@ -55,7 +90,16 @@ lychee \
   --exclude '^https?://(www\.)?fda\.gov' \
   --exclude '^https?://(www\.)?mri\.co\.jp' \
   --exclude '^https?://(www\.)?github\.com/[^/]+/[^/]+/stargazers/?$' \
-  --max-concurrency 4 \
+  --max-concurrency 8 \
+  --host-concurrency 1 \
+  --timeout 60 \
+  --max-retries 4 \
+  --retry-wait-time 5 \
   --cache \
+  --cache-exclude-status '429,500..504' \
   --max-cache-age 1d \
   "${targets[@]}"
+status=$?
+
+echo "link-check: $(date '+%H:%M:%S') 終了、$((SECONDS - started_at)) 秒、終了コード ${status}"
+exit "$status"
