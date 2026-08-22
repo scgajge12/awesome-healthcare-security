@@ -78,20 +78,23 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `docs/threats/incidents/` | インシデント事例 |
 | `docs/threats/actors/` | 脅威アクターと TTPs |
 | `docs/threats/statistics/` | 公的統計から読む脅威（日本、海外） |
-| `docs/technology/medical-devices/` | 医療機器（IoMT, PACS）のセキュリティ |
+| `docs/technology/medical-devices/` | 医療機器（IoMT、PACS）のセキュリティ |
 | `docs/technology/oss-vulnerabilities/` | OSS 医療情報システムの脆弱性 |
 | `docs/technology/web-security/` | 医療系 Web アプリケーションのセキュリティ |
 | `docs/technology/cloud/` | クラウド事業者と医療（AWS、Google Cloud、Azure、さくらインターネット） |
 | `docs/technology/dx-ax/` | 医療 DX と AX（国の基盤と接続点、医療における AI のセキュリティ） |
 | `docs/technology/segmentation.md` | ネットワークの分離（ゾーンモデル、到達性の確認、例外の管理） |
+| `docs/practice/threat-modeling.md` | 医療の脅威モデリング（信頼境界、STRIDE、攻撃ツリー、順序づけ） |
+| `docs/practice/attack-surface.md` | 外部から見た自組織の攻撃面（棚卸し、測り方の線引き、継続） |
 | `docs/practice/pentest/` | セキュリティ診断とペネトレーションテスト（医療機関、製薬企業、医療機器） |
 | `docs/practice/bug-bounty/` | バグバウンティと脆弱性開示（医療分野） |
 | `docs/response/` | インシデント対応と事業継続（初動、ダウンタイム運用、届出、復旧） |
 | `docs/guidelines/` | ガイドラインと法規制 |
 | `docs/governance/` | 経営とガバナンス（体制、経営層への報告、予算、リスク移転） |
 | `docs/reference/pharma/` | 製薬企業のセキュリティ（治験と研究データ、製造 OT、原薬と受託製造） |
-| `docs/reference/labs-communities/` | ラボ, コミュニティ |
-| `docs/reference/resources/` | ツール, 論文, 学習リソース |
+| `docs/reference/labs-communities/` | ラボ、コミュニティ |
+| `docs/reference/resources/` | ツール、論文、学習リソース |
+| `docs/reference/security-services/` | セキュリティサービスのカタログ（区分と選び方、国内、海外）。掲載は推奨ではない |
 | `docs/reference/GLOSSARY.md` | 用語集 |
 | `docs/reference/_templates/` | 事例追加用のテンプレート |
 | `monthly-reports/` | 月報。`YYYY/YYYY-MM.md` の形式で追加する |
@@ -103,7 +106,7 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 `docs/` は七つの群に分かれる。
 **threats**：脅威を知る。
 **technology**：守る対象と攻撃面を、システムの種類ごとに扱う。
-**practice**：検証と報告の実務を扱う。
+**practice**：設計段階の脅威の数え上げから、攻撃面の把握、検証、報告の受け取りまでを扱う。
 **response**：侵害が起きたあとの初動、診療の継続、届出、復旧を扱う。
 **guidelines**：規制と業界ガイドラインを扱う。
 **governance**：体制、権限、予算、経営層への報告を扱う。

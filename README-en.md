@@ -155,6 +155,25 @@ This repository is written for the people on the other side of that equation: se
 
 ---
 
+## 🔍 The four lenses
+
+Material on healthcare security tends to settle into one of three shapes: a regulatory summary, a product pitch, or a retelling of incidents.
+This repository keeps what survives four lenses instead.
+Drop any one of them and the reader is left with something they cannot act on.
+
+| Lens | What it means in practice | Where it shows up |
+|---|---|---|
+| **Write down to the implementation** | A control is not finished at the policy statement. Where it goes, and how you verify it, belong in the same row. A control with an empty verification column does not count as a control | [Defense playbook](docs/threats/actors/defense-playbook.md), [Network segmentation](docs/technology/segmentation.md), [Identity and access management](docs/technology/identity.md), [Logging and monitoring](docs/technology/logging.md) |
+| **Read the paths in the attacker's order** | Count from the entry points reachable from outside, not from the asset register. Paths are built from disclosed incidents and observed tradecraft | [External attack surface](docs/practice/attack-surface.md) (Japanese), [Ransomware chains](docs/threats/actors/ransomware-chain.md), [Group TTPs](docs/threats/actors/ransomware-groups.md), [Bug bounty](docs/practice/bug-bounty/) |
+| **Sequence the work by risk** | Write the order that fits the budget, the staffing, and the downtime window that actually exists. Not descending CVSS, but reachable from outside, reaching the patient, and whether a compensating control can be placed | [Risk-based thinking](docs/reference/security-basics.md#3-リスクベースの考え方), [Translating severity into clinical terms](docs/practice/pentest/README.md#7-深刻度を診療と患者安全の言葉に翻訳する), [Small organizations](docs/governance/small-organizations.md) |
+| **Enumerate at design time** | Before measuring what was built, count the flows that cross trust boundaries and the paths that reach the target. A provider's only points of leverage over the design are procurement and new connections | [Threat modeling for healthcare](docs/practice/threat-modeling.md) (Japanese), [Secure by design](docs/reference/security-basics.md#9-セキュリティバイデザイン), [Device testing methodology](docs/technology/medical-devices/testing-methodology.md) |
+
+The four look at the same system from different directions.
+Enumerate at design time, confirm how it looks from outside, measure whether the path actually works, and let outsiders tell you about the part you never looked at ([Practice](docs/practice/)).
+How trustworthy each statement is comes from the [editorial principles](#-editorial-principles) below.
+
+---
+
 ## 📚 Contents
 
 `docs/` is split into seven groups: understand the threat, understand what you are defending, test it, respond when it happens, check the regulation, decide who owns it, and look things up.
@@ -166,9 +185,9 @@ Starting from the role closest to your own gets you to the decisions you need fa
 
 ```mermaid
 flowchart LR
-    R1["Hospital IT<br>and security teams"] --> A1["Organizational weaknesses"] --> A2["Defense playbook"] --> A3["Incident response and continuity"]
-    R2["Medical device<br>manufacturers"] --> B1["Medical device security"] --> B2["Device testing methodology"] --> B3["Guidelines and regulations"]
-    R3["Security researchers<br>and testers"] --> C1["Technology domains"] --> C2["Pentesting"] --> C3["Bug bounty and disclosure"]
+    R1["Hospital IT<br>and security teams"] --> A1["Organizational weaknesses"] --> A0["External attack surface"] --> A2["Defense playbook"] --> A3["Incident response and continuity"]
+    R2["Medical device<br>manufacturers"] --> B1["Medical device security"] --> B0["Threat modeling"] --> B2["Device testing methodology"] --> B3["Guidelines and regulations"]
+    R3["Security researchers<br>and testers"] --> C1["Technology domains"] --> C0["Threat modeling"] --> C2["Pentesting"] --> C3["Bug bounty and disclosure"]
     R4["Pharmaceutical<br>companies"] --> D1["Pharma security"] --> D2["Manufacturing OT"] --> D3["Governance"]
     R5["Briefing the board"] --> E1["Threat statistics"] --> E2["Incident case studies"] --> E3["Governance"]
 ```
@@ -216,6 +235,11 @@ Statistics from the National Police Agency, IPA, the Personal Information Protec
 
 </td>
 <td width="50%" valign="top">
+
+#### 🧪 [Integrity Attacks and Patient Safety](docs/threats/integrity-attacks.md)
+
+The third failure mode, neither disclosure nor downtime: values that have been altered and are still being read.
+
 </td>
 </tr>
 </table>
@@ -233,6 +257,7 @@ Risks specific to IoMT and PACS/DICOM, and how to test them safely.
 - [IoMT risks](docs/technology/medical-devices/iomt.md)
 - [PACS / DICOM security](docs/technology/medical-devices/pacs-dicom.md)
 - [Testing methodology](docs/technology/medical-devices/testing-methodology.md)
+- [Vulnerability intake and disclosure on the manufacturer side](docs/technology/medical-devices/psirt-cvd.md)
 
 </td>
 <td width="50%" valign="top">
@@ -258,6 +283,8 @@ Vulnerabilities that tend to show up in patient portals and telehealth, plus the
 
 - [Patient portal vulnerabilities](docs/technology/web-security/patient-portal.md)
 - [HL7 v2 and FHIR attack surface](docs/technology/web-security/hl7-fhir.md)
+- [Third-party transmission from patient-facing sites](docs/technology/web-security/tracking.md)
+- [PHR, health apps and wearables](docs/technology/web-security/phr-apps.md)
 
 </td>
 <td width="50%" valign="top">
@@ -284,9 +311,50 @@ The connection points added by Japan's national health data platform, and the th
 </td>
 <td width="50%" valign="top">
 
+#### 🧬 [Protecting Genomic Data](docs/technology/genomics.md)
+
+Where sequence data lives, how it moves into secondary use, and what happens to it when the custodian goes out of business.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### 🧱 [Network Segmentation](docs/technology/segmentation.md)
 
 A zone model for hospitals, the structures that quietly defeat segmentation, how to verify reachability, and how to manage exceptions.
+
+</td>
+<td width="50%" valign="top">
+
+#### 🔑 [Identity and Access Management](docs/technology/identity.md)
+
+Two-factor requirements and their deadlines, account inventories, break-glass procedures, and vendor maintenance accounts.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+#### 🪵 [Logging and Monitoring](docs/technology/logging.md)
+
+What to record, how long to keep it, and who reads it, derived from three uses: scoping a breach, detecting insider misuse, and meeting notification deadlines.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### ✉️ [Email and Domain Management](docs/technology/email-domain.md)
+
+Sender authentication, domains that lapse and get re-registered by someone else, and fraud aimed at invoices and payments.
+
+</td>
+<td width="50%" valign="top">
+
+#### 🗑️ [Media Disposal and Device Trade-In](docs/technology/media-disposal.md)
+
+Assets leaving the organization: sanitization methods, the chain of subcontractors, and the network credentials left on second-hand medical devices.
 
 </td>
 </tr>
@@ -295,6 +363,22 @@ A zone model for hospitals, the structures that quietly defeat segmentation, how
 ### 🛡️ [Practice](docs/practice/)
 
 <table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🧠 [Threat Modeling for Healthcare](docs/practice/threat-modeling.md)
+
+Starting without a design document: trust boundaries, STRIDE applied to healthcare asset classes, attack trees, and turning the output into a prioritized list of controls and test items. (Japanese)
+
+</td>
+<td width="50%" valign="top">
+
+#### 🛰️ [External Attack Surface](docs/practice/attack-surface.md)
+
+Why the asset register and reality diverge, how to count the entry points visible from outside, where the line between passive and active measurement sits, and how to notice when the surface grows. (Japanese)
+
+</td>
+</tr>
 <tr>
 <td width="50%" valign="top">
 
@@ -334,6 +418,8 @@ From Japan's "three-ministry, two-guideline" framework to HIPAA, FDA, EU MDR, an
 Who decides, and how: the CISO role and reporting lines, reporting to the board, maturity assessment, budget and staffing, risk transfer, and where to start with no dedicated staff.
 
 - [Reading survey data as an attacker would](docs/governance/readiness-gaps.md)
+- [The cost of an incident, and how to explain it to the board](docs/governance/cost.md)
+- [Where to start with no dedicated staff](docs/governance/small-organizations.md)
 
 Individual pages are being added.
 
@@ -359,10 +445,22 @@ Theft of trial data and intellectual property, manufacturing equipment under GMP
 Research labs, ISACs, and communities in Japan and abroad.
 
 - [Biohacking Village (DEF CON, CODE BLUE)](docs/reference/labs-communities/biohacking-village.md)
+- [Cyberbiosecurity](docs/reference/labs-communities/cyberbiosecurity.md)
 
 </td>
 </tr>
 <tr>
+<td width="50%" valign="top">
+
+#### 🗂️ [Security Service Catalogue](docs/reference/security-services/)
+
+Services that can be procured from outside, sorted into fourteen categories, with notes on selection, on the reach of third-party endorsements, and on what to settle in the contract.
+Listing is not endorsement.
+
+- [Japan](docs/reference/security-services/japan.md)
+- [Global](docs/reference/security-services/global.md)
+
+</td>
 <td width="50%" valign="top">
 
 #### 🧰 [Tools and Learning Resources](docs/reference/resources/)
@@ -373,11 +471,22 @@ Research labs, ISACs, and communities in Japan and abroad.
 - [Glossary](docs/reference/GLOSSARY.md)
 
 </td>
-<td width="50%" valign="top">
+</tr>
+<tr>
+<td colspan="2" valign="top">
 
 #### 🧭 [Security Fundamentals](docs/reference/security-basics.md)
 
 The vocabulary and frameworks the rest of this repository assumes: the seven elements of information security, working backwards from what must be protected, risk-based prioritisation, design principles (defence in depth, least privilege, zero trust, secure by design), threat modeling, assessment versus penetration testing, detection and response, DevSecOps, OWASP, and hardening.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+#### ⚖️ [Medical Ethics and Security Ethics](docs/reference/ethics.md)
+
+How the two sets of ethics differ in concept, character, and reasoning: the gap between who consents and who bears the harm, the opposite directions in which each justifies an intrusion, who benefits from confidentiality, and the moments when the order of what to protect is reversed. Written in Japanese.
 
 </td>
 </tr>
@@ -399,26 +508,36 @@ awesome-healthcare-security/
 │   ├── threats/                     Threats
 │   │   ├── incidents/               Incident case studies (japan/, global/ with per-year pages; cyber attacks first, other events secondary)
 │   │   ├── actors/                  Threat actors, TTPs, defense playbook
-│   │   └── statistics/              Official statistics on cyber attacks (japan.md, global.md)
+│   │   ├── statistics/              Official statistics on cyber attacks (japan.md, global.md)
+│   │   └── integrity-attacks.md     Integrity attacks and patient safety (paths, detection)
 │   ├── technology/                  Technology domains
 │   │   ├── medical-devices/         Medical device security (IoMT, PACS)
 │   │   ├── oss-vulnerabilities/     Open source health IT vulnerabilities
 │   │   ├── web-security/            Healthcare web application security
 │   │   ├── cloud/                   Cloud providers and healthcare
 │   │   ├── dx-ax/                   Healthcare DX and AX (platforms, Digital Agency, regional networks, AI, frontline-led adoption)
+│   │   ├── genomics.md              Protecting genomic data (where it lives, secondary use, custodian failure)
+│   │   ├── identity.md              Identity and access management (2FA deadlines, account inventory, break-glass)
+│   │   ├── logging.md               Logging and monitoring (what to keep, retention, who reads it)
+│   │   ├── email-domain.md          Email and domain management (sender auth, lapsed domains, BEC)
+│   │   ├── media-disposal.md        Media disposal and device trade-in (sanitization, evidence)
 │   │   └── segmentation.md          Network segmentation (zone model, verification, exceptions)
 │   ├── practice/                    Assessment and practice
+│   │   ├── threat-modeling.md       Threat modeling for healthcare (trust boundaries, STRIDE, attack trees)
+│   │   ├── attack-surface.md        External attack surface (inventory, measurement limits, continuity)
 │   │   ├── pentest/                 Security assessment and penetration testing
 │   │   └── bug-bounty/              Bug bounty and vulnerability disclosure
 │   ├── response/                    Incident response and continuity (cyber BCP, infrastructure and dependencies, first response, reporting)
 │   ├── guidelines/                  Guidelines and regulation
-│   ├── governance/                  Governance and management
+│   ├── governance/                  Governance and management (incident cost, small organizations)
 │   └── reference/                   Reference
 │       ├── pharma/                  Pharmaceutical security
 │       ├── labs-communities/        Labs and communities
 │       ├── resources/               Tools, papers, learning resources
+│       ├── security-services/       Security service catalogue (japan.md, global.md)
 │       ├── _templates/              Templates for new entries
 │       ├── security-basics.md       Security fundamentals (7 elements, design principles, threat modeling, detection)
+│       ├── ethics.md                Medical ethics and security ethics (concepts, character, reasoning)
 │       └── GLOSSARY.md              Glossary
 ├── monthly-reports/                 Monthly reports (YYYY/YYYY-MM.md)
 ├── skills/                          Review skills for this repository

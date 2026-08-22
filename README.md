@@ -153,6 +153,25 @@ AI の導入（AX）は、この差をさらに広げる。
 
 ---
 
+## 🔍 どの視点で書いているか
+
+医療とセキュリティを扱う資料は、規制の解説か、製品の説明か、事例の紹介に寄りやすい。
+本リポジトリは、次の四つを通したときに残るものを書く。
+どれか一つが欠けると、読んだ内容が手元の判断に使えなくなる。
+
+| 視点 | 何をするか | 主に現れる場所 |
+|---|---|---|
+| **実装と運用に落ちる形で書く** | 対策を方針で終わらせず、どこに何を置き、何で確かめるかまで書く。確かめ方の欄が埋まらない対策は、対策として数えない | [防御プレイブック](docs/threats/actors/defense-playbook.md)、[ネットワークの分離](docs/technology/segmentation.md)、[認証とアクセス管理](docs/technology/identity.md)、[ログと監視の設計](docs/technology/logging.md) |
+| **攻撃側の順序で経路を読む** | 資産台帳の側からではなく、外から到達できる入口の側から数える。経路の材料は、公表された事例と観測された手口に取る | [外部から見た自組織の攻撃面](docs/practice/attack-surface.md)、[連鎖するランサムウェア攻撃](docs/threats/actors/ransomware-chain.md)、[グループ別 TTPs](docs/threats/actors/ransomware-groups.md)、[Bug Bounty × 医療、ヘルスケア](docs/practice/bug-bounty/) |
+| **リスクベースで順序を決める** | 予算と人員と停止調整の枠に収まる順序を書く。CVSS の高い順ではなく、外から届くか、患者に届くか、緩和策を置けるかで並べる | [リスクベースの考え方](docs/reference/security-basics.md#3-リスクベースの考え方)、[深刻度を、診療と患者安全の言葉に翻訳する](docs/practice/pentest/README.md#7-深刻度を診療と患者安全の言葉に翻訳する)、[小規模組織で何から始めるか](docs/governance/small-organizations.md) |
+| **設計の段階で数え上げる** | 実装されたものを測る前に、境界をまたぐ流れと到達経路を数える。医療機関が構成に介入できる時点は、調達と接続の追加に限られる | [医療の脅威モデリング](docs/practice/threat-modeling.md)、[セキュリティ・バイ・デザイン](docs/reference/security-basics.md#9-セキュリティバイデザイン)、[医療機器の検証手法](docs/technology/medical-devices/testing-methodology.md) |
+
+四つは、同じ対象を別の方向から見る。
+設計で数え、外からの見え方を確かめ、通るかどうかを測り、見ていない範囲を外部から知らせてもらう、という順に並ぶ（[検証と実務](docs/practice/)）。
+記述そのものの確からしさは、後述の[記述の方針](#-記述の方針)で担保する。
+
+---
+
 ## 📚 コンテンツ
 
 `docs/` は七つの群に分かれている。
@@ -165,9 +184,9 @@ AI の導入（AX）は、この差をさらに広げる。
 
 ```mermaid
 flowchart LR
-    R1["医療機関の<br>情報システム部門"] --> A1["組織の脆弱性の分類"] --> A2["防御プレイブック"] --> A3["インシデント対応と事業継続"]
-    R2["医療機器メーカー"] --> B1["医療機器のセキュリティ"] --> B2["医療機器の検証手法"] --> B3["ガイドラインと法規制"]
-    R3["セキュリティ研究者<br>診断の実務者"] --> C1["技術領域"] --> C2["診断とペネトレーションテスト"] --> C3["バグバウンティと脆弱性開示"]
+    R1["医療機関の<br>情報システム部門"] --> A1["組織の脆弱性の分類"] --> A0["外部から見た自組織の攻撃面"] --> A2["防御プレイブック"] --> A3["インシデント対応と事業継続"]
+    R2["医療機器メーカー"] --> B1["医療機器のセキュリティ"] --> B0["医療の脅威モデリング"] --> B2["医療機器の検証手法"] --> B3["ガイドラインと法規制"]
+    R3["セキュリティ研究者<br>診断の実務者"] --> C1["技術領域"] --> C0["医療の脅威モデリング"] --> C2["診断とペネトレーションテスト"] --> C3["バグバウンティと脆弱性開示"]
     R4["製薬企業"] --> D1["製薬企業のセキュリティ"] --> D2["製造設備と OT"] --> D3["経営とガバナンス"]
     R5["経営層への説明"] --> E1["統計から読む脅威"] --> E2["インシデント事例集"] --> E3["経営とガバナンス"]
 ```
@@ -218,6 +237,12 @@ flowchart LR
 
 </td>
 <td width="50%" valign="top">
+
+#### 🧪 [完全性への攻撃と患者安全](docs/threats/integrity-attacks.md)
+
+漏えいでも停止でもない三つ目の型。
+値が変わったまま参照される状態を、どこで検知するか。
+
 </td>
 </tr>
 </table>
@@ -235,6 +260,7 @@ IoMT、PACS/DICOM 固有のリスクと、安全に検証するための手法�
 - [IoMT（医療 IoT 機器）のリスク](docs/technology/medical-devices/iomt.md)
 - [PACS / DICOM のセキュリティ](docs/technology/medical-devices/pacs-dicom.md)
 - [医療機器の検証手法](docs/technology/medical-devices/testing-methodology.md)
+- [メーカー側の脆弱性受付と開示](docs/technology/medical-devices/psirt-cvd.md)
 
 </td>
 <td width="50%" valign="top">
@@ -261,6 +287,8 @@ SCA と SBOM による既知脆弱性への対処。
 
 - [患者用ポータルの脆弱性](docs/technology/web-security/patient-portal.md)
 - [HL7 v2 と FHIR の攻撃面](docs/technology/web-security/hl7-fhir.md)
+- [患者向けサイトの第三者送信](docs/technology/web-security/tracking.md)
+- [PHR、健康アプリ、ウェアラブル](docs/technology/web-security/phr-apps.md)
 
 </td>
 <td width="50%" valign="top">
@@ -288,10 +316,56 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 </td>
 <td width="50%" valign="top">
 
+#### 🧬 [ゲノムデータの保護](docs/technology/genomics.md)
+
+再発行できないデータの所在、二次利用、事業者が消えるときの帰結。
+がんゲノム医療の情報基盤から、消費者向け遺伝子検査までを扱う。
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### 🧱 [ネットワークの分離](docs/technology/segmentation.md)
 
 医療機関のゾーンモデル、分離が破れる典型的な構造、到達性の確認、例外の扱い。
 直せない資産を周囲から守るための設計。
+
+</td>
+<td width="50%" valign="top">
+
+#### 🔑 [認証とアクセス管理](docs/technology/identity.md)
+
+二要素認証の要求と期限、ID の棚卸し、ブレークグラス、保守アカウント。
+現場の運用を崩さずに、水平展開を止める設計。
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+#### 🪵 [ログと監視の設計](docs/technology/logging.md)
+
+何を残し、どれだけ保存し、誰が読むか。
+侵害範囲の確定、内部不正の検知、届出の三つの用途から逆算する。
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### ✉️ [メールとドメインの管理](docs/technology/email-domain.md)
+
+送信ドメイン認証、失効したドメインの再取得、請求と支払いを狙うメール。
+なりすまされたときの被害が組織の外に出る領域。
+
+</td>
+<td width="50%" valign="top">
+
+#### 🗑️ [記憶媒体の廃棄と機器の下取り](docs/technology/media-disposal.md)
+
+組織の管理から外れていく資産。
+消去の方法、委託の連鎖、中古の医療機器に残るネットワークの資格情報。
 
 </td>
 </tr>
@@ -300,6 +374,22 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 ### 🛡️ [検証と実務](docs/practice/)
 
 <table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🧠 [医療の脅威モデリング](docs/practice/threat-modeling.md)
+
+設計図が手元にない状態から始めて、信頼境界と攻撃ツリーを描き、優先順位のついた対策と検証項目に落とす。
+
+</td>
+<td width="50%" valign="top">
+
+#### 🛰️ [外部から見た自組織の攻撃面](docs/practice/attack-surface.md)
+
+台帳と実際のずれ、外から到達できる入口の数え方、測ってよい範囲の線引き、増えたときに気付く仕組み。
+
+</td>
+</tr>
 <tr>
 <td width="50%" valign="top">
 
@@ -342,6 +432,8 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 CISO の役割と体制、経営層への報告、成熟度の把握、予算と人材、リスク移転、小規模組織での進め方。
 
 - [調査データから読む、備えの穴](docs/governance/readiness-gaps.md)
+- [インシデントの費用と、経営層への説明](docs/governance/cost.md)
+- [小規模組織で何から始めるか](docs/governance/small-organizations.md)
 
 個別のページは順次追加する。
 
@@ -367,10 +459,22 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 医療セキュリティの研究室、ISAC、国内外のコミュニティ。
 
 - [Biohacking Village（DEF CON、CODE BLUE）](docs/reference/labs-communities/biohacking-village.md)
+- [サイバーバイオセキュリティ](docs/reference/labs-communities/cyberbiosecurity.md)
 
 </td>
 </tr>
 <tr>
+<td width="50%" valign="top">
+
+#### 🗂️ [セキュリティサービスのカタログ](docs/reference/security-services/)
+
+外部から調達できるサービスを十四区分に分け、選び方、第三者評価の射程、契約で決めることを整理する。
+掲載は推奨ではない。
+
+- [国内のサービス](docs/reference/security-services/japan.md)
+- [海外のサービス](docs/reference/security-services/global.md)
+
+</td>
 <td width="50%" valign="top">
 
 #### 🧰 [ツールと学習リソース](docs/reference/resources/)
@@ -381,12 +485,24 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 - [用語集](docs/reference/GLOSSARY.md)
 
 </td>
-<td width="50%" valign="top">
+</tr>
+<tr>
+<td colspan="2" valign="top">
 
 #### 🧭 [セキュリティの基礎](docs/reference/security-basics.md)
 
 各ページが前提として使う語彙と枠組みを一通り並べる。
 情報セキュリティの 7 要素、守るべきものからの逆算、リスクベースの考え方、設計の原則（多層防御、最小権限、ゼロトラスト、セキュリティ・バイ・デザイン）、脅威モデリング、診断とペネトレーションテスト、検知と対応、DevSecOps、OWASP、ハードニング。
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+#### ⚖️ [医療の倫理とセキュリティの倫理](docs/reference/ethics.md)
+
+二つの倫理の概念、特徴、考え方の違いを並べる。
+同意を与える者と危害を受ける者のずれ、侵襲を正当化する向き、守秘の受益者、緊急時に守る対象の順位が入れ替わる場面。
 
 </td>
 </tr>
@@ -409,26 +525,36 @@ awesome-healthcare-security/
 │   ├── threats/                     脅威
 │   │   ├── incidents/               インシデント事例（japan/、global/ に年別の履歴とサマリー。サイバー攻撃を主、それ以外の事案を副として収録）
 │   │   ├── actors/                  脅威アクターと TTPs、防御プレイブック
-│   │   └── statistics/              公的統計から読む脅威（japan.md、global.md）
+│   │   ├── statistics/              公的統計から読む脅威（japan.md、global.md）
+│   │   └── integrity-attacks.md     完全性への攻撃と患者安全（改変の経路、検知の設計）
 │   ├── technology/                  技術領域
 │   │   ├── medical-devices/         医療機器（IoMT、PACS）のセキュリティ
 │   │   ├── oss-vulnerabilities/     OSS 医療情報システムの脆弱性
 │   │   ├── web-security/            医療系 Web アプリケーションのセキュリティ
 │   │   ├── cloud/                   クラウド事業者と医療（AWS、Google Cloud、Azure、さくら）
 │   │   ├── dx-ax/                   医療 DX と AX（国の基盤、デジタル庁、地域医療連携、医療 AI、現場主導の導入）
+│   │   ├── genomics.md              ゲノムデータの保護（所在、二次利用、事業者が消えるときの扱い）
+│   │   ├── identity.md              認証とアクセス管理（二要素認証の期限、ID の棚卸し、ブレークグラス）
+│   │   ├── logging.md               ログと監視の設計（何を残すか、保存期間、読む仕組み）
+│   │   ├── email-domain.md          メールとドメインの管理（送信ドメイン認証、失効ドメイン、BEC）
+│   │   ├── media-disposal.md        記憶媒体の廃棄と機器の下取り（消去、証跡、中古市場）
 │   │   └── segmentation.md          ネットワークの分離（ゾーンモデル、到達性の確認、例外の管理）
 │   ├── practice/                    検証と実務
+│   │   ├── threat-modeling.md       医療の脅威モデリング（信頼境界、STRIDE、攻撃ツリー、順序づけ）
+│   │   ├── attack-surface.md        外部から見た自組織の攻撃面（棚卸し、測り方の線引き、継続）
 │   │   ├── pentest/                 セキュリティ診断とペネトレーションテスト
 │   │   └── bug-bounty/              バグバウンティと脆弱性開示（医療分野）
 │   ├── response/                    インシデント対応と事業継続（サイバー BCP、基盤の構えと外部依存、初動、届出）
 │   ├── guidelines/                  ガイドラインと法規制
-│   ├── governance/                  経営とガバナンス（体制、報告、予算、リスク移転）
+│   ├── governance/                  経営とガバナンス（体制、報告、予算、リスク移転、インシデントの費用、小規模組織）
 │   └── reference/                   リファレンス
 │       ├── pharma/                  製薬企業のセキュリティ（治験、製造 OT、供給網）
 │       ├── labs-communities/        ラボ、コミュニティ
 │       ├── resources/               ツール、論文、学習リソース
+│       ├── security-services/       セキュリティサービスのカタログ（japan.md、global.md）
 │       ├── _templates/              事例追加のテンプレート
 │       ├── security-basics.md       セキュリティの基礎（7 要素、設計の原則、脅威モデリング、検知と対応）
+│       ├── ethics.md                医療の倫理とセキュリティの倫理（概念、特徴、考え方の違い）
 │       └── GLOSSARY.md              用語集
 ├── monthly-reports/                 月報（YYYY/YYYY-MM.md）
 ├── skills/                          文書レビュー用のスキル
