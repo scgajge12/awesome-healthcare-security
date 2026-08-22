@@ -42,8 +42,8 @@ flowchart TD
 | 規則 | 内容 |
 |---|---|
 | Privacy Rule | 保護対象保健情報（PHI）の利用と開示のルール |
-| Security Rule | 電子的な PHI（ePHI）に対する管理的, 物理的, 技術的セーフガード |
-| Breach Notification Rule | 侵害発生時の本人, HHS, 報道機関への通知義務 |
+| Security Rule | 電子的な PHI（ePHI）に対する管理的、物理的、技術的セーフガード |
+| Breach Notification Rule | 侵害発生時の本人、HHS、報道機関への通知義務 |
 
 適用対象は、医療提供者や保険者などの Covered Entity と、その業務を受託する Business Associate である。
 クラウド事業者や医療 IT ベンダは後者にあたり、契約（BAA）を通じて同等の義務を負う。
@@ -107,7 +107,7 @@ HHS が公表した医療分野向けのサイバーセキュリティ性能目�
 | **GDPR** | 個人データ全般 | 健康データを特別カテゴリとして扱う。侵害通知は 72 時間以内 |
 | **Cyber Resilience Act** | デジタル要素を持つ製品 | 製品のライフサイクル全体でのセキュリティ要求。医療機器は MDR との整合が図られる |
 | **European Health Data Space** | 医療データの流通 | 医療データの一次利用と二次利用の枠組みを定める |
-| **AI 規則（2024/1689）** | AI システム | 医療機器の安全構成要素として使われる AI を高リスクに分類し、MDR, IVDR の適合性評価と接続する |
+| **AI 規則（2024/1689）** | AI システム | 医療機器の安全構成要素として使われる AI を高リスクに分類し、MDR、IVDR の適合性評価と接続する |
 
 NIS2 は、医療機関を「重要（Essential）」な事業体として扱い、対策の不備に対して制裁金と経営層の責任を規定した点で影響が大きい。
 加盟国ごとの国内法化の内容に差があるため、事業を行う国の実装を確認する必要がある。
@@ -122,7 +122,7 @@ NIS2 は、医療機関を「重要（Essential）」な事業体として扱い
 |---|---|
 | NHS Data Security and Protection Toolkit（DSPT） | NHS と取引する組織が自己評価を提出する仕組み |
 | Cyber Assessment Framework（CAF） | NCSC が定める評価枠組み。DSPT が CAF に整合する形へ移行している |
-| NHS England Cyber Security | 医療分野向けの警告, 支援体制 |
+| NHS England Cyber Security | 医療分野向けの警告、支援体制 |
 
 **参照先**：[NHS Digital Data Security](https://digital.nhs.uk/) ／ [NCSC](https://www.ncsc.gov.uk/)
 

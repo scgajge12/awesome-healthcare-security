@@ -331,7 +331,7 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 
 ### ⚖️ [ガイドラインと法規制](docs/guidelines/)
 
-国内の 3省2ガイドラインから、HIPAA、FDA、EU MDR / NIS2 まで。
+国内の三省二ガイドラインから、HIPAA、FDA、EU MDR / NIS2 まで。
 
 - [国内のガイドライン、法規制](docs/guidelines/japan.md)
 - [海外のガイドライン、法規制](docs/guidelines/global.md)

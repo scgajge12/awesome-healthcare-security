@@ -36,7 +36,7 @@ IoMT（Internet of Medical Things）は、ネットワークに接続された�
 | **URGENT/11** | 2019 | VxWorks の IPnet TCP/IP スタック | リアルタイム OS の TCP/IP 実装に 11 件の脆弱性。患者モニタなど多数の医療機器が影響を受け、FDA が安全性通知を発出した（発見：Armis） | [FDA Safety Communication](https://www.fda.gov/medical-devices/medical-device-safety/safety-communications) ／ [CISA Advisory](https://www.cisa.gov/news-events/ics-advisories) |
 | **Ripple20** | 2020 | Treck TCP/IP スタック | 組込み機器に広く採用されたスタックに 19 件の脆弱性。輸液ポンプを含む医療機器が影響を受けた（発見：JSOF） | [JSOF 公表](https://www.jsof-tech.com/disclosures/ripple20/) |
 | **SweynTooth** | 2020 | 複数ベンダの BLE SoC | Bluetooth Low Energy の実装不備群。ペースメーカープログラマや血糖モニタなどが影響を受けた（発見：SUTD ASSET Research Group） | [ASSET 公表](https://asset-group.github.io/disclosures/sweyntooth/) |
-| **Access:7** | 2022 | PTC Axeda エージェント | 医療機器のリモート保守に使われるエージェントの脆弱性。多数のメーカー製品に影響（発見：Forescout, CyberMDX） | [CISA Advisory](https://www.cisa.gov/news-events/ics-advisories) |
+| **Access:7** | 2022 | PTC Axeda エージェント | 医療機器のリモート保守に使われるエージェントの脆弱性。多数のメーカー製品に影響（発見：Forescout、CyberMDX） | [CISA Advisory](https://www.cisa.gov/news-events/ics-advisories) |
 | **PwnedPiper** | 2021 | 気送管システム（Swisslog Healthcare Translogic PTS） | 北米の多数の病院に導入された検体と薬剤の搬送システムの制御に関する脆弱性群（発見：Armis） | [CISA Advisory](https://www.cisa.gov/news-events/ics-advisories) |
 
 > [!IMPORTANT]

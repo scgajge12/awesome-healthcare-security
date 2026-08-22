@@ -156,7 +156,7 @@ flowchart TD
 
 **事実**：市販後の改良が想定される医療機器については、承認された事項の一部の変更に係る計画を、あらかじめ確認しておく制度がある。
 変更計画確認手続（IDATEN）と呼ばれ、2020 年 9 月 1 日に導入された。
-根拠は医薬品医療機器等法第 23 条の 2 の 10 の 2 であり、確認を受けた計画の範囲内であれば、一部変更承認申請ではなく届出で変更できる（[PMDA プログラム医療機器の薬事開発, 承認申請に関する手引き](https://www.pmda.go.jp/files/000274829.pdf)）。
+根拠は医薬品医療機器等法第 23 条の 2 の 10 の 2 であり、確認を受けた計画の範囲内であれば、一部変更承認申請ではなく届出で変更できる（[PMDA プログラム医療機器の薬事開発、承認申請に関する手引き](https://www.pmda.go.jp/files/000274829.pdf)）。
 
 **分析**：この制度がある前提でも、モデルの更新は薬事の手続きを伴う。
 一般のソフトウェアのように、脆弱性が公表された日に更新を適用するという運用は成り立たない。
@@ -179,7 +179,7 @@ flowchart TD
 |---|---|
 | 経営層のリーダーシップ | 対策を投資と位置づけ、実施方針、予算と人材、実施状況の確認までを経営層の責任で回す |
 | 基本的な対策の確実な実施と、更なる強化 | 資産管理、リスクアセスメント、脆弱性管理、アカウント管理と認証とアクセス制御、バックアップ、監視と分析、事業継続計画、インシデント対応と復旧、サプライチェーンへの対応。加えてゼロトラストへの移行、脅威ハンティング、高性能 AI の防御側での活用、CYDER や IPA 中核人材育成プログラムによる人材育成 |
-| 高速化する脆弱性の発見, 修正への対応 | 既知の未処理脆弱性のリスクを改めて検証し、資産管理を前提に脆弱性情報を収集し、影響度, 悪用リスク, 事業継続への影響を踏まえて優先順位を付ける。判断のプロセスと体制をあらかじめ構築する |
+| 高速化する脆弱性の発見、修正への対応 | 既知の未処理脆弱性のリスクを改めて検証し、資産管理を前提に脆弱性情報を収集し、影響度、悪用リスク、事業継続への影響を踏まえて優先順位を付ける。判断のプロセスと体制をあらかじめ構築する |
 
 実施状況は、関係省庁と関係機関を通じて機動的に確認するとされている。
 根拠として、英国 AISI による Claude Mythos Preview の評価と、米国 CISA の重要インフラのレジリエンス強化に関するガイダンス（CI Fortify）が挙げられ、基本的な対策、隔離、復旧の重要性が示されている。
@@ -213,7 +213,7 @@ AISI が定めた AI セーフティ評価観点ガイドを土台に、AI ラ�
 日本デジタルヘルス・アライアンス（JaDHA）をはじめとする事業者、団体が策定に参加している（[AISI 公表ページ](https://aisi.go.jp/output/output_information/260402/)、[IPA プレス発表](https://www.ipa.go.jp/pressrelease/2026/press20260403.html)）。
 
 **事実**：国際的には、世界保健機関（WHO）が 2024 年 1 月に、医療で用いる大規模マルチモーダルモデル（LMM）に関する指針を公表している（[Ethics and governance of artificial intelligence for health: Guidance on large multi-modal models](https://www.who.int/publications/i/item/9789240084759)）。
-EU では、AI 規則（Regulation (EU) 2024/1689）が、医療機器の安全構成要素として使われる AI を高リスクに位置づけ、MDR, IVDR の適合性評価と接続する構造をとる。
+EU では、AI 規則（Regulation (EU) 2024/1689）が、医療機器の安全構成要素として使われる AI を高リスクに位置づけ、MDR、IVDR の適合性評価と接続する構造をとる。
 
 **分析**：規範は「守るべき要求」と「評価の観点」に分かれる。
 薬機法や個人情報保護法は前者であり、AISI のガイドや WHO の指針は後者にあたる。
@@ -250,9 +250,9 @@ EU では、AI 規則（Regulation (EU) 2024/1689）が、医療機器の安全�
 
 | 名称 | 発行 |
 |---|---|
-| [AI 事業者ガイドライン 第 1.2 版](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf)（[概要](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_2.pdf)） | 総務省, 経済産業省 |
+| [AI 事業者ガイドライン 第 1.2 版](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_1.pdf)（[概要](https://www.meti.go.jp/shingikai/mono_info_service/ai_shakai_jisso/pdf/20260331_2.pdf)） | 総務省、経済産業省 |
 | [医療デジタルデータの AI 研究開発等への利活用に係るガイドライン](https://www.mhlw.go.jp/content/001310044.pdf) | 厚生労働省 |
-| [プログラム医療機器の薬事開発, 承認申請に関する手引き](https://www.pmda.go.jp/files/000274829.pdf) | 医薬品医療機器総合機構（PMDA） |
+| [プログラム医療機器の薬事開発、承認申請に関する手引き](https://www.pmda.go.jp/files/000274829.pdf) | 医薬品医療機器総合機構（PMDA） |
 | [次世代医療基盤法](https://www8.cao.go.jp/iryou/index.html) | 内閣府 |
 | [ヘルスケア領域における AI セーフティ評価観点ガイド 第 1.0 版](https://aisi.go.jp/output/output_information/260402/) | AI セーフティ・インスティテュート（AISI） ヘルスケアサブワーキンググループ |
 | [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/) | OWASP Gen AI Security Project |

@@ -278,7 +278,7 @@ flowchart TD
 - [患者用ポータルで狙われやすい脆弱性](patient-portal.md)
 - [PACS / DICOM のセキュリティ](../medical-devices/pacs-dicom.md)
 - [ネットワークの分離](../segmentation.md)
-- [OSS 電子カルテ, HIS の脆弱性](../oss-vulnerabilities/ehr-systems.md)
+- [OSS 電子カルテ、HIS の脆弱性](../oss-vulnerabilities/ehr-systems.md)
 - [報告された脆弱性の事例（CVE）](../oss-vulnerabilities/cve-cases.md)
 - [医療 DX：国の基盤と接続点](../dx-ax/medical-dx.md)
 - [ツール](../../reference/resources/tools.md)

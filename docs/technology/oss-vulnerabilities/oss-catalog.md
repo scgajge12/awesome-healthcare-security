@@ -71,14 +71,14 @@ CVE が公表されたときに動けるかどうかは、この層を台帳に�
 
 | 製品 | 実装 | 何をするか | 一次情報 |
 |---|---|---|---|
-| **OpenEMR** | PHP, MySQL | 診療所向けの電子カルテと診療管理。患者ポータル、請求、FHIR API を含む | [公式](https://www.open-emr.org/) / [GitHub](https://github.com/openemr/openemr) / [NVD](https://nvd.nist.gov/vuln/search/results?query=openemr) |
-| **OpenMRS** | Java, Spring | モジュール型の EMR プラットフォーム。国際保健の現場で広く導入されている | [公式](https://openmrs.org/) / [GitHub](https://github.com/openmrs) / [NVD](https://nvd.nist.gov/vuln/search/results?query=openmrs) |
-| **Bahmni** | OpenMRS, OpenELIS, Odoo | 電子カルテ、検査、会計、画像連携をまとめた病院情報システム | [公式](https://www.bahmni.org/) / [GitHub](https://github.com/Bahmni) |
-| **GNU Health** | Python, Tryton | 病院情報システムと公衆衛生の管理 | [公式](https://www.gnuhealth.org/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=gnu+health) |
+| **OpenEMR** | PHP、MySQL | 診療所向けの電子カルテと診療管理。患者ポータル、請求、FHIR API を含む | [公式](https://www.open-emr.org/) / [GitHub](https://github.com/openemr/openemr) / [NVD](https://nvd.nist.gov/vuln/search/results?query=openemr) |
+| **OpenMRS** | Java、Spring | モジュール型の EMR プラットフォーム。国際保健の現場で広く導入されている | [公式](https://openmrs.org/) / [GitHub](https://github.com/openmrs) / [NVD](https://nvd.nist.gov/vuln/search/results?query=openmrs) |
+| **Bahmni** | OpenMRS、OpenELIS、Odoo | 電子カルテ、検査、会計、画像連携をまとめた病院情報システム | [公式](https://www.bahmni.org/) / [GitHub](https://github.com/Bahmni) |
+| **GNU Health** | Python、Tryton | 病院情報システムと公衆衛生の管理 | [公式](https://www.gnuhealth.org/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=gnu+health) |
 | **LibreHealth EHR** | PHP | OpenEMR からのフォーク | [公式](https://librehealth.io/) / [GitHub](https://github.com/LibreHealthIO/lh-ehr) / [NVD](https://nvd.nist.gov/vuln/search/results?query=librehealth) |
 | **OpenClinic GA** | Java | 病院情報システム。多数の CVE が公開されている | [SourceForge](https://sourceforge.net/projects/open-clinic/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=openclinic) |
 | **Open Hospital** | Java | 低資源環境の病院向け情報システム | [GitHub](https://github.com/informatici/openhospital) |
-| **HospitalRun** | JavaScript, Node | 通信が不安定な環境を前提としたオフライン優先設計 | [公式](https://hospitalrun.io/) / [GitHub](https://github.com/HospitalRun) |
+| **HospitalRun** | JavaScript、Node | 通信が不安定な環境を前提としたオフライン優先設計 | [公式](https://hospitalrun.io/) / [GitHub](https://github.com/HospitalRun) |
 | **GNUmed** | Python | 電子カルテクライアント | [公式](https://www.gnumed.de/) |
 | **日医標準レセプトソフト（ORCA）** | 日本 | 医事会計（レセプト）システム | [ORCA Project](https://www.orca.med.or.jp/orca/summary/) |
 
@@ -99,7 +99,7 @@ CVE が公表されたときに動けるかどうかは、この層を台帳に�
 | **Orthanc** | C++ | 軽量な PACS サーバ。REST API とプラグイン機構を持つ | [公式](https://www.orthanc-server.com/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=orthanc) |
 | **dcm4che / dcm4chee** | Java | DICOM ツールキットと、実運用規模のアーカイブ | [公式](https://www.dcm4che.org/) / [GitHub](https://github.com/dcm4che) |
 | **DCMTK** | C++ | DICOM の参照実装に近いツールキット。商用製品の内部でも動く | [公式](https://dicom.offis.de/dcmtk) / [NVD](https://nvd.nist.gov/vuln/search/results?query=dcmtk) |
-| **GDCM（Grassroots DICOM）** | C++ | DICOM の読み書きライブラリ。ITK, VTK 経由で研究用途にも広がる | [GitHub](https://github.com/malaterre/GDCM) |
+| **GDCM（Grassroots DICOM）** | C++ | DICOM の読み書きライブラリ。ITK、VTK 経由で研究用途にも広がる | [GitHub](https://github.com/malaterre/GDCM) |
 | **pydicom** | Python | Python の DICOM 処理ライブラリ。研究と前処理の標準的な入口 | [GitHub](https://github.com/pydicom/pydicom) |
 | **fo-dicom** | .NET | .NET の DICOM 実装 | [GitHub](https://github.com/fo-dicom/fo-dicom) |
 | **OHIF Viewer** | JavaScript | ブラウザで動く医用画像ビューア | [公式](https://ohif.org/) / [GitHub](https://github.com/OHIF/Viewers) |
@@ -139,9 +139,9 @@ DCMTK や GDCM は多くの製品に組み込まれるため、1 件の欠陥が
 | 製品 | 実装 | 何をするか | 一次情報 |
 |---|---|---|---|
 | **OpenELIS Global** | Java | 臨床検査情報システム（LIS） | [GitHub](https://github.com/DIGI-UW/OpenELIS-Global-2) |
-| **SENAITE（旧 Bika LIMS）** | Python, Plone | 検査室情報管理システム（LIMS） | [公式](https://www.senaite.com/) / [GitHub](https://github.com/senaite/senaite.core) |
+| **SENAITE（旧 Bika LIMS）** | Python、Plone | 検査室情報管理システム（LIMS） | [公式](https://www.senaite.com/) / [GitHub](https://github.com/senaite/senaite.core) |
 | **LabKey Server** | Java | 研究データと検体の管理 | [公式](https://www.labkey.com/) |
-| **OpenBoxes** | Groovy, Grails | 医薬品と医療材料の在庫, 供給管理 | [公式](https://openboxes.com/) / [GitHub](https://github.com/openboxes/openboxes) |
+| **OpenBoxes** | Groovy、Grails | 医薬品と医療材料の在庫、供給管理 | [公式](https://openboxes.com/) / [GitHub](https://github.com/openboxes/openboxes) |
 | **OpenLMIS** | Java | 公衆衛生分野の物流管理 | [公式](https://openlmis.org/) |
 
 ---
@@ -153,7 +153,7 @@ DCMTK や GDCM は多くの製品に組み込まれるため、1 件の欠陥が
 | **DHIS2** | Java | 保健情報の集計と分析。多くの国の保健省が採用している | [公式](https://dhis2.org/) / [GitHub](https://github.com/dhis2) / [NVD](https://nvd.nist.gov/vuln/search/results?query=dhis2) |
 | **SORMAS** | Java | 感染症サーベイランスと接触者管理 | [GitHub](https://github.com/SORMAS-Foundation/SORMAS-Project) |
 | **CommCare HQ** | Python | 地域保健員向けのモバイルデータ収集 | [GitHub](https://github.com/dimagi/commcare-hq) |
-| **OpenSRP** | Java, Android | 地域保健の記録と追跡 | [公式](https://opensrp.io/) |
+| **OpenSRP** | Java、Android | 地域保健の記録と追跡 | [公式](https://opensrp.io/) |
 
 **分析**：この分野の製品は、国単位の保健データを 1 か所に集める設計になっている。
 影響範囲が特定の医療機関ではなく国民規模になるため、同じ SQL インジェクションでも結果の重さが変わる。
@@ -167,7 +167,7 @@ DCMTK や GDCM は多くの製品に組み込まれるため、1 件の欠陥が
 | **REDCap** | PHP | 研究用の電子データ収集。大学と研究機関で広く使われる | [公式](https://projectredcap.org/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=redcap) |
 | **OpenClinica** | Java | 治験の電子データ収集（EDC） | [公式](https://www.openclinica.com/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=openclinica) |
 | **i2b2** | Java | 診療データの二次利用と患者コホート抽出 | [公式](https://www.i2b2.org/) |
-| **OHDSI ATLAS / WebAPI** | Java, R | OMOP 共通データモデル上での観察研究 | [GitHub](https://github.com/OHDSI) |
+| **OHDSI ATLAS / WebAPI** | Java、R | OMOP 共通データモデル上での観察研究 | [GitHub](https://github.com/OHDSI) |
 | **XNAT** | Java | 研究用の画像データ管理 | [公式](https://www.xnat.org/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=xnat) |
 
 > [!NOTE]
@@ -185,9 +185,9 @@ DCMTK や GDCM は多くの製品に組み込まれるため、1 件の欠陥が
 
 | 製品 | 実装 | 何をするか | 一次情報 |
 |---|---|---|---|
-| **MONAI** | Python, PyTorch | 医用画像向けの深層学習フレームワーク | [GitHub](https://github.com/Project-MONAI/MONAI) |
+| **MONAI** | Python、PyTorch | 医用画像向けの深層学習フレームワーク | [GitHub](https://github.com/Project-MONAI/MONAI) |
 | **MONAI Deploy** | Python | 学習済みモデルを臨床ワークフローに組み込む実行基盤 | [GitHub](https://github.com/Project-MONAI/monai-deploy) |
-| **3D Slicer** | C++, Python | 医用画像の可視化と解析。研究用途で広く使われる | [公式](https://www.slicer.org/) |
+| **3D Slicer** | C++、Python | 医用画像の可視化と解析。研究用途で広く使われる | [公式](https://www.slicer.org/) |
 | **ITK / VTK** | C++ | 画像処理と可視化のライブラリ。内部で GDCM を使う | [公式](https://itk.org/) |
 
 **分析**：医療 AI の基盤は、モデルの重みやバンドルを外部から取得して読み込む設計になっている。
@@ -201,7 +201,7 @@ MONAI に報告された一連の脆弱性は、この構造から生じてい�
 
 | 分類 | 代表例 |
 |---|---|
-| OS | Linux（RHEL, Ubuntu ほか） |
+| OS | Linux（RHEL、Ubuntu ほか） |
 | Web サーバ、アプリケーションサーバ | Apache HTTP Server、Nginx、Apache Tomcat、WildFly |
 | データベース | PostgreSQL、MySQL / MariaDB |
 | 実行基盤、ライブラリ | Java（OpenJDK）、PHP、Spring Framework、Apache Log4j、OpenSSL |
@@ -257,7 +257,7 @@ CISA は同日にこれを Known Exploited Vulnerabilities カタログへ追加
 | **修正の実績** | 過去の CVE に対する修正リリースの間隔 | 報告しても直らない |
 | **修正の完全性** | 過去に不完全な修正が繰り返されていないか | 更新しても攻撃経路が残る |
 | **既定設定** | 初期状態で認証が有効か。管理画面が外に出ないか | 導入した時点で露出する |
-| **認証の外部化** | OIDC, SAML に対応し、院内の認証基盤に寄せられるか | 個別のアカウント管理が残る |
+| **認証の外部化** | OIDC、SAML に対応し、院内の認証基盤に寄せられるか | 個別のアカウント管理が残る |
 | **監査ログ** | 参照イベントを患者単位で記録できるか | 内部不正を追跡できない |
 | **依存の可視化** | SBOM を出力できるか。依存が更新されているか | 影響判断に毎回時間がかかる |
 | **配布物の検証** | リリースやコンテナイメージに署名があるか | 入手経路を攻撃されたときに気づけない |
@@ -270,12 +270,12 @@ CISA は同日にこれを Known Exploited Vulnerabilities カタログへ追加
 - [ ] SBOM を取得した（自前構築なら生成した）
 - [ ] 依存に既知の脆弱性がないか SCA で確認した
 - [ ] 既定の管理者アカウントとパスワードを変更した
-- [ ] インストーラ, セットアップ画面を導入後に無効化した
+- [ ] インストーラ、セットアップ画面を導入後に無効化した
 - [ ] 管理 UI と API の外部到達性を確認した
 - [ ] 認証を院内の認証基盤に寄せた（または個別管理の運用を決めた）
 - [ ] 参照を含む監査ログの取得と保存先を決めた
 - [ ] 更新の担当と適用のタイミングを決めた
-- [ ] 脆弱性情報の受信経路（NVD, JVN, プロジェクトのリリース通知）を登録した
+- [ ] 脆弱性情報の受信経路（NVD、JVN、プロジェクトのリリース通知）を登録した
 
 ---
 

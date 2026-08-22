@@ -1,4 +1,4 @@
-# 📑 論文, レポート
+# 📑 論文、レポート
 
 医療セキュリティを理解するうえで参照される研究と報告書をまとめる。
 
@@ -15,7 +15,7 @@
 | [Pacemakers and Implantable Cardiac Defibrillators: Software Radio Attacks and Zero-Power Defenses](https://www.secure-medicine.org/hubfs/public/publications/icd-study.pdf) | 植込み型除細動器の無線通信に対する攻撃と、電力を消費しない防御手法を示した研究。この分野の出発点として参照される |
 | [On the (in)security of the Latest Generation Implantable Cardiac Defibrillators and How to Secure Them](https://cosicdatabase.esat.kuleuven.be/backend/publications/files/conferencepaper/2678) | 新しい世代の植込み型デバイスに対する解析と対策 |
 | [Hacking Medical Devices for Fun and Insulin: Breaking the Human SCADA System](https://media.blackhat.com/bh-us-11/Radcliffe/BH_US_11_Radcliffe_Hacking_Medical_Devices_WP.pdf) | インスリンポンプに対する攻撃を示した Black Hat の研究 |
-| [Security and Privacy Qualities of Medical Devices: An Analysis of FDA Postmarket Surveillance](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0040200&type=printable) | FDA の市販後監視データから、医療機器のセキュリティ, プライバシー問題を分析した論文 |
+| [Security and Privacy Qualities of Medical Devices: An Analysis of FDA Postmarket Surveillance](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0040200&type=printable) | FDA の市販後監視データから、医療機器のセキュリティ、プライバシー問題を分析した論文 |
 | [ANATOMY OF AN ATTACK: MEDJACK](https://securityledger.com/wp-content/uploads/2015/06/AOA_MEDJACK_LAYOUT_6-0_6-3-2015-1.pdf) | 医療機器を足場として院内に潜伏する攻撃手法の報告 |
 | [An Architecture for Analysis](https://sites.cs.ucsb.edu/~jmcmahan/research/top_picks_18.pdf) | ペースメーカーを例に、組込み機器のセキュリティ設計を論じた研究 |
 
@@ -31,7 +31,7 @@
 | [HSE Conti Cyber Attack Independent Post Incident Review](https://about.hse.ie/publications/conti-cyber-attack-on-the-hse-independent-post-incident-review/) | アイルランド保健サービスへの攻撃に関する詳細な事後レビュー。医療機関のインシデント対応を学ぶうえで最も充実した公開文書 |
 | [NAO: Investigation - WannaCry cyber attack and the NHS](https://www.nao.org.uk/reports/investigation-wannacry-cyber-attack-and-the-nhs/) | 英国国家監査院による WannaCry の影響調査 |
 | つるぎ町立半田病院 コンピュータウイルス感染事案 調査報告書 | 国内の医療機関が技術的経緯を詳細に公開した事例（[公式サイト](https://www.handa-hospital.jp/)） |
-| 大阪急性期, 総合医療センター 情報セキュリティインシデント調査委員会報告書 | 委託先経由の侵入を分析した国内の事例（[公式サイト](https://www.gh.opho.jp/)） |
+| 大阪急性期・総合医療センター 情報セキュリティインシデント調査委員会報告書 | 委託先経由の侵入を分析した国内の事例（[公式サイト](https://www.gh.opho.jp/)） |
 
 ---
 
@@ -42,7 +42,7 @@
 
 | 研究課題 | 研究代表者 | 年度 |
 |---|---|---|
-| [地域における共通基盤, 集中管理体制によるサイバーセキュリティの実証のための研究](https://mhlw-grants.niph.go.jp/project/180408) | 黒田知宏（京都大学医学部附属病院） | 令和 7〜8 年度 |
+| [地域における共通基盤、集中管理体制によるサイバーセキュリティの実証のための研究](https://mhlw-grants.niph.go.jp/project/180408) | 黒田知宏（京都大学医学部附属病院） | 令和 7〜8 年度 |
 
 **事実**：上記の研究は、医療機関のセキュリティ人材の不足に対して、人材を集約した指導的な医療機関が周辺を支援する体制を構築することを目的としている。
 初年度は、相互チェックの監査項目リストの策定、セキュリティチェック手順書の準備、IT-BCP 計画の策定が行われた（[研究課題の概要](https://mhlw-grants.niph.go.jp/project/180408)）。
@@ -61,10 +61,10 @@
 
 | 資料 | 発行 | 内容 |
 |---|---|---|
-| [病院, 診療所のサイバーセキュリティ：医療機関の情報システムの管理体制に関する実態調査から（No.453）](https://www.jmari.med.or.jp/result/working/post-233/) | 2021-05-14 | 病院と診療所を対象とした大規模なアンケート調査。管理体制の整備状況を項目別に集計している |
+| [病院、診療所のサイバーセキュリティ：医療機関の情報システムの管理体制に関する実態調査から（No.453）](https://www.jmari.med.or.jp/result/working/post-233/) | 2021-05-14 | 病院と診療所を対象とした大規模なアンケート調査。管理体制の整備状況を項目別に集計している |
 | [医療機器に関わるサイバーセキュリティの動向（No.465）](https://www.jmari.med.or.jp/result/working/post-3389/) | 2022-03-23 | 国内外の政策と関連団体の取り組みの整理、製造販売業者と医療現場への調査 |
-| [医療現場のサイバーセキュリティ確保に向けて：専門家インタビュー調査から（No.488）](https://www.jmari.med.or.jp/result/working/post-4657/) | 2024-12-10 | 専門家, 実務家へのインタビューにもとづく、医療機関, 業界, 行政それぞれへの提言 |
-| [医師会共同利用施設のサイバーセキュリティ：医師会病院と健診, 検査センター, 複合体の実態（No.501）](https://www.jmari.med.or.jp/result/working/post-5118/) | 2026-02-24 | 医師会共同利用施設に対象を絞った実態調査 |
+| [医療現場のサイバーセキュリティ確保に向けて：専門家インタビュー調査から（No.488）](https://www.jmari.med.or.jp/result/working/post-4657/) | 2024-12-10 | 専門家、実務家へのインタビューにもとづく、医療機関、業界、行政それぞれへの提言 |
+| [医師会共同利用施設のサイバーセキュリティ：医師会病院と健診・検査センター、複合体の実態（No.501）](https://www.jmari.med.or.jp/result/working/post-5118/) | 2026-02-24 | 医師会共同利用施設に対象を絞った実態調査 |
 | [医療機器高度化に伴う医療情報のサイバーセキュリティマネジメントに関する研究（RP077）](https://www.jmari.med.or.jp/result/other/post-218/) | 2021-03 | 委託研究報告書 |
 
 ### No.453：管理体制の実態（2021 年）
@@ -79,13 +79,13 @@
 
 ### No.488：専門家インタビューからの提言（2024 年）
 
-**事実**：ICT, 情報セキュリティの専門家, 実務家, 学識経験者を対象に、2024 年 5 月から 10 月にかけて計 8 団体、18 人を対象とする非構造化面接法によるインタビューが行われた。
-提言は「自助（医療機関）」「共助（医療界, 情報システム業界, 保険業界）」「公助（政治, 行政）」の三層に整理されている（[No.488](https://www.jmari.med.or.jp/result/working/post-4657/)）。
+**事実**：ICT、情報セキュリティの専門家、実務家、学識経験者を対象に、2024 年 5 月から 10 月にかけて計 8 団体、18 人を対象とする非構造化面接法によるインタビューが行われた。
+提言は「自助（医療機関）」「共助（医療界、情報システム業界、保険業界）」「公助（政治、行政）」の三層に整理されている（[No.488](https://www.jmari.med.or.jp/result/working/post-4657/)）。
 
 **事実**：医療機関に対しては、ICT 資産管理、ネットワーク構成図の作成と更新、ネットワークの出入口対策、端末と VPN 機器の脆弱性対応、ネットワーク内部の監視、被害最小化策（オフラインバックアップ、セグメンテーション、BCP、サイバー保険）が挙げられている。
 あわせて、保守契約への委託事項の明記、複数ベンダが並立する場合のプライムベンダーの設置、希少な ICT 人材を地域ごとに共有する仕組みの構築が提言されている。
 
-**事実**：国に対しては、司令塔組織の見直しと強化、脆弱性情報の確実な伝達と対策実装の支援、システム仕様書を点検する第三者機関の創設、SOC の制度化と医療機関向け地域別 SOC の構築支援、有事の相談窓口の一本化、財源の確保と国民, 患者への説明、健康, 医療データの廃棄ルールと真正性担保の政策議論が提言されている。
+**事実**：国に対しては、司令塔組織の見直しと強化、脆弱性情報の確実な伝達と対策実装の支援、システム仕様書を点検する第三者機関の創設、SOC の制度化と医療機関向け地域別 SOC の構築支援、有事の相談窓口の一本化、財源の確保と国民、患者への説明、健康、医療データの廃棄ルールと真正性担保の政策議論が提言されている。
 
 **分析**：この提言のうち、地域別 SOC と人材の共有は、[厚生労働科学研究の地域共通基盤の実証](#国内の公的研究)と同じ方向を向いている。
 一施設で 24 時間 365 日の監視要員を確保できないという制約は共通しており、解を施設の外に置く点で一致する。

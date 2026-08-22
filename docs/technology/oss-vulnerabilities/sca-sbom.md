@@ -200,7 +200,7 @@ flowchart TD
 
 経営層への報告では、この四つを継続して出す（[経営とガバナンス](../../governance/)）。
 
-### 調達, 契約に書く
+### 調達、契約に書く
 
 - SBOM を、リリースごとに SPDX または CycloneDX 形式で提供すること
 - 自社製品に影響する脆弱性が公表された場合の**通知の期限**
@@ -228,7 +228,7 @@ flowchart TD
 
 ## ツール
 
-具体的なツールは [ツール](../../reference/resources/tools.md) の脆弱性管理, SBOM の節にまとめている。
+具体的なツールは [ツール](../../reference/resources/tools.md) の脆弱性管理、SBOM の節にまとめている。
 生成には Syft や Trivy、突き合わせには Grype や OSV-Scanner、継続的な追跡には Dependency-Track が使われる。
 
 ---

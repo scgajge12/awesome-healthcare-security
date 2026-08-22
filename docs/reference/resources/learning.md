@@ -79,11 +79,11 @@ FHIR は REST ベースの新しい規格であり、Web セキュリティの�
 | [CyberMed Summit](https://www.cybermedsummit.org/) | 医師とセキュリティ研究者による臨床シミュレーション形式の演習 |
 | [HIMSS Global Conference](https://www.himss.org/) | 医療 IT 全般。セキュリティのセッションを含む |
 | [S4](https://s4xevents.com/) | 制御システムセキュリティ。医療機器のセッションが含まれることがある |
-| [Black Hat / DEF CON](https://blackhat.com/) | 医療機器, 医療システムの研究発表が定期的に行われる |
+| [Black Hat / DEF CON](https://blackhat.com/) | 医療機器、医療システムの研究発表が定期的に行われる |
 
 ---
 
-## 研修, 教材
+## 研修、教材
 
 講演で全体像をつかんだあと、組織内の教育に使える教材が国内外にある。
 
@@ -95,13 +95,13 @@ FHIR は REST ベースの新しい規格であり、Web セキュリティの�
 | [厚生労働省 医療分野のサイバーセキュリティ対策について](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/johoka/cyber-security.html) | ガイドライン、チェックリスト、注意喚起。研修の題材として使える |
 | [IPA 映像で知る情報セキュリティ](https://www.ipa.go.jp/security/videos/) | 分野横断の啓発動画。医療に限らない基礎の底上げに使う |
 | [特定非営利活動法人日本医療 AI リテラシー協会（JAMAIL）](https://jamail.or.jp/) | 医療 AI の教育と情報発信。無料のオンラインコミュニティ AcademiX Medical を運営 |
-| [一般社団法人医療サイバーセキュリティ協議会（MedCSC）](https://medcsc.org/) | セミナー, ワークショップ、実践的トレーニングとインシデント訓練 |
+| [一般社団法人医療サイバーセキュリティ協議会（MedCSC）](https://medcsc.org/) | セミナー、ワークショップ、実践的トレーニングとインシデント訓練 |
 
 ### 国外
 
 | 提供元 | 内容 |
 |---|---|
-| [HHS 405(d) Program](https://405d.hhs.gov/) | 規模別の実践集 HICP と、医療従事者向けの啓発教材, 資料 |
+| [HHS 405(d) Program](https://405d.hhs.gov/) | 規模別の実践集 HICP と、医療従事者向けの啓発教材、資料 |
 | [HHS HC3](https://www.hhs.gov/about/agencies/asa/ocio/hc3/index.html) | 医療分野の脅威分析レポートとブリーフィング資料 |
 | [CISA](https://www.cisa.gov/) | 重要インフラ向けの無償サービスと、医療機器の ICS Medical Advisory |
 | [Health-ISAC](https://health-isac.org/) | サミット、ワークショップ、ウェビナー。[日本語ページ](https://health-isac.org/ja/)がある |
@@ -114,7 +114,7 @@ FHIR は REST ベースの新しい規格であり、Web セキュリティの�
 
 1. **検証環境を作る**：OpenEMR や Orthanc をローカルに構築する（[ツール](tools.md)）
 2. **合成データを流す**：Synthea で患者データを生成し、システムに投入する
-3. **プロトコルを観察する**：Wireshark で HL7, DICOM の通信を見る
+3. **プロトコルを観察する**：Wireshark で HL7、DICOM の通信を見る
 4. **脆弱性を追う**：対象製品の CVE と修正コミットを読み、何が問題だったかを理解する
 5. **報告する**：発見した問題は、プロジェクトのセキュリティポリシーに従って報告する
 
@@ -123,8 +123,8 @@ FHIR は REST ベースの新しい規格であり、Web セキュリティの�
 ## 関連ページ
 
 - [ツール](tools.md)
-- [論文, レポート](research.md)
-- [ラボ, コミュニティ](../labs-communities/README.md)
+- [論文、レポート](research.md)
+- [ラボ、コミュニティ](../labs-communities/README.md)
 
 ---
 

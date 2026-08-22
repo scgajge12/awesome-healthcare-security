@@ -1,7 +1,7 @@
 # 🧭 セキュリティの基礎
 
 医療機関と製薬企業の現場では、セキュリティの用語が、出所の異なる枠組みから混ざって降ってくる。
-3省2ガイドラインは ISMS の語彙で書かれ、医療機器メーカーの資料は FDA と IEC の語彙で書かれ、診断ベンダの提案書は OWASP と ATT&CK の語彙で書かれる。
+三省二ガイドラインは ISMS の語彙で書かれ、医療機器メーカーの資料は FDA と IEC の語彙で書かれ、診断ベンダの提案書は OWASP と ATT&CK の語彙で書かれる。
 同じ「リスク」「脆弱性」「テスト」という語が、それぞれ別の枠組みの中で別の意味を持つ。
 
 本ページは、その語彙と枠組みを一通り並べ、どれが何を測る道具なのかを示す。
@@ -64,7 +64,7 @@
 ### 7 要素はどこから来たか
 
 情報セキュリティは、長らく **機密性、完全性、可用性** の三つで定義されてきた。
-頭文字をとって **CIA トライアド**（Confidentiality, Integrity, Availability）と呼ぶ。
+頭文字をとって **CIA トライアド**（Confidentiality、Integrity、Availability）と呼ぶ。
 
 **事実**：ISO/IEC 27000 は、情報セキュリティを「情報の機密性、完全性、可用性を維持すること」と定義したうえで、注記として「さらに、真正性、責任追跡性、否認防止、信頼性などの特性を維持することを含めることもある」と述べている。
 国内の対応規格である JIS Q 27000 も同じ構成をとる。
@@ -209,7 +209,7 @@ HL7 v2 も、認証と暗号化を規格自体には含まない。
 医療と製薬で否認防止が要求される場面は、記録が外部の判断材料になるときである。
 電子処方箋の発行、治験データの記録、GMP 下の製造記録と出荷判定がこれにあたる。
 米国 FDA の 21 CFR Part 11 は、電子記録と電子署名がこの性質を満たすための要件を定めている。
-出典：[FDA Part 11, Electronic Records; Electronic Signatures](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application)
+出典：[FDA Part 11、Electronic Records; Electronic Signatures](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application)
 
 支える仕組みは、電子署名、タイムスタンプ、改ざん検知のできるログ、鍵の管理である。
 
@@ -723,7 +723,7 @@ flowchart LR
 | **ゼロトラスト（SP 800-207）** | 境界を信頼しない設計とは何か | アーキテクチャの考え方 | 閉域網の前提が崩れた環境の再設計（[8. ゼロトラスト](#8-ゼロトラスト)） |
 | **HIPAA Security Rule** | 米国の法令要求を満たすか | 法規制 | 米国で PHI を扱う場合 |
 | **HITRUST CSF** | 複数の規制要求を一つの枠で満たすか | 認証を伴う統合フレームワーク | 米国のヘルスケア事業者、その取引先 |
-| **3省2ガイドライン** | 国内の医療機関として求められる水準か | 所管省庁のガイドライン | 国内の医療機関、事業者（[国内のガイドライン](../guidelines/japan.md)） |
+| **三省二ガイドライン** | 国内の医療機関として求められる水準か | 所管省庁のガイドライン | 国内の医療機関、事業者（[国内のガイドライン](../guidelines/japan.md)） |
 
 ### NIST CSF 2.0 の 6 機能
 
@@ -1045,7 +1045,7 @@ flowchart LR
 **SCA**（ソフトウェアコンポジション解析）：依存ライブラリの既知脆弱性を検出する。
 **SBOM**：製品に含まれる部品の一覧。脆弱性が公表されたときに影響範囲を判断する前提になる。
 
-**事実**：NIST は、開発工程に組み込むセキュリティ実践を SSDF（Secure Software Development Framework, SP 800-218）として整理している。
+**事実**：NIST は、開発工程に組み込むセキュリティ実践を SSDF（Secure Software Development Framework、SP 800-218）として整理している。
 出典：[NIST SSDF](https://csrc.nist.gov/projects/ssdf)
 
 ### 医療での制約
@@ -1189,7 +1189,7 @@ Top 10 の上位に置かれるアクセス制御の不備は、患者ポータ�
 | アプリケーションセキュリティ | [OWASP](https://owasp.org/)、[OWASP Top 10](https://owasp.org/Top10/)、[OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) |
 | 設定基準 | [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks)、[DISA STIGs](https://public.cyber.mil/stigs/) |
 | 電子記録と電子署名 | [FDA 21 CFR Part 11](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application) |
-| 設計原則 | [The Protection of Information in Computer Systems (Saltzer & Schroeder, 1975)](https://www.cs.virginia.edu/~evans/cs551/saltzer/) |
+| 設計原則 | [The Protection of Information in Computer Systems (Saltzer & Schroeder、1975)](https://www.cs.virginia.edu/~evans/cs551/saltzer/) |
 | セキュリティ・バイ・デザイン | [CISA Secure by Design](https://www.cisa.gov/securebydesign)、[FDA Cybersecurity in Medical Devices](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cybersecurity-medical-devices-quality-system-considerations-and-content-premarket-submissions) |
 | 医療機器のリスクマネジメント | ISO 14971、IEC 81001-5-1（[ISO](https://www.iso.org/standards.html)、[IEC Webstore](https://webstore.iec.ch/)） |
 | 個人情報の加工と二次利用 | [個人情報保護委員会](https://www.ppc.go.jp/)、[HHS De-identification Guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html) |

@@ -38,13 +38,13 @@ flowchart LR
 
 ---
 
-## DICOM, 医用画像
+## DICOM、医用画像
 
 | ツール | 用途 | 段階 |
 |---|---|---|
-| [DCMTK](https://dicom.offis.de/dcmtk) | DICOM の標準的なツールキット。`echoscu`, `findscu`, `movescu`, `storescu` による疎通確認と通信検証 | 低侵襲から侵襲 |
-| [pydicom](https://github.com/pydicom/pydicom) | Python による DICOM ファイルの解析, 生成。タグ検証の自動化に使える | 受動 |
-| [pynetdicom](https://github.com/pydicom/pynetdicom) | Python による DICOM ネットワーク通信の実装。検証用のサーバ, クライアント構築 | 低侵襲から侵襲 |
+| [DCMTK](https://dicom.offis.de/dcmtk) | DICOM の標準的なツールキット。`echoscu`、`findscu`、`movescu`、`storescu` による疎通確認と通信検証 | 低侵襲から侵襲 |
+| [pydicom](https://github.com/pydicom/pydicom) | Python による DICOM ファイルの解析、生成。タグ検証の自動化に使える | 受動 |
+| [pynetdicom](https://github.com/pydicom/pynetdicom) | Python による DICOM ネットワーク通信の実装。検証用のサーバ、クライアント構築 | 低侵襲から侵襲 |
 | [Orthanc](https://www.orthanc-server.com/) | 軽量な PACS サーバ。検証環境の構築に使える | 受動 |
 | [dcm4che](https://github.com/dcm4che/dcm4che) | Java 製の DICOM ツールキット | 低侵襲から侵襲 |
 | [fo-dicom](https://github.com/fo-dicom/fo-dicom) | .NET の DICOM 実装 | 受動 |
@@ -60,7 +60,7 @@ flowchart LR
 
 ---
 
-## HL7, FHIR
+## HL7、FHIR
 
 | ツール | 用途 | 段階 |
 |---|---|---|
@@ -69,26 +69,26 @@ flowchart LR
 | [python-hl7](https://github.com/johnpaulett/python-hl7) | Python の HL7 v2 パーサ。MLLP のクライアントを含む | 受動から低侵襲 |
 | [nHapi](https://github.com/nHapiNET/nHapi) | .NET の HL7 v2 実装 | 受動 |
 | [HL7Fuse](https://github.com/dib0/HL7Fuse) | HL7 メッセージのルーティングサービス | 受動 |
-| [HL7 Snoop](https://github.com/dgrinberg/HL7-Snoop) | HL7 メッセージの解析, 表示 | 受動 |
+| [HL7 Snoop](https://github.com/dgrinberg/HL7-Snoop) | HL7 メッセージの解析、表示 | 受動 |
 | [Mirth Connect / NextGen Connect](https://github.com/nextgenhealthcare/connect) | HL7 連携エンジン。検証環境の構築にも使える | 受動 |
 | [Inferno](https://inferno-framework.github.io/) | FHIR サーバの適合性テストツール | 低侵襲 |
 | [Synthea](https://github.com/synthetichealth/synthea) | 合成患者データの生成。実データを使わずに検証環境を作れる | 受動 |
 
 > [!TIP]
 > 検証には必ず合成データを使ってほしい。
-> Synthea は、実在しない患者の診療履歴を FHIR, HL7, CSV 形式で生成できる。
+> Synthea は、実在しない患者の診療履歴を FHIR、HL7、CSV 形式で生成できる。
 > 医療システムの検証環境を作るとき、実データを持ち込まないための最も実用的な手段になる。
 
 連携インタフェースの検証観点は [HL7 v2 と FHIR の攻撃面](../../technology/web-security/hl7-fhir.md) にまとめている。
 
 ---
 
-## ネットワーク, 資産可視化
+## ネットワーク、資産可視化
 
 | ツール | 用途 | 段階 |
 |---|---|---|
-| [Zeek](https://zeek.org/) | ネットワーク通信の記録, 分析。医療機器セグメントの可視化に使える | 受動 |
-| [Wireshark](https://www.wireshark.org/) | DICOM, HL7 プロトコルの解析（両方ともディセクタが用意されている） | 受動 |
+| [Zeek](https://zeek.org/) | ネットワーク通信の記録、分析。医療機器セグメントの可視化に使える | 受動 |
+| [Wireshark](https://www.wireshark.org/) | DICOM、HL7 プロトコルの解析（両方ともディセクタが用意されている） | 受動 |
 | [Arkime](https://arkime.com/) | 通信の全量保存と検索。事後の追跡に使う | 受動 |
 | [Shodan](https://www.shodan.io/) | 自組織の資産の外部露出確認 | 受動 |
 | [Censys](https://censys.com/) | 同上 | 受動 |
@@ -115,19 +115,19 @@ flowchart LR
 | [Ghidra](https://github.com/NationalSecurityAgency/ghidra) | 逆アセンブルと逆コンパイル。独自プロトコルの解析に使う | 受動 |
 
 **分析**：ファームウェア解析は、SBOM が入手できない機器に対する代替手段になる。
-メーカーから SBOM が提供されていれば、[脆弱性管理](#脆弱性管理-sbom) の側で同じ問いに答えられる。
+メーカーから SBOM が提供されていれば、[脆弱性管理](#脆弱性管理sbom) の側で同じ問いに答えられる。
 解析に手間をかける前に、調達と保守契約で SBOM を求められないかを確認する。
 
 ---
 
-## 脆弱性管理, SBOM
+## 脆弱性管理、SBOM
 
 | ツール | 用途 | 段階 |
 |---|---|---|
 | [OSV-Scanner](https://github.com/google/osv-scanner) | 依存パッケージの脆弱性検出 | 受動 |
 | [Syft](https://github.com/anchore/syft) | SBOM の生成 | 受動 |
 | [Grype](https://github.com/anchore/grype) | SBOM や成果物に対する脆弱性検出 | 受動 |
-| [Trivy](https://github.com/aquasecurity/trivy) | コンテナ, ファイルシステム, IaC の脆弱性検出 | 受動 |
+| [Trivy](https://github.com/aquasecurity/trivy) | コンテナ、ファイルシステム、IaC の脆弱性検出 | 受動 |
 | [Dependency-Track](https://dependencytrack.org/) | SBOM を継続的に管理し、新規脆弱性を追跡する | 受動 |
 
 医療機器メーカーにとって、SBOM の生成と継続的な追跡は規制要求への対応そのものになる。
@@ -155,7 +155,7 @@ flowchart LR
 対象を参照系に絞るか、合成データを載せた環境で行う。
 
 > [!IMPORTANT]
-> 自動巡回（クローラ, アクティブスキャン）は侵襲にあたる。
+> 自動巡回（クローラ、アクティブスキャン）は侵襲にあたる。
 > 医療系では、巡回そのものが予約の登録、問診の送信、通知メールの発火といった業務上の操作を起こしうる。
 > 稼働中のシステムで使う場合は、対象 URL を限定し、更新系の操作を除外する。
 
