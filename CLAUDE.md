@@ -19,7 +19,7 @@
 ## レビュー
 
 文書を追加または編集したら、[`skills/repo-review/SKILL.md`](skills/repo-review/SKILL.md) の手順でレビューする。
-一次情報、事実と推測の分離、文章規範、公開適格性、図解の五つの観点で確認する。
+一次情報、事実と推測の分離、文章規範、公開適格性、構成の整合、図解の六つの観点で確認する。
 
 ## 一次情報
 
@@ -75,26 +75,37 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | パス | 内容 |
 |---|---|
 | `README.md` / `README-en.md` | 日本語版と英語版のトップページ。両方を同期させる |
-| `docs/threats/incidents/` | インシデント事例 |
+| `docs/threats/incidents/` | インシデント事例。履歴は地域ごと（`japan/YYYY-timeline.md`、`global/YYYY-timeline.md`）、その年の情勢は国内と海外を統合して `years/YYYY-summary.md` に置く。米国 HHS OCR の届出は制度軸として `global/YYYY-us-hhs.md` に全件集計を置く |
+| `docs/threats/incidents/research-tips.md` | 事例の調べ方（情報源、手順、落とし穴） |
 | `docs/threats/actors/` | 脅威アクターと TTPs |
 | `docs/threats/statistics/` | 公的統計から読む脅威（日本、海外） |
+| `docs/threats/integrity-attacks.md` | 完全性への攻撃と患者安全（改変の経路、検知の設計） |
 | `docs/technology/medical-devices/` | 医療機器（IoMT、PACS）のセキュリティ |
 | `docs/technology/oss-vulnerabilities/` | OSS 医療情報システムの脆弱性 |
 | `docs/technology/web-security/` | 医療系 Web アプリケーションのセキュリティ |
 | `docs/technology/cloud/` | クラウド事業者と医療（AWS、Google Cloud、Azure、さくらインターネット） |
 | `docs/technology/dx-ax/` | 医療 DX と AX（国の基盤と接続点、医療における AI のセキュリティ） |
+| `docs/technology/digital-health/` | デジタルヘルス（規制の当たり方、攻撃面、Google のデジタルヘルス） |
+| `docs/technology/genomics.md` | ゲノムデータの保護（所在、二次利用、事業者が消えるときの扱い） |
+| `docs/technology/identity.md` | 認証とアクセス管理（二要素認証の要求と期限、ID の棚卸し、ブレークグラス） |
+| `docs/technology/logging.md` | ログと監視の設計（何を残すか、保存期間、読む仕組み） |
+| `docs/technology/email-domain.md` | メールとドメインの管理（送信ドメイン認証、失効ドメイン、BEC） |
+| `docs/technology/media-disposal.md` | 記憶媒体の廃棄と機器の下取り（消去、証跡、中古市場） |
 | `docs/technology/segmentation.md` | ネットワークの分離（ゾーンモデル、到達性の確認、例外の管理） |
 | `docs/practice/threat-modeling.md` | 医療の脅威モデリング（信頼境界、STRIDE、攻撃ツリー、順序づけ） |
 | `docs/practice/attack-surface.md` | 外部から見た自組織の攻撃面（棚卸し、測り方の線引き、継続） |
 | `docs/practice/pentest/` | セキュリティ診断とペネトレーションテスト（医療機関、製薬企業、医療機器） |
 | `docs/practice/bug-bounty/` | バグバウンティと脆弱性開示（医療分野） |
-| `docs/response/` | インシデント対応と事業継続（初動、ダウンタイム運用、届出、復旧） |
+| `docs/response/` | インシデント対応と事業継続（サイバー BCP、基盤の構えと外部依存）。初動、ダウンタイム運用、届出、復旧は順次追加する |
 | `docs/guidelines/` | ガイドラインと法規制 |
 | `docs/governance/` | 経営とガバナンス（体制、経営層への報告、予算、リスク移転） |
 | `docs/reference/pharma/` | 製薬企業のセキュリティ（治験と研究データ、製造 OT、原薬と受託製造） |
 | `docs/reference/labs-communities/` | ラボ、コミュニティ |
-| `docs/reference/resources/` | ツール、論文、学習リソース |
+| `docs/reference/resources/` | ツール、論文、研究テーマ、学習リソース、リークサイト横断フィード |
 | `docs/reference/security-services/` | セキュリティサービスのカタログ（区分と選び方、国内、海外）。掲載は推奨ではない |
+| `docs/reference/security-basics.md` | セキュリティの基礎（7 要素、設計の原則、脅威モデリング、検知と対応） |
+| `docs/reference/ethics.md` | 医療の倫理とセキュリティの倫理（概念、特徴、考え方の違い） |
+| `docs/reference/ai-agent.md` | AI エージェントから使う（取り込み方、構造の渡し方、聞き方、生成物の確かめ方、更新の追い方） |
 | `docs/reference/GLOSSARY.md` | 用語集 |
 | `docs/reference/_templates/` | 事例追加用のテンプレート |
 | `monthly-reports/` | 月報。`YYYY/YYYY-MM.md` の形式で追加する |

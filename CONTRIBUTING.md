@@ -58,7 +58,7 @@
 ## レビュー
 
 Pull Request を出す前に、[レビュースキル](skills/repo-review/SKILL.md)の手順で自己レビューしてほしい。
-一次情報、事実と推測の分離、文章規範、公開適格性、図解の五つの観点をまとめている。
+一次情報、事実と推測の分離、文章規範、公開適格性、構成の整合、図解の六つの観点をまとめている。
 
 ## 図解
 
@@ -162,10 +162,12 @@ Gitmoji と Conventional Commits の形式に従う。
 ```
 📝 docs(incidents): 海外の事例に Synnovis の項目を追加
 🐛 fix(guidelines): 医療法施行規則の施行時期の記載を修正
-🔗 docs(resources): リンク切れを修正
+🐛 fix(resources): 移転した参照先のリンクを修正
 ```
 
-よく使う対応：`docs` は 📝、`fix` は 🐛、`feat` は ✨、リンク修正は 🔗。
+よく使う対応：`docs` は 📝、`fix` は 🐛、`feat` は ✨、typo と表記の修正は ✏️。
+絵文字はショートコード（`:memo:`）ではなく Unicode の絵文字そのものを書く。
+[Gitmoji の一覧](https://gitmoji.dev/)にない絵文字は使わない。
 
 ---
 
