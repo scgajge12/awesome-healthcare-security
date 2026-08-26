@@ -29,6 +29,7 @@ timeline
     2022 : Guy's and St Thomas'（病院系、システム障害） : CommonSpirit Health（病院系） : Medibank（医療関連事業者）
     2023 : Prospect Medical Holdings（病院系）
     2024 : Change Healthcare（医療関連事業者） : Ascension（病院系） : Synnovis（医療関連事業者）
+    2025 : Kettering Health ほか病院系 56 : Inotiv ほか製薬企業系 6 : Episource ほか医療関連事業者 31
 ```
 
 図に現れない年は、本リポジトリに収録した事例がない年である。
