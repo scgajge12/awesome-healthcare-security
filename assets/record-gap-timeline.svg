@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 400" role="img" aria-label="復旧後に突合する記録が二種類あることを示す時間軸の図。左から、最後に複製が届いた時点、障害の発生、復旧または切替の完了、通常運用の再開が並ぶ。最後の複製から障害までの区間は非同期の複製で欠ける記録、障害から復旧までの区間は紙で取る記録であり、復旧後にそれぞれ別の突合作業になる。前者の長さは事業者の RPO で決まり、後者の長さは停止の長さで決まる。">
+  <title>復旧後に突合する記録は、二種類ある</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .axis  { stroke: #8b949e; stroke-width: 1.5; }
+    .tick  { stroke: #8b949e; stroke-width: 1.5; }
+    .own   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .warn  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; }
+    .lead  { stroke: #8b949e; stroke-width: 1.5; fill: none; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer, .axis, .tick, .lead { stroke: #6e7681; }
+      .own   { fill: #121d2f; stroke: #4184e4; }
+      .warn  { fill: #341a00; stroke: #d29922; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .t-title, .t, .t-lab { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="970" height="380" rx="8"/>
+  <text class="t-title" x="495" y="38" text-anchor="middle">復旧後に突合する記録は、二種類ある</text>
+
+  <!-- 時間軸 -->
+  <line class="axis" x1="70" y1="130" x2="930" y2="130"/>
+  <line class="tick" x1="230" y1="120" x2="230" y2="230"/>
+  <line class="tick" x1="380" y1="120" x2="380" y2="230"/>
+  <line class="tick" x1="690" y1="120" x2="690" y2="230"/>
+  <line class="tick" x1="880" y1="120" x2="880" y2="140"/>
+
+  <text class="t-sm" x="230" y="112" text-anchor="middle">最後に複製が届いた時点</text>
+  <text class="t-sm" x="380" y="112" text-anchor="middle">障害の発生</text>
+  <text class="t-sm" x="690" y="112" text-anchor="middle">復旧、または切替の完了</text>
+  <text class="t-sm" x="880" y="112" text-anchor="middle">通常運用</text>
+  <text class="t-sm" x="920" y="150" text-anchor="end">時間 →</text>
+
+  <!-- 区間 1：複製で欠ける -->
+  <rect class="warn" x="230" y="160" width="150" height="52" rx="4"/>
+  <text class="t"    x="305" y="182" text-anchor="middle">複製に入らなかった記録</text>
+  <text class="t-sm" x="305" y="200" text-anchor="middle">長さは RPO で決まる</text>
+
+  <!-- 区間 2：紙で取る -->
+  <rect class="own" x="380" y="160" width="310" height="52" rx="4"/>
+  <text class="t"    x="535" y="182" text-anchor="middle">停止中に紙で取った記録</text>
+  <text class="t-sm" x="535" y="200" text-anchor="middle">長さは停止の長さで決まる</text>
+
+  <!-- 引き出し -->
+  <path class="lead" d="M305 212 L305 252 L250 252 L250 268"/>
+  <path class="lead" d="M535 212 L535 252 L640 252 L640 268"/>
+
+  <!-- 復旧後の作業 -->
+  <rect class="note" x="70" y="268" width="360" height="72" rx="4"/>
+  <text class="t-lab" x="84" y="290">失われた記録を埋める</text>
+  <text class="t-sm" x="84" y="310">どこまで欠けたかを事業者に確認し、紙の控えや</text>
+  <text class="t-sm" x="84" y="328">検査機器側の記録から復元する</text>
+
+  <rect class="note" x="460" y="268" width="360" height="72" rx="4"/>
+  <text class="t-lab" x="474" y="290">紙の記録を入力し直す</text>
+  <text class="t-sm" x="474" y="310">通常の診療と並行するため、復旧宣言の時期は</text>
+  <text class="t-sm" x="474" y="328">この作業量を織り込んで決める</text>
+
+  <text class="t-sm" x="495" y="366" text-anchor="middle">事業者が RPO を数値で答えられない場合、左側の作業量を見積もれない</text>
+</svg>

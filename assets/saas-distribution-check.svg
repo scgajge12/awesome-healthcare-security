@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 520" role="img" aria-label="同じ「分散しています」でも止まり方が違うことを示す図。左は構成 A としてアプリケーションだけを二つのデータセンターに分散し、データベースとバックアップは拠点 1 だけに置く形、右は構成 B としてデータベースの複製とバックアップも拠点 2 と別の場所に置く形を示す。どちらも下に、拠点をまたいで共通する認証基盤、DNS、回線、切替の運用ツールの帯がある。拠点 1 が失われたとき、構成 A では全体が止まり復旧は拠点 1 の復旧を待つのに対し、構成 B ではデータは残るが共通の層が落ちれば同じく止まる。">
+  <title>同じ「分散しています」でも、止まり方が違う</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .panel { fill: none; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .own   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .prov  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .warn  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .gone  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; }
+    .head  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer, .panel { stroke: #6e7681; }
+      .own   { fill: #121d2f; stroke: #4184e4; }
+      .prov, .gone { fill: #161b22; stroke: #6e7681; }
+      .warn  { fill: #341a00; stroke: #d29922; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .head  { fill: #161b22; stroke: #6e7681; }
+      .t-title, .t-head, .t, .t-lab { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="970" height="500" rx="8"/>
+  <text class="t-title" x="495" y="38" text-anchor="middle">同じ「分散しています」でも、止まり方が違う</text>
+  <text class="t-sm" x="495" y="58" text-anchor="middle">層ごとに、どの拠点に実体があるかを分けて聞く</text>
+
+  <!-- 構成 A -->
+  <rect class="panel" x="25" y="76" width="455" height="330" rx="6"/>
+  <rect class="head" x="40" y="90" width="425" height="30" rx="4"/>
+  <text class="t-head" x="252" y="110" text-anchor="middle">構成 A：アプリケーションだけを分散</text>
+
+  <rect class="prov" x="40" y="134" width="205" height="150" rx="4"/>
+  <text class="t-lab" x="142" y="154" text-anchor="middle">拠点 1</text>
+  <rect class="own" x="52" y="164" width="181" height="30" rx="3"/><text class="t" x="142" y="184" text-anchor="middle">アプリケーション</text>
+  <rect class="own" x="52" y="200" width="181" height="30" rx="3"/><text class="t" x="142" y="220" text-anchor="middle">データベース（実体）</text>
+  <rect class="own" x="52" y="236" width="181" height="30" rx="3"/><text class="t" x="142" y="256" text-anchor="middle">バックアップ</text>
+
+  <rect class="prov" x="260" y="134" width="205" height="150" rx="4"/>
+  <text class="t-lab" x="362" y="154" text-anchor="middle">拠点 2</text>
+  <rect class="own"  x="272" y="164" width="181" height="30" rx="3"/><text class="t" x="362" y="184" text-anchor="middle">アプリケーション</text>
+  <rect class="gone" x="272" y="200" width="181" height="30" rx="3"/><text class="t-sm" x="362" y="220" text-anchor="middle">なし</text>
+  <rect class="gone" x="272" y="236" width="181" height="30" rx="3"/><text class="t-sm" x="362" y="256" text-anchor="middle">なし</text>
+
+  <rect class="warn" x="40" y="298" width="425" height="44" rx="4"/>
+  <text class="t"    x="252" y="316" text-anchor="middle">拠点をまたいで共通</text>
+  <text class="t-sm" x="252" y="334" text-anchor="middle">認証基盤、DNS、回線、切替の運用ツール</text>
+
+  <rect class="note" x="40" y="352" width="425" height="42" rx="4"/>
+  <text class="t"    x="52" y="370">拠点 1 が失われると：全体が止まる</text>
+  <text class="t-sm" x="52" y="387">データの実体が片側にしかない。復旧は拠点 1 の復旧を待つ</text>
+
+  <!-- 構成 B -->
+  <rect class="panel" x="510" y="76" width="455" height="330" rx="6"/>
+  <rect class="head" x="525" y="90" width="425" height="30" rx="4"/>
+  <text class="t-head" x="737" y="110" text-anchor="middle">構成 B：データベースと複製先も分散</text>
+
+  <rect class="prov" x="525" y="134" width="205" height="150" rx="4"/>
+  <text class="t-lab" x="627" y="154" text-anchor="middle">拠点 1</text>
+  <rect class="own" x="537" y="164" width="181" height="30" rx="3"/><text class="t" x="627" y="184" text-anchor="middle">アプリケーション</text>
+  <rect class="own" x="537" y="200" width="181" height="30" rx="3"/><text class="t" x="627" y="220" text-anchor="middle">データベース（実体）</text>
+  <rect class="own" x="537" y="236" width="181" height="30" rx="3"/><text class="t-sm" x="627" y="256" text-anchor="middle">バックアップは別の場所へ</text>
+
+  <rect class="prov" x="745" y="134" width="205" height="150" rx="4"/>
+  <text class="t-lab" x="847" y="154" text-anchor="middle">拠点 2</text>
+  <rect class="own" x="757" y="164" width="181" height="30" rx="3"/><text class="t" x="847" y="184" text-anchor="middle">アプリケーション</text>
+  <rect class="own" x="757" y="200" width="181" height="30" rx="3"/><text class="t" x="847" y="220" text-anchor="middle">データベース（複製）</text>
+  <rect class="own" x="757" y="236" width="181" height="30" rx="3"/><text class="t-sm" x="847" y="256" text-anchor="middle">同期か非同期かを聞く</text>
+
+  <rect class="warn" x="525" y="298" width="425" height="44" rx="4"/>
+  <text class="t"    x="737" y="316" text-anchor="middle">拠点をまたいで共通</text>
+  <text class="t-sm" x="737" y="334" text-anchor="middle">認証基盤、DNS、回線、切替の運用ツール</text>
+
+  <rect class="note" x="525" y="352" width="425" height="42" rx="4"/>
+  <text class="t"    x="537" y="370">拠点 1 が失われると：データは残る</text>
+  <text class="t-sm" x="537" y="387">ただし共通の層が落ちれば、分散していても同じく止まる</text>
+
+  <!-- まとめ -->
+  <rect class="note" x="25" y="420" width="940" height="72" rx="4"/>
+  <text class="t-lab" x="40" y="442">病院が聞く順序</text>
+  <text class="t-sm" x="40" y="462">1. アプリケーションだけか、データベースの実体まで分散しているか　2. 複製は同期か非同期か、切替は自動か手動か</text>
+  <text class="t-sm" x="40" y="480">3. バックアップは本番と同じ権限で消せないか　4. 黄色の帯にあたる層が、拠点をまたいで単一になっていないか</text>
+</svg>

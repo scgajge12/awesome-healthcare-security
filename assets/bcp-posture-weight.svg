@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 470" role="img" aria-label="構えで BCP の書きどころが移ることを示す図。確認表の五つの区分（平時、検知、初動、復旧、事後）を縦に、オンプレミス、クラウド（シングルテナント）、クラウド（マルチテナント）を横に並べ、各区分で自組織が実行できる範囲の広さを帯で示す。オンプレミスでは全区分で帯が広く、マルチテナントでは初動と復旧の帯がほとんど残らない。下段に、厚く書く章として、オンプレミスは復旧の手順、シングルテナントは自組織の作業と事業者待ちの切り分け、マルチテナントは診療継続と対外的な説明を示す。帯の長さは模式であり測定値ではない。">
+  <title>構えで、BCP の書きどころが移る</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .own   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .prov  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; }
+    .head  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer { stroke: #6e7681; }
+      .own   { fill: #121d2f; stroke: #4184e4; }
+      .prov  { fill: #161b22; stroke: #6e7681; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .head  { fill: #161b22; stroke: #6e7681; }
+      .t-title, .t-head, .t, .t-lab { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="970" height="450" rx="8"/>
+  <text class="t-title" x="495" y="38" text-anchor="middle">構えで、BCP の書きどころが移る</text>
+  <text class="t-sm" x="495" y="58" text-anchor="middle">帯は、その区分で自組織が実行できる範囲の広さを示す模式である。測定した値ではない</text>
+
+  <!-- 凡例 -->
+  <rect class="own"  x="300" y="72" width="16" height="12" rx="2"/>
+  <text class="t-sm" x="322" y="82">自組織が実行する</text>
+  <rect class="prov" x="520" y="72" width="16" height="12" rx="2"/>
+  <text class="t-sm" x="542" y="82">事業者に依存する</text>
+
+  <!-- 列見出し -->
+  <rect class="head" x="245" y="96" width="230" height="32" rx="4"/>
+  <text class="t-head" x="360" y="117" text-anchor="middle">オンプレミス</text>
+  <rect class="head" x="485" y="96" width="230" height="32" rx="4"/>
+  <text class="t-head" x="600" y="117" text-anchor="middle">クラウド（シングルテナント）</text>
+  <rect class="head" x="725" y="96" width="230" height="32" rx="4"/>
+  <text class="t-head" x="840" y="117" text-anchor="middle">クラウド（マルチテナント）</text>
+
+  <!-- 区分ラベル -->
+  <text class="t-lab" x="30" y="163">1 平時</text>
+  <text class="t-lab" x="30" y="205">2 検知</text>
+  <text class="t-lab" x="30" y="247">3 初動</text>
+  <text class="t-lab" x="30" y="289">4 復旧</text>
+  <text class="t-lab" x="30" y="331">5 事後</text>
+
+  <!-- 1 平時 -->
+  <rect class="prov" x="245" y="142" width="230" height="28" rx="4"/><rect class="own" x="245" y="142" width="230" height="28" rx="4"/>
+  <rect class="prov" x="485" y="142" width="230" height="28" rx="4"/><rect class="own" x="485" y="142" width="173" height="28" rx="4"/>
+  <rect class="prov" x="725" y="142" width="230" height="28" rx="4"/><rect class="own" x="725" y="142" width="115" height="28" rx="4"/>
+
+  <!-- 2 検知 -->
+  <rect class="prov" x="245" y="184" width="230" height="28" rx="4"/><rect class="own" x="245" y="184" width="230" height="28" rx="4"/>
+  <rect class="prov" x="485" y="184" width="230" height="28" rx="4"/><rect class="own" x="485" y="184" width="138" height="28" rx="4"/>
+  <rect class="prov" x="725" y="184" width="230" height="28" rx="4"/><rect class="own" x="725" y="184" width="58" height="28" rx="4"/>
+
+  <!-- 3 初動 -->
+  <rect class="prov" x="245" y="226" width="230" height="28" rx="4"/><rect class="own" x="245" y="226" width="230" height="28" rx="4"/>
+  <rect class="prov" x="485" y="226" width="230" height="28" rx="4"/><rect class="own" x="485" y="226" width="127" height="28" rx="4"/>
+  <rect class="prov" x="725" y="226" width="230" height="28" rx="4"/><rect class="own" x="725" y="226" width="35" height="28" rx="4"/>
+
+  <!-- 4 復旧 -->
+  <rect class="prov" x="245" y="268" width="230" height="28" rx="4"/><rect class="own" x="245" y="268" width="207" height="28" rx="4"/>
+  <rect class="prov" x="485" y="268" width="230" height="28" rx="4"/><rect class="own" x="485" y="268" width="104" height="28" rx="4"/>
+  <rect class="prov" x="725" y="268" width="230" height="28" rx="4"/><rect class="own" x="725" y="268" width="14" height="28" rx="4"/>
+
+  <!-- 5 事後 -->
+  <rect class="prov" x="245" y="310" width="230" height="28" rx="4"/><rect class="own" x="245" y="310" width="184" height="28" rx="4"/>
+  <rect class="prov" x="485" y="310" width="230" height="28" rx="4"/><rect class="own" x="485" y="310" width="127" height="28" rx="4"/>
+  <rect class="prov" x="725" y="310" width="230" height="28" rx="4"/><rect class="own" x="725" y="310" width="58" height="28" rx="4"/>
+
+  <!-- 厚く書く章 -->
+  <text class="t-lab" x="30" y="380">厚く書く章</text>
+  <rect class="note" x="245" y="358" width="230" height="70" rx="4"/>
+  <text class="t"    x="360" y="388" text-anchor="middle">復旧の手順</text>
+  <text class="t-sm" x="360" y="408" text-anchor="middle">順序、代替機、人員の時間帯</text>
+
+  <rect class="note" x="485" y="358" width="230" height="70" rx="4"/>
+  <text class="t"    x="600" y="388" text-anchor="middle">自組織と事業者の切り分け</text>
+  <text class="t-sm" x="600" y="408" text-anchor="middle">論理での遮断、権限、保全</text>
+
+  <rect class="note" x="725" y="358" width="230" height="70" rx="4"/>
+  <text class="t"    x="840" y="388" text-anchor="middle">診療継続と対外的な説明</text>
+  <text class="t-sm" x="840" y="408" text-anchor="middle">縮退の開始、届出、周知</text>
+
+  <text class="t-sm" x="495" y="447" text-anchor="middle">自組織が手を動かせる範囲が狭いほど、復旧手順は短くなり、待つ間の運用と説明が長くなる</text>
+</svg>
