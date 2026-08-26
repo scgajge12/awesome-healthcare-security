@@ -18,7 +18,7 @@
 |---|---|---|
 | 地域軸 | `japan/YYYY-timeline.md`、`global/YYYY-timeline.md` | その年の事例を時系列に並べた**履歴**。一覧表と、事例ごとの経緯、教訓、一次情報 |
 | 年軸 | `years/YYYY-summary.md` | 国内と海外を一つにまとめた**その年の情勢**。要点、収録事例の集計、外部統計、規制の動き、前年との差分 |
-| 制度軸 | `global/YYYY-us-hhs.md` | 米国 HHS OCR の届出ポータルから取得した**その年の全件集計**。件数と人数の分布、類型、取得の手順 |
+| 制度軸 | `global/YYYY-us-hhs.md` | 米国 HHS OCR の届出ポータルから取得した**その年の全件集計**。件数と人数の分布、類型、取得の手順。2020 年から 2025 年の 6 年分を置いている |
 
 履歴を地域で分けるのは、公表の慣行と規制が国ごとに違うためである。
 情勢を年で統合するのは、同じ年の国内と海外を並べて初めて、被害の型と規制の時間差が読めるためである。
@@ -42,18 +42,19 @@
 | 年 | 国内 | 海外 | ページ |
 |---|---|---|---|
 | 2026 | 0 | 0 | [情勢](years/2026-summary.md) ／ [国内の履歴](japan/2026-timeline.md) ／ [海外の履歴](global/2026-timeline.md) |
-| 2025 | 17（37） | 93（1） | [情勢](years/2025-summary.md) ／ [国内の履歴](japan/2025-timeline.md) ／ [海外の履歴](global/2025-timeline.md) |
-| 2024 | 1 | 3 | [情勢](years/2024-summary.md) ／ [国内の履歴](japan/2024-timeline.md) ／ [海外の履歴](global/2024-timeline.md) |
-| 2023 | 0 | 1 | [情勢](years/2023-summary.md) ／ [国内の履歴](japan/2023-timeline.md) ／ [海外の履歴](global/2023-timeline.md) |
-| 2022 | 1 | 2（1） | [情勢](years/2022-summary.md) ／ [国内の履歴](japan/2022-timeline.md) ／ [海外の履歴](global/2022-timeline.md) |
-| 2021 | 1 | 1 | [情勢](years/2021-summary.md) ／ [国内の履歴](japan/2021-timeline.md) ／ [海外の履歴](global/2021-timeline.md) |
-| 2020 | 0 | 3 | [情勢](years/2020-summary.md) ／ [国内の履歴](japan/2020-timeline.md) ／ [海外の履歴](global/2020-timeline.md) |
-| 2019 以前 | 1 | 2 | [国内の履歴](japan/2019-earlier.md) ／ [海外の履歴](global/2019-earlier.md) |
+| 2025 | 18（41） | 93（1） | [情勢](years/2025-summary.md) ／ [国内の履歴](japan/2025-timeline.md) ／ [海外の履歴](global/2025-timeline.md) ／ [米国 HHS OCR](global/2025-us-hhs.md) |
+| 2024 | 19（12） | 39（2） | [情勢](years/2024-summary.md) ／ [国内の履歴](japan/2024-timeline.md) ／ [海外の履歴](global/2024-timeline.md) ／ [米国 HHS OCR](global/2024-us-hhs.md) |
+| 2023 | 11（19） | 34（1） | [情勢](years/2023-summary.md) ／ [国内の履歴](japan/2023-timeline.md) ／ [海外の履歴](global/2023-timeline.md) ／ [米国 HHS OCR](global/2023-us-hhs.md) |
+| 2022 | 18（17） | 29（4） | [情勢](years/2022-summary.md) ／ [国内の履歴](japan/2022-timeline.md) ／ [海外の履歴](global/2022-timeline.md) ／ [米国 HHS OCR](global/2022-us-hhs.md) |
+| 2021 | 12（13） | 28（1） | [情勢](years/2021-summary.md) ／ [国内の履歴](japan/2021-timeline.md) ／ [海外の履歴](global/2021-timeline.md) ／ [米国 HHS OCR](global/2021-us-hhs.md) |
+| 2020 | 9（18） | 28（2） | [情勢](years/2020-summary.md) ／ [国内の履歴](japan/2020-timeline.md) ／ [海外の履歴](global/2020-timeline.md) ／ [米国 HHS OCR](global/2020-us-hhs.md) |
+| 2019 以前 | 6（11） | 2 | [国内の履歴](japan/2019-earlier.md) ／ [海外の履歴](global/2019-earlier.md) |
 
 区分（病院系、製薬企業系、医療関連事業者）ごとの内訳は、各履歴ページ冒頭の収録件数と、[年ごとのページ](years/)の集計にある。
 
-2025 年の収録件数が前年より大きいのは、本リポジトリがこの年から本格的な収集を行ったためである。
-海外の件数は、2026 年の追加調査で欧州、中南米、大洋州、カリブ海地域へ範囲を広げた結果を含む。
+2025 年の収録件数が他の年より大きいのは、本リポジトリがこの年から本格的な収集を行ったためである。
+2020 年から 2024 年の件数は、2026 年の追加調査で遡って収録した結果である。
+国内の件数が海外より一桁小さいのは、当事者が組織名とともに経緯を公表する慣行の差による。
 被害件数の推移を読むときは、収録件数ではなく[年ごとのページ](years/)に挙げた外部統計を根拠にしてほしい。
 
 ## 事案の類型
