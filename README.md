@@ -205,8 +205,11 @@ flowchart LR
 サイバー攻撃を主として、侵入経路、侵害範囲、診療への影響、再発防止策まで追跡する。
 サポート詐欺、システム障害、内部不正、記憶媒体の紛失と盗難などの事案も副として収録する。
 
-- [国内の事例](docs/threats/incidents/japan/)（年ごとの履歴とサマリー）
-- [海外の事例](docs/threats/incidents/global/)（年ごとの履歴とサマリー）
+- [国内の事例](docs/threats/incidents/japan/)（年ごとの履歴）
+- [海外の事例](docs/threats/incidents/global/)（年ごとの履歴）
+- [年ごとの情勢](docs/threats/incidents/years/)（国内と海外を統合した集計、規制の動き）
+- [2025 年 米国 HHS OCR 届出の全件集計](docs/threats/incidents/global/2025-us-hhs.md)（795 件の分布、10 万人以上の全 96 件、取得の手順）
+- [事例の調べ方](docs/threats/incidents/research-tips.md)（情報源、手順、落とし穴）
 
 </td>
 <td width="50%" valign="top">
@@ -523,7 +526,7 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 awesome-healthcare-security/
 ├── docs/
 │   ├── threats/                     脅威
-│   │   ├── incidents/               インシデント事例（japan/、global/ に年別の履歴とサマリー。サイバー攻撃を主、それ以外の事案を副として収録）
+│   │   ├── incidents/               インシデント事例（japan/、global/ に年別の履歴、years/ に年ごとの情勢。サイバー攻撃を主、それ以外の事案を副として収録）
 │   │   ├── actors/                  脅威アクターと TTPs、防御プレイブック
 │   │   ├── statistics/              公的統計から読む脅威（japan.md、global.md）
 │   │   └── integrity-attacks.md     完全性への攻撃と患者安全（改変の経路、検知の設計）

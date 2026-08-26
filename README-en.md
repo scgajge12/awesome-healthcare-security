@@ -204,8 +204,11 @@ If you want the shared vocabulary first, [Security fundamentals](docs/reference/
 
 Incidents at healthcare providers in Japan and abroad. Cyber attacks come first, tracked through initial access, scope of compromise, clinical impact, and remediation; non-attack events (tech support scams, system failures, insider misuse, lost or stolen media) are collected as a secondary category.
 
-- [Japan](docs/threats/incidents/japan/) (per-year timelines and summaries)
-- [Rest of the world](docs/threats/incidents/global/) (per-year timelines and summaries)
+- [Japan](docs/threats/incidents/japan/) (per-year timelines)
+- [Rest of the world](docs/threats/incidents/global/) (per-year timelines)
+- [Year in review](docs/threats/incidents/years/) (Japan and the rest of the world combined: tallies and regulatory developments)
+- [2025 US HHS OCR breach filings, full tally](docs/threats/incidents/global/2025-us-hhs.md) (all 795 filings by distribution, every one of the 96 above 100,000 individuals, and how to retrieve the data)
+- [How to research a case](docs/threats/incidents/research-tips.md) (sources, method, pitfalls)
 
 </td>
 <td width="50%" valign="top">
@@ -506,7 +509,7 @@ A month-by-month record of the sector: incidents, vulnerabilities, regulatory ch
 awesome-healthcare-security/
 ├── docs/
 │   ├── threats/                     Threats
-│   │   ├── incidents/               Incident case studies (japan/, global/ with per-year pages; cyber attacks first, other events secondary)
+│   │   ├── incidents/               Incident case studies (japan/, global/ hold per-year timelines; years/ holds the combined year-in-review; cyber attacks first, other events secondary)
 │   │   ├── actors/                  Threat actors, TTPs, defense playbook
 │   │   ├── statistics/              Official statistics on cyber attacks (japan.md, global.md)
 │   │   └── integrity-attacks.md     Integrity attacks and patient safety (paths, detection)
