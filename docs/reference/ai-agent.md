@@ -314,7 +314,7 @@ https://github.com/scgajge12/awesome-healthcare-security/commits/main.atom
 
 ### RSS アプリを使う
 
-**事実**：Slack の RSS アプリは、RSS と Atom のフィードをチャンネルに流す（[Slack ヘルプ](https://slack.com/help/articles/218688467-Add-RSS-feeds-to-Slack)）。
+**事実**：Slack の RSS アプリは、RSS と Atom のフィードをチャンネルに流す（[Slack ヘルプ](https://slack.com/intl/ja-jp/help/articles/218688467-Slack-に-RSS-フィードを追加する)）。
 
 ```text
 /feed subscribe https://github.com/scgajge12/awesome-healthcare-security/commits/main.atom
