@@ -1,6 +1,6 @@
 ---
 name: repo-review
-description: awesome-healthcare-security リポジトリの文書レビュー。一次情報が示されているか、事実と推測が書き分けられているか、日本語技術文書の規範に適合しているか、公開リポジトリに載せてよい内容か、構造と因果が図で示されているかを、五つの観点で確認して具体的な修正案を出す。本リポジトリの Markdown を書いた直後、コミットや Pull Request を出す前、月報を書いたあと、インシデント事例や脆弱性情報やガイドライン情報を追加したあとには必ず使う。「レビューして」「校正して」「文章を確認して」「出典は足りているか」「事実と推測が分かれているか」「読みにくくないか」といった依頼はもちろん、リポジトリ内の .md を編集したあとは依頼がなくても自発的に使う。
+description: awesome-healthcare-security リポジトリの文書レビュー。一次情報が示されているか、事実と推測が書き分けられているか、日本語技術文書の規範に適合しているか、公開リポジトリに載せてよい内容か、構造と因果が図で示されているかを、六つの観点で確認して具体的な修正案を出す。本リポジトリの Markdown を書いた直後、コミットや Pull Request を出す前、月報を書いたあと、インシデント事例や脆弱性情報やガイドライン情報を追加したあとには必ず使う。「レビューして」「校正して」「文章を確認して」「出典は足りているか」「事実と推測が分かれているか」「読みにくくないか」といった依頼はもちろん、リポジトリ内の .md を編集したあとは依頼がなくても自発的に使う。
 ---
 
 # awesome-healthcare-security レビュースキル
@@ -11,7 +11,7 @@ description: awesome-healthcare-security リポジトリの文書レビュー。
 ## 前提
 
 本リポジトリは**公開リポジトリ**であり、医療とセキュリティという、誤りが実害につながる領域を扱う。
-レビューは、次の五つのレンズで行う。
+レビューは、次の六つのレンズで行う。
 
 | レンズ | 問い |
 |---|---|
@@ -50,7 +50,7 @@ bash skills/repo-review/scripts/check.sh docs/threats/incidents  # 対象を絞�
 スクリプトが実行できない場合は、個別に実行する。
 
 ```bash
-# 日本語の地の文, 見出しのダッシュ（英語表記と CONTRIBUTING の説明箇所を除く）
+# 日本語の地の文、見出しのダッシュ（英語表記と CONTRIBUTING の説明箇所を除く）
 grep -rn "—\|――" --include="*.md" . | grep -v README-en.md | grep -v CLAUDE.md | grep -v CONTRIBUTING.md | grep -v skills/
 
 # 並列の中黒（固有名詞の内部は許容。個別に判断する）
@@ -64,6 +64,11 @@ grep -rn "です。\|ます。\|ません。\|でしょう。" --include="*.md" 
 
 # 出典のない「事実」ブロック（目視で確認する）
 grep -rn -A6 "^\*\*事実\*\*" --include="*.md" docs/ monthly-reports/ | grep -c "http"
+
+# 図のないページ（構造や流れを扱うページには図を検討する）
+for f in $(find docs monthly-reports -name "*.md"); do
+  grep -q '```mermaid\|<img src=.*\.svg' "$f" || echo "$f"
+done
 ```
 
 検出結果は候補であり、そのまま違反とは限らない。
@@ -179,16 +184,27 @@ docs/threats/incidents/global/2024-timeline.md:42
 ## レンズ E：構成の整合
 
 - [ ] 追加したページへのリンクが `README.md` と `README-en.md` の両方にあるか
+- [ ] 群の `README.md` に、追加したページへのリンクがあるか
+- [ ] ディレクトリを入口としてリンクする場合、そのディレクトリに `README.md` があるか
 - [ ] 月報を追加した場合、`monthly-reports/README.md` の一覧表に行を追加したか
 - [ ] ページ末尾のナビゲーションリンクが正しいか
 - [ ] 相対リンクが壊れていないか
 
 ```bash
-# リポジトリ内の相対リンクの存在確認
-grep -rhoE "\]\(\.?\.?/?[a-zA-Z0-9_./-]+\.md[^)]*\)" --include="*.md" . | sed 's/](\(.*\))/\1/' | sort -u
+# リポジトリ内の相対リンクの解決確認（解決できない参照先だけを出す）
+grep -rn -oE '\]\([^)]+\.md(#[^)]*)?\)' --include="*.md" . | while IFS= read -r line; do
+  src=${line%%:*}
+  target=${line#*](}; target=${target%)}; target=${target%%#*}
+  case "$target" in http*|"") continue ;; esac
+  [ -e "$(dirname "$src")/$target" ] || echo "$src -> $target"
+done
 ```
 
-リンク切れの網羅的な確認は、GitHub Actions の Link Check ワークフローが行う。
+外部リンクの確認は、`scripts/link-check.sh` を手元で実行する（CI では行わない。[CONTRIBUTING.md](../../CONTRIBUTING.md) の「リンク切れをローカルで確認する」を参照）。
+
+> [!IMPORTANT]
+> `scripts/link-check.sh` は引数を省略すると `git ls-files` の結果を対象にする。
+> 新規ページは `git add` を済ませてから実行しないと、確認の対象から漏れる。
 
 ---
 

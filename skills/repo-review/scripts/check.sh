@@ -38,9 +38,10 @@ section "LLM 的な空虚表現"
 grep -rnE "重要なのは|不可欠|極めて|非常に|大いに|掘り下げ|多角的|包括的|正面から|に他ならない|と言えるだろう" \
   --include="*.md" "${TARGETS[@]}" 2>/dev/null | grep -Ev "$EXCLUDE" | report
 
+# _templates/ は寄稿者への指示文であり、ですます調のままでよい。文体の検査からだけ外す。
 section "文体の不統一（本文は「である」調。依頼と手順の指示文は除く）"
 grep -rn "です。\|ます。\|ません。\|でしょう。" --include="*.md" "${TARGETS[@]}" 2>/dev/null \
-  | grep -Ev "$EXCLUDE" | grep -v "ください。" | grep -v "ほしい。" | report
+  | grep -Ev "$EXCLUDE" | grep -v "_templates/" | grep -v "ください。" | grep -v "ほしい。" | report
 
 section "「事実」ブロックと出典の対応（目視で確認する）"
 for f in $(grep -rl "^\*\*事実\*\*" --include="*.md" "${TARGETS[@]}" 2>/dev/null | grep -Ev "$EXCLUDE"); do
