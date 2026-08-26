@@ -327,6 +327,18 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+#### 📲 [デジタルヘルス](docs/technology/digital-health/)
+
+治療用アプリ、遠隔医療、PHR、医療機関向け SaaS、健康データの二次利用基盤。
+医療機関の外で作られ、同じデータを扱いながら規制の当たり方が変わる製品群を、攻撃者から見た集約度で並べる。
+
+- [Google のデジタルヘルス](docs/technology/digital-health/google.md)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### 🧱 [ネットワークの分離](docs/technology/segmentation.md)
@@ -536,6 +548,7 @@ awesome-healthcare-security/
 │   │   ├── web-security/            医療系 Web アプリケーションのセキュリティ
 │   │   ├── cloud/                   クラウド事業者と医療（AWS、Google Cloud、Azure、さくら）
 │   │   ├── dx-ax/                   医療 DX と AX（国の基盤、デジタル庁、地域医療連携、医療 AI、現場主導の導入）
+│   │   ├── digital-health/          デジタルヘルス（規制の当たり方、攻撃面、Google のデジタルヘルス）
 │   │   ├── genomics.md              ゲノムデータの保護（所在、二次利用、事業者が消えるときの扱い）
 │   │   ├── identity.md              認証とアクセス管理（二要素認証の期限、ID の棚卸し、ブレークグラス）
 │   │   ├── logging.md               ログと監視の設計（何を残すか、保存期間、読む仕組み）

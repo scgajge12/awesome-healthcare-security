@@ -405,6 +405,7 @@ AWS の S3 オブジェクトロックとバックアップボールトのロッ
 - [海外のガイドラインと法規制](../../guidelines/global.md)
 - [脅威アクターと TTPs](../../threats/actors/)
 - [医療系 Web アプリケーションのセキュリティ](../web-security/)
+- [Google のデジタルヘルス](../digital-health/google.md)
 - [ネットワークの分離](../segmentation.md)
 - [インシデント事例集](../../threats/incidents/)
 

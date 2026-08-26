@@ -321,6 +321,18 @@ Where sequence data lives, how it moves into secondary use, and what happens to 
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+#### 📲 [Digital Health](docs/technology/digital-health/)
+
+Therapeutic apps, telemedicine, PHR, SaaS sold to providers, and platforms for secondary use of health data.
+Products built outside the hospital that handle the same data under a different regulatory regime, ranked by how much an attacker gets in one reach.
+
+- [Google's digital health](docs/technology/digital-health/google.md)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### 🧱 [Network Segmentation](docs/technology/segmentation.md)
@@ -519,6 +531,7 @@ awesome-healthcare-security/
 │   │   ├── web-security/            Healthcare web application security
 │   │   ├── cloud/                   Cloud providers and healthcare
 │   │   ├── dx-ax/                   Healthcare DX and AX (platforms, Digital Agency, regional networks, AI, frontline-led adoption)
+│   │   ├── digital-health/          Digital health (regulatory boundaries, attack surface, Google's digital health)
 │   │   ├── genomics.md              Protecting genomic data (where it lives, secondary use, custodian failure)
 │   │   ├── identity.md              Identity and access management (2FA deadlines, account inventory, break-glass)
 │   │   ├── logging.md               Logging and monitoring (what to keep, retention, who reads it)

@@ -57,6 +57,7 @@ flowchart LR
 
 ## 関連ページ
 
+- [デジタルヘルス](../digital-health/)：医療機関の外で作られる製品群と、規制の当たり方
 - [OSS 電子カルテ、HIS の脆弱性](../oss-vulnerabilities/ehr-systems.md)
 - [地域医療情報連携ネットワーク](../dx-ax/regional-networks.md)
 - [ガイドラインと法規制](../../guidelines/)

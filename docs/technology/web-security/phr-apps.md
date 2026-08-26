@@ -148,6 +148,7 @@ FHIR などの API を用いる場合は、[HL7 v2 と FHIR の攻撃面](hl7-fh
 - [ゲノムデータの保護](../genomics.md)：事業者が消えるときのデータの扱い
 - [完全性への攻撃と患者安全](../../threats/integrity-attacks.md)：持ち込まれたデータの信頼性
 - [医療 DX：国の基盤と接続点](../dx-ax/medical-dx.md)：マイナポータル経由の情報提供
+- [デジタルヘルス](../digital-health/)：規制の当たり方の違いと、製品全体の攻撃面
 - [国内のガイドラインと法規制](../../guidelines/japan.md)：要配慮個人情報の扱い
 
 ---
