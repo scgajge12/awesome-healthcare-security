@@ -54,16 +54,24 @@ fi
 started_at=$SECONDS
 echo "link-check: $(date '+%H:%M:%S') 開始、${#targets[@]} ファイルを確認する"
 
-# Why not: 次の五点は URL 側の問題ではないため、除外や許可で黙らせる。
+# Why not: 次の七点は URL 側の問題ではないため、除外や許可で黙らせる。
 # 一律に除外を増やすと本当のリンク切れを見落とすので、理由を書けるものだけを対象にする。
 #
 # - m-isac.jp：サーバ証明書が *.xbiz.ne.jp のみを含み、ホスト名と一致しない。
 #   サイトは稼働しているため、証明書が直るまで除外する。
+# - union.health, kch.or.kr：443 への接続が拒否またはタイムアウトする。上記の各例と違い
+#   ブラウザでも開けないが、いずれも当該医療機関の公式ドメインであることは、検索エンジンの
+#   索引と医療機関検索サイトの掲載で確認できる。日本からの接続を制限していると見られるため、
+#   URL の誤りとは区別して除外する。到達性が戻ったら除外を外す。
 # - imdrf.org, sophos.com：HTTP/2 の応答が lychee の実装と噛み合わず、毎回失敗する。
 #   ブラウザと WebFetch では開けるため、URL 側の問題ではない。
 # - fda.gov, mri.co.jp：自動アクセスを bot 検知に回し、ブラウザでは開くページに 404 や
 #   apology ページへの 302 を返す。URL の誤りと区別できないため除外し、これらのリンクは
 #   サイト改編の告知や検索結果で追う。
+# - i2b2.org：前段の Varnish が自動アクセスへ HTTP 781 という非標準の状態行を返す。
+#   accept に並べても他サイトの本当の異常まで通してしまうため、ホスト単位で除外する。
+#   ブラウザと WebFetch では開き、更新も続いている。community.i2b2.org は 200 を返すので
+#   除外の対象に含めず、確認を続ける。
 # - github.com の stargazers：README のバッジのリンク先。スター数が 0 のリポジトリでは
 #   GitHub がこのページに 404 を返すため、リンクが正しくても失敗する。
 # - accept に 202 を含めるのは、hl7.org が自動アクセスに 202 を返すため。
@@ -85,10 +93,13 @@ lychee \
   --accept 200,202,206,403,429 \
   --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36" \
   --exclude '^https?://(www\.)?m-isac\.jp' \
+  --exclude '^https?://(www\.)?union\.health' \
+  --exclude '^https?://(www\.)?kch\.or\.kr' \
   --exclude '^https?://(www\.)?imdrf\.org' \
   --exclude '^https?://(www\.)?sophos\.com' \
   --exclude '^https?://(www\.)?fda\.gov' \
   --exclude '^https?://(www\.)?mri\.co\.jp' \
+  --exclude '^https?://(www\.)?i2b2\.org' \
   --exclude '^https?://(www\.)?github\.com/[^/]+/[^/]+/stargazers/?$' \
   --max-concurrency 8 \
   --host-concurrency 1 \
