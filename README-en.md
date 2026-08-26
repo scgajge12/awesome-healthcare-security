@@ -131,6 +131,7 @@ Generative AI does not create the six constraints above, but it compresses the t
    The constraint of "no changes without vendor approval" comes back for artifacts that are expected to change often.
 
 All of it comes from the same gap: the speed at which the field adopts new technology versus the speed at which regulation and operations catch up.
+The connection points of each national platform, and the threats that come with putting AI inside clinical work, are collected in [Healthcare DX and AX](docs/technology/dx-ax/).
 
 ### Frontier AI and critical infrastructure
 
@@ -164,9 +165,9 @@ Drop any one of them and the reader is left with something they cannot act on.
 | Lens | What it means in practice | Where it shows up |
 |---|---|---|
 | **Write down to the implementation** | A control is not finished at the policy statement. Where it goes, and how you verify it, belong in the same row. A control with an empty verification column does not count as a control | [Defense playbook](docs/threats/actors/defense-playbook.md), [Network segmentation](docs/technology/segmentation.md), [Identity and access management](docs/technology/identity.md), [Logging and monitoring](docs/technology/logging.md) |
-| **Read the paths in the attacker's order** | Count from the entry points reachable from outside, not from the asset register. Paths are built from disclosed incidents and observed tradecraft | [External attack surface](docs/practice/attack-surface.md) (Japanese), [Ransomware chains](docs/threats/actors/ransomware-chain.md), [Group TTPs](docs/threats/actors/ransomware-groups.md), [Bug bounty](docs/practice/bug-bounty/) |
+| **Read the paths in the attacker's order** | Count from the entry points reachable from outside, not from the asset register. Paths are built from disclosed incidents and observed tradecraft | [External attack surface](docs/practice/attack-surface.md), [Ransomware chains](docs/threats/actors/ransomware-chain.md), [Group TTPs](docs/threats/actors/ransomware-groups.md), [Bug bounty](docs/practice/bug-bounty/) |
 | **Sequence the work by risk** | Write the order that fits the budget, the staffing, and the downtime window that actually exists. Not descending CVSS, but reachable from outside, reaching the patient, and whether a compensating control can be placed | [Risk-based thinking](docs/reference/security-basics.md#3-リスクベースの考え方), [Translating severity into clinical terms](docs/practice/pentest/README.md#7-深刻度を診療と患者安全の言葉に翻訳する), [Small organizations](docs/governance/small-organizations.md) |
-| **Enumerate at design time** | Before measuring what was built, count the flows that cross trust boundaries and the paths that reach the target. A provider's only points of leverage over the design are procurement and new connections | [Threat modeling for healthcare](docs/practice/threat-modeling.md) (Japanese), [Secure by design](docs/reference/security-basics.md#9-セキュリティバイデザイン), [Device testing methodology](docs/technology/medical-devices/testing-methodology.md) |
+| **Enumerate at design time** | Before measuring what was built, count the flows that cross trust boundaries and the paths that reach the target. A provider's only points of leverage over the design are procurement and new connections | [Threat modeling for healthcare](docs/practice/threat-modeling.md), [Secure by design](docs/reference/security-basics.md#9-セキュリティバイデザイン), [Device testing methodology](docs/technology/medical-devices/testing-methodology.md) |
 
 The four look at the same system from different directions.
 Enumerate at design time, confirm how it looks from outside, measure whether the path actually works, and let outsiders tell you about the part you never looked at ([Practice](docs/practice/)).
@@ -383,14 +384,14 @@ Assets leaving the organization: sanitization methods, the chain of subcontracto
 
 #### 🧠 [Threat Modeling for Healthcare](docs/practice/threat-modeling.md)
 
-Starting without a design document: trust boundaries, STRIDE applied to healthcare asset classes, attack trees, and turning the output into a prioritized list of controls and test items. (Japanese)
+Starting without a design document: trust boundaries, STRIDE applied to healthcare asset classes, attack trees, and turning the output into a prioritized list of controls and test items.
 
 </td>
 <td width="50%" valign="top">
 
 #### 🛰️ [External Attack Surface](docs/practice/attack-surface.md)
 
-Why the asset register and reality diverge, how to count the entry points visible from outside, where the line between passive and active measurement sits, and how to notice when the surface grows. (Japanese)
+Why the asset register and reality diverge, how to count the entry points visible from outside, where the line between passive and active measurement sits, and how to notice when the surface grows.
 
 </td>
 </tr>
@@ -406,7 +407,7 @@ Testing scopes for hospitals and pharma, separated by domain: people, perimeter,
 
 #### 🎯 [Bug Bounty × Healthcare](docs/practice/bug-bounty/)
 
-Bug bounty and vulnerability disclosure in healthcare: what is in scope, where to report, how researchers fit into national cyber defence frameworks, and how to stand up a VDP. (Japanese)
+Bug bounty and vulnerability disclosure in healthcare: what is in scope, where to report, how researchers fit into national cyber defence frameworks, and how to stand up a VDP.
 
 </td>
 </tr>
@@ -416,8 +417,8 @@ Bug bounty and vulnerability disclosure in healthcare: what is in scope, where t
 
 What happens after a breach: the first decisions, keeping care running while the EHR is down, statutory reporting deadlines, and the order in which systems come back.
 
-- [BCP for cyber attacks](docs/response/bcp-cyber.md) (Japanese)
-- [Infrastructure posture and external dependencies](docs/response/dependencies.md) (Japanese)
+- [BCP for cyber attacks](docs/response/bcp-cyber.md)
+- [Infrastructure posture and external dependencies](docs/response/dependencies.md)
 
 Remaining topics are being added.
 
@@ -521,6 +522,8 @@ How to point an AI agent at this repository: ingesting the files, handing over t
 ### 📅 [Monthly Reports](monthly-reports/)
 
 A month-by-month record of the sector: incidents, vulnerabilities, regulatory changes, and threat activity.
+Early reports on the year in progress land here first; once the primary sources settle, the case is promoted into the [incident case studies](docs/threats/incidents/).
+The series starts with August 2026; earlier months have not been filled in retroactively.
 
 - [Index](monthly-reports/README.md)
 
