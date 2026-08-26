@@ -496,7 +496,9 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 
 - [ツール](docs/reference/resources/tools.md)
 - [論文、レポート](docs/reference/resources/research.md)
+- [研究テーマの地図](docs/reference/resources/research-themes.md)
 - [学習リソース](docs/reference/resources/learning.md)
+- [リークサイト横断フィード](docs/reference/resources/leak-site-feeds.md)
 - [用語集](docs/reference/GLOSSARY.md)
 
 </td>
@@ -566,7 +568,7 @@ awesome-healthcare-security/
 │   └── reference/                   リファレンス
 │       ├── pharma/                  製薬企業のセキュリティ（治験、製造 OT、供給網）
 │       ├── labs-communities/        ラボ、コミュニティ
-│       ├── resources/               ツール、論文、学習リソース
+│       ├── resources/               ツール、論文、研究テーマ、学習リソース、リークサイト横断フィード
 │       ├── security-services/       セキュリティサービスのカタログ（japan.md、global.md）
 │       ├── _templates/              事例追加のテンプレート
 │       ├── security-basics.md       セキュリティの基礎（7 要素、設計の原則、脅威モデリング、検知と対応）

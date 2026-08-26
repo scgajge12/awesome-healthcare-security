@@ -482,7 +482,9 @@ Listing is not endorsement.
 
 - [Tools](docs/reference/resources/tools.md)
 - [Papers and reports](docs/reference/resources/research.md)
+- [Map of research themes](docs/reference/resources/research-themes.md)
 - [Learning resources](docs/reference/resources/learning.md)
+- [Leak-site aggregator feeds](docs/reference/resources/leak-site-feeds.md)
 - [Glossary](docs/reference/GLOSSARY.md)
 
 </td>
@@ -549,7 +551,7 @@ awesome-healthcare-security/
 │   └── reference/                   Reference
 │       ├── pharma/                  Pharmaceutical security
 │       ├── labs-communities/        Labs and communities
-│       ├── resources/               Tools, papers, learning resources
+│       ├── resources/               Tools, papers, research themes, learning resources, leak-site feeds
 │       ├── security-services/       Security service catalogue (japan.md, global.md)
 │       ├── _templates/              Templates for new entries
 │       ├── security-basics.md       Security fundamentals (7 elements, design principles, threat modeling, detection)
