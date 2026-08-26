@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 520" role="img" aria-label="第三者送信の経路に、どの制度がどの位置で当たるかを示す図。上段に、公開ページ、患者ポータル（認証後）、第三者ドメインへの送信、受信側での識別子との結合という四つの位置を並べる。下段に制度の及ぶ範囲を帯で示す。個人情報保護法は四つすべて、電気通信事業法の外部送信規律は送信までを、役務が四類型に該当する場合に限って対象とする。HIPAA は患者ポータル以降を対象とし、公開ページに関する解釈の一部は 2024 年 6 月に無効とされた。FTC 法第 5 条と Health Breach Notification Rule は、HIPAA の外側にある事業者について四つすべてに及ぶ。">
+  <title>同じ経路に、制度は別々の位置で当たる</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .own   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .prov  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .warn  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .gone  { fill: none; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 5 3; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; }
+    .lead  { stroke: #8b949e; stroke-width: 1.5; fill: none; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer, .lead, .gone { stroke: #6e7681; }
+      .own   { fill: #121d2f; stroke: #4184e4; }
+      .prov  { fill: #161b22; stroke: #6e7681; }
+      .warn  { fill: #341a00; stroke: #d29922; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .t-title, .t, .t-lab { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="970" height="500" rx="8"/>
+  <text class="t-title" x="495" y="38" text-anchor="middle">同じ経路に、制度は別々の位置で当たる</text>
+  <text class="t-sm" x="495" y="58" text-anchor="middle">患者がページを開いてから、受信側で結合されるまでの四つの位置</text>
+
+  <!-- 経路の四つの位置 -->
+  <rect class="prov" x="25" y="82" width="190" height="56" rx="4"/>
+  <text class="t" x="120" y="106" text-anchor="middle">自院の公開ページ</text>
+  <text class="t-sm" x="120" y="125" text-anchor="middle">診療科、疾患名が URL に出る</text>
+
+  <rect class="prov" x="255" y="82" width="190" height="56" rx="4"/>
+  <text class="t" x="350" y="106" text-anchor="middle">患者ポータル（認証後）</text>
+  <text class="t-sm" x="350" y="125" text-anchor="middle">検査結果、処方、次回予約</text>
+
+  <rect class="warn" x="495" y="82" width="190" height="56" rx="4"/>
+  <text class="t" x="590" y="106" text-anchor="middle">第三者ドメインへの送信</text>
+  <text class="t-sm" x="590" y="125" text-anchor="middle">解析、広告、部品、フォント</text>
+
+  <rect class="warn" x="725" y="82" width="190" height="56" rx="4"/>
+  <text class="t" x="820" y="106" text-anchor="middle">受信側で識別子と結合</text>
+  <text class="t-sm" x="820" y="125" text-anchor="middle">何の診療かまで復元されうる</text>
+
+  <path class="lead" d="M215 110 L255 110"/>
+  <path class="lead" d="M445 110 L495 110"/>
+  <path class="lead" d="M685 110 L725 110"/>
+
+  <!-- 制度の及ぶ範囲 -->
+  <text class="t-lab" x="25" y="168">制度の及ぶ範囲</text>
+
+  <rect class="own" x="25" y="178" width="890" height="34" rx="4"/>
+  <text class="t" x="39" y="200">個人情報保護法（日）</text>
+  <text class="t-sm" x="905" y="200" text-anchor="end">要配慮個人情報の取得は原則同意（法 20 条 2 項）。個人関連情報の第三者提供は同意の確認（法 31 条）</text>
+
+  <rect class="own" x="25" y="220" width="660" height="34" rx="4"/>
+  <text class="t" x="39" y="242">電気通信事業法の外部送信規律（日）</text>
+  <text class="t-sm" x="675" y="242" text-anchor="end">役務が四類型に該当する場合</text>
+
+  <rect class="own" x="255" y="262" width="660" height="34" rx="4"/>
+  <text class="t" x="269" y="284">HIPAA（米、HHS OCR）</text>
+  <text class="t-sm" x="905" y="284" text-anchor="end">ポータル内の動作は対象のまま</text>
+
+  <rect class="gone" x="25" y="304" width="190" height="34" rx="4"/>
+  <text class="t-sm" x="120" y="326" text-anchor="middle">公開ページに関する解釈</text>
+  <text class="t-sm" x="229" y="320">HIPAA の改訂 Bulletin のうち、公開ページへの訪問と IP アドレスの結合をもって</text>
+  <text class="t-sm" x="229" y="336">個人識別可能な健康情報とみなす部分は、2024 年 6 月に無効とされた（差止めは認められず）</text>
+
+  <rect class="own" x="25" y="346" width="890" height="34" rx="4"/>
+  <text class="t" x="39" y="368">FTC 法第 5 条、Health Breach Notification Rule（米）</text>
+  <text class="t-sm" x="905" y="368" text-anchor="end">HIPAA の外側にある事業者。表示と実態の乖離、承諾のない開示</text>
+
+  <!-- 注記 -->
+  <rect class="note" x="25" y="398" width="890" height="60" rx="4"/>
+  <text class="t-sm" x="39" y="420">医療法の広告規制は、医療機関が発信する内容そのものを規律する別の枠組みであり、第三者送信の確認とは別の作業になる。</text>
+  <text class="t-sm" x="39" y="440">また、訴訟の結果を「タグを自由に置いてよくなった」と読むのは誤りになる。無効とされたのは、公開ページに関する解釈の一部である。</text>
+
+  <text class="t-sm" x="495" y="484" text-anchor="middle">この経路には侵入がない。送信は正規の機能であり、侵害としては検知されない</text>
+</svg>

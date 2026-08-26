@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 520" role="img" aria-label="ログの経路と、失われる位置を示す図。左に境界機器、認証基盤、サーバと端末、電子カルテの参照ログ、バックアップ基盤、クラウドと保守経路の発生源を並べ、中央で二つの置き方を比べる。生成したホストに置いたままの経路は、ホストの暗号化、境界機器の更新、端末の初期化と世代の上書きで失われ、右の問いに答えられない。書き込み専用の集約先へ転送する経路は残り、侵害範囲の確定、内部不正と誤操作の検知、届出と説明の三つの問いに答えられる。下部に、初動で壊さないための順序を置く。">
+  <title>ログの経路と、失われる位置</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .own   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .prov  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .warn  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; }
+    .head  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .lead  { stroke: #8b949e; stroke-width: 1.5; fill: none; }
+    .cross { stroke: #bf8700; stroke-width: 2; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer, .lead { stroke: #6e7681; }
+      .own   { fill: #121d2f; stroke: #4184e4; }
+      .prov  { fill: #161b22; stroke: #6e7681; }
+      .warn  { fill: #341a00; stroke: #d29922; }
+      .cross { stroke: #d29922; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .head  { fill: #161b22; stroke: #6e7681; }
+      .t-title, .t-head, .t, .t-lab { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="970" height="500" rx="8"/>
+  <text class="t-title" x="495" y="38" text-anchor="middle">ログの経路と、失われる位置</text>
+  <text class="t-sm" x="495" y="58" text-anchor="middle">どこに置くかで、侵害のあとに答えられる問いが決まる</text>
+
+  <!-- 帯の見出し -->
+  <rect class="head" x="30" y="78" width="220" height="28" rx="4"/>
+  <text class="t-head" x="140" y="97" text-anchor="middle">発生源</text>
+  <rect class="head" x="290" y="78" width="350" height="28" rx="4"/>
+  <text class="t-head" x="465" y="97" text-anchor="middle">どこに置くか</text>
+  <rect class="head" x="680" y="78" width="280" height="28" rx="4"/>
+  <text class="t-head" x="820" y="97" text-anchor="middle">侵害のあとに答えられる問い</text>
+
+  <!-- 発生源 -->
+  <rect class="prov" x="30" y="116" width="220" height="34" rx="4"/><text class="t" x="140" y="138" text-anchor="middle">境界機器（VPN、FW）</text>
+  <rect class="prov" x="30" y="158" width="220" height="34" rx="4"/><text class="t" x="140" y="180" text-anchor="middle">認証基盤</text>
+  <rect class="prov" x="30" y="200" width="220" height="34" rx="4"/><text class="t" x="140" y="222" text-anchor="middle">サーバ、端末（EDR）</text>
+  <rect class="prov" x="30" y="242" width="220" height="34" rx="4"/><text class="t" x="140" y="264" text-anchor="middle">電子カルテの参照ログ</text>
+  <rect class="prov" x="30" y="284" width="220" height="34" rx="4"/><text class="t" x="140" y="306" text-anchor="middle">バックアップ基盤</text>
+  <rect class="prov" x="30" y="326" width="220" height="34" rx="4"/><text class="t" x="140" y="348" text-anchor="middle">クラウド、保守経路</text>
+
+  <!-- 分岐の線 -->
+  <path class="lead" d="M250 133 L268 133 L268 343"/>
+  <path class="lead" d="M250 175 L268 175"/>
+  <path class="lead" d="M250 217 L268 217"/>
+  <path class="lead" d="M250 259 L268 259"/>
+  <path class="lead" d="M250 301 L268 301"/>
+  <path class="lead" d="M250 343 L268 343"/>
+  <path class="lead" d="M268 171 L290 171"/>
+  <path class="lead" d="M268 305 L290 305"/>
+
+  <!-- 置き方 A：ホストに置いたまま -->
+  <rect class="warn" x="290" y="116" width="350" height="110" rx="4"/>
+  <text class="t-lab" x="304" y="140">生成したホストに置いたまま</text>
+  <text class="t-sm" x="304" y="164">ホストが暗号化されれば、同時に失われる</text>
+  <text class="t-sm" x="304" y="182">境界機器を更新すると、装置内のログが消える</text>
+  <text class="t-sm" x="304" y="200">端末の初期化と、世代の上書きで消える</text>
+  <line class="cross" x1="600" y1="126" x2="630" y2="156"/>
+  <line class="cross" x1="630" y1="126" x2="600" y2="156"/>
+  <text class="t-sm" x="465" y="242" text-anchor="middle">この経路では、右の問いに答えられない</text>
+
+  <!-- 置き方 B：集約先へ転送 -->
+  <rect class="own" x="290" y="250" width="350" height="110" rx="4"/>
+  <text class="t-lab" x="304" y="274">書き込み専用の集約先へ転送する</text>
+  <text class="t-sm" x="304" y="298">集約先の認証を、業務ドメインから分ける</text>
+  <text class="t-sm" x="304" y="316">時刻を院内で同期し、標準時刻と一致させる</text>
+  <text class="t-sm" x="304" y="334">接続点ごとに分散させず、一箇所へ集める</text>
+
+  <!-- 用途への線 -->
+  <path class="lead" d="M640 305 L660 305 L660 150 L680 150"/>
+  <path class="lead" d="M660 240 L680 240"/>
+  <path class="lead" d="M660 305 L680 305"/>
+
+  <!-- 用途 -->
+  <rect class="note" x="680" y="116" width="280" height="70" rx="4"/>
+  <text class="t"    x="694" y="138">侵害範囲の確定</text>
+  <text class="t-sm" x="694" y="158">いつ、どこから入り、何を持ち出したか</text>
+  <text class="t-sm" x="694" y="176">数か月前まで遡る</text>
+
+  <rect class="note" x="680" y="204" width="280" height="70" rx="4"/>
+  <text class="t"    x="694" y="226">内部不正と誤操作の検知</text>
+  <text class="t-sm" x="694" y="246">誰が、どの患者の情報を参照したか</text>
+  <text class="t-sm" x="694" y="264">数年後の照会にも答える</text>
+
+  <rect class="note" x="680" y="292" width="280" height="70" rx="4"/>
+  <text class="t"    x="694" y="314">届出と説明</text>
+  <text class="t-sm" x="694" y="334">何件、誰の情報が影響を受けたか</text>
+  <text class="t-sm" x="694" y="352">速報はおおむね 3 日から 5 日、確報は 30 日</text>
+
+  <!-- 初動 -->
+  <rect class="note" x="30" y="382" width="930" height="70" rx="4"/>
+  <text class="t-lab" x="44" y="404">初動で壊さない</text>
+  <text class="t-sm" x="44" y="424">更新、再起動、初期化、アカウントの一括リセットは、いずれも封じ込めとして妥当でありながら、調査に必要な情報を消す</text>
+  <text class="t-sm" x="44" y="442">手順書では、遮断の判断と同じ段に、ログの保全指示を書く</text>
+
+  <text class="t-sm" x="495" y="478" text-anchor="middle">保存期間は、侵入から発覚までの期間から逆算する。容量に制約があるなら、境界機器、認証基盤、サーバ OS を優先して長く残す</text>
+</svg>

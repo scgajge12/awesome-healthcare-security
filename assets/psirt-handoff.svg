@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 510" role="img" aria-label="脆弱性の受付から公表までを、当事者のレーンで示す図。報告者、メーカーの PSIRT、規制当局と情報共有組織、医療機関の四つのレーンに、報告、受領の連絡、再現と影響判定、修正の設計と検証、医療機関への通知、公表、追跡を配置する。影響判定から通知までの区間が、修正が届かない期間にあたり、この間はメーカー、医療機関、規制当局と情報共有組織が分担して受け持つ。下部に三者の分担を示す。">
+  <title>受付から公表までを、当事者のレーンで見る</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .lane  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .own   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .warn  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .span  { fill: none; stroke: #bf8700; stroke-width: 1.5; stroke-dasharray: 5 3; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; }
+    .lead  { stroke: #8b949e; stroke-width: 1.5; fill: none; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer, .lead { stroke: #6e7681; }
+      .lane  { fill: #161b22; stroke: #6e7681; }
+      .own   { fill: #121d2f; stroke: #4184e4; }
+      .warn  { fill: #341a00; stroke: #d29922; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .t-title, .t, .t-lab { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="970" height="490" rx="8"/>
+  <text class="t-title" x="495" y="38" text-anchor="middle">受付から公表までを、当事者のレーンで見る</text>
+  <text class="t-sm" x="495" y="58" text-anchor="middle">工程の順序だけでなく、その時点で誰が受け持っているかを見る</text>
+
+  <!-- 修正が届かない期間 -->
+  <rect class="span" x="430" y="82" width="400" height="292" rx="6"/>
+  <text class="t-lab" x="630" y="100" text-anchor="middle">修正が届かない期間</text>
+
+  <!-- レーン -->
+  <rect class="lane" x="30" y="112" width="930" height="60" rx="4"/>
+  <text class="t-lab" x="44" y="147">報告者</text>
+  <rect class="lane" x="30" y="180" width="930" height="60" rx="4"/>
+  <text class="t-lab" x="44" y="207">メーカーの</text>
+  <text class="t-lab" x="44" y="224">PSIRT</text>
+  <rect class="lane" x="30" y="248" width="930" height="60" rx="4"/>
+  <text class="t-lab" x="44" y="275">規制当局、</text>
+  <text class="t-lab" x="44" y="292">情報共有組織</text>
+  <rect class="lane" x="30" y="316" width="930" height="60" rx="4"/>
+  <text class="t-lab" x="44" y="351">医療機関</text>
+
+  <!-- 報告者レーン -->
+  <rect class="own" x="180" y="124" width="120" height="36" rx="4"/><text class="t" x="240" y="147" text-anchor="middle">報告</text>
+  <rect class="own" x="840" y="124" width="110" height="36" rx="4"/><text class="t-sm" x="895" y="140" text-anchor="middle">公表の時期を</text><text class="t-sm" x="895" y="155" text-anchor="middle">調整する</text>
+
+  <!-- PSIRT レーン -->
+  <rect class="own" x="310" y="192" width="110" height="36" rx="4"/><text class="t" x="365" y="215" text-anchor="middle">受領の連絡</text>
+  <rect class="own" x="440" y="192" width="120" height="36" rx="4"/><text class="t" x="500" y="215" text-anchor="middle">再現、影響判定</text>
+  <rect class="own" x="580" y="192" width="130" height="36" rx="4"/><text class="t" x="645" y="215" text-anchor="middle">修正の設計と検証</text>
+  <rect class="own" x="730" y="192" width="100" height="36" rx="4"/><text class="t-sm" x="780" y="208" text-anchor="middle">医療機関への</text><text class="t-sm" x="780" y="223" text-anchor="middle">通知</text>
+  <rect class="own" x="840" y="192" width="110" height="36" rx="4"/><text class="t-sm" x="895" y="208" text-anchor="middle">公表、追跡</text><text class="t-sm" x="895" y="223" text-anchor="middle">CVE、CVSS</text>
+
+  <!-- 規制当局レーン -->
+  <rect class="own" x="730" y="260" width="220" height="36" rx="4"/><text class="t" x="840" y="283" text-anchor="middle">注意喚起の配信、業界横断の共有</text>
+
+  <!-- 医療機関レーン -->
+  <rect class="warn" x="440" y="328" width="270" height="36" rx="4"/><text class="t" x="575" y="351" text-anchor="middle">到達経路の遮断、運用の変更</text>
+  <rect class="own" x="730" y="328" width="220" height="36" rx="4"/><text class="t" x="840" y="351" text-anchor="middle">適用、未適用機器への再通知</text>
+
+  <!-- 流れ -->
+  <path class="lead" d="M300 142 L310 142 L310 192"/>
+  <path class="lead" d="M420 210 L440 210"/>
+  <path class="lead" d="M560 210 L580 210"/>
+  <path class="lead" d="M710 210 L730 210"/>
+  <path class="lead" d="M830 210 L840 210"/>
+  <path class="lead" d="M500 228 L500 328"/>
+  <path class="lead" d="M780 228 L780 260"/>
+  <path class="lead" d="M780 296 L780 328"/>
+  <path class="lead" d="M895 192 L895 160"/>
+
+  <!-- 三者の分担 -->
+  <text class="t-lab" x="30" y="400">修正が届かない期間の分担</text>
+
+  <rect class="note" x="30" y="410" width="300" height="66" rx="4"/>
+  <text class="t"    x="44" y="432">メーカー</text>
+  <text class="t-sm" x="44" y="452">回避策の提示、適用手順の提供</text>
+  <text class="t-sm" x="44" y="468">保守要員による作業</text>
+
+  <rect class="note" x="345" y="410" width="300" height="66" rx="4"/>
+  <text class="t"    x="359" y="432">医療機関</text>
+  <text class="t-sm" x="359" y="452">到達経路の遮断、一時的な運用変更</text>
+  <text class="t-sm" x="359" y="468">優先順位の判断</text>
+
+  <rect class="note" x="660" y="410" width="300" height="66" rx="4"/>
+  <text class="t"    x="674" y="432">規制当局、情報共有組織</text>
+  <text class="t-sm" x="674" y="452">注意喚起の配信</text>
+  <text class="t-sm" x="674" y="468">業界横断での情報共有</text>
+</svg>

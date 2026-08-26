@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 480" role="img" aria-label="医療機関の Active Directory で権限が集まりやすい箇所と、二つの手当の位置を示す図。左に、部門システムのサービスアカウント、ベンダの保守アカウント、医療機器に付属する PC、共有端末に残る資格情報、バックアップ基盤の認証、仮想化基盤の管理者の六つを並べる。これらが業務ドメインの資格情報に集まり、そこから電子カルテ、部門システム、バックアップ基盤、仮想化基盤へ到達する。手当は二か所にあり、集まる手前で権限を下げる手当は現場に通りにくく、到達の手前でログオンできる端末とゾーンを絞る手当は権限を下げられなくても実現できることが多い。">
+  <title>権限が集まる箇所と、手当が効く位置</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .own   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .prov  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .warn  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .soft  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 5 3; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; }
+    .lead  { stroke: #8b949e; stroke-width: 1.5; fill: none; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer, .lead { stroke: #6e7681; }
+      .own   { fill: #121d2f; stroke: #4184e4; }
+      .prov, .soft { fill: #161b22; stroke: #6e7681; }
+      .warn  { fill: #341a00; stroke: #d29922; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .t-title, .t-head, .t, .t-lab { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="970" height="460" rx="8"/>
+  <text class="t-title" x="495" y="38" text-anchor="middle">権限が集まる箇所と、手当が効く位置</text>
+  <text class="t-sm" x="495" y="58" text-anchor="middle">水平展開は、到達性と資格情報の両方が揃ったときに成立する</text>
+
+  <!-- 見出し -->
+  <text class="t-head" x="125" y="98" text-anchor="middle">権限が集まりやすい箇所</text>
+  <text class="t-head" x="330" y="98" text-anchor="middle">手当 A</text>
+  <text class="t-head" x="525" y="98" text-anchor="middle">集まった先</text>
+  <text class="t-head" x="725" y="98" text-anchor="middle">手当 B</text>
+  <text class="t-head" x="900" y="98" text-anchor="middle">到達できる範囲</text>
+
+  <!-- 六つの箇所 -->
+  <rect class="warn" x="25" y="120" width="200" height="32" rx="4"/><text class="t-sm" x="125" y="140" text-anchor="middle">部門システムのサービスアカウント</text>
+  <rect class="warn" x="25" y="158" width="200" height="32" rx="4"/><text class="t-sm" x="125" y="178" text-anchor="middle">ベンダの保守アカウント</text>
+  <rect class="warn" x="25" y="196" width="200" height="32" rx="4"/><text class="t-sm" x="125" y="216" text-anchor="middle">医療機器に付属する PC</text>
+  <rect class="warn" x="25" y="234" width="200" height="32" rx="4"/><text class="t-sm" x="125" y="254" text-anchor="middle">共有端末に残る資格情報</text>
+  <rect class="warn" x="25" y="272" width="200" height="32" rx="4"/><text class="t-sm" x="125" y="292" text-anchor="middle">バックアップ基盤の認証</text>
+  <rect class="warn" x="25" y="310" width="200" height="32" rx="4"/><text class="t-sm" x="125" y="330" text-anchor="middle">仮想化基盤の管理者</text>
+
+  <!-- 収束 -->
+  <path class="lead" d="M225 136 L245 136 L245 231"/>
+  <path class="lead" d="M225 174 L245 174"/>
+  <path class="lead" d="M225 212 L245 212"/>
+  <path class="lead" d="M225 250 L245 250"/>
+  <path class="lead" d="M225 288 L245 288"/>
+  <path class="lead" d="M225 326 L245 326 L245 231"/>
+  <path class="lead" d="M245 231 L255 231"/>
+
+  <!-- 手当 A -->
+  <rect class="soft" x="255" y="186" width="150" height="90" rx="4"/>
+  <text class="t"    x="330" y="212" text-anchor="middle">権限を下げる</text>
+  <text class="t-sm" x="330" y="236" text-anchor="middle">導入手順や運用の</text>
+  <text class="t-sm" x="330" y="252" text-anchor="middle">都合があり、現場に</text>
+  <text class="t-sm" x="330" y="268" text-anchor="middle">通りにくい</text>
+
+  <path class="lead" d="M405 231 L435 231"/>
+
+  <!-- 集まった先 -->
+  <rect class="prov" x="435" y="186" width="180" height="90" rx="4"/>
+  <text class="t"    x="525" y="212" text-anchor="middle">業務ドメインの資格情報</text>
+  <text class="t-sm" x="525" y="240" text-anchor="middle">一つ取られると、</text>
+  <text class="t-sm" x="525" y="258" text-anchor="middle">そこから次へ到達できる</text>
+
+  <path class="lead" d="M615 231 L645 231"/>
+
+  <!-- 手当 B -->
+  <rect class="own" x="645" y="186" width="160" height="90" rx="4"/>
+  <text class="t"    x="725" y="208" text-anchor="middle">ログオンできる端末と</text>
+  <text class="t"    x="725" y="226" text-anchor="middle">ゾーンを絞る</text>
+  <text class="t-sm" x="725" y="250" text-anchor="middle">権限を下げられなくても</text>
+  <text class="t-sm" x="725" y="268" text-anchor="middle">実現できることが多い</text>
+
+  <!-- 発散 -->
+  <path class="lead" d="M805 231 L825 231"/>
+  <path class="lead" d="M825 231 L825 152 L835 152"/>
+  <path class="lead" d="M825 190 L835 190"/>
+  <path class="lead" d="M825 231 L835 231"/>
+  <path class="lead" d="M825 231 L825 269 L835 269"/>
+
+  <!-- 到達先 -->
+  <rect class="prov" x="835" y="136" width="130" height="32" rx="4"/><text class="t-sm" x="900" y="156" text-anchor="middle">電子カルテ</text>
+  <rect class="prov" x="835" y="174" width="130" height="32" rx="4"/><text class="t-sm" x="900" y="194" text-anchor="middle">部門システム</text>
+  <rect class="prov" x="835" y="215" width="130" height="32" rx="4"/><text class="t-sm" x="900" y="235" text-anchor="middle">バックアップ基盤</text>
+  <rect class="prov" x="835" y="253" width="130" height="32" rx="4"/><text class="t-sm" x="900" y="273" text-anchor="middle">仮想化基盤</text>
+
+  <!-- 注記 -->
+  <rect class="note" x="25" y="360" width="940" height="66" rx="4"/>
+  <text class="t-lab" x="39" y="382">絞る前に測る</text>
+  <text class="t-sm" x="39" y="402">分離を先に強めると、業務で使われていた経路を予告なく塞ぐことがある。検査結果が届かない、画像が参照できないという形で診療に出る。</text>
+  <text class="t-sm" x="39" y="420">遮断の前に、その経路が実際に使われていないことを測る。到達できるかどうかは、侵入前提の検証で確かめられる。</text>
+
+  <text class="t-sm" x="495" y="452" text-anchor="middle">六つの箇所は、いずれも運用上の理由から生まれている。生まれ方を変えずに、到達の側を絞る手が残る</text>
+</svg>
