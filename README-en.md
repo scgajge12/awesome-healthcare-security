@@ -208,7 +208,7 @@ Incidents at healthcare providers in Japan and abroad. Cyber attacks come first,
 - [Japan](docs/threats/incidents/japan/) (per-year timelines)
 - [Rest of the world](docs/threats/incidents/global/) (per-year timelines)
 - [Year in review](docs/threats/incidents/years/) (Japan and the rest of the world combined: tallies and regulatory developments)
-- [2025 US HHS OCR breach filings, full tally](docs/threats/incidents/global/2025-us-hhs.md) (all 795 filings by distribution, every one of the 96 above 100,000 individuals, and how to retrieve the data)
+- US HHS OCR breach filings, full tally (distribution of filings, largest by individuals affected, and how to retrieve the data): [2025](docs/threats/incidents/global/2025-us-hhs.md) (795 filings) / [2024](docs/threats/incidents/global/2024-us-hhs.md) (741) / [2023](docs/threats/incidents/global/2023-us-hhs.md) (746) / [2022](docs/threats/incidents/global/2022-us-hhs.md) (718) / [2021](docs/threats/incidents/global/2021-us-hhs.md) (715) / [2020](docs/threats/incidents/global/2020-us-hhs.md) (663)
 - [How to research a case](docs/threats/incidents/research-tips.md) (sources, method, pitfalls)
 
 </td>
