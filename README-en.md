@@ -507,6 +507,15 @@ How the two sets of ethics differ in concept, character, and reasoning: the gap 
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top">
+
+#### 🤖 [Using This Repository with AI Agents](docs/reference/ai-agent.md)
+
+How to point an AI agent at this repository: ingesting the files, handing over the directory map, phrasing the question, checking what comes back, and tracking updates (git, Atom feeds, Slack). Written in Japanese.
+
+</td>
+</tr>
 </table>
 
 ### 📅 [Monthly Reports](monthly-reports/)
@@ -556,6 +565,7 @@ awesome-healthcare-security/
 │       ├── _templates/              Templates for new entries
 │       ├── security-basics.md       Security fundamentals (7 elements, design principles, threat modeling, detection)
 │       ├── ethics.md                Medical ethics and security ethics (concepts, character, reasoning)
+│       ├── ai-agent.md              Using this repository with AI agents (ingestion, prompting, tracking updates)
 │       └── GLOSSARY.md              Glossary
 ├── monthly-reports/                 Monthly reports (YYYY/YYYY-MM.md)
 ├── skills/                          Review skills for this repository
@@ -563,6 +573,25 @@ awesome-healthcare-security/
 ├── .githooks/                       Pre-commit hook
 └── assets/                          Diagrams (SVG)
 ```
+
+## 🤖 Using this repository with AI agents
+
+Everything here is plain Markdown.
+Clone it, or let an agent read it over GitHub, and it works as a knowledge base as it is.
+[Using This Repository with AI Agents](docs/reference/ai-agent.md) covers ingestion, the directory map to hand over, how to phrase questions, and how to check the output. Written in Japanese.
+
+Updates can be tracked in any of these ways.
+
+| Method | How |
+|---|---|
+| git | `git pull`, then `git log --since=<date> --name-status` to list what changed |
+| Atom feed | `https://github.com/scgajge12/awesome-healthcare-security/commits/main.atom` |
+| Slack | `/github subscribe scgajge12/awesome-healthcare-security` via the official GitHub app ([details](docs/reference/ai-agent.md#7-slack-で通知を受け取る)) |
+| Monthly reports | [Index](monthly-reports/README.md) |
+
+When summarising or reusing the content, keep the primary-source links and the fact / press-reported / analysis distinction intact (see [License](#-license)).
+
+---
 
 ## ✍️ Editorial principles
 

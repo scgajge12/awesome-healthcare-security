@@ -523,6 +523,16 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top">
+
+#### 🤖 [AI エージェントから使う](docs/reference/ai-agent.md)
+
+本リポジトリを AI エージェントの参照先として使う手順。
+取り込み方、構造の渡し方、聞き方、生成物の確かめ方、更新の追い方（git、Atom フィード、Slack 通知）。
+
+</td>
+</tr>
 </table>
 
 ### 📅 [月報](monthly-reports/)
@@ -573,6 +583,7 @@ awesome-healthcare-security/
 │       ├── _templates/              事例追加のテンプレート
 │       ├── security-basics.md       セキュリティの基礎（7 要素、設計の原則、脅威モデリング、検知と対応）
 │       ├── ethics.md                医療の倫理とセキュリティの倫理（概念、特徴、考え方の違い）
+│       ├── ai-agent.md              AI エージェントから使う（取り込み方、聞き方、更新の追い方）
 │       └── GLOSSARY.md              用語集
 ├── monthly-reports/                 月報（YYYY/YYYY-MM.md）
 ├── skills/                          文書レビュー用のスキル
@@ -580,6 +591,25 @@ awesome-healthcare-security/
 ├── .githooks/                       コミット前に走らせるフック
 └── assets/                          図（SVG）
 ```
+
+## 🤖 AI エージェントから使う
+
+本リポジトリは Markdown だけで構成している。
+クローンするか GitHub 越しに読ませれば、AI エージェントの参照先としてそのまま使える。
+取り込み方、構造の渡し方、聞き方、生成物の確かめ方は [AI エージェントから使う](docs/reference/ai-agent.md) にまとめた。
+
+更新は、次のいずれかで追える。
+
+| 手段 | 方法 |
+|---|---|
+| git | `git pull` のあと `git log --since=<日付> --name-status` で変更ファイルを一覧する |
+| Atom フィード | `https://github.com/scgajge12/awesome-healthcare-security/commits/main.atom` |
+| Slack | GitHub 公式アプリで `/github subscribe scgajge12/awesome-healthcare-security`（[設定と絞り込み](docs/reference/ai-agent.md#7-slack-で通知を受け取る)） |
+| 月報 | [月報一覧](monthly-reports/README.md) |
+
+要約や再利用のときは、本文に載せている一次情報のリンクと、「事実」「報道ベース」「分析」の区別を残してほしい（[ライセンス](#-ライセンス)）。
+
+---
 
 ## ✍️ 記述の方針
 
