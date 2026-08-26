@@ -130,7 +130,7 @@ flowchart LR
 **事実**：23andMe に対するクレデンシャルスタッフィングは 2023 年 4 月から 9 月にかけて行われ、公表は同年 10 月だった。
 規制当局は、異常な事象が個別に検知されながら、全体として進行中の攻撃を示すものとして調査されなかったことを不備として認定している（[PIPEDA Findings #2025-001](https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-businesses/2025/pipeda-2025-001/)）。
 
-**事実**：Change Healthcare への攻撃では、影響を受けた個人の数の届出が段階的に更新され、2025 年 7 月 31 日時点で 1 億 9,270 万人となった（[OCR Breach Portal](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf)）。
+**事実**：Change Healthcare への攻撃では、影響を受けた個人の数の届出が段階的に更新され、2025 年 7 月 31 日時点で 1 億 9270 万人となった（[OCR Breach Portal](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf)）。
 
 **分析**：この二つは、ログの保存期間を決める材料になる。
 発覚が数か月遅れる前提に立つなら、境界機器と認証基盤のログは、少なくともその期間を超えて残す必要がある。

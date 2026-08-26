@@ -161,7 +161,7 @@ flowchart LR
 | [Bugcrowd](https://www.bugcrowd.com/solutions/healthcare/) | バグバウンティ、ペネトレーションテスト、脆弱性開示、攻撃対象領域管理に加え、医療機器を対象とした IoT ペンテストを提供と記載。HIPAA への対応に言及 | Redox |
 | [Intigriti](https://www.intigriti.com/solutions/healthcare) | バグバウンティ、VDP、PTaaS、ライブハッキングイベントを提供と記載。対象領域として電子カルテ、接続された医療機器、患者ポータルと遠隔医療、クラウド診断、レガシーの臨床基盤を挙げる。HIPAA、NEN7510、NIS2、GDPR などへの対応に言及。登録ハッカーを 150,000 人以上と記載 | Nexuzhealth、UZ Leuven、Universitäts Spital Zürich、Ada、Shop Apotheke |
 
-HackerOne の医療ページは、医療のデータ侵害の平均コストを 1,093 万ドル、全業種平均の約 2.5 倍と記載している。
+HackerOne の医療ページは、医療のデータ侵害の平均コストを 1093 万ドル、全業種平均の約 2.5 倍と記載している。
 この数値の原典は IBM の年次調査であり、本リポジトリでは原典を確認していない（未確認）。
 
 **分析**：欧州のプラットフォームでは、大学病院（UZ Leuven、Universitäts Spital Zürich）や医療 SaaS が実名で挙がっている。

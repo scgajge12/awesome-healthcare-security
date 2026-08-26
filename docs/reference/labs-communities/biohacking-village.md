@@ -11,7 +11,7 @@ DEF CON では 2014 年から続き、2024 年からは日本の CODE BLUE で�
 
 ---
 
-## 概要
+## 名称、組織、活動
 
 | 項目 | 内容 |
 |---|---|
@@ -45,7 +45,7 @@ DEF CON では 2014 年から続き、2024 年からは日本の CODE BLUE で�
 
 （事実、出典：[Our Story](https://villageb.io/OurStory)、[Biohacking Village at DEF CON](https://www.villageb.io/def-con)、[CODE BLUE 2024 Biohacking Village](https://archive.codeblue.jp/2024/program/contests-workshops/biohackingvillage/)）
 
-公式サイトは、これまでの累計として、30 か国以上での活動、1,000 名を超える研究者への教育、100 機種以上の機器の検証を挙げている（事実、出典：Our Story）。
+公式サイトは、これまでの累計として、30 か国以上での活動、1000 名を超える研究者への教育、100 機種以上の機器の検証を挙げている（事実、出典：Our Story）。
 FDA と HHS の医療機器サイバーセキュリティ関連文書に、ビレッジの成果が反映されたとも説明している（事実、出典：Our Story。
 ただし当該文書側での言及は本ページでは未確認）。
 
@@ -116,7 +116,7 @@ DEF CON 34 の会期を通じて、68 件の機器の指摘が挙がり、いず
 
 Hippocratic Oath for Hackers は、I Am The Cavalry が作成した文書を起点とし、各国の規制の更新に合わせて毎年改訂されている（事実、出典：[Hippocratic Oath for Hackers](https://villageb.io/HippocraticOath)）。
 掲げられているのは、個人データの保護（HIPAA、GDPR、PIPL などの枠組みへの準拠）、医療と重要インフラの安全性の優先、責任ある開示、FDA ガイダンスや MDR に沿った機器の扱い、機微情報の秘匿、公益の増進、当局が定める期限内の報告である（事実、出典：Hippocratic Oath for Hackers）。
-DEF CON 34 では、この宣誓に 3,274 件の署名があった（事実、出典：Biohacking Village at DEF CON）。
+DEF CON 34 では、この宣誓に 3274 件の署名があった（事実、出典：Biohacking Village at DEF CON）。
 
 **分析**：この署名は形式的な同意書ではなく、参加者が持ち帰れる情報の範囲を決める文書である。
 何を公表できるかが会期の前に確定するため、あとから公表の可否を交渉する必要がない。

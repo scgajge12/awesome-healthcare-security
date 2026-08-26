@@ -54,7 +54,7 @@
 ### 価格の数字を引用するときの注意
 
 **事実**：「医療記録は 1 件あたり数百ドルで売買される」という数字が広く引用されているが、その多くは民間事業者による推計であり、算出方法と観測範囲が示されていない。
-同じ対象について、1 件あたり 250 ドルとする推計と 1,000 ドルとする推計が併存している（[Fierce Healthcare の整理](https://www.fiercehealthcare.com/hospitals/industry-voices-forget-credit-card-numbers-medical-records-are-hottest-items-dark-web)、[Experian の解説](https://www.experian.com/blogs/ask-experian/heres-how-much-your-personal-information-is-selling-for-on-the-dark-web/)）。
+同じ対象について、1 件あたり 250 ドルとする推計と 1000 ドルとする推計が併存している（[Fierce Healthcare の整理](https://www.fiercehealthcare.com/hospitals/industry-voices-forget-credit-card-numbers-medical-records-are-hottest-items-dark-web)、[Experian の解説](https://www.experian.com/blogs/ask-experian/heres-how-much-your-personal-information-is-selling-for-on-the-dark-web/)）。
 
 **分析**：価格は、データの完全性、鮮度、対象地域、売り手の評判で変わる。
 さらに、二重恐喝で公開されるデータには値が付かない。
@@ -73,7 +73,7 @@ flowchart TD
     subgraph S["窃取"]
         direction TB
         S1["電子カルテ、部門システム<br>ファイルサーバからの持ち出し"]
-        S2["委託先, 医療関連事業者からの持ち出し"]
+        S2["委託先、医療関連事業者からの持ち出し"]
         S3["職員端末のインフォスティーラ感染<br>認証情報と Cookie の窃取"]
     end
 
@@ -108,7 +108,7 @@ flowchart TD
 ```
 
 **事実**：認証情報の売買は、個人の手作業ではなく市場として運営されていた。
-2023 年 4 月 4 日、FBI とオランダ警察が主導した Operation Cookie Monster により Genesis Market が摘発され、テイクダウン時点で 150 万件規模の端末単位の出品と 8,000 万件規模の認証情報が扱われていたことが公表されている。
+2023 年 4 月 4 日、FBI とオランダ警察が主導した Operation Cookie Monster により Genesis Market が摘発され、テイクダウン時点で 150 万件規模の端末単位の出品と 8000 万件規模の認証情報が扱われていたことが公表されている。
 出品されたデータは、AZORult、Raccoon、RedLine といったインフォスティーラによって収集されたものであった（[Eurojust の発表](https://www.eurojust.europa.eu/news/takedown-online-market-sold-stolen-account-credentials-Operation-Cookie-Monster)）。
 
 **分析**：この摘発が示すのは、盗まれた認証情報が「どこかに漏れている」状態ではなく、検索して買える在庫として並んでいたという構造である。
@@ -156,7 +156,7 @@ flowchart TD
     P2A --> P3A["三次被害：患者が受診と申告を控える"]
     P2B --> P3B["三次被害：診療記録の真正性が疑われる"]
     P2C --> P3C["三次被害：再恐喝と、公開の繰り返し"]
-    P2D --> P3D["三次被害：委託先, 地域の医療機関へ波及する"]
+    P2D --> P3D["三次被害：委託先、地域の医療機関へ波及する"]
 
     P3A --> X["医療の質と、地域の受療行動に影響が残る"]
     P3B --> X
@@ -170,7 +170,7 @@ flowchart TD
 
 **報道ベース**：オーストラリアの Medibank では、組織が支払いを拒否した結果、中絶や依存症治療を含む診療内容が段階的に公開された（[GL-2022-02](../incidents/global/2022-timeline.md#GL-2022-02)）。
 
-**報道ベース**：米国の Lehigh Valley Health Network では、2023 年の侵害で放射線腫瘍科の患者の臨床写真を含むデータが公開され、集団訴訟が 6,500 万ドルで和解した（[Insurance Journal](https://www.insurancejournal.com/news/east/2024/09/12/792600.htm)、[HIPAA Journal](https://www.hipaajournal.com/lehigh-valley-health-network-blackcat-settlement/)）。
+**報道ベース**：米国の Lehigh Valley Health Network では、2023 年の侵害で放射線腫瘍科の患者の臨床写真を含むデータが公開され、集団訴訟が 6500 万ドルで和解した（[Insurance Journal](https://www.insurancejournal.com/news/east/2024/09/12/792600.htm)、[HIPAA Journal](https://www.hipaajournal.com/lehigh-valley-health-network-blackcat-settlement/)）。
 当事者の公表資料と裁判所の記録は本リポジトリで未確認である。
 
 **分析**：この三つに共通するのは、恐喝の相手が組織から患者個人へ下りている点である。

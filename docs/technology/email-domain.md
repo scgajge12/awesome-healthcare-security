@@ -54,7 +54,7 @@ flowchart TD
     POL -->|reject| R["受信側で拒否される"]
 ```
 
-**事実**：Google は、Gmail 宛に 1 日 5,000 通を超えて送信する送信者に対し、2024 年 2 月以降、SPF と DKIM に加えて送信ドメインへの DMARC の設定を求めている。
+**事実**：Google は、Gmail 宛に 1 日 5000 通を超えて送信する送信者に対し、2024 年 2 月以降、SPF と DKIM に加えて送信ドメインへの DMARC の設定を求めている。
 DMARC のポリシーは `none` でも要件を満たすとされている。
 あわせて、送信ドメインまたは IP の正引きと逆引きの一致、TLS による送信、迷惑メール率を 0.30% 未満に保つことなどが挙げられている。
 出典：[Google Email sender guidelines](https://support.google.com/a/answer/81126)

@@ -60,7 +60,7 @@ FDA のリコール情報と機器の利用状況を扱い、購入前のリス�
 **事実**：Ordr は、IT、IoT、OT、IoMT を横断する資産の可視化、AI による機器分類、リスクにもとづく脆弱性の優先順位付け、機器レベルの自動マイクロセグメンテーション、適用前のポリシー検証を提供する。
 出典：[Ordr](https://ordr.net/)
 
-**事実**：Nozomi Networks は、医療機器（IoMT）に加えて、空調、カメラ、エレベータなどの建物管理システム（BAS）を同じ基盤で扱い、患者の安全と快適性の観点から運用上のリスクを優先順位付けする。
+**事実**：Nozomi Networks は、医療機器（IoMT）に加えて、空調、カメラ、エレベータなどの建物管理システム（BAS）を同じ基盤で扱い、患者の安全と快適性への影響にもとづいて運用上のリスクを優先順位付けする。
 出典：[Nozomi Networks](https://www.nozominetworks.com/industries/healthcare-cybersecurity)
 
 **事実**：Palo Alto Networks の Medical IoT Security は、センサーを追加せずに接続機器を可視化し、機器の種類、患者ケアにおける重要度、露出度を踏まえたリスク評価を行う。
@@ -175,7 +175,7 @@ IRM Pro は、分析、プライバシー、セキュリティ、405(d) HICP の
 **事実**：KLAS Research の 2026 年の Best in KLAS では、Security & Privacy Consulting Services 部門で Clearwater が総合スコア 94.3 で受賞している。
 出典：[KLAS Research](https://klasresearch.com/best-in-klas-ranking/security-and-privacy-consulting-services/2026/400)
 
-**報道ベース**：Clearwater は 2022 年に CynergisTek を 1,770 万ドルの現金取引で買収した。
+**報道ベース**：Clearwater は 2022 年に CynergisTek を 1770 万ドルの現金取引で買収した。
 出典：[Fierce Healthcare](https://www.fiercehealthcare.com/health-tech/clearwater-buys-rival-cybersecurity-firm-cynergistek-177m-cash)
 
 **事実**：Meditology Services は 2025 年 11 月 12 日に、第三者リスク管理（TPRM）の CORL Technologies を買収したと公表した。
@@ -432,7 +432,7 @@ flowchart LR
 ```
 
 **事実**：Health Catalyst は 2024 年 11 月 6 日に、Intraprise Health を買収する最終契約を締結したと公表した。
-取得価額は約 4,300 万ドルで、現金と株式を組み合わせて充当するとしている。
+取得価額は約 4300 万ドルで、現金と株式を組み合わせて充当するとしている。
 出典：[Health Catalyst](https://www.healthcatalyst.com/news/health-catalyst-signs-definitive-agreement-to-acquire-top-rated-cybersecurity-provider-intraprise-health)
 
 **分析**：この再編には二つの方向がある。
