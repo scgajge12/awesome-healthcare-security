@@ -54,7 +54,7 @@ fi
 started_at=$SECONDS
 echo "link-check: $(date '+%H:%M:%S') 開始、${#targets[@]} ファイルを確認する"
 
-# Why not: 次の七点は URL 側の問題ではないため、除外や許可で黙らせる。
+# Why not: 次の各点は URL 側の問題ではないため、除外や許可で黙らせる。
 # 一律に除外を増やすと本当のリンク切れを見落とすので、理由を書けるものだけを対象にする。
 #
 # - m-isac.jp：サーバ証明書が *.xbiz.ne.jp のみを含み、ホスト名と一致しない。
@@ -63,8 +63,8 @@ echo "link-check: $(date '+%H:%M:%S') 開始、${#targets[@]} ファイルを確
 #   ブラウザでも開けないが、いずれも当該医療機関の公式ドメインであることは、検索エンジンの
 #   索引と医療機関検索サイトの掲載で確認できる。日本からの接続を制限していると見られるため、
 #   URL の誤りとは区別して除外する。到達性が戻ったら除外を外す。
-# - imdrf.org, sophos.com：HTTP/2 の応答が lychee の実装と噛み合わず、毎回失敗する。
-#   ブラウザと WebFetch では開けるため、URL 側の問題ではない。
+# - imdrf.org, sophos.com, cyber.gov.au, digitalhealth.gov.au：HTTP/2 の応答が lychee の
+#   実装と噛み合わず、毎回失敗する。ブラウザと WebFetch では開けるため、URL 側の問題ではない。
 # - fda.gov, mri.co.jp：自動アクセスを bot 検知に回し、ブラウザでは開くページに 404 や
 #   apology ページへの 302 を返す。URL の誤りと区別できないため除外し、これらのリンクは
 #   サイト改編の告知や検索結果で追う。
@@ -72,6 +72,12 @@ echo "link-check: $(date '+%H:%M:%S') 開始、${#targets[@]} ファイルを確
 #   accept に並べても他サイトの本当の異常まで通してしまうため、ホスト単位で除外する。
 #   ブラウザと WebFetch では開き、更新も続いている。community.i2b2.org は 200 を返すので
 #   除外の対象に含めず、確認を続ける。
+# - developer.android.com：自動アクセスを Google のサインイン（prompt=none）へ回し、
+#   元の URL とサインインの間を往復する。lychee は 10 回追ってもページ本文に届かない。
+#   WebFetch では 200 で本文が取れるため、URL 側の問題ではない。ホスト全体が同じ挙動に
+#   なるので、パス単位では切り分けられず、ホストごと除外する。
+# - chc1.com：ブラウザ以外からの取得に 503 を返す。lychee と WebFetch のどちらでも同じで、
+#   当該医療機関の公式ドメインであることは HHS OCR の届出と一致する。
 # - github.com の stargazers：README のバッジのリンク先。スター数が 0 のリポジトリでは
 #   GitHub がこのページに 404 を返すため、リンクが正しくても失敗する。
 # - accept に 202 を含めるのは、hl7.org が自動アクセスに 202 を返すため。
@@ -100,6 +106,10 @@ lychee \
   --exclude '^https?://(www\.)?fda\.gov' \
   --exclude '^https?://(www\.)?mri\.co\.jp' \
   --exclude '^https?://(www\.)?i2b2\.org' \
+  --exclude '^https?://(www\.)?cyber\.gov\.au' \
+  --exclude '^https?://(www\.)?digitalhealth\.gov\.au' \
+  --exclude '^https?://developer\.android\.com' \
+  --exclude '^https?://(www\.)?chc1\.com' \
   --exclude '^https?://(www\.)?github\.com/[^/]+/[^/]+/stargazers/?$' \
   --max-concurrency 8 \
   --host-concurrency 1 \
