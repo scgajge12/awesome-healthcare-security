@@ -166,7 +166,7 @@ DCMTK や GDCM は多くの製品に組み込まれるため、1 件の欠陥が
 |---|---|---|---|
 | **REDCap** | PHP | 研究用の電子データ収集。大学と研究機関で広く使われる | [公式](https://projectredcap.org/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=redcap) |
 | **OpenClinica** | Java | 治験の電子データ収集（EDC） | [公式](https://www.openclinica.com/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=openclinica) |
-| **i2b2** | Java | 診療データの二次利用と患者コホート抽出 | [公式](https://www.i2b2.org/) |
+| **i2b2** | Java | 診療データの二次利用と患者コホート抽出 | [公式](https://i2b2.org/) |
 | **OHDSI ATLAS / WebAPI** | Java、R | OMOP 共通データモデル上での観察研究 | [GitHub](https://github.com/OHDSI) |
 | **XNAT** | Java | 研究用の画像データ管理 | [公式](https://www.xnat.org/) / [NVD](https://nvd.nist.gov/vuln/search/results?query=xnat) |
 

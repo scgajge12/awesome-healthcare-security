@@ -46,7 +46,7 @@ flowchart LR
 
 **事実**：米国では、大統領令 14110（2023 年 10 月 30 日）にもとづき、OSTP が 2024 年 4 月 29 日に「Framework for Nucleic Acid Synthesis Screening」を公表した。
 連邦の生命科学研究資金を受ける条件として、スクリーニングの要件を満たす提供者から合成核酸およびベンチトップ合成装置を調達することを求める枠組みである。
-出典：[Framework（PDF）](https://aspr.hhs.gov/S3/Documents/OSTP-Nucleic-Acid-Synthesis-Screening-Framework-Sep2024.pdf)、[ASPR の案内](https://aspr.hhs.gov/S3/Pages/OSTP-Framework-for-Nucleic-Acid-Synthesis-Screening.aspx)
+出典：[ASPR 2024 OSTP Framework for Nucleic Acid Synthesis Screening](https://www.aspr.gov/readiness-response/medical-countermeasures-biodefense/s3/synthetic-nucleic-acid-screening/ostp-framework-nucleic-acid-synthesis-screening)
 
 **事実**：大統領令 14110 は 2025 年 1 月に撤回された。
 2025 年 5 月 5 日の大統領令 14292「Improving the Safety and Security of Biological Research」が、2024 年の枠組みの改訂または置き換えを指示している。

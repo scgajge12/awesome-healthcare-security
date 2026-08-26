@@ -37,10 +37,11 @@ flowchart LR
 
 **事実**：総務省、厚生労働省、経済産業省は「民間 PHR 事業者による健診等情報の取扱いに関する基本的指針」を令和 3 年 4 月に策定し、令和 4 年 4 月に一部改定した。
 健診等情報を取り扱う PHR サービスを提供する民間事業者に対し、法規制上の遵守事項に加えて、情報セキュリティ対策、個人情報の適切な取扱い、健診等情報の保存と管理および相互運用性の確保、要件遵守の担保方法について定めている。
-出典：[基本的指針（PDF）](https://www.mhlw.go.jp/content/12600000/000812874.pdf)、[Q&A（PDF）](https://www.mhlw.go.jp/content/10904750/001030113.pdf)
+令和 7 年 4 月の改定で、名称は「PHR サービス提供者による健診等情報の取扱いに関する基本的指針」となった。
+出典：[総務省 報道資料（令和 7 年）](https://www.soumu.go.jp/menu_news/s-news/01ryutsu06_02000443.html)、[改定後の指針（PDF）](https://www.meti.go.jp/policy/mono_info_service/healthcare/00phrshishin_20250428.pdf)、[令和 3 年策定時の指針（PDF）](https://www.mhlw.go.jp/content/12600000/000812874.pdf)、[Q&A（PDF）](https://www.mhlw.go.jp/content/10904750/001030113.pdf)
 
-**事実**：業界側の文書として、一般社団法人 PHR 普及推進協議会と PHR サービス事業協会が「民間事業者の PHR サービスに関わるガイドライン（第 3 版）」を 2024 年 6 月に公表している。
-出典：[ガイドライン第 3 版（PDF）](https://www.meti.go.jp/policy/mono_info_service/healthcare/downloadfiles/phrgaidorain.pdf)
+**事実**：業界側の文書として、一般社団法人 PHR 普及推進協議会と PHR サービス事業協会が「PHR サービス提供に関わるガイドライン（第 4 版）」を 2025 年 6 月に公表している。
+出典：[PHR サービス事業協会 ガイドライン](https://phr-s.org/contents/guidelines/)
 
 **事実**：健康診断等の結果は、個人情報保護法上の要配慮個人情報に含まれる（[国内のガイドラインと法規制](../../guidelines/japan.md)）。
 
@@ -55,7 +56,7 @@ flowchart LR
 **事実**：米国では、HIPAA の対象外にある健康アプリ等について、FTC の Health Breach Notification Rule が適用される。
 改正最終規則は 2024 年 4 月 26 日に公表され、2024 年 7 月 29 日に施行された。
 本人の承諾のない第三者への開示が、規則上の「セキュリティ侵害」に含まれることが明確化されている。
-出典：[Federal Register 2024-10855](https://www.federalregister.gov/documents/2024/05/30/2024-10855/health-breach-notification-rule)
+出典：[FTC 発表](https://www.ftc.gov/news-events/news/press-releases/2024/04/ftc-finalizes-changes-health-breach-notification-rule)、[FTC 規則ページ](https://www.ftc.gov/legal-library/browse/rules/health-breach-notification-rule)
 
 **事実**：同規則にもとづく執行として、処方薬の割引サービス、排卵日予測アプリに対する命令が公表されている。
 オンラインカウンセリングの事業者に対しては、FTC 法第 5 条にもとづく命令が出ている（[患者向けサイトの第三者送信](tracking.md)）。

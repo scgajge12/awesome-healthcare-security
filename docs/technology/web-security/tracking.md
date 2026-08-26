@@ -84,7 +84,7 @@ flowchart LR
 
 **事実**：FTC は Health Breach Notification Rule の改正最終規則を 2024 年 4 月 26 日に公表し、2024 年 7 月 29 日に施行した。
 健康アプリ等が本人の承諾なく第三者へ健康情報を開示する行為が、規則上の「セキュリティ侵害」に含まれることを明確化している。
-出典：[Federal Register 2024-10855](https://www.federalregister.gov/documents/2024/05/30/2024-10855/health-breach-notification-rule)
+出典：[FTC 発表](https://www.ftc.gov/news-events/news/press-releases/2024/04/ftc-finalizes-changes-health-breach-notification-rule)、[FTC 規則ページ](https://www.ftc.gov/legal-library/browse/rules/health-breach-notification-rule)
 
 **事実**：GoodRx は、Facebook や Google 等への利用者の健康情報の開示について通知を行わなかったとして、同規則にもとづく初の執行を受け、150 万ドルの民事制裁金を含む命令に服した（2023 年 2 月公表）。
 出典：[FTC 発表](https://www.ftc.gov/news-events/news/press-releases/2023/02/ftc-enforcement-action-bar-goodrx-sharing-consumers-sensitive-health-info-advertising)
