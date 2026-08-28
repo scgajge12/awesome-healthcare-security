@@ -184,6 +184,7 @@ flowchart TD
 ## 関連ページ
 
 - [医療の脅威モデリング](threat-modeling.md)：境界の一覧を、脅威の数え上げに渡す
+- [医療機関に対する OSINT](osint.md)：入口の一覧に現れない、人、時期、取引関係を集める
 - [診断とペネトレーションテスト](pentest/)：数えた入口が実際に通るかを測る
 - [Bug Bounty × 医療、ヘルスケア](bug-bounty/)：外部からの報告を受け取る側の設計
 - [防御プレイブック](../threats/actors/defense-playbook.md)：第 0 段階の現状把握と、その後の順序
@@ -203,4 +204,4 @@ flowchart TD
 
 ---
 
-<sub>[← 医療の脅威モデリング](threat-modeling.md) | [検証と実務](README.md) | [トップへ](../../README.md)</sub>
+<sub>[← 医療機関に対する OSINT](osint.md) | [検証と実務](README.md) | [診断とペネトレーションテスト →](pentest/) | [トップへ](../../README.md)</sub>

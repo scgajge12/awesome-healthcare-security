@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 578" role="img" aria-label="医療機関について公開されている情報の断片が、四つの層に分かれて存在し、それらを結合すると攻撃の仮説になることを示す図。左側の縦軸は、その情報を自組織の判断で減らせるかどうかを表す。上ほど制度で公開が決まり減らしにくく、下ほど自組織の裁量で減らせる。第一層は制度が公開させるもので、医療機能情報提供制度、施設基準の届出受理状況、入札公告と落札結果が含まれる。第二層は組織が自ら出すもので、求人票、学会発表と論文、広報と写真が含まれる。第三層は技術的な痕跡で、証明書とDNS、機器とサービスの応答、公開リポジトリと配布物が含まれる。第四層は第三者に渡ったもので、流出した認証情報、リークサイトの掲載が含まれる。中央では、法人と施設の名寄せ、時系列への並べ替え、構成の推定という三つの手順で断片を結合する。右側では、更改の端境期に保守の接続が開くという仮説、委託先の担当者を名乗る宛先が作れるという仮説、この型式の機器が院内にあるという仮説の三つが得られる。図の下部は、仮説が当たるとは限らず、情報の鮮度と名寄せの誤りで崩れることを注記する。">
+  <title>公開情報の断片が結合して攻撃の仮説になる</title>
+  <style>
+    .frame  { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .layer1 { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .layer2 { fill: #fff1e5; stroke: #bc4c00; stroke-width: 1.5; }
+    .layer3 { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .layer4 { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.5; }
+    .chip   { fill: #ffffff; stroke: #8b949e; stroke-width: 1; }
+    .join   { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .hypo   { fill: #ffffff; stroke: #cf222e; stroke-width: 1.5; }
+    .flow   { stroke: #8b949e; stroke-width: 1.5; fill: none; }
+    .flow-h { stroke: #cf222e; stroke-width: 2; fill: none; }
+    .axis   { stroke: #8b949e; stroke-width: 1.5; fill: none; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    .t-red   { fill: #cf222e; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .frame, .flow, .axis { stroke: #6e7681; }
+      .layer1 { fill: #341a00; stroke: #d29922; }
+      .layer2 { fill: #3a1d00; stroke: #db6d28; }
+      .layer3 { fill: #121d2f; stroke: #4184e4; }
+      .layer4 { fill: #3c1618; stroke: #f85149; }
+      .chip   { fill: #0d1117; stroke: #6e7681; }
+      .join   { fill: #161b22; stroke: #6e7681; }
+      .hypo   { fill: #0d1117; stroke: #f85149; }
+      .flow-h { stroke: #f85149; }
+      .t-title, .t-head, .t { fill: #e6edf3; }
+      .t-sm  { fill: #9198a1; }
+      .t-red { fill: #f85149; }
+    }
+  </style>
+
+  <rect class="frame" x="10" y="10" width="1000" height="558" rx="8"/>
+  <text class="t-title" x="510" y="36" text-anchor="middle">公開されている断片は、単体では無害に見え、結合すると攻撃の前提になる</text>
+  <text class="t-sm"    x="510" y="56" text-anchor="middle">左の縦軸は、その情報を自組織の判断で減らせるかどうかを表す</text>
+
+  <!-- 縦軸 -->
+  <path class="axis" d="M46 88 L46 528" marker-start="url(#up)" marker-end="url(#down)"/>
+  <text class="t-sm" transform="rotate(-90 30 190)" x="30" y="190" text-anchor="middle">減らしにくい</text>
+  <text class="t-sm" transform="rotate(-90 30 430)" x="30" y="430" text-anchor="middle">減らせる</text>
+
+  <defs>
+    <marker id="up" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto">
+      <path d="M4 0 L8 8 L0 8 Z" fill="#8b949e"/>
+    </marker>
+    <marker id="down" markerWidth="8" markerHeight="8" refX="4" refY="2" orient="auto">
+      <path d="M0 0 L8 0 L4 8 Z" fill="#8b949e"/>
+    </marker>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 Z" fill="#8b949e"/>
+    </marker>
+    <marker id="arrow-h" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 Z" fill="#cf222e"/>
+    </marker>
+  </defs>
+
+  <!-- 第 1 層 -->
+  <rect class="layer1" x="70" y="82" width="360" height="100" rx="6"/>
+  <text class="t-head" x="86" y="104">制度が公開させるもの</text>
+  <rect class="chip" x="82"  y="118" width="110" height="50" rx="4"/>
+  <text class="t"    x="137" y="139" text-anchor="middle">医療機能</text>
+  <text class="t"    x="137" y="155" text-anchor="middle">情報提供制度</text>
+  <rect class="chip" x="200" y="118" width="110" height="50" rx="4"/>
+  <text class="t"    x="255" y="139" text-anchor="middle">施設基準の</text>
+  <text class="t"    x="255" y="155" text-anchor="middle">届出受理状況</text>
+  <rect class="chip" x="318" y="118" width="110" height="50" rx="4"/>
+  <text class="t"    x="373" y="139" text-anchor="middle">入札公告と</text>
+  <text class="t"    x="373" y="155" text-anchor="middle">落札結果</text>
+
+  <!-- 第 2 層 -->
+  <rect class="layer2" x="70" y="194" width="360" height="100" rx="6"/>
+  <text class="t-head" x="86" y="216">組織が自ら出すもの</text>
+  <rect class="chip" x="82"  y="230" width="110" height="50" rx="4"/>
+  <text class="t"    x="137" y="251" text-anchor="middle">求人票</text>
+  <text class="t-sm" x="137" y="267" text-anchor="middle">製品名と要件</text>
+  <rect class="chip" x="200" y="230" width="110" height="50" rx="4"/>
+  <text class="t"    x="255" y="251" text-anchor="middle">学会発表</text>
+  <text class="t-sm" x="255" y="267" text-anchor="middle">構成図と経緯</text>
+  <rect class="chip" x="318" y="230" width="110" height="50" rx="4"/>
+  <text class="t"    x="373" y="251" text-anchor="middle">広報と写真</text>
+  <text class="t-sm" x="373" y="267" text-anchor="middle">画面と掲示物</text>
+
+  <!-- 第 3 層 -->
+  <rect class="layer3" x="70" y="306" width="360" height="100" rx="6"/>
+  <text class="t-head" x="86" y="328">技術的な痕跡</text>
+  <rect class="chip" x="82"  y="342" width="110" height="50" rx="4"/>
+  <text class="t"    x="137" y="363" text-anchor="middle">証明書と DNS</text>
+  <text class="t-sm" x="137" y="379" text-anchor="middle">ホスト名の規則</text>
+  <rect class="chip" x="200" y="342" width="110" height="50" rx="4"/>
+  <text class="t"    x="255" y="363" text-anchor="middle">機器の応答</text>
+  <text class="t-sm" x="255" y="379" text-anchor="middle">製品と版</text>
+  <rect class="chip" x="318" y="342" width="110" height="50" rx="4"/>
+  <text class="t"    x="373" y="363" text-anchor="middle">公開リポジトリ</text>
+  <text class="t-sm" x="373" y="379" text-anchor="middle">接続先と設定値</text>
+
+  <!-- 第 4 層 -->
+  <rect class="layer4" x="70" y="418" width="360" height="100" rx="6"/>
+  <text class="t-head" x="86" y="440">第三者に渡ったもの</text>
+  <rect class="chip" x="82"  y="454" width="169" height="50" rx="4"/>
+  <text class="t"    x="166" y="475" text-anchor="middle">流出した認証情報</text>
+  <text class="t-sm" x="166" y="491" text-anchor="middle">委託先の端末を経由することがある</text>
+  <rect class="chip" x="259" y="454" width="169" height="50" rx="4"/>
+  <text class="t"    x="343" y="475" text-anchor="middle">リークサイトの掲載</text>
+  <text class="t-sm" x="343" y="491" text-anchor="middle">系列施設と委託先の被害</text>
+
+  <!-- 結合 -->
+  <path class="flow" d="M430 132 C 460 132, 460 260, 490 290" marker-end="url(#arrow)"/>
+  <path class="flow" d="M430 244 C 460 244, 465 275, 490 300" marker-end="url(#arrow)"/>
+  <path class="flow" d="M430 356 C 460 356, 465 335, 490 312" marker-end="url(#arrow)"/>
+  <path class="flow" d="M430 468 C 460 468, 460 350, 490 322" marker-end="url(#arrow)"/>
+
+  <rect class="join" x="496" y="222" width="160" height="166" rx="6"/>
+  <text class="t-head" x="576" y="248" text-anchor="middle">結合する</text>
+  <text class="t"    x="512" y="284">1. 法人と施設を</text>
+  <text class="t"    x="524" y="300">名寄せする</text>
+  <text class="t"    x="512" y="326">2. 時系列に並べる</text>
+  <text class="t"    x="512" y="352">3. 構成を推定する</text>
+
+  <!-- 仮説 -->
+  <path class="flow-h" d="M656 280 C 676 280, 676 205, 696 205" marker-end="url(#arrow-h)"/>
+  <path class="flow-h" d="M656 305 L 696 305" marker-end="url(#arrow-h)"/>
+  <path class="flow-h" d="M656 330 C 676 330, 676 405, 696 405" marker-end="url(#arrow-h)"/>
+
+  <text class="t-red" x="850" y="128" text-anchor="middle">結合の結果として立つ仮説</text>
+
+  <rect class="hypo" x="702" y="150" width="288" height="110" rx="6"/>
+  <text class="t-head" x="718" y="176">更改の端境期をねらう</text>
+  <text class="t"     x="718" y="200">落札の時期と、求人票の要件から</text>
+  <text class="t"     x="718" y="220">移行の期間を推定する。この期間は</text>
+  <text class="t"     x="718" y="240">保守の接続が広く開くことがある</text>
+
+  <rect class="hypo" x="702" y="272" width="288" height="110" rx="6"/>
+  <text class="t-head" x="718" y="298">連絡の宛先を組み立てる</text>
+  <text class="t"     x="718" y="322">委託先名、担当部署、氏名の並びと</text>
+  <text class="t"     x="718" y="342">メールアドレスの規則から、業務の</text>
+  <text class="t"     x="718" y="362">文脈に合う差出人と宛先を作る</text>
+
+  <rect class="hypo" x="702" y="394" width="288" height="110" rx="6"/>
+  <text class="t-head" x="718" y="420">機器と版を突き合わせる</text>
+  <text class="t"     x="718" y="444">入札の仕様と学会発表から型式を</text>
+  <text class="t"     x="718" y="464">読み、公表済みの脆弱性情報と</text>
+  <text class="t"     x="718" y="484">照合する。院内へは通信しない</text>
+
+  <text class="t-sm" x="510" y="548" text-anchor="middle">いずれも仮説であり、当たるとは限らない。名寄せの誤りと情報の鮮度で崩れる。守る側は、この仮説が成り立たない状態を作る。</text>
+</svg>

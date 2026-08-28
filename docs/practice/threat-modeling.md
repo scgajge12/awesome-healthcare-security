@@ -422,4 +422,4 @@ ISO 14971 が定める安全リスクマネジメントの枠組みの中に置�
 
 ---
 
-<sub>[← 検証と実務](README.md) | [外部から見た自組織の攻撃面 →](attack-surface.md) | [トップへ](../../README.md)</sub>
+<sub>[← 検証と実務](README.md) | [医療機関に対する OSINT →](osint.md) | [トップへ](../../README.md)</sub>
