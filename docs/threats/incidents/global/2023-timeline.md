@@ -457,7 +457,7 @@
 
 **一次情報**
 
-- [Anna Jaques Hospital](https://www.ajh.org/)
+- [Anna Jaques Hospital](https://ajh.org/)
 - [HHS OCR 侵害報告ポータル](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf)
 
 ---

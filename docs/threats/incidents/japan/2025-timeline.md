@@ -369,7 +369,7 @@
 
 **一次情報**
 
-- [株式会社コア・エス](https://www.core-s.co.jp/)
+- [株式会社Core-S（コア・エス）](https://www.smg-core-s.jp/)
 - [三笑堂 グループ会社](https://www.sanshodoh.co.jp/company/group/)
 
 ---

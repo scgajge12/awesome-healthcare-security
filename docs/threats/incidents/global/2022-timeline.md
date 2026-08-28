@@ -397,7 +397,7 @@
 
 **一次情報**
 
-- [Katholische Hospitalvereinigung Ostwestfalen](https://www.khowl.de/)
+- [Katholische Hospitalvereinigung Ostwestfalen](https://www.kho.de/)
 - [Bundesamt für Sicherheit in der Informationstechnik（BSI）](https://www.bsi.bund.de/)
 
 ---

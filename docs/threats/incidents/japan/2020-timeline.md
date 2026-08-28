@@ -388,7 +388,7 @@ JP-2020-S11 の新潟県立中央病院では、同じ委託先が前年にも 2
 
 **一次情報**
 
-- [地方独立行政法人 大阪市民病院機構](https://www.occh.jp/)
+- [地方独立行政法人 大阪市民病院機構](https://www.osakacity-hp.or.jp/byouin/)
 - [放射線技師が電子カルテ閲覧、20 名の電話番号抜き出し懲戒処分に（大阪市、大阪市民病院機構）](https://scan.netsecurity.ne.jp/article/2020/04/01/43898.html)（ScanNetSecurity による当事者公表の報道）
 
 ---
@@ -476,10 +476,10 @@ JP-2020-S11 の新潟県立中央病院では、同じ委託先が前年にも 2
 - [鳥取県立総合療育センター](https://www.pref.tottori.lg.jp/ryoiku/)（JP-2020-S05）
 - [東京都立墨東病院](https://www.tmhp.jp/bokutoh/)（JP-2020-S06）
 - [横浜市立大学附属病院](https://www.yokohama-cu.ac.jp/fukuhp/)（JP-2020-S07）
-- [鹿児島大学病院](https://www.h.kufm.kagoshima-u.ac.jp/)（JP-2020-S09）
-- [東京都病院経営本部](https://www.hospital.metro.tokyo.lg.jp/)（JP-2020-S10）
+- [鹿児島大学病院](https://www.hosp.kagoshima-u.ac.jp/)（JP-2020-S09）
+- [東京都立病院機構](https://www.tmhp.jp/)（JP-2020-S10。当時の所管は東京都病院経営本部で、2022 年 7 月に同機構へ移行した）
 - [新潟県立中央病院](https://www.chuo-hp.jp/)（JP-2020-S11）
-- [広島市立リハビリテーション病院](https://www.hosp-city-hiroshima.jp/rehabili/)（JP-2020-S12）
+- [広島市立リハビリテーション病院](https://soriha-hiroshima.jp/)（JP-2020-S12）
 - [神戸市立医療センター中央市民病院](https://chuo.kcho.jp/)（JP-2020-S14）
 - [北野病院](https://www.kitano-hp.or.jp/)（JP-2020-S15）
 - [神戸市](https://www.city.kobe.lg.jp/)（JP-2020-S16）

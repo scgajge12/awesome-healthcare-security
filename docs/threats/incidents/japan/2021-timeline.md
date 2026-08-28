@@ -538,7 +538,7 @@ flowchart TD
 
 ### その他の事案の一次情報
 
-- [松下記念病院](https://www.panasonic.co.jp/php/matsushita-hp/)（JP-2021-S01、JP-2021-S04）
+- [松下記念病院](https://kenpo.jpn.panasonic.com/kinen/)（JP-2021-S01、JP-2021-S04）
 - [奈良県](https://www.pref.nara.jp/)（JP-2021-S03）
 - [東邦大学医療センター大森病院](https://www.lab.toho-u.ac.jp/med/omori/hospital/)（JP-2021-S06）
 - [科研製薬株式会社](https://www.kaken.co.jp/)（JP-2021-S07）

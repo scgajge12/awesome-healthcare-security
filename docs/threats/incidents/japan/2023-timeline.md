@@ -529,7 +529,7 @@ flowchart TD
 
 - [医療法人社団鴻愛会 こうのす共生病院](https://kouaikai.jp/)（JP-2023-S04）
 - [社会医療法人財団慈泉会 相澤病院](https://www.ai-hosp.or.jp/)（JP-2023-S05）
-- [鹿児島大学病院](https://www.h.kufm.kagoshima-u.ac.jp/)（JP-2023-S07）
+- [鹿児島大学病院](https://www.hosp.kagoshima-u.ac.jp/)（JP-2023-S07）
 - [北海道大学病院](https://www.huhp.hokudai.ac.jp/)（JP-2023-S08）
 - [神奈川県立こども医療センター](https://kcmc.kanagawa-pho.jp/)（JP-2023-S09）
 - [株式会社データホライゾン](https://www.dhorizon.co.jp/)（JP-2023-S10）

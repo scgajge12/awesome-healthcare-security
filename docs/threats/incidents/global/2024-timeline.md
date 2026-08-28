@@ -522,7 +522,7 @@
 
 **一次情報**
 
-- [Boston Children's Health Physicians](https://www.bchphysicians.org/)
+- [Boston Children's Health Physicians](https://bchp.childrenshospital.org/)
 - [HHS OCR 侵害報告ポータル](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf)
 
 ---
