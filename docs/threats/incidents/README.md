@@ -29,6 +29,7 @@
 | 🌍 海外 | [海外の事例](global/README.md) |
 | 📅 年ごとの情勢 | [years/](years/) |
 | 🔍 調べ方 | [事例の調べ方](research-tips.md) |
+| 📑 報告書の読み方 | [調査報告書から攻撃の流れを復元する](report-reading.md) |
 
 2019 年以前は収録件数が少ないため、地域ごとに `2019-earlier.md` へ集約している。
 この年代に対応する年軸のページは置いていない。
@@ -223,6 +224,7 @@ flowchart LR
 6. [`skills/repo-review/SKILL.md`](../../../skills/repo-review/SKILL.md) の手順でレビューする
 
 情報源の探し方と、調査で分かった落とし穴は[事例の調べ方](research-tips.md)にまとめている。
+公表された調査報告書から攻撃の流れを取り出す読み方は[調査報告書から攻撃の流れを復元する](report-reading.md)にまとめている。
 
 ### 副分類（サイバー攻撃以外）の事案
 
