@@ -165,12 +165,12 @@ Drop any one of them and the reader is left with something they cannot act on.
 | Lens | What it means in practice | Where it shows up |
 |---|---|---|
 | **Write down to the implementation** | A control is not finished at the policy statement. Where it goes, and how you verify it, belong in the same row. A control with an empty verification column does not count as a control | [Defense playbook](docs/threats/actors/defense-playbook.md), [Network segmentation](docs/technology/segmentation.md), [Identity and access management](docs/technology/identity.md), [Logging and monitoring](docs/technology/logging.md) |
-| **Read the paths in the attacker's order** | Count from the entry points reachable from outside, not from the asset register. Paths are built from disclosed incidents and observed tradecraft | [External attack surface](docs/practice/attack-surface.md), [Ransomware chains](docs/threats/actors/ransomware-chain.md), [Group TTPs](docs/threats/actors/ransomware-groups.md), [Bug bounty](docs/practice/bug-bounty/) |
+| **Read the paths in the attacker's order** | Count from the entry points reachable from outside, not from the asset register. Paths are built from disclosed incidents and observed tradecraft | [OSINT against providers](docs/practice/osint.md), [External attack surface](docs/practice/attack-surface.md), [Ransomware chains](docs/threats/actors/ransomware-chain.md), [Group TTPs](docs/threats/actors/ransomware-groups.md), [Bug bounty](docs/practice/bug-bounty/) |
 | **Sequence the work by risk** | Write the order that fits the budget, the staffing, and the downtime window that actually exists. Not descending CVSS, but reachable from outside, reaching the patient, and whether a compensating control can be placed | [Risk-based thinking](docs/reference/security-basics.md#3-リスクベースの考え方), [Translating severity into clinical terms](docs/practice/pentest/README.md#7-深刻度を診療と患者安全の言葉に翻訳する), [Small organizations](docs/governance/small-organizations.md) |
 | **Enumerate at design time** | Before measuring what was built, count the flows that cross trust boundaries and the paths that reach the target. A provider's only points of leverage over the design are procurement and new connections | [Threat modeling for healthcare](docs/practice/threat-modeling.md), [Secure by design](docs/reference/security-basics.md#9-セキュリティバイデザイン), [Device testing methodology](docs/technology/medical-devices/testing-methodology.md) |
 
-The four look at the same system from different directions.
-Enumerate at design time, confirm how it looks from outside, measure whether the path actually works, and let outsiders tell you about the part you never looked at ([Practice](docs/practice/)).
+The five look at the same system from different directions.
+Enumerate at design time, gather what is knowable from outside, confirm how it looks from outside, measure whether the path actually works, and let outsiders tell you about the part you never looked at ([Practice](docs/practice/)).
 How trustworthy each statement is comes from the [editorial principles](#-editorial-principles) below.
 
 ---
@@ -208,8 +208,10 @@ Incidents at healthcare providers in Japan and abroad. Cyber attacks come first,
 - [Japan](docs/threats/incidents/japan/) (per-year timelines)
 - [Rest of the world](docs/threats/incidents/global/) (per-year timelines)
 - [Year in review](docs/threats/incidents/years/) (Japan and the rest of the world combined: tallies and regulatory developments)
+- Pre-2019 history: [Japan](docs/threats/incidents/japan/2019-earlier.md) (79 cases) / [rest of the world](docs/threats/incidents/global/2019-earlier.md) (33 cases)
 - US HHS OCR breach filings, full tally (distribution of filings, largest by individuals affected, and how to retrieve the data): [2025](docs/threats/incidents/global/2025-us-hhs.md) (795 filings) / [2024](docs/threats/incidents/global/2024-us-hhs.md) (741) / [2023](docs/threats/incidents/global/2023-us-hhs.md) (746) / [2022](docs/threats/incidents/global/2022-us-hhs.md) (718) / [2021](docs/threats/incidents/global/2021-us-hhs.md) (715) / [2020](docs/threats/incidents/global/2020-us-hhs.md) (663)
 - [How to research a case](docs/threats/incidents/research-tips.md) (sources, method, pitfalls)
+- [Reconstructing an attack from a published report](docs/threats/incidents/report-reading.md) (fields to extract, how to treat what is absent)
 
 </td>
 <td width="50%" valign="top">
@@ -361,6 +363,22 @@ What to record, how long to keep it, and who reads it, derived from three uses: 
 <tr>
 <td width="50%" valign="top">
 
+#### 📡 [Detection Engineering](docs/technology/detection-engineering.md)
+
+Observation points and conditions per technique, the clinical routines that turn into false positives, and where deception and canaries can and cannot be placed.
+
+</td>
+<td width="50%" valign="top">
+
+#### 🔓 [Exposed Credentials](docs/technology/credential-exposure.md)
+
+How credentials leave the organization, how attackers use them, how to check for your own, and the order of revocation once you find them.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### ✉️ [Email and Domain Management](docs/technology/email-domain.md)
 
 Sender authentication, domains that lapse and get re-registered by someone else, and fraud aimed at invoices and payments.
@@ -389,13 +407,20 @@ Starting without a design document: trust boundaries, STRIDE applied to healthca
 </td>
 <td width="50%" valign="top">
 
+#### 🔍 [OSINT Against Healthcare Providers](docs/practice/osint.md)
+
+What leaks through regulation, public relations, conference talks, job postings, and procurement. Each class of information mapped to the channel and technique that exposes it, what an attacker does with it, and what can and cannot be reduced. Includes tooling and impact tiers split between web and IoMT.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### 🛰️ [External Attack Surface](docs/practice/attack-surface.md)
 
 Why the asset register and reality diverge, how to count the entry points visible from outside, where the line between passive and active measurement sits, and how to notice when the surface grows.
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 #### 🛡️ [Security Assessment and Penetration Testing](docs/practice/pentest/)
@@ -403,11 +428,22 @@ Why the asset register and reality diverge, how to count the entry points visibl
 Testing scopes for hospitals and pharma, separated by domain: people, perimeter, web, cloud, internal, medical devices, and manufacturing OT.
 
 </td>
-<td width="50%" valign="top">
+</tr>
+<tr>
+<td colspan="2" valign="top">
 
 #### 🎯 [Bug Bounty × Healthcare](docs/practice/bug-bounty/)
 
 Bug bounty and vulnerability disclosure in healthcare: what is in scope, where to report, how researchers fit into national cyber defence frameworks, and how to stand up a VDP.
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+#### ⚖️ [Legal Boundaries of Testing and Research](docs/practice/legal-boundary.md)
+
+Which statutes apply at each stage of an assessment, how the line moves with authorization, what to put in writing, and the disclosure channels the system already provides.
 
 </td>
 </tr>
@@ -419,6 +455,7 @@ What happens after a breach: the first decisions, keeping care running while the
 
 - [BCP for cyber attacks](docs/response/bcp-cyber.md)
 - [Infrastructure posture and external dependencies](docs/response/dependencies.md)
+- [Tabletop exercise scenarios](docs/response/tabletop.md)
 
 Remaining topics are being added.
 
@@ -433,6 +470,7 @@ From Japan's "three-ministry, two-guideline" framework to HIPAA, FDA, EU MDR, an
 
 Who decides, and how: the CISO role and reporting lines, reporting to the board, maturity assessment, budget and staffing, risk transfer, and where to start with no dedicated staff.
 
+- [Making executive accountability concrete](docs/governance/executive-accountability.md)
 - [Reading survey data as an attacker would](docs/governance/readiness-gaps.md)
 - [The cost of an incident, and how to explain it to the board](docs/governance/cost.md)
 - [Where to start with no dedicated staff](docs/governance/small-organizations.md)
@@ -549,17 +587,21 @@ awesome-healthcare-security/
 │   │   ├── genomics.md              Protecting genomic data (where it lives, secondary use, custodian failure)
 │   │   ├── identity.md              Identity and access management (2FA deadlines, account inventory, break-glass)
 │   │   ├── logging.md               Logging and monitoring (what to keep, retention, who reads it)
+│   │   ├── detection-engineering.md Detection engineering (observation points, conditions, deception)
+│   │   ├── credential-exposure.md   Exposed credentials (how they leak, checking, revocation)
 │   │   ├── email-domain.md          Email and domain management (sender auth, lapsed domains, BEC)
 │   │   ├── media-disposal.md        Media disposal and device trade-in (sanitization, evidence)
 │   │   └── segmentation.md          Network segmentation (zone model, verification, exceptions)
 │   ├── practice/                    Assessment and practice
 │   │   ├── threat-modeling.md       Threat modeling for healthcare (trust boundaries, STRIDE, attack trees)
+│   │   ├── osint.md                 OSINT against healthcare providers (sources, techniques, risk)
 │   │   ├── attack-surface.md        External attack surface (inventory, measurement limits, continuity)
+│   │   ├── legal-boundary.md        Legal boundaries of testing and research (statutes, authorization)
 │   │   ├── pentest/                 Security assessment and penetration testing
 │   │   └── bug-bounty/              Bug bounty and vulnerability disclosure
-│   ├── response/                    Incident response and continuity (cyber BCP, infrastructure and dependencies, first response, reporting)
+│   ├── response/                    Incident response and continuity (cyber BCP, infrastructure and dependencies, tabletop exercises, first response, reporting)
 │   ├── guidelines/                  Guidelines and regulation
-│   ├── governance/                  Governance and management (incident cost, small organizations)
+│   ├── governance/                  Governance and management (executive accountability, incident cost, small organizations)
 │   └── reference/                   Reference
 │       ├── pharma/                  Pharmaceutical security
 │       ├── labs-communities/        Labs and communities

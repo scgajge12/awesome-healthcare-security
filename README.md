@@ -162,12 +162,12 @@ AI の導入（AX）は、この差をさらに広げる。
 | 視点 | 何をするか | 主に現れる場所 |
 |---|---|---|
 | **実装と運用に落ちる形で書く** | 対策を方針で終わらせず、どこに何を置き、何で確かめるかまで書く。確かめ方の欄が埋まらない対策は、対策として数えない | [防御プレイブック](docs/threats/actors/defense-playbook.md)、[ネットワークの分離](docs/technology/segmentation.md)、[認証とアクセス管理](docs/technology/identity.md)、[ログと監視の設計](docs/technology/logging.md) |
-| **攻撃側の順序で経路を読む** | 資産台帳の側からではなく、外から到達できる入口の側から数える。経路の材料は、公表された事例と観測された手口に取る | [外部から見た自組織の攻撃面](docs/practice/attack-surface.md)、[連鎖するランサムウェア攻撃](docs/threats/actors/ransomware-chain.md)、[グループ別 TTPs](docs/threats/actors/ransomware-groups.md)、[Bug Bounty × 医療、ヘルスケア](docs/practice/bug-bounty/) |
+| **攻撃側の順序で経路を読む** | 資産台帳の側からではなく、外から到達できる入口の側から数える。経路の材料は、公表された事例と観測された手口に取る | [医療機関に対する OSINT](docs/practice/osint.md)、[外部から見た自組織の攻撃面](docs/practice/attack-surface.md)、[連鎖するランサムウェア攻撃](docs/threats/actors/ransomware-chain.md)、[グループ別 TTPs](docs/threats/actors/ransomware-groups.md)、[Bug Bounty × 医療、ヘルスケア](docs/practice/bug-bounty/) |
 | **リスクベースで順序を決める** | 予算と人員と停止調整の枠に収まる順序を書く。CVSS の高い順ではなく、外から届くか、患者に届くか、緩和策を置けるかで並べる | [リスクベースの考え方](docs/reference/security-basics.md#3-リスクベースの考え方)、[深刻度を、診療と患者安全の言葉に翻訳する](docs/practice/pentest/README.md#7-深刻度を診療と患者安全の言葉に翻訳する)、[小規模組織で何から始めるか](docs/governance/small-organizations.md) |
 | **設計の段階で数え上げる** | 実装されたものを測る前に、境界をまたぐ流れと到達経路を数える。医療機関が構成に介入できる時点は、調達と接続の追加に限られる | [医療の脅威モデリング](docs/practice/threat-modeling.md)、[セキュリティ・バイ・デザイン](docs/reference/security-basics.md#9-セキュリティバイデザイン)、[医療機器の検証手法](docs/technology/medical-devices/testing-methodology.md) |
 
-四つは、同じ対象を別の方向から見る。
-設計で数え、外からの見え方を確かめ、通るかどうかを測り、見ていない範囲を外部から知らせてもらう、という順に並ぶ（[検証と実務](docs/practice/)）。
+五つは、同じ対象を別の方向から見る。
+設計で数え、外から何が分かるかを集め、見え方を確かめ、通るかどうかを測り、見ていない範囲を外部から知らせてもらう、という順に並ぶ（[検証と実務](docs/practice/)）。
 記述そのものの確からしさは、後述の[記述の方針](#-記述の方針)で担保する。
 
 ---
@@ -208,8 +208,10 @@ flowchart LR
 - [国内の事例](docs/threats/incidents/japan/)（年ごとの履歴）
 - [海外の事例](docs/threats/incidents/global/)（年ごとの履歴）
 - [年ごとの情勢](docs/threats/incidents/years/)（国内と海外を統合した集計、規制の動き）
+- 2019 年以前の履歴：[国内](docs/threats/incidents/japan/2019-earlier.md)（79 件）／[海外](docs/threats/incidents/global/2019-earlier.md)（33 件）
 - 米国 HHS OCR 届出の全件集計（届出の分布、影響人数の上位、取得の手順）：[2025 年](docs/threats/incidents/global/2025-us-hhs.md)（795 件）／[2024 年](docs/threats/incidents/global/2024-us-hhs.md)（741 件）／[2023 年](docs/threats/incidents/global/2023-us-hhs.md)（746 件）／[2022 年](docs/threats/incidents/global/2022-us-hhs.md)（718 件）／[2021 年](docs/threats/incidents/global/2021-us-hhs.md)（715 件）／[2020 年](docs/threats/incidents/global/2020-us-hhs.md)（663 件）
 - [事例の調べ方](docs/threats/incidents/research-tips.md)（情報源、手順、落とし穴）
+- [調査報告書から攻撃の流れを復元する](docs/threats/incidents/report-reading.md)（取り出す欄、書かれていないことの扱い）
 
 </td>
 <td width="50%" valign="top">
@@ -369,6 +371,24 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 <tr>
 <td width="50%" valign="top">
 
+#### 📡 [検知の設計を技法単位に落とす](docs/technology/detection-engineering.md)
+
+技法ごとの観測点と条件、医療の正常な業務が誤検知になる形。
+欺瞞とカナリアを置ける場所と、置いてはいけない場所。
+
+</td>
+<td width="50%" valign="top">
+
+#### 🔓 [外に出た認証情報](docs/technology/credential-exposure.md)
+
+資格情報が組織の外へ出る経路と、攻撃側での使われ方。
+自組織のものを確認する手順と、見つけたときの失効の順序。
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### ✉️ [メールとドメインの管理](docs/technology/email-domain.md)
 
 送信ドメイン認証、失効したドメインの再取得、請求と支払いを狙うメール。
@@ -399,13 +419,22 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 </td>
 <td width="50%" valign="top">
 
+#### 🔍 [医療機関に対する OSINT](docs/practice/osint.md)
+
+制度、広報、学会、求人、調達から何が外に出るか。
+情報の種類ごとに、経路と手法、攻撃側の使い道、減らせるものと減らせないものを対応づける。
+Web と IoMT に分けた道具と段階を含む。
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### 🛰️ [外部から見た自組織の攻撃面](docs/practice/attack-surface.md)
 
 台帳と実際のずれ、外から到達できる入口の数え方、測ってよい範囲の線引き、増えたときに気付く仕組み。
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 #### 🛡️ [診断とペネトレーションテスト](docs/practice/pentest/)
@@ -413,12 +442,24 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 医療機関と製薬企業に対する検証を、人、外部境界、Web、クラウド、内部、医療機器、製造 OT の領域に分けて整理する。
 
 </td>
-<td width="50%" valign="top">
+</tr>
+<tr>
+<td colspan="2" valign="top">
 
 #### 🎯 [Bug Bounty × 医療、ヘルスケア](docs/practice/bug-bounty/)
 
 医療分野でのバグバウンティと脆弱性開示。
 触れてよい対象の線引き、報告経路、サイバー防衛としての位置づけ、受け入れ側の始め方。
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
+#### ⚖️ [検証と調査の法的境界](docs/practice/legal-boundary.md)
+
+行為の段ごとに当たる法令、立場ごとの線、許諾の文面に書く事項。
+実データに到達したときの扱いと、制度が用意している報告の経路。
 
 </td>
 </tr>
@@ -431,6 +472,7 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 
 - [サイバー攻撃を想定した BCP](docs/response/bcp-cyber.md)
 - [基盤の構えと、外部への依存](docs/response/dependencies.md)
+- [演習シナリオのカタログ](docs/response/tabletop.md)
 
 残りの主題は順次追加する。
 
@@ -446,6 +488,7 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 誰がどう決めるかを扱う。
 CISO の役割と体制、経営層への報告、成熟度の把握、予算と人材、リスク移転、小規模組織での進め方。
 
+- [経営層の責任の明確化](docs/governance/executive-accountability.md)
 - [調査データから読む、備えの穴](docs/governance/readiness-gaps.md)
 - [インシデントの費用と、経営層への説明](docs/governance/cost.md)
 - [小規模組織で何から始めるか](docs/governance/small-organizations.md)
@@ -566,17 +609,21 @@ awesome-healthcare-security/
 │   │   ├── genomics.md              ゲノムデータの保護（所在、二次利用、事業者が消えるときの扱い）
 │   │   ├── identity.md              認証とアクセス管理（二要素認証の期限、ID の棚卸し、ブレークグラス）
 │   │   ├── logging.md               ログと監視の設計（何を残すか、保存期間、読む仕組み）
+│   │   ├── detection-engineering.md 検知の設計を技法単位に落とす（観測点、条件、正常系、欺瞞）
+│   │   ├── credential-exposure.md   外に出た認証情報（流出の経路、確認、失効の順序）
 │   │   ├── email-domain.md          メールとドメインの管理（送信ドメイン認証、失効ドメイン、BEC）
 │   │   ├── media-disposal.md        記憶媒体の廃棄と機器の下取り（消去、証跡、中古市場）
 │   │   └── segmentation.md          ネットワークの分離（ゾーンモデル、到達性の確認、例外の管理）
 │   ├── practice/                    検証と実務
 │   │   ├── threat-modeling.md       医療の脅威モデリング（信頼境界、STRIDE、攻撃ツリー、順序づけ）
+│   │   ├── osint.md                 医療機関に対する OSINT（情報源、手法、リスク、減らせる範囲）
 │   │   ├── attack-surface.md        外部から見た自組織の攻撃面（棚卸し、測り方の線引き、継続）
+│   │   ├── legal-boundary.md        検証と調査の法的境界（条文、立場ごとの線、許諾の文面）
 │   │   ├── pentest/                 セキュリティ診断とペネトレーションテスト
 │   │   └── bug-bounty/              バグバウンティと脆弱性開示（医療分野）
-│   ├── response/                    インシデント対応と事業継続（サイバー BCP、基盤の構えと外部依存、初動、届出）
+│   ├── response/                    インシデント対応と事業継続（サイバー BCP、基盤の構えと外部依存、演習、初動、届出）
 │   ├── guidelines/                  ガイドラインと法規制
-│   ├── governance/                  経営とガバナンス（体制、報告、予算、リスク移転、インシデントの費用、小規模組織）
+│   ├── governance/                  経営とガバナンス（経営層の責任、体制、報告、予算、リスク移転、インシデントの費用、小規模組織）
 │   └── reference/                   リファレンス
 │       ├── pharma/                  製薬企業のセキュリティ（治験、製造 OT、供給網）
 │       ├── labs-communities/        ラボ、コミュニティ
