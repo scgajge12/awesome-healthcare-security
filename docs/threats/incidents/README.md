@@ -31,7 +31,7 @@
 | 🔍 調べ方 | [事例の調べ方](research-tips.md) |
 | 📑 報告書の読み方 | [調査報告書から攻撃の流れを復元する](report-reading.md) |
 
-2019 年以前は収録件数が少ないため、地域ごとに `2019-earlier.md` へ集約している。
+2019 年以前は年ごとの収録件数に偏りが大きいため、地域ごとに `2019-earlier.md` へ集約している。
 この年代に対応する年軸のページは置いていない。
 
 ## 年別一覧
@@ -49,7 +49,7 @@
 | 2022 | 18（17） | 29（4） | [情勢](years/2022-summary.md) ／ [国内の履歴](japan/2022-timeline.md) ／ [海外の履歴](global/2022-timeline.md) ／ [米国 HHS OCR](global/2022-us-hhs.md) |
 | 2021 | 12（13） | 28（1） | [情勢](years/2021-summary.md) ／ [国内の履歴](japan/2021-timeline.md) ／ [海外の履歴](global/2021-timeline.md) ／ [米国 HHS OCR](global/2021-us-hhs.md) |
 | 2020 | 9（18） | 28（2） | [情勢](years/2020-summary.md) ／ [国内の履歴](japan/2020-timeline.md) ／ [海外の履歴](global/2020-timeline.md) ／ [米国 HHS OCR](global/2020-us-hhs.md) |
-| 2019 以前 | 6（11） | 2 | [国内の履歴](japan/2019-earlier.md) ／ [海外の履歴](global/2019-earlier.md) |
+| 2019 以前 | 79（485） | 33（4） | [国内の履歴](japan/2019-earlier.md) ／ [海外の履歴](global/2019-earlier.md) |
 
 区分（病院系、製薬企業系、医療関連事業者）ごとの内訳は、各履歴ページ冒頭の収録件数と、[年ごとのページ](years/)の集計にある。
 

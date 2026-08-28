@@ -22,8 +22,12 @@
 ```mermaid
 timeline
     title 本リポジトリに収録した海外事例
-    2015 : Anthem（医療関連事業者）
-    2017 : NHS（病院系）
+    2014 : Community Health Systems ほか病院系 2
+    2015 : UCLA Health（病院系） : Anthem ほか医療関連事業者 4
+    2016 : Hollywood Presbyterian Medical Center ほか病院系 6
+    2017 : NHS ほか病院系 3 : Merck（製薬企業系） : Nuance Communications（医療関連事業者）
+    2018 : Hancock Health ほか病院系 3
+    2019 : Park DuValle Community Health Center ほか病院系 9 : Bayer（製薬企業系） : American Medical Collection Agency ほか医療関連事業者 2
     2020 : Universal Health Services ほか病院系 16 : European Medicines Agency ほか製薬企業系 4 : Blackbaud ほか医療関連事業者 8
     2021 : HSE ほか病院系 19 : Accellion FTA ほか医療関連事業者 9
     2022 : CommonSpirit Health ほか病院系 14 : Advanced ほか医療関連事業者 15
@@ -32,6 +36,8 @@ timeline
     2025 : Kettering Health ほか病院系 56 : Inotiv ほか製薬企業系 6 : Episource ほか医療関連事業者 31
 ```
 
+図はサイバー攻撃の収録件数を示す。
+記憶媒体の紛失、内部不正、誤送付などの[サイバー攻撃以外の事案](../README.md#事案の類型)は、各年の履歴ページに別に収録している。
 図に現れない年は、本リポジトリに収録した事例がない年である。
 被害がなかったことを示すものではない。
 
@@ -56,7 +62,8 @@ timeline
 区分ごとの収録件数を国内と並べて見るときは、[インシデント事例集の年別一覧](../README.md#年別一覧)を参照してほしい。
 
 **製薬企業系の収録について**：本リポジトリは病院と製薬企業の双方を対象としている。
-海外では 2020 年に 4 件、2023 年に 1 件、2024 年に 2 件、2025 年に 6 件を収録した。
+海外では 2019 年以前に 2 件、2020 年に 4 件、2023 年に 1 件、2024 年に 2 件、2025 年に 6 件を収録した。
+2019 年以前の 2 件は、NotPetya により製造と販売が世界規模で中断した [GL-2017-04 Merck & Co.](2019-earlier.md#GL-2017-04) と、侵入を検知したうえで 1 年以上監視してから排除した [GL-2019-10 Bayer](2019-earlier.md#GL-2019-10) である。
 2020 年は、COVID-19 ワクチンの開発と審査に関わる組織が続けて狙われた年である。
 [GL-2020-20 European Medicines Agency](2020-timeline.md#GL-2020-20)では、窃取された審査文書が改変のうえ公開された。
 2024 年は、医薬品卸の [GL-2024-20 Cencora](2024-timeline.md#GL-2024-20) と、血漿を採取する [GL-2024-21 Octapharma Plasma](2024-timeline.md#GL-2024-21) で、供給の側が止まっている。

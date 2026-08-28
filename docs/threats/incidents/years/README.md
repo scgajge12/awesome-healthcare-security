@@ -15,7 +15,7 @@
 | 2021 | [2021 年の情勢](2021-summary.md) | [国内](../japan/2021-timeline.md) ／ [海外](../global/2021-timeline.md) |
 | 2020 | [2020 年の情勢](2020-summary.md) | [国内](../japan/2020-timeline.md) ／ [海外](../global/2020-timeline.md) |
 
-2019 年以前は収録件数が少なく、地域ごとの `2019-earlier.md`（[国内](../japan/2019-earlier.md)、[海外](../global/2019-earlier.md)）に集約している。
+2019 年以前は年ごとの収録件数に偏りが大きく、地域ごとの `2019-earlier.md`（[国内](../japan/2019-earlier.md)、[海外](../global/2019-earlier.md)）に集約している。
 この年代に対応する年ごとのページは置いていない。
 
 収録件数を年で並べた一覧は[インシデント事例集の年別一覧](../README.md#年別一覧)にある。
