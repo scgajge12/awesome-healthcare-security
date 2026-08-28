@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 580" role="img" aria-label="検証で行う操作を五つの段に分け、それぞれに当たりうる法令を並べた図。第 1 段の公開情報の閲覧と第 2 段の到達性の確認は、アクセス制御機能による制限を解除しないため不正アクセス禁止法 3 条の対象にならない。第 3 段の認証の試行から同法 2 条 4 項 1 号の領域に入り、第 4 段の制限の回避は同項 2 号と 3 号に当たる。第 5 段の取得と変更では、刑法 234 条の 2 の電子計算機損壊等業務妨害罪、刑法 168 条の 2 の不正指令電磁的記録に関する罪、個人情報保護法上の報告義務が重なる。図の下に、アクセス管理者の承諾は全段について 2 条 4 項の除外に当たると注記する">
+  <title>検証の行為の段と、当たりうる法令</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .head  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .safe  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .act   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .warn  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .heavy { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .line  { stroke: #cf222e; stroke-width: 2; stroke-dasharray: 6 4; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-red   { fill: #cf222e; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer { stroke: #6e7681; }
+      .head, .safe { fill: #161b22; stroke: #6e7681; }
+      .act   { fill: #121d2f; stroke: #4184e4; }
+      .warn  { fill: #341a00; stroke: #d29922; }
+      .heavy { fill: #3c1618; stroke: #f85149; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .line  { stroke: #f85149; }
+      .t-title, .t-head, .t-lab, .t { fill: #e6edf3; }
+      .t-sm  { fill: #8b949e; }
+      .t-red { fill: #f85149; }
+    }
+  </style>
+
+  <text class="t-title" x="30" y="30">検証の行為の段と、当たりうる法令</text>
+
+  <rect class="head" x="30" y="48" width="430" height="32" rx="4"/>
+  <text class="t-head" x="45" y="69">行為の段</text>
+  <rect class="head" x="500" y="48" width="460" height="32" rx="4"/>
+  <text class="t-head" x="515" y="69">当たりうる法令と、その理由</text>
+
+  <rect class="safe" x="30" y="92" width="430" height="62" rx="4"/>
+  <text class="t-lab" x="45" y="117">1. 公開情報の閲覧</text>
+  <text class="t-sm"  x="45" y="139">公表資料、証明書、DNS、求人、調達公告</text>
+  <rect class="safe" x="500" y="92" width="460" height="62" rx="4"/>
+  <text class="t" x="515" y="117">解除すべき制限がないため、不正アクセス禁止法 3 条の</text>
+  <text class="t" x="515" y="137">対象にならない</text>
+
+  <rect class="safe" x="30" y="166" width="430" height="62" rx="4"/>
+  <text class="t-lab" x="45" y="191">2. 到達性の確認</text>
+  <text class="t-sm"  x="45" y="213">公開されている口が応答するかを見る</text>
+  <rect class="safe" x="500" y="166" width="460" height="62" rx="4"/>
+  <text class="t" x="515" y="191">同上。ただし態様と負荷によっては、業務への影響の側</text>
+  <text class="t" x="515" y="211">で評価される</text>
+
+  <line class="line" x1="30" y1="240" x2="960" y2="240"/>
+  <text class="t-red" x="30" y="256">ここから、アクセス制御機能による制限の解除が始まる</text>
+
+  <rect class="act" x="30" y="266" width="430" height="62" rx="4"/>
+  <text class="t-lab" x="45" y="291">3. 認証の試行</text>
+  <text class="t-sm"  x="45" y="313">他人の識別符号を入力する</text>
+  <rect class="warn" x="500" y="266" width="460" height="62" rx="4"/>
+  <text class="t" x="515" y="291">不正アクセス禁止法 3 条（2 条 4 項 1 号）</text>
+  <text class="t-sm" x="515" y="311">識別符号の取得と保管は 4 条、6 条</text>
+
+  <rect class="act" x="30" y="340" width="430" height="62" rx="4"/>
+  <text class="t-lab" x="45" y="365">4. 制限の回避</text>
+  <text class="t-sm"  x="45" y="387">識別符号以外の情報または指令を入力する</text>
+  <rect class="warn" x="500" y="340" width="460" height="62" rx="4"/>
+  <text class="t" x="515" y="365">不正アクセス禁止法 3 条（2 条 4 項 2 号、3 号）</text>
+  <text class="t-sm" x="515" y="385">利用し得る状態にさせた時点で成立する</text>
+
+  <rect class="act" x="30" y="414" width="430" height="76" rx="4"/>
+  <text class="t-lab" x="45" y="439">5. 取得と変更</text>
+  <text class="t-sm"  x="45" y="461">データの取得、設定の変更、停止</text>
+  <text class="t-sm"  x="45" y="479">医療では検査と診療の停止が結果として現れる</text>
+  <rect class="heavy" x="500" y="414" width="460" height="76" rx="4"/>
+  <text class="t" x="515" y="437">刑法 234 条の 2（電子計算機損壊等業務妨害、未遂も処罰）</text>
+  <text class="t" x="515" y="457">刑法 168 条の 2、168 条の 3（不正指令電磁的記録）</text>
+  <text class="t" x="515" y="477">個人情報保護法（要配慮個人情報の漏えい等の報告）</text>
+
+  <rect class="note" x="30" y="504" width="930" height="56" rx="4"/>
+  <text class="t" x="45" y="527">アクセス管理者の承諾（1 号では利用権者の承諾も）は、2 条 4 項が定める除外に当たる。掲示された受付規則も同じ働きをする。</text>
+  <text class="t-sm" x="45" y="548">承諾は段を下げるのではなく、その段を不正アクセス行為の定義から外す。範囲外の系へ到達した時点で、除外は及ばなくなる。</text>
+</svg>
