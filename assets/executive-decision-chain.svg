@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" role="img" aria-label="経営層の責任が、制度の要求から現場の実装を経て外部の確認に至るまでの流れを示す図。左から順に、制度が求めること（統一基準、医療法施行規則、安全管理ガイドライン）、理事会が決めること（予算、人事と責任者、契約、遮断と支払いの権限）、現場が実装すること（外部の入口を減らす、認証を全面に適用する、バックアップを隔離する、ログを残す）、外から確かめられること（立入検査、監査、侵害後の事後検証、説明責任と賠償）の四つの列が並ぶ。現場が測った数字は理事会へ戻る。理事会が決めなかった事項は現場に届かず、四つ目の列で不足として現れる。">
+  <title>制度の要求から、理事会の決定、現場の実装、外部の確認まで</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .col   { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .key   { fill: #ddf4ff; stroke: #316dca; stroke-width: 2; }
+    .warn  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .item  { fill: #ffffff; stroke: #8b949e; stroke-width: 1; }
+    .lead  { stroke: #8b949e; stroke-width: 1.5; fill: none; }
+    .back  { stroke: #316dca; stroke-width: 1.5; fill: none; stroke-dasharray: 5 3; }
+    .gap   { stroke: #bf8700; stroke-width: 1.5; fill: none; stroke-dasharray: 4 3; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-key   { fill: #0550ae; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 700; }
+    .t-warn  { fill: #9a6700; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer, .lead { stroke: #6e7681; }
+      .col   { fill: #161b22; stroke: #6e7681; }
+      .key   { fill: #121d2f; stroke: #4184e4; }
+      .warn  { fill: #341a00; stroke: #d29922; }
+      .item  { fill: #0d1117; stroke: #6e7681; }
+      .t-title, .t-head, .t { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+      .t-key { fill: #6cb6ff; }
+      .t-warn { fill: #d29922; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="980" height="450" rx="8"/>
+  <text class="t-title" x="500" y="38" text-anchor="middle">経営層の責任は、四つの列をつないだときだけ成立する</text>
+  <text class="t-sm"    x="500" y="58" text-anchor="middle">二列目で決まらなかった事項は、三列目に届かず、四列目で不足として現れる</text>
+
+  <!-- 列 1 -->
+  <rect class="col" x="28" y="80" width="205" height="250" rx="6"/>
+  <text class="t-head" x="130" y="105" text-anchor="middle">① 制度が求めること</text>
+  <rect class="item" x="42" y="120" width="177" height="42" rx="4"/>
+  <text class="t"    x="130" y="138" text-anchor="middle">統一基準</text>
+  <text class="t-sm" x="130" y="154" text-anchor="middle">2026 年 10 月 1 日施行</text>
+  <rect class="item" x="42" y="170" width="177" height="42" rx="4"/>
+  <text class="t"    x="130" y="188" text-anchor="middle">医療法施行規則 14 条 2 項</text>
+  <text class="t-sm" x="130" y="204" text-anchor="middle">管理者（院長）の義務</text>
+  <rect class="item" x="42" y="220" width="177" height="42" rx="4"/>
+  <text class="t"    x="130" y="238" text-anchor="middle">安全管理ガイドライン</text>
+  <text class="t-sm" x="130" y="254" text-anchor="middle">経営管理編の遵守事項</text>
+  <rect class="item" x="42" y="270" width="177" height="42" rx="4"/>
+  <text class="t"    x="130" y="288" text-anchor="middle">対策チェックリスト</text>
+  <text class="t-sm" x="130" y="304" text-anchor="middle">立入検査で確認される</text>
+
+  <!-- 列 2 -->
+  <rect class="key" x="263" y="80" width="205" height="250" rx="6"/>
+  <text class="t-head" x="365" y="105" text-anchor="middle">② 理事会が決めること</text>
+  <rect class="item" x="277" y="120" width="177" height="42" rx="4"/>
+  <text class="t"    x="365" y="138" text-anchor="middle">予算</text>
+  <text class="t-sm" x="365" y="154" text-anchor="middle">恒常費として計上するか</text>
+  <rect class="item" x="277" y="170" width="177" height="42" rx="4"/>
+  <text class="t"    x="365" y="188" text-anchor="middle">人事</text>
+  <text class="t-sm" x="365" y="204" text-anchor="middle">責任者を誰が任命するか</text>
+  <rect class="item" x="277" y="220" width="177" height="42" rx="4"/>
+  <text class="t"    x="365" y="238" text-anchor="middle">契約</text>
+  <text class="t-sm" x="365" y="254" text-anchor="middle">更新責任を誰が負うか</text>
+  <rect class="item" x="277" y="270" width="177" height="42" rx="4"/>
+  <text class="t"    x="365" y="288" text-anchor="middle">権限</text>
+  <text class="t-sm" x="365" y="304" text-anchor="middle">遮断、支払い、公表の判断</text>
+
+  <!-- 列 3 -->
+  <rect class="col" x="498" y="80" width="205" height="250" rx="6"/>
+  <text class="t-head" x="600" y="105" text-anchor="middle">③ 現場が実装すること</text>
+  <rect class="item" x="512" y="120" width="177" height="42" rx="4"/>
+  <text class="t"    x="600" y="138" text-anchor="middle">外部の入口を減らす</text>
+  <text class="t-sm" x="600" y="154" text-anchor="middle">到達できる資産の件数</text>
+  <rect class="item" x="512" y="170" width="177" height="42" rx="4"/>
+  <text class="t"    x="600" y="188" text-anchor="middle">認証を全面に適用する</text>
+  <text class="t-sm" x="600" y="204" text-anchor="middle">未対応の件数</text>
+  <rect class="item" x="512" y="220" width="177" height="42" rx="4"/>
+  <text class="t"    x="600" y="238" text-anchor="middle">バックアップを隔離する</text>
+  <text class="t-sm" x="600" y="254" text-anchor="middle">復旧訓練の所要時間</text>
+  <rect class="item" x="512" y="270" width="177" height="42" rx="4"/>
+  <text class="t"    x="600" y="288" text-anchor="middle">ログを残す</text>
+  <text class="t-sm" x="600" y="304" text-anchor="middle">遡れる日数</text>
+
+  <!-- 列 4 -->
+  <rect class="warn" x="733" y="80" width="205" height="250" rx="6"/>
+  <text class="t-head" x="835" y="105" text-anchor="middle">④ 外から確かめられる</text>
+  <rect class="item" x="747" y="120" width="177" height="42" rx="4"/>
+  <text class="t"    x="835" y="138" text-anchor="middle">立入検査</text>
+  <text class="t-sm" x="835" y="154" text-anchor="middle">チェックリストの確認</text>
+  <rect class="item" x="747" y="170" width="177" height="42" rx="4"/>
+  <text class="t"    x="835" y="188" text-anchor="middle">内部監査、外部監査</text>
+  <text class="t-sm" x="835" y="204" text-anchor="middle">経営層の責任で実施</text>
+  <rect class="item" x="747" y="220" width="177" height="42" rx="4"/>
+  <text class="t"    x="835" y="238" text-anchor="middle">侵害後の事後検証</text>
+  <text class="t-sm" x="835" y="254" text-anchor="middle">何を決めていたかを見る</text>
+  <rect class="item" x="747" y="270" width="177" height="42" rx="4"/>
+  <text class="t"    x="835" y="288" text-anchor="middle">説明責任、賠償</text>
+  <text class="t-sm" x="835" y="304" text-anchor="middle">任務懈怠が争点になる</text>
+
+  <!-- 矢印 -->
+  <path class="lead" d="M233 205 L263 205" marker-end="url(#ar)"/>
+  <path class="lead" d="M468 205 L498 205" marker-end="url(#ar)"/>
+  <path class="lead" d="M703 205 L733 205" marker-end="url(#ar)"/>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8b949e"/>
+    </marker>
+    <marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#316dca"/>
+    </marker>
+  </defs>
+
+  <!-- 戻り -->
+  <path class="back" d="M600 330 L600 358 L365 358 L365 330" marker-end="url(#arb)"/>
+  <text class="t-key" x="482" y="376" text-anchor="middle">測った数字が理事会に戻る（四半期）</text>
+
+  <!-- 抜け -->
+  <path class="gap" d="M318 330 L318 405 L835 405 L835 330"/>
+  <text class="t-warn" x="600" y="425" text-anchor="middle">②で決めなかった事項は、③を素通りして④で不足として現れる</text>
+</svg>

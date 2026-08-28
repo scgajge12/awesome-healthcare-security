@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" role="img" aria-label="侵入から診療停止までの経過と、経営が介入できる三つの区間を示す図。上段に攻撃者の行動を六段階で並べる。入口を通る、潜伏する、権限を広げて情報を持ち出す、バックアップを壊す、暗号化する、診療が止まり交渉と届出が始まる。時間の目盛りは、侵入が一日以内、潜伏と準備が数日から数か月、実行が数時間から一日、事後が数週間から数か月である。アイルランドの HSE の事例では初期侵入から暗号化まで約八週間であった。下段に三つの区間を重ねる。平時の決定が効く区間は侵入から暗号化の手前までで、入口の数、認証、バックアップの隔離、ログの保存期間が該当する。気づけば止められる区間は潜伏からバックアップ破壊までで、監視と、夜間休日の連絡経路が該当する。決めていないと詰まる区間は暗号化以降で、遮断の権限、身代金の方針、公表の基準が該当する。">
+  <title>侵入から診療停止までの経過と、経営が介入できる三つの区間</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .step  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .stepq { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.5; }
+    .axis  { stroke: #8b949e; stroke-width: 1.5; fill: none; }
+    .tick  { stroke: #8b949e; stroke-width: 1; fill: none; }
+    .b1    { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .b2    { fill: #dafbe1; stroke: #1a7f37; stroke-width: 1.5; }
+    .b3    { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; }
+    .t-b     { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    .t-red   { fill: #cf222e; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .outer, .axis, .tick { stroke: #6e7681; }
+      .step  { fill: #161b22; stroke: #6e7681; }
+      .stepq { fill: #3c1618; stroke: #f85149; }
+      .b1    { fill: #121d2f; stroke: #4184e4; }
+      .b2    { fill: #0f2417; stroke: #3fb950; }
+      .b3    { fill: #341a00; stroke: #d29922; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .t-title, .t, .t-b { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+      .t-red { fill: #f85149; }
+    }
+  </style>
+
+  <rect class="outer" x="10" y="10" width="980" height="450" rx="8"/>
+  <text class="t-title" x="500" y="38" text-anchor="middle">攻撃は、侵入した瞬間に診療を止めるわけではない</text>
+  <text class="t-sm"    x="500" y="58" text-anchor="middle">この幅の中で気づけるかどうかが、平時に何を決めていたかで決まる</text>
+
+  <!-- 段階 -->
+  <rect class="step" x="45" y="82" width="140" height="52" rx="5"/>
+  <text class="t-b" x="115" y="104" text-anchor="middle">① 入口を通る</text>
+  <text class="t-sm" x="115" y="122" text-anchor="middle">認証情報と、未更新の機器</text>
+
+  <rect class="step" x="195" y="82" width="140" height="52" rx="5"/>
+  <text class="t-b" x="265" y="104" text-anchor="middle">② 潜伏する</text>
+  <text class="t-sm" x="265" y="122" text-anchor="middle">気づかれずに院内を調べる</text>
+
+  <rect class="step" x="345" y="82" width="140" height="52" rx="5"/>
+  <text class="t-b" x="415" y="104" text-anchor="middle">③ 権限を広げる</text>
+  <text class="t-sm" x="415" y="122" text-anchor="middle">情報を持ち出す</text>
+
+  <rect class="step" x="495" y="82" width="140" height="52" rx="5"/>
+  <text class="t-b" x="565" y="104" text-anchor="middle">④ バックアップ破壊</text>
+  <text class="t-sm" x="565" y="122" text-anchor="middle">戻せない状態にする</text>
+
+  <rect class="stepq" x="645" y="82" width="140" height="52" rx="5"/>
+  <text class="t-b" x="715" y="104" text-anchor="middle">⑤ 暗号化する</text>
+  <text class="t-sm" x="715" y="122" text-anchor="middle">連休や夜間を選ぶ</text>
+
+  <rect class="stepq" x="795" y="82" width="150" height="52" rx="5"/>
+  <text class="t-b" x="870" y="104" text-anchor="middle">⑥ 診療が止まる</text>
+  <text class="t-sm" x="870" y="122" text-anchor="middle">交渉、届出、公表が始まる</text>
+
+  <!-- 時間軸 -->
+  <path class="axis" d="M45 158 L945 158"/>
+  <path class="tick" d="M185 152 L185 164"/>
+  <path class="tick" d="M635 152 L635 164"/>
+  <path class="tick" d="M785 152 L785 164"/>
+  <text class="t-sm" x="115" y="180" text-anchor="middle">1 日以内</text>
+  <text class="t-sm" x="410" y="180" text-anchor="middle">数日から数か月（HSE の事例では約 8 週間）</text>
+  <text class="t-sm" x="710" y="180" text-anchor="middle">数時間から 1 日</text>
+  <text class="t-sm" x="865" y="180" text-anchor="middle">数週間から数か月</text>
+
+  <!-- 区間 1 -->
+  <rect class="b1" x="45" y="200" width="590" height="58" rx="5"/>
+  <text class="t-b"  x="62" y="222">平時の決定が効く区間</text>
+  <text class="t-sm" x="62" y="242">入口の数、認証の全面適用、バックアップの隔離、ログの保存期間</text>
+  <text class="t-sm" x="650" y="234">決めるのは予算と契約</text>
+
+  <!-- 区間 2 -->
+  <rect class="b2" x="195" y="268" width="440" height="58" rx="5"/>
+  <text class="t-b"  x="212" y="290">気づけば止められる区間</text>
+  <text class="t-sm" x="212" y="310">監視。夜間と休日に、誰が誰へ連絡し、何を止められるか</text>
+  <text class="t-sm" x="650" y="302">決めるのは人事と権限</text>
+
+  <!-- 区間 3 -->
+  <rect class="b3" x="645" y="336" width="300" height="58" rx="5"/>
+  <text class="t-b"  x="662" y="358">決めていないと詰まる区間</text>
+  <text class="t-sm" x="662" y="378">遮断の権限、身代金の方針、公表の基準</text>
+  <text class="t-sm" x="380" y="370" text-anchor="middle">多くの組織が BCP として整備しているのは、この区間だけである</text>
+
+  <!-- 注記 -->
+  <rect class="note" x="45" y="406" width="900" height="40" rx="5"/>
+  <text class="t-red" x="62" y="422">区間 1 と区間 2 は、予算と人事の議題である</text>
+  <text class="t-sm"  x="62" y="440">情報システム部門だけでは決まらないため、理事会の議題に載らないかぎり手がつかない</text>
+</svg>
