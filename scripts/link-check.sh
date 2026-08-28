@@ -76,8 +76,46 @@ echo "link-check: $(date '+%H:%M:%S') 開始、${#targets[@]} ファイルを確
 #   元の URL とサインインの間を往復する。lychee は 10 回追ってもページ本文に届かない。
 #   WebFetch では 200 で本文が取れるため、URL 側の問題ではない。ホスト全体が同じ挙動に
 #   なるので、パス単位では切り分けられず、ホストごと除外する。
+# - h.u-tokyo.ac.jp：サーバが中間証明書を返さず、検証が「unable to verify the first
+#   certificate」で止まる。ブラウザは自前で補完するため開けるが、curl と lychee は失敗する。
+#   東京大学医学部附属病院の公式ドメインであることは大学のサイトからの導線で確認できる。
+#   証明書の配信が直るまで除外する。
+# - miekosei.or.jp：h.u-tokyo.ac.jp と同じく中間証明書を返さない。JA 三重厚生連の公式
+#   ドメインであることは、WebFetch で取得した本文（県内 6 病院と 1 診療所を運営）で確認した。
 # - chc1.com：ブラウザ以外からの取得に 503 を返す。lychee と WebFetch のどちらでも同じで、
 #   当該医療機関の公式ドメインであることは HHS OCR の届出と一致する。
+# - bannerhealth.com：自動アクセスへ 403 を返し、応答ヘッダが肥大して HTTP/2 の扱いが
+#   lychee と噛み合わない。curl でも 403、WebFetch は「Header overflow」で止まる。
+# - med.kagawa-u.ac.jp、psyche-niigata.jp：TLS の折衝が lychee 側で HandshakeFailure に
+#   なる。curl では 200 が返り、内容も香川大学医学部と新潟県立精神医療センターの公式
+#   サイトであることを確認した。
+# - ssl4.eir-parts.net：TDnet の開示 PDF を配信するサーバ。lychee は TLS handshake failed で
+#   止まるが、取得した PDF がリニカルの 2021 年 12 月 6 日付の開示であることを確認した。
+# - geisinger.org：自動アクセスを 302 で回し続け、lychee が追いきれない。WebFetch では
+#   本文が取れる。
+# - dxs-systems.com：接続はできるが、自動アクセスへ本文を返さないまま切断する。
+# - drk-khg.de：日本からの接続が確立できない。union.health, kch.or.kr と同じ挙動で、
+#   ブラウザでも開けないが、DRK Trägergesellschaft Süd-West の公式ドメインであることは
+#   検索エンジンが /ueber-uns や /standorte/kliniken を索引していることで確認できる。
+#   到達性が戻ったら除外を外す。
+# - ccss.sa.cr、ch-versailles.fr、ch-armentieres.fr、ajh.org：--timeout 60 と 4 回の再試行を
+#   かけても毎回タイムアウトまたは接続拒否になる。eur-lex.europa.eu などと違い待ち方の
+#   調整では通らない。いずれも当該医療機関の公式ドメインで、検索エンジンが下位ページ
+#   （ch-versailles.fr/0/1/34/68、ccss.sa.cr/portal、ajh.org/about など）を索引している。
+#   国外からの自動アクセスを絞っていると見られるため、URL の誤りとは区別して除外する。
+# - baxter.com：応答が lychee の HTTP/2 の扱いと噛み合わず「HTTP/2 protocol error」で
+#   止まる。curl では 200 が返り、内容も Baxter International の公式サイトである。
+# - nychealthandhospitals.org：Radware の bot 管理が自動アクセスを検証用の外部ドメインへ
+#   302 で回すため、lychee がリダイレクトを追い切れない。geisinger.org と同じ挙動で、
+#   curl では最終的に 200 が返る。ニューヨーク市保健病院公社の公式ドメインである。
+# - cch.org.tw：lychee は接続を確立できないと報告するが、curl では 200 が返る。証明書の
+#   subject が Changhua Christian Hospital、subjectAltName が *.cch.org.tw であることも
+#   確認した。彰化基督教醫院の公式ドメインである。
+# - marinomed.com：apex と www のどちらも、TLS の折衝の途中で接続が切られる。curl でも
+#   WebFetch でも同じで、drk-khg.de と同様に国外からの接続を絞っていると見られる。
+#   参照先が Marinomed Biotech のアドホック開示のページであることは、検索エンジンが同じ
+#   URL を索引していること、および EQS 経由の同日の開示が金融メディアに転載されている
+#   ことで確認できる。
 # - github.com の stargazers：README のバッジのリンク先。スター数が 0 のリポジトリでは
 #   GitHub がこのページに 404 を返すため、リンクが正しくても失敗する。
 # - accept に 202 を含めるのは、hl7.org が自動アクセスに 202 を返すため。
@@ -110,6 +148,23 @@ lychee \
   --exclude '^https?://(www\.)?digitalhealth\.gov\.au' \
   --exclude '^https?://developer\.android\.com' \
   --exclude '^https?://(www\.)?chc1\.com' \
+  --exclude '^https?://(www\.)?h\.u-tokyo\.ac\.jp' \
+  --exclude '^https?://(www\.)?miekosei\.or\.jp' \
+  --exclude '^https?://(www\.)?bannerhealth\.com' \
+  --exclude '^https?://(www\.)?med\.kagawa-u\.ac\.jp' \
+  --exclude '^https?://(www\.)?psyche-niigata\.jp' \
+  --exclude '^https?://ssl4\.eir-parts\.net' \
+  --exclude '^https?://(www\.)?geisinger\.org' \
+  --exclude '^https?://(www\.)?dxs-systems\.com' \
+  --exclude '^https?://(www\.)?drk-khg\.de' \
+  --exclude '^https?://(www\.)?ccss\.sa\.cr' \
+  --exclude '^https?://(www\.)?ch-versailles\.fr' \
+  --exclude '^https?://(www\.)?ch-armentieres\.fr' \
+  --exclude '^https?://(www\.)?ajh\.org' \
+  --exclude '^https?://(www\.)?baxter\.com' \
+  --exclude '^https?://(www\.)?nychealthandhospitals\.org' \
+  --exclude '^https?://(www\.)?cch\.org\.tw' \
+  --exclude '^https?://(www\.)?marinomed\.com' \
   --exclude '^https?://(www\.)?github\.com/[^/]+/[^/]+/stargazers/?$' \
   --max-concurrency 8 \
   --host-concurrency 1 \
