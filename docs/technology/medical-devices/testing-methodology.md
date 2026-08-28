@@ -166,7 +166,7 @@ MITRE が公表している [Rubric for Applying CVSS to Medical Devices](https:
 - 悪用に必要な条件（物理アクセス、同一ネットワーク、遠隔）
 - 臨床での使用状況における現実的な影響
 
-**事実**：CVSS v4.0 は、後続システムへの影響を表す指標の値として Safety を定め、補足指標にも Safety を置いている（[FIRST CVSS v4.0 Specification Document](https://www.first.org/cvss/v4-0/specification-document)）。
+**事実**：CVSS v4.0 は、後続システムへの影響を表す指標の値として Safety を定め、補足指標にも Safety を置いている（[FIRST CVSS v4.0 Specification Document](https://www.first.org/cvss/v4.0/specification-document)）。
 情報への影響と、人体への危害を別に表せる。
 
 医療機関側で、指摘を修正の順番に変換するときの段階の切り方は、[深刻度を、診療と患者安全の言葉に翻訳する](../../practice/pentest/README.md#7-深刻度を診療と患者安全の言葉に翻訳する) に整理している。
