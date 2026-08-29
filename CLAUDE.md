@@ -98,7 +98,7 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `docs/practice/threat-modeling.md` | 医療の脅威モデリング（信頼境界、STRIDE、攻撃ツリー、順序づけ） |
 | `docs/practice/attack-surface.md` | 外部から見た自組織の攻撃面（棚卸し、測り方の線引き、継続） |
 | `docs/practice/legal-boundary.md` | 検証と調査の法的境界（条文、立場ごとの線、許諾の文面、報告の経路） |
-| `docs/practice/pentest/` | セキュリティ診断とペネトレーションテスト（医療機関、製薬企業、医療機器） |
+| `docs/practice/pentest/` | セキュリティ診断とペネトレーションテスト（医療機関、製薬企業、医療機器）。`htb-style-hospital.md` は演習環境の攻略の型を病院に当てはめた読み替えと、商用メニューとの対応 |
 | `docs/practice/bug-bounty/` | バグバウンティと脆弱性開示（医療分野） |
 | `docs/response/` | インシデント対応と事業継続（サイバー BCP、基盤の構えと外部依存、演習シナリオ）。初動、ダウンタイム運用、届出、復旧は順次追加する |
 | `docs/guidelines/` | ガイドラインと法規制 |

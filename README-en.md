@@ -426,6 +426,7 @@ Why the asset register and reality diverge, how to count the entry points visibl
 #### 🛡️ [Security Assessment and Penetration Testing](docs/practice/pentest/)
 
 Testing scopes for hospitals and pharma, separated by domain: people, perimeter, web, cloud, internal, medical devices, and manufacturing OT.
+A lab-style walkthrough that maps each stage of a Hack The Box engagement onto a hospital, and lines it up against what vendors actually sell: [Reading a hospital through the Hack The Box playbook](docs/practice/pentest/htb-style-hospital.md).
 
 </td>
 </tr>

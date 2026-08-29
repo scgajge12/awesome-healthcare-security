@@ -440,6 +440,7 @@ Web と IoMT に分けた道具と段階を含む。
 #### 🛡️ [診断とペネトレーションテスト](docs/practice/pentest/)
 
 医療機関と製薬企業に対する検証を、人、外部境界、Web、クラウド、内部、医療機器、製造 OT の領域に分けて整理する。
+演習環境の攻略の型を病院に当てはめた読み替えは、[Hack The Box の型で病院を想定する](docs/practice/pentest/htb-style-hospital.md) に置いた。
 
 </td>
 </tr>
