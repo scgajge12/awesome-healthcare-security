@@ -116,6 +116,16 @@ echo "link-check: $(date '+%H:%M:%S') 開始、${#targets[@]} ファイルを確
 #   参照先が Marinomed Biotech のアドホック開示のページであることは、検索エンジンが同じ
 #   URL を索引していること、および EQS 経由の同日の開示が金融メディアに転載されている
 #   ことで確認できる。
+# - pharmerica.com：www は 301 で apex へ回る。apex は 141.193.213.20 と .21 に解決し、
+#   WebFetch では本文（PharMerica Corporation の長期ケア薬局サービス）が取れるが、lychee は
+#   接続を確立できない。本文が返ることを確認できたため、リンクを apex に直したうえで除外する。
+# - fmu.ac.jp：www.fmu.ac.jp は CNAME で lb.48h08j5c19vil51e.4.d-16.jp を指すが、その名前に
+#   A レコードがない（IIJ の管理 DNS が SOA だけを返す NODATA）。名前解決が住所まで届かないため、
+#   lychee も curl も WebFetch も到達できない。福島県立医科大学の公式ドメインであることは、
+#   検索エンジンが /univ/daigaku/ や /hospitals/hikarigaoka/ を索引していることで確認できる。
+#   先方の DNS の不具合であって URL の誤りではないため除外する。上記の各例と違い、恒常的な
+#   アクセス制限ではなく復旧しうる障害なので、A レコードが戻ったら除外を外す。
+#   確認は `dig +short www.fmu.ac.jp` で A レコードが返るかを見る。
 # - github.com の stargazers：README のバッジのリンク先。スター数が 0 のリポジトリでは
 #   GitHub がこのページに 404 を返すため、リンクが正しくても失敗する。
 # - accept に 202 を含めるのは、hl7.org が自動アクセスに 202 を返すため。
@@ -165,6 +175,8 @@ lychee \
   --exclude '^https?://(www\.)?nychealthandhospitals\.org' \
   --exclude '^https?://(www\.)?cch\.org\.tw' \
   --exclude '^https?://(www\.)?marinomed\.com' \
+  --exclude '^https?://(www\.)?pharmerica\.com' \
+  --exclude '^https?://(www\.)?fmu\.ac\.jp' \
   --exclude '^https?://(www\.)?github\.com/[^/]+/[^/]+/stargazers/?$' \
   --max-concurrency 8 \
   --host-concurrency 1 \
