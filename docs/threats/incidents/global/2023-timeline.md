@@ -661,7 +661,7 @@
 
 **一次情報**
 
-- [PharMerica](https://www.pharmerica.com/)
+- [PharMerica](https://pharmerica.com/)
 - [HHS OCR 侵害報告ポータル](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf)
 
 ---
