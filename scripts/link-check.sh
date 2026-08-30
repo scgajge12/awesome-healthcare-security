@@ -126,6 +126,17 @@ echo "link-check: $(date '+%H:%M:%S') 開始、${#targets[@]} ファイルを確
 #   先方の DNS の不具合であって URL の誤りではないため除外する。上記の各例と違い、恒常的な
 #   アクセス制限ではなく復旧しうる障害なので、A レコードが戻ったら除外を外す。
 #   確認は `dig +short www.fmu.ac.jp` で A レコードが返るかを見る。
+# - nhls.ac.za：h.u-tokyo.ac.jp と同じく中間証明書を返さない。lychee は接続失敗として
+#   報告し、WebFetch は「unable to verify the first certificate」で止まる。南アフリカ国立
+#   衛生検査機構の公式ドメインであることは、併記した South African Medical Journal の論文が
+#   同機構への攻撃を扱っていることで確認できる。証明書の配信が直るまで除外する。
+# - umc.edu：自動アクセスを接続段階で弾き、--timeout 60 と 4 回の再試行でも「Connection
+#   failed」で止まる。ミシシッピ大学医療センターの公式ドメインであることは、WebFetch で
+#   本文（州で唯一の学術医療センターである旨の告知）が取れることで確認した。到達性が戻ったら
+#   除外を外す。
+# - oppc.com：umc.edu と同じく自動アクセスを接続段階で弾く。OnePoint Patient Care の公式
+#   ドメインであることは、WebFetch で本文が取れること、および HHS OCR の届出と一致することで
+#   確認した。到達性が戻ったら除外を外す。
 # - github.com の stargazers：README のバッジのリンク先。スター数が 0 のリポジトリでは
 #   GitHub がこのページに 404 を返すため、リンクが正しくても失敗する。
 # - accept に 202 を含めるのは、hl7.org が自動アクセスに 202 を返すため。
@@ -177,6 +188,9 @@ lychee \
   --exclude '^https?://(www\.)?marinomed\.com' \
   --exclude '^https?://(www\.)?pharmerica\.com' \
   --exclude '^https?://(www\.)?fmu\.ac\.jp' \
+  --exclude '^https?://(www\.)?nhls\.ac\.za' \
+  --exclude '^https?://(www\.)?umc\.edu' \
+  --exclude '^https?://(www\.)?oppc\.com' \
   --exclude '^https?://(www\.)?github\.com/[^/]+/[^/]+/stargazers/?$' \
   --max-concurrency 8 \
   --host-concurrency 1 \
