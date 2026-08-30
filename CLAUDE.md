@@ -94,6 +94,7 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `docs/technology/detection-engineering.md` | 検知の設計を技法単位に落とす（観測点、条件、医療の正常系、欺瞞とカナリア） |
 | `docs/technology/credential-exposure.md` | 外に出た認証情報（流出の経路、確認の手順、失効の順序） |
 | `docs/technology/email-domain.md` | メールとドメインの管理（送信ドメイン認証、失効ドメイン、BEC） |
+| `docs/technology/seo-poisoning.md` | 検索経路の汚染（SEO ポイズニング）。職員の検索が初期侵入になる型、患者が偽サイトや未承認の販売サイトに到達する型、自組織のサイトが踏み台になる型。ATT&CK の段階との対応、配信側の制御が調査に与える制約、検知の条件、演習で測れる範囲 |
 | `docs/technology/media-disposal.md` | 記憶媒体の廃棄と機器の下取り（消去、証跡、中古市場） |
 | `docs/technology/segmentation.md` | ネットワークの分離（ゾーンモデル、到達性の確認、例外の管理） |
 | `docs/practice/threat-modeling.md` | 医療の脅威モデリング（信頼境界、STRIDE、攻撃ツリー、順序づけ） |

@@ -419,6 +419,18 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🔍 [検索経路の汚染](docs/technology/seo-poisoning.md)
+
+職員の業務上の検索が初期侵入になる型、患者が偽サイトや未承認の販売サイトに到達する型、自組織のサイトが踏み台になる型。
+配信側が一度しか渡さないことが調査に与える制約と、実行の段を壊す手当。
+
+</td>
+<td width="50%" valign="top">
+</td>
+</tr>
 </table>
 
 ### 🛡️ [検証と実務](docs/practice/)
@@ -630,6 +642,7 @@ awesome-healthcare-security/
 │   │   ├── detection-engineering.md 検知の設計を技法単位に落とす（観測点、条件、正常系、欺瞞）
 │   │   ├── credential-exposure.md   外に出た認証情報（流出の経路、確認、失効の順序）
 │   │   ├── email-domain.md          メールとドメインの管理（送信ドメイン認証、失効ドメイン、BEC）
+│   │   ├── seo-poisoning.md         検索経路の汚染（職員の検索、患者の検索、踏み台になるサイト）
 │   │   ├── media-disposal.md        記憶媒体の廃棄と機器の下取り（消去、証跡、中古市場）
 │   │   └── segmentation.md          ネットワークの分離（ゾーンモデル、到達性の確認、例外の管理）
 │   ├── practice/                    検証と実務

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="検索結果の画面を四つの層に分け、層ごとの汚染の手段と到達点を示した図。左側は「マイナ保険証 読取機 エラー」と入力された検索結果の画面で、上から順に、生成 AI による回答、広告枠、オーガニックの上位、施設情報の枠が並ぶ。右側に各層へ対応する汚染の手段を置く。生成 AI による回答には参照先の汚染が対応し、モデルが示す URL がブランドの管理外を指し、未登録のドメイン名は第三者が取得できる。広告枠には広告の出稿が対応し、認定が要る枠と要らない枠が同じ画面に並び、出稿は購入であって順位の操作を必要としない。オーガニックの上位には改ざんサイトへの寄生が対応し、正規のサイトに偽の掲示板を大量に置いて医療の語と地名で順位を取る。施設情報の枠には情報の書き換えが対応し、電話番号を差し替えて患者の問い合わせを受ける。下段に三つの到達点を示す。職員の端末で実行される、患者が偽の窓口に到達する、自組織のサイトが配信元になる">
+  <title>検索結果の層と、層ごとの汚染の手段</title>
+  <style>
+    .frame  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .bar    { fill: #ffffff; stroke: #8b949e; stroke-width: 1.2; }
+    .l-ai   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .l-ad   { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .l-org  { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.5; }
+    .l-biz  { fill: #dafbe1; stroke: #1a7f37; stroke-width: 1.5; }
+    .side   { fill: #ffffff; stroke: #8b949e; stroke-width: 1.4; }
+    .goal   { fill: #f6f8fa; stroke: #57606a; stroke-width: 1.6; }
+    .arr    { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .ah     { fill: #57606a; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-q     { fill: #1f2328; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; }
+    @media (prefers-color-scheme: dark) {
+      .frame  { fill: #161b22; stroke: #6e7681; }
+      .bar    { fill: #0d1117; stroke: #6e7681; }
+      .l-ai   { fill: #121d2f; stroke: #4184e4; }
+      .l-ad   { fill: #341a00; stroke: #d29922; }
+      .l-org  { fill: #2d0f11; stroke: #f85149; }
+      .l-biz  { fill: #0f2916; stroke: #3fb950; }
+      .side   { fill: #0d1117; stroke: #6e7681; }
+      .goal   { fill: #161b22; stroke: #9198a1; }
+      .arr    { stroke: #9198a1; }
+      .ah     { fill: #9198a1; }
+      .t-title, .t-lab, .t, .t-q { fill: #e6edf3; }
+      .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <text class="t-title" x="30" y="32">検索結果の層と、層ごとの汚染の手段</text>
+
+  <rect class="frame" x="36" y="62" width="390" height="412" rx="8"/>
+  <rect class="bar" x="56" y="80" width="350" height="30" rx="15"/>
+  <text class="t-q" x="72" y="100">マイナ保険証 読取機 エラー</text>
+
+  <rect class="l-ai" x="56" y="126" width="350" height="72" rx="5"/>
+  <text class="t-lab" x="72" y="150">生成 AI による回答</text>
+  <text class="t-sm" x="72" y="171">要約された手順と、参照先の URL が</text>
+  <text class="t-sm" x="72" y="188">検索結果より上に置かれる</text>
+
+  <rect class="l-ad" x="56" y="212" width="350" height="72" rx="5"/>
+  <text class="t-lab" x="72" y="236">広告枠（スポンサー）</text>
+  <text class="t-sm" x="72" y="257">表示されるドメイン名と、実際の遷移先は</text>
+  <text class="t-sm" x="72" y="274">同じである必要がない</text>
+
+  <rect class="l-org" x="56" y="298" width="350" height="72" rx="5"/>
+  <text class="t-lab" x="72" y="322">オーガニックの上位</text>
+  <text class="t-sm" x="72" y="343">順位は被リンクと語の一致で決まる。</text>
+  <text class="t-sm" x="72" y="360">どちらも外から積める</text>
+
+  <rect class="l-biz" x="56" y="384" width="350" height="72" rx="5"/>
+  <text class="t-lab" x="72" y="408">施設情報の枠</text>
+  <text class="t-sm" x="72" y="429">電話番号、地図、診療時間が</text>
+  <text class="t-sm" x="72" y="446">検索結果の右または上に出る</text>
+
+  <path class="arr" d="M426 162 L462 162"/>
+  <polygon class="ah" points="470,162 458,157 458,167"/>
+  <path class="arr" d="M426 248 L462 248"/>
+  <polygon class="ah" points="470,248 458,243 458,253"/>
+  <path class="arr" d="M426 334 L462 334"/>
+  <polygon class="ah" points="470,334 458,329 458,339"/>
+  <path class="arr" d="M426 420 L462 420"/>
+  <polygon class="ah" points="470,420 458,415 458,425"/>
+
+  <rect class="side" x="474" y="126" width="490" height="72" rx="5"/>
+  <text class="t-lab" x="492" y="150">参照先の汚染</text>
+  <text class="t" x="492" y="171">モデルが示す URL が、そのブランドの管理外を指すことがある。</text>
+  <text class="t" x="492" y="188">未登録のドメイン名は、第三者が取得して使える</text>
+
+  <rect class="side" x="474" y="212" width="490" height="72" rx="5"/>
+  <text class="t-lab" x="492" y="236">広告の出稿</text>
+  <text class="t" x="492" y="257">認定を求められる枠と、求められない枠が同じ画面に並ぶ。</text>
+  <text class="t" x="492" y="274">出稿は購入であり、順位の操作を必要としない</text>
+
+  <rect class="side" x="474" y="298" width="490" height="72" rx="5"/>
+  <text class="t-lab" x="492" y="322">改ざんされたサイトへの寄生</text>
+  <text class="t" x="492" y="343">正規のサイトに偽の掲示板を大量に置く。</text>
+  <text class="t" x="492" y="360">医療の語と地名を組み合わせ、狭い検索で上位を取る</text>
+
+  <rect class="side" x="474" y="384" width="490" height="72" rx="5"/>
+  <text class="t-lab" x="492" y="408">施設情報の書き換え</text>
+  <text class="t" x="492" y="429">電話番号を差し替え、予約や問い合わせを横取りする。</text>
+  <text class="t" x="492" y="446">患者は病院に電話したつもりのまま話し続ける</text>
+
+  <rect class="goal" x="36" y="504" width="296" height="72" rx="5"/>
+  <text class="t-lab" x="54" y="528">職員の端末で実行される</text>
+  <text class="t-sm" x="54" y="549">業務上の調べものが起点になる。</text>
+  <text class="t-sm" x="54" y="566">初期侵入から横移動へ続く</text>
+
+  <rect class="goal" x="352" y="504" width="296" height="72" rx="5"/>
+  <text class="t-lab" x="370" y="528">患者が偽の窓口に到達する</text>
+  <text class="t-sm" x="370" y="549">被害は組織の外に出る。</text>
+  <text class="t-sm" x="370" y="566">自組織は侵害されていない</text>
+
+  <rect class="goal" x="668" y="504" width="296" height="72" rx="5"/>
+  <text class="t-lab" x="686" y="528">自組織のサイトが配信元になる</text>
+  <text class="t-sm" x="686" y="549">改ざんの目的は表示の書き換えではなく、</text>
+  <text class="t-sm" x="686" y="566">検索エンジンに見せるページの設置である</text>
+
+  <text class="t-sm" x="36" y="592">層ごとに手段は違うが、到達点は重なる。どの層を見ていないかが、そのまま抜けになる。</text>
+</svg>

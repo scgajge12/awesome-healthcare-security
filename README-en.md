@@ -407,6 +407,18 @@ Assets leaving the organization: sanitization methods, the chain of subcontracto
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🔍 [Search-Channel Poisoning](docs/technology/seo-poisoning.md)
+
+Three shapes of SEO poisoning in healthcare: staff searches that become initial access, patient searches that end at fake sites and unlicensed pharmacies, and your own site turned into the host that serves them.
+Includes why one-shot delivery breaks post-incident reproduction.
+
+</td>
+<td width="50%" valign="top">
+</td>
+</tr>
 </table>
 
 ### 🛡️ [Practice](docs/practice/)
@@ -608,6 +620,7 @@ awesome-healthcare-security/
 │   │   ├── detection-engineering.md Detection engineering (observation points, conditions, deception)
 │   │   ├── credential-exposure.md   Exposed credentials (how they leak, checking, revocation)
 │   │   ├── email-domain.md          Email and domain management (sender auth, lapsed domains, BEC)
+│   │   ├── seo-poisoning.md         Search-channel poisoning (staff searches, patient searches, hosts)
 │   │   ├── media-disposal.md        Media disposal and device trade-in (sanitization, evidence)
 │   │   └── segmentation.md          Network segmentation (zone model, verification, exceptions)
 │   ├── practice/                    Assessment and practice
