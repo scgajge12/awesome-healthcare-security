@@ -299,6 +299,9 @@ Vulnerabilities that tend to show up in patient portals and telehealth, plus the
 
 How responsibility is split across AWS, Google Cloud, Azure, and Sakura Internet, and the paths by which cloud-hosted health systems are compromised.
 
+- [Healthcare Cloud Through MITRE ATT&CK for Cloud (AWS)](docs/technology/cloud/mitre-attack-aws.md)
+- [Healthcare Cloud Through MITRE ATT&CK for Cloud (Google Cloud)](docs/technology/cloud/mitre-attack-google-cloud.md)
+
 </td>
 </tr>
 <tr>

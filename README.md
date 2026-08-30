@@ -302,6 +302,9 @@ SCA と SBOM による既知脆弱性への対処。
 
 AWS、Google Cloud、Azure、さくらインターネットの責任分界と、クラウド上の医療システムが侵害される経路。
 
+- [MITRE ATT&CK for Cloud から見た医療クラウド環境（AWS 編）](docs/technology/cloud/mitre-attack-aws.md)
+- [MITRE ATT&CK for Cloud から見た医療クラウド環境（Google Cloud 編）](docs/technology/cloud/mitre-attack-google-cloud.md)
+
 </td>
 </tr>
 <tr>
