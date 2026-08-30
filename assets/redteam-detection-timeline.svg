@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 470" role="img" aria-label="レッドチームの作戦の段を横軸に並べ、検知の結果が分かれた二つの組織を対比した図。上段に初期アクセス、常駐と足場、権限昇格、横展開、目標への到達の五段を置く。組織 B は初期アクセスの段で中程度の警告を受けて三台の端末を 2 分から 20 分で隔離し、レッドチームは指令基盤を失って想定侵害の合意のうえで内部から再開した。組織 A は中程度と低の警告が出たものの数千件の誤検知に埋もれて対応されず、全段を完走してクラウド資源まで到達した。下段に、演習で記録する三つの値として、最初の警告が出るまでの時間、最初にトリアージされるまでの時間、封じ込めまでの時間を挙げる">
+  <title>作戦の段と、検知の結果が分かれた二つの組織</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .stage { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .good  { fill: #dafbe1; stroke: #1a7f37; stroke-width: 1.5; }
+    .bad   { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .flow  { stroke: #57606a; stroke-width: 2; fill: none; }
+    .ah    { fill: #57606a; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    @media (prefers-color-scheme: dark) {
+      .outer { stroke: #6e7681; }
+      .stage { fill: #161b22; stroke: #6e7681; }
+      .good  { fill: #0f2417; stroke: #2ea043; }
+      .bad   { fill: #3c1618; stroke: #f85149; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .flow  { stroke: #9198a1; }
+      .ah    { fill: #9198a1; }
+      .t-title, .t-lab, .t { fill: #e6edf3; }
+      .t-sm  { fill: #9198a1; }
+    }
+  </style>
+
+  <text class="t-title" x="30" y="30">作戦の段と、検知の結果が分かれた二つの組織</text>
+
+  <rect class="stage" x="30" y="56" width="162" height="52" rx="4"/>
+  <text class="t-lab" x="111" y="88" text-anchor="middle">初期アクセス</text>
+  <rect class="stage" x="222" y="56" width="162" height="52" rx="4"/>
+  <text class="t-lab" x="303" y="88" text-anchor="middle">常駐と足場</text>
+  <rect class="stage" x="414" y="56" width="162" height="52" rx="4"/>
+  <text class="t-lab" x="495" y="88" text-anchor="middle">権限昇格</text>
+  <rect class="stage" x="606" y="56" width="162" height="52" rx="4"/>
+  <text class="t-lab" x="687" y="88" text-anchor="middle">横展開</text>
+  <rect class="stage" x="798" y="56" width="162" height="52" rx="4"/>
+  <text class="t-lab" x="879" y="88" text-anchor="middle">目標への到達</text>
+
+  <path class="flow" d="M192 82 L214 82"/>
+  <polygon class="ah" points="222,82 212,78 212,86"/>
+  <path class="flow" d="M384 82 L406 82"/>
+  <polygon class="ah" points="414,82 404,78 404,86"/>
+  <path class="flow" d="M576 82 L598 82"/>
+  <polygon class="ah" points="606,82 596,78 596,86"/>
+  <path class="flow" d="M768 82 L790 82"/>
+  <polygon class="ah" points="798,82 788,78 788,86"/>
+
+  <rect class="outer" x="30" y="136" width="930" height="78" rx="6"/>
+  <text class="t-lab" x="44" y="158">組織 B（初期の侵害を検知した側）</text>
+  <rect class="good" x="44" y="168" width="148" height="34" rx="4"/>
+  <text class="t-sm" x="54" y="190">2 分から 20 分で隔離</text>
+  <rect class="note" x="222" y="168" width="724" height="34" rx="4"/>
+  <text class="t" x="234" y="190">指令基盤との通信を失い、想定侵害の合意のうえで内部から再開した。以後の段は検知の対象から外れる</text>
+
+  <rect class="outer" x="30" y="230" width="930" height="78" rx="6"/>
+  <text class="t-lab" x="44" y="252">組織 A（検知できなかった側）</text>
+  <rect class="bad" x="44" y="262" width="902" height="34" rx="4"/>
+  <text class="t" x="56" y="284">中程度と低の警告は出たが、数千件の誤検知に埋もれて対応されなかった。全段を完走し、クラウド資源まで到達した</text>
+
+  <rect class="note" x="30" y="326" width="930" height="118" rx="6"/>
+  <text class="t-lab" x="44" y="350">演習で記録する三つの値</text>
+  <text class="t" x="44" y="376">1. 最初の警告が出るまでの時間。検知の設計が効いたかどうかがここに出る</text>
+  <text class="t" x="44" y="400">2. 最初にトリアージされるまでの時間。警告と対応の差が、この区間の長さになる</text>
+  <text class="t" x="44" y="424">3. 封じ込めまでの時間。隔離、遮断、資格情報の失効が終わるまで</text>
+</svg>

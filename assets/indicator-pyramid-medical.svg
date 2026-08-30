@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 572" role="img" aria-label="攻撃の指標を六層のピラミッドで示し、医療機関での観測点を右に並べた図。下から順に、ハッシュ値は EDR とウイルス対策で観測でき再ビルドで変わる、IP アドレスは境界機器とプロキシの記録で観測でき借り直せば変わる、ドメイン名は DNS の記録で観測でき取り直せば変わる、ネットワークとホストの痕跡はプロセスの親子や通信の周期で観測でき実装を直す必要がある、ツールは実行の文脈と署名のない実行体で観測でき作り直すか探し直す必要がある、最上段の TTPs は段の並びそのもので観測でき行動を学び直す必要がある。上の二層は作戦をまたいで変わりにくく演習で測る価値があり、中段の痕跡の層は実装を直せば変わるが作戦の途中では変えにくく、下の三層は作戦のたびに変わるため共有の指標としては短命であると凡例で示す">
+  <title>指標の階層と、医療機関での観測点</title>
+  <style>
+    .l-top { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .l-mid { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .l-bot { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .axis  { stroke: #57606a; stroke-width: 2; fill: none; }
+    .ah    { fill: #57606a; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-ax    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .l-top { fill: #121d2f; stroke: #4184e4; }
+      .l-mid { fill: #341a00; stroke: #d29922; }
+      .l-bot { fill: #161b22; stroke: #6e7681; }
+      .axis  { stroke: #9198a1; }
+      .ah    { fill: #9198a1; }
+      .t-title, .t-head, .t-lab, .t { fill: #e6edf3; }
+      .t-sm, .t-ax { fill: #9198a1; }
+    }
+  </style>
+
+  <text class="t-title" x="30" y="30">指標の階層と、医療機関での観測点</text>
+
+  <path class="axis" d="M44 442 L44 76"/>
+  <polygon class="ah" points="44,64 39,78 49,78"/>
+  <text class="t-ax" transform="rotate(-90 22 256)" x="22" y="256" text-anchor="middle">攻撃側が付け替えるコスト</text>
+
+  <polygon class="l-top" points="285,70 375,70 410.8,132 249.2,132"/>
+  <text class="t-lab" x="330" y="106" text-anchor="middle">TTPs</text>
+
+  <polygon class="l-top" points="249.2,132 410.8,132 446.7,194 213.3,194"/>
+  <text class="t-lab" x="330" y="168" text-anchor="middle">ツール</text>
+
+  <polygon class="l-mid" points="213.3,194 446.7,194 482.5,256 177.5,256"/>
+  <text class="t-lab" x="330" y="230" text-anchor="middle">ネットワークとホストの痕跡</text>
+
+  <polygon class="l-bot" points="177.5,256 482.5,256 518.3,318 141.7,318"/>
+  <text class="t-lab" x="330" y="292" text-anchor="middle">ドメイン名</text>
+
+  <polygon class="l-bot" points="141.7,318 518.3,318 554.2,380 105.8,380"/>
+  <text class="t-lab" x="330" y="354" text-anchor="middle">IP アドレス</text>
+
+  <polygon class="l-bot" points="105.8,380 554.2,380 590,442 70,442"/>
+  <text class="t-lab" x="330" y="416" text-anchor="middle">ハッシュ値</text>
+
+  <text class="t-head" x="630" y="52">医療機関での観測点</text>
+
+  <text class="t"    x="630" y="95">観測点：段の並びそのもの</text>
+  <text class="t-sm" x="630" y="113">付け替え：行動を学び直す</text>
+
+  <text class="t"    x="630" y="157">観測点：実行の文脈、署名のない実行体</text>
+  <text class="t-sm" x="630" y="175">付け替え：作り直すか、探し直す</text>
+
+  <text class="t"    x="630" y="219">観測点：プロセスの親子、通信の周期</text>
+  <text class="t-sm" x="630" y="237">付け替え：実装を直す</text>
+
+  <text class="t"    x="630" y="281">観測点：DNS の記録</text>
+  <text class="t-sm" x="630" y="299">付け替え：取り直す</text>
+
+  <text class="t"    x="630" y="343">観測点：境界機器とプロキシの記録</text>
+  <text class="t-sm" x="630" y="361">付け替え：借り直す</text>
+
+  <text class="t"    x="630" y="405">観測点：EDR、ウイルス対策</text>
+  <text class="t-sm" x="630" y="423">付け替え：再ビルドする</text>
+
+  <rect class="l-top" x="70" y="480" width="18" height="14" rx="2"/>
+  <text class="t" x="98" y="492">作戦をまたいで変わりにくい。演習で測る価値がある</text>
+  <rect class="l-mid" x="70" y="506" width="18" height="14" rx="2"/>
+  <text class="t" x="98" y="518">実装を直せば変わるが、作戦の途中では変えにくい</text>
+  <rect class="l-bot" x="70" y="532" width="18" height="14" rx="2"/>
+  <text class="t" x="98" y="544">作戦のたびに変わる。共有の指標としては短命である</text>
+</svg>

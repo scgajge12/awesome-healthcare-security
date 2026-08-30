@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 620" role="img" aria-label="レッドチームの指令基盤を三つの層に分け、それぞれで防御側が観測できるものを右に並べた図。第 1 層は攻撃側が用意する層で、作戦端末、指令サーバ、リダイレクタが並び、境界の外からは新しく登録されたドメインへの名前解決、プロキシの分類にないカテゴリ、証明書の発行元と有効期間が見える。第 2 層は病院の出口で、DNS、プロキシ、ファイアウォールが並び、宛先ごとの通信の周期と間隔、平時に出ない宛先への継続的な接続、出口の制限がない区画の存在そのものが見える。第 3 層は病院の内側で、短周期の足場、長周期の足場、内部中継が並び、親子関係を説明できないプロセスの実行、端末から端末への管理系ポートの接続、中程度の深刻度で出る警告が見える。下段に、記録に残すのはどの層が露見したかであり、リダイレクタだけなら差し替えて続行でき、足場が焼けたら想定侵害に切り替えると注記する">
+  <title>指令基盤の三つの層と、防御側が観測できる点</title>
+  <style>
+    .outer { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .box   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .box2  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .box3  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .flow  { stroke: #57606a; stroke-width: 2; fill: none; }
+    .ah    { fill: #57606a; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    @media (prefers-color-scheme: dark) {
+      .outer { stroke: #6e7681; }
+      .box   { fill: #121d2f; stroke: #4184e4; }
+      .box2  { fill: #161b22; stroke: #6e7681; }
+      .box3  { fill: #341a00; stroke: #d29922; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .flow  { stroke: #9198a1; }
+      .ah    { fill: #9198a1; }
+      .t-title, .t-head, .t-lab, .t { fill: #e6edf3; }
+      .t-sm  { fill: #9198a1; }
+    }
+  </style>
+
+  <text class="t-title" x="30" y="30">指令基盤の三つの層と、防御側が観測できる点</text>
+
+  <!-- 層 1 -->
+  <rect class="outer" x="30" y="56" width="610" height="150" rx="6"/>
+  <text class="t-head" x="44" y="78">1. 攻撃側が用意する層</text>
+  <rect class="box" x="44" y="92" width="168" height="50" rx="4"/>
+  <text class="t-lab" x="58" y="116">作戦端末</text>
+  <text class="t-sm"  x="58" y="133">オペレータが操作する</text>
+  <rect class="box" x="232" y="92" width="168" height="50" rx="4"/>
+  <text class="t-lab" x="246" y="116">指令サーバ（C2）</text>
+  <text class="t-sm"  x="246" y="133">標的から直接見せない</text>
+  <rect class="box" x="420" y="92" width="168" height="50" rx="4"/>
+  <text class="t-lab" x="434" y="116">リダイレクタ</text>
+  <text class="t-sm"  x="434" y="133">使い捨てる前提で置く</text>
+  <path class="flow" d="M212 117 L226 117"/>
+  <polygon class="ah" points="232,117 224,113 224,121"/>
+  <path class="flow" d="M400 117 L414 117"/>
+  <polygon class="ah" points="420,117 412,113 412,121"/>
+  <text class="t" x="44" y="166">ドメインは用途で分ける。フィッシング、指令、持ち出しを同じ名前でまとめない</text>
+  <text class="t" x="44" y="188">リダイレクタが露見しても、差し替えれば指令サーバは残る</text>
+
+  <rect class="note" x="660" y="56" width="300" height="150" rx="6"/>
+  <text class="t-lab" x="674" y="80">境界より外で見えるもの</text>
+  <text class="t" x="674" y="106">新しく登録されたドメインへの</text>
+  <text class="t" x="674" y="124">名前解決</text>
+  <text class="t" x="674" y="146">プロキシの分類にないカテゴリ</text>
+  <text class="t" x="674" y="168">証明書の発行元と有効期間</text>
+  <text class="t-sm" x="674" y="192">ここだけで止めると、次の作戦では別の名前になる</text>
+
+  <path class="flow" d="M335 206 L335 224"/>
+  <polygon class="ah" points="335,232 331,222 339,222"/>
+
+  <!-- 層 2 -->
+  <rect class="outer" x="30" y="232" width="610" height="120" rx="6"/>
+  <text class="t-head" x="44" y="254">2. 病院の出口</text>
+  <rect class="box2" x="44" y="268" width="168" height="46" rx="4"/>
+  <text class="t-lab" x="58" y="290">DNS</text>
+  <text class="t-sm"  x="58" y="307">名前解決の記録</text>
+  <rect class="box2" x="232" y="268" width="168" height="46" rx="4"/>
+  <text class="t-lab" x="246" y="290">プロキシ</text>
+  <text class="t-sm"  x="246" y="307">宛先、分類、応答の大きさ</text>
+  <rect class="box2" x="420" y="268" width="168" height="46" rx="4"/>
+  <text class="t-lab" x="434" y="290">ファイアウォール</text>
+  <text class="t-sm"  x="434" y="307">許可した宛先と、その外</text>
+  <text class="t" x="44" y="338">出口の制限がない区画では、この層で何も観測できない</text>
+
+  <rect class="note" x="660" y="232" width="300" height="120" rx="6"/>
+  <text class="t-lab" x="674" y="256">出口で見えるもの</text>
+  <text class="t" x="674" y="282">宛先ごとの通信の周期と間隔</text>
+  <text class="t" x="674" y="304">平時に出ない宛先への継続的な接続</text>
+  <text class="t" x="674" y="326">出口の制限がない区画の存在そのもの</text>
+
+  <path class="flow" d="M335 352 L335 370"/>
+  <polygon class="ah" points="335,378 331,368 339,368"/>
+
+  <!-- 層 3 -->
+  <rect class="outer" x="30" y="378" width="610" height="150" rx="6"/>
+  <text class="t-head" x="44" y="400">3. 病院の内側</text>
+  <rect class="box3" x="44" y="414" width="168" height="50" rx="4"/>
+  <text class="t-lab" x="58" y="438">短周期の足場</text>
+  <text class="t-sm"  x="58" y="455">作業用。露見しやすい</text>
+  <rect class="box3" x="232" y="414" width="168" height="50" rx="4"/>
+  <text class="t-lab" x="246" y="438">長周期の足場</text>
+  <text class="t-sm"  x="246" y="455">保険。数時間に一度動く</text>
+  <rect class="box3" x="420" y="414" width="168" height="50" rx="4"/>
+  <text class="t-lab" x="434" y="438">内部中継</text>
+  <text class="t-sm"  x="434" y="455">出口のない区画へ届かせる</text>
+  <text class="t" x="44" y="488">短周期が焼けても、長周期が残れば作戦は続く。防御側が数える単位は端末ではなく経路である</text>
+  <text class="t" x="44" y="510">内部中継が置かれた区画は、外向きの通信を持たないため、出口の層では観測できない</text>
+
+  <rect class="note" x="660" y="378" width="300" height="150" rx="6"/>
+  <text class="t-lab" x="674" y="402">内側で見えるもの</text>
+  <text class="t" x="674" y="428">親子関係を説明できない</text>
+  <text class="t" x="674" y="446">プロセスの実行</text>
+  <text class="t" x="674" y="468">端末から端末への管理系ポート</text>
+  <text class="t" x="674" y="486">への接続</text>
+  <text class="t" x="674" y="508">中程度の深刻度で出る警告</text>
+
+  <rect class="note" x="30" y="548" width="930" height="58" rx="6"/>
+  <text class="t-lab" x="44" y="572">記録に残すのは「どの層が露見したか」である</text>
+  <text class="t" x="44" y="594">リダイレクタだけなら差し替えて続行できる。足場が焼けたら、想定侵害に切り替える。</text>
+</svg>

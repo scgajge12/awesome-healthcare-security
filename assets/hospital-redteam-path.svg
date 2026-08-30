@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 990 665" role="img" aria-label="病院のゾーンを通る演習の経路と、観測点、越えない線を示す図。インターネットから三つの入口、すなわち人（フィッシング、ヘルプデスク詐称）、外部境界（VPN、公開サーバ、リモート保守）、委託先の接続点（保守回線、業務の受託先）が下りる。人と外部境界は事務と情報系ゾーンへ、委託先は管理ゾーンへ入る。事務と情報系ゾーンから基幹ゾーン（電子カルテ、Active Directory、バックアップ）へ進み、管理ゾーンは全ゾーンに届く経路を持つ。基幹ゾーンの下に赤い破線があり、ここから先は権限の確認までで止めると示す。線の下に医療機器ゾーン（PACS、生体情報モニタ、輸液ポンプ）と、患者データそのもの（画像、検査結果、処方）を置く。経路上の四つの観測点として、受信したメールから起動したプロセスの親子、端末から端末への管理系ポートの接続とドメイン全体を列挙する問い合わせ、管理サーバから各ゾーンへ配信される実行体とその署名、ゾーン境界を越える接続のうち許可した経路の外にあるものを挙げる">
+  <title>病院のゾーンを通る演習の経路と、観測点、越えない線</title>
+  <style>
+    .net   { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1.5; }
+    .entry { fill: #fff1e5; stroke: #bc4c00; stroke-width: 1.5; }
+    .zone  { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .core  { fill: #cfe6ff; stroke: #0969da; stroke-width: 1.5; }
+    .adm   { fill: #fbefff; stroke: #8250df; stroke-width: 1.5; }
+    .med   { fill: #dafbe1; stroke: #1a7f37; stroke-width: 1.5; }
+    .data  { fill: #dafbe1; stroke: #1a7f37; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .stop  { stroke: #cf222e; stroke-width: 2.5; stroke-dasharray: 8 5; fill: none; }
+    .path  { stroke: #cf222e; stroke-width: 2.5; fill: none; }
+    .ahr   { fill: #cf222e; }
+    .flow  { stroke: #57606a; stroke-width: 2; fill: none; }
+    .ah    { fill: #57606a; }
+    .obs   { fill: #ddf4ff; stroke: #0969da; stroke-width: 2; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-red   { fill: #cf222e; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    .t-obs   { fill: #0969da; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .net   { fill: #161b22; stroke: #6e7681; }
+      .entry { fill: #2b1a10; stroke: #db6d28; }
+      .zone  { fill: #121d2f; stroke: #4184e4; }
+      .core  { fill: #16305c; stroke: #4184e4; }
+      .adm   { fill: #21182f; stroke: #a371f7; }
+      .med, .data { fill: #12261e; stroke: #2ea043; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .stop, .path { stroke: #f85149; }
+      .ahr   { fill: #f85149; }
+      .flow  { stroke: #9198a1; }
+      .ah    { fill: #9198a1; }
+      .obs   { fill: #121d2f; stroke: #4184e4; }
+      .t-title, .t-lab, .t { fill: #e6edf3; }
+      .t-sm  { fill: #9198a1; }
+      .t-red { fill: #f85149; }
+      .t-obs { fill: #4184e4; }
+    }
+  </style>
+
+  <text class="t-title" x="30" y="30">病院のゾーンを通る演習の経路と、観測点、越えない線</text>
+
+  <rect class="net" x="30" y="52" width="930" height="34" rx="4"/>
+  <text class="t-lab" x="44" y="74">インターネット</text>
+
+  <path class="flow" d="M175 86 L175 94"/>
+  <polygon class="ah" points="175,102 171,92 179,92"/>
+  <path class="flow" d="M495 86 L495 94"/>
+  <polygon class="ah" points="495,102 491,92 499,92"/>
+  <path class="flow" d="M815 86 L815 94"/>
+  <polygon class="ah" points="815,102 811,92 819,92"/>
+
+  <rect class="entry" x="30" y="102" width="290" height="62" rx="4"/>
+  <text class="t-lab" x="44" y="126">A. 人</text>
+  <text class="t-sm"  x="44" y="148">フィッシング、ヘルプデスク詐称</text>
+  <rect class="entry" x="350" y="102" width="290" height="62" rx="4"/>
+  <text class="t-lab" x="364" y="126">B. 外部境界</text>
+  <text class="t-sm"  x="364" y="148">VPN、公開サーバ、リモート保守</text>
+  <rect class="entry" x="670" y="102" width="290" height="62" rx="4"/>
+  <text class="t-lab" x="684" y="126">I. 委託先の接続点</text>
+  <text class="t-sm"  x="684" y="148">保守回線、業務の受託先</text>
+
+  <path class="path" d="M175 164 L175 196"/>
+  <polygon class="ahr" points="175,204 170,193 180,193"/>
+  <path class="path" d="M495 164 L495 196"/>
+  <polygon class="ahr" points="495,204 490,193 500,193"/>
+  <path class="path" d="M815 164 L815 196"/>
+  <polygon class="ahr" points="815,204 810,193 820,193"/>
+
+  <rect class="zone" x="30" y="204" width="610" height="62" rx="4"/>
+  <text class="t-lab" x="44" y="228">事務と情報系ゾーン</text>
+  <text class="t-sm"  x="44" y="250">職員端末、ファイル共有、部門の業務端末</text>
+
+  <rect class="adm" x="670" y="204" width="290" height="166" rx="4"/>
+  <text class="t-lab" x="684" y="228">管理ゾーン</text>
+  <text class="t-sm"  x="684" y="250">資産管理、監視、バックアップ、</text>
+  <text class="t-sm"  x="684" y="268">ウイルス対策の管理サーバ</text>
+  <text class="t"     x="684" y="296">全ゾーンに届く経路を持つ。</text>
+  <text class="t"     x="684" y="316">ここを取ると、以後の横展開は</text>
+  <text class="t"     x="684" y="336">配信の仕組みに乗る</text>
+
+  <path class="path" d="M175 266 L175 300"/>
+  <polygon class="ahr" points="175,308 170,297 180,297"/>
+  <path class="path" d="M670 356 L648 356"/>
+  <polygon class="ahr" points="640,356 651,351 651,361"/>
+
+  <rect class="core" x="30" y="308" width="610" height="62" rx="4"/>
+  <text class="t-lab" x="44" y="332">基幹ゾーン</text>
+  <text class="t-sm"  x="44" y="354">電子カルテ、Active Directory、ファイル、バックアップ</text>
+
+  <path class="path" d="M175 370 L175 396"/>
+  <line class="path" x1="140" y1="398" x2="210" y2="398"/>
+
+  <line class="stop" x1="30" y1="416" x2="960" y2="416"/>
+  <text class="t-red" x="30" y="410">ここから先は、権限の確認までで止める。行使は患者の安全に触れる</text>
+
+  <rect class="med" x="30" y="432" width="610" height="62" rx="4"/>
+  <text class="t-lab" x="44" y="456">医療機器ゾーン</text>
+  <text class="t-sm"  x="44" y="478">PACS、生体情報モニタ、輸液ポンプ</text>
+  <rect class="data" x="670" y="432" width="290" height="62" rx="4"/>
+  <text class="t-lab" x="684" y="456">患者データそのもの</text>
+  <text class="t-sm"  x="684" y="478">画像、検査結果、処方</text>
+
+  <circle class="obs" cx="206" cy="184" r="12"/>
+  <text class="t-obs" x="206" y="189" text-anchor="middle">1</text>
+  <circle class="obs" cx="206" cy="288" r="12"/>
+  <text class="t-obs" x="206" y="293" text-anchor="middle">2</text>
+  <circle class="obs" cx="655" cy="326" r="12"/>
+  <text class="t-obs" x="655" y="331" text-anchor="middle">3</text>
+  <circle class="obs" cx="930" cy="416" r="12"/>
+  <text class="t-obs" x="930" y="421" text-anchor="middle">4</text>
+
+  <rect class="note" x="30" y="514" width="930" height="130" rx="6"/>
+  <text class="t-lab" x="44" y="538">境界ごとに観測する点</text>
+  <text class="t" x="44" y="564">1. 受信したメールから起動したプロセスの親子と、実行体の出どころ</text>
+  <text class="t" x="44" y="588">2. 端末から端末への管理系ポートへの接続と、ドメイン全体を列挙する問い合わせ</text>
+  <text class="t" x="44" y="612">3. 管理サーバから各ゾーンへ配信される実行体と、その署名</text>
+  <text class="t" x="44" y="636">4. ゾーン境界を越える接続のうち、許可した経路の外にあるもの</text>
+</svg>

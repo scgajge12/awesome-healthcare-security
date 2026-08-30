@@ -426,6 +426,7 @@ Why the asset register and reality diverge, how to count the entry points visibl
 #### 🛡️ [Security Assessment and Penetration Testing](docs/practice/pentest/)
 
 Testing scopes for hospitals and pharma, separated by domain: people, perimeter, web, cloud, internal, medical devices, and manufacturing OT.
+What separates a red team engagement from TLPT, the phases and actors borrowed from the financial-sector frameworks, what a Red Team Operator actually does down to the layering of their command infrastructure, why stealth is a requirement paired with the detections it maps to, and how the path through a hospital's zones sets the line the exercise stops at: [Red Teaming and TLPT for Hospitals](docs/practice/pentest/red-team-tlpt.md).
 A lab-style walkthrough that maps each stage of a Hack The Box engagement onto a hospital, and lines it up against what vendors actually sell: [Reading a hospital through the Hack The Box playbook](docs/practice/pentest/htb-style-hospital.md).
 
 </td>
