@@ -468,7 +468,7 @@ Web と IoMT に分けた道具と段階を含む。
 
 医療機関と製薬企業に対する検証を、人、外部境界、Web、クラウド、内部、医療機器、製造 OT の領域に分けて整理する。
 レッドチーム演習と TLPT の違い、工程と主体、Red Team Operator の職能、潜伏（ステルス）と対になる検知、病院のゾーンを通る経路と越えない線は、[レッドチームと TLPT を医療機関に当てはめる](docs/practice/pentest/red-team-tlpt.md) に置いた。
-演習環境の攻略の型を病院に当てはめた読み替えは、[Hack The Box の型で病院を想定する](docs/practice/pentest/htb-style-hospital.md) に置いた。
+演習環境の攻略の型を病院に当てはめた読み替えと、実在の医療機関の診断で繰り返し所見になる製品と構成は、[Hack The Box の型で病院を想定する](docs/practice/pentest/htb-style-hospital.md) に置いた。
 
 </td>
 </tr>
