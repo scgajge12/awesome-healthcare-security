@@ -305,6 +305,21 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+#### 🪟 [Windows 環境のセキュリティ](docs/technology/windows/)
+
+医療機関の情報システムの大半が動く基盤。
+端末とサーバを分けた七つの攻撃シナリオ、Active Directory の攻撃面、端末で動くアプリケーションの権限昇格とメモリ破壊、Defender と EDR の回避、バックドアが残る場所と復旧で消えないもの。
+いずれも、成立の条件と検知の観測点を対にして扱う。
+
+- [Active Directory の攻撃面と、段階的な手当](docs/technology/windows/active-directory.md)
+- [Windows アプリケーションのセキュリティ](docs/technology/windows/app-security.md)
+- [Microsoft Defender と EDR の回避が成立する条件](docs/technology/windows/defense-evasion.md)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### 🔄 [医療 DX と AX](docs/technology/dx-ax/)
@@ -605,6 +620,7 @@ awesome-healthcare-security/
 │   │   ├── medical-devices/         医療機器（IoMT、PACS）のセキュリティ
 │   │   ├── oss-vulnerabilities/     OSS 医療情報システムの脆弱性
 │   │   ├── web-security/            医療系 Web アプリケーションのセキュリティ
+│   │   ├── windows/                 Windows 環境のセキュリティ（Active Directory、Windows アプリ、Defender と EDR の回避）
 │   │   ├── cloud/                   クラウド事業者と医療（AWS、Google Cloud、Azure、さくら）
 │   │   ├── dx-ax/                   医療 DX と AX（国の基盤、デジタル庁、地域医療連携、医療 AI、現場主導の導入）
 │   │   ├── digital-health/          デジタルヘルス（規制の当たり方、攻撃面、Google のデジタルヘルス）

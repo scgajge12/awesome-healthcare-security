@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" role="img" aria-label="Windows 環境でバックドアが残る場所を四つに分け、それぞれ何が消える契機になるかを示した図。第 1 列は端末で、自動起動、サービスとスケジュールタスク、WMI のイベント購読、読み込まれる DLL の差し替えが並び、その端末を再構築すれば消える。第 2 列はサーバで、追加された管理者アカウント、常駐する遠隔管理ツール、公開領域に置かれた受け口、起動時に実行される構成が並び、そのサーバを再構築すれば消える。第 3 列はドメインで、追加されたアカウントとグループへの追加、ACL への追記と委任の設定、発行済みの証明書、ドメインの署名鍵から作られたチケットが並び、パスワードの変更だけでは消えず、鍵の二回の変更と証明書の失効が要る。第 4 列は保守と機器で、ベンダの遠隔保守ツール、機器に付属する端末の構成、保守回線の接続設定が並び、医療機関の再構築の対象外であり契約と手順の側でしか戻せない。下段に、復旧の計画に証明書の失効、鍵の二回の変更、保守経路の確認の欄がないと、再構築しても戻られると注記する">
+  <title>バックドアが残る四つの場所と、消える契機</title>
+  <style>
+    .col   { fill: none; stroke: #8b949e; stroke-width: 1.5; }
+    .head  { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .item  { fill: #f6f8fa; stroke: #8b949e; stroke-width: 1; }
+    .clear { fill: #dafbe1; stroke: #1a7f37; stroke-width: 1.5; }
+    .hard  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .never { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.5; }
+    .foot  { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.5; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11px; }
+    @media (prefers-color-scheme: dark) {
+      .col   { stroke: #6e7681; }
+      .head  { fill: #121d2f; stroke: #4184e4; }
+      .item  { fill: #161b22; stroke: #6e7681; }
+      .clear { fill: #0f2417; stroke: #3fb950; }
+      .hard  { fill: #341a00; stroke: #d29922; }
+      .never, .foot { fill: #3c1618; stroke: #f85149; }
+      .t-title, .t-head, .t-lab, .t { fill: #e6edf3; }
+      .t-sm  { fill: #9198a1; }
+    }
+  </style>
+
+  <text class="t-title" x="30" y="30">バックドアが残る四つの場所と、消える契機</text>
+  <text class="t-sm" x="30" y="52">左から右へ、医療機関が自力で消せる度合いが下がる</text>
+
+  <!-- 列 1 端末 -->
+  <rect class="col" x="30" y="66" width="222" height="452" rx="6"/>
+  <rect class="head" x="44" y="80" width="194" height="46" rx="4"/>
+  <text class="t-head" x="58" y="102">1. 端末（クライアント）</text>
+  <text class="t-sm"  x="58" y="119">業務ゾーンの共有端末など</text>
+  <rect class="item" x="44" y="138" width="194" height="34" rx="4"/>
+  <text class="t" x="56" y="160">自動起動（Run キー、起動フォルダ）</text>
+  <rect class="item" x="44" y="180" width="194" height="34" rx="4"/>
+  <text class="t" x="56" y="202">サービス、スケジュールタスク</text>
+  <rect class="item" x="44" y="222" width="194" height="34" rx="4"/>
+  <text class="t" x="56" y="244">WMI のイベント購読</text>
+  <rect class="item" x="44" y="264" width="194" height="34" rx="4"/>
+  <text class="t" x="56" y="286">読み込まれる DLL の差し替え</text>
+  <rect class="clear" x="44" y="316" width="194" height="86" rx="4"/>
+  <text class="t-lab" x="56" y="338">消える契機</text>
+  <text class="t" x="56" y="360">その端末を再構築すれば消える</text>
+  <text class="t-sm" x="56" y="382">ただし、再構築しない端末には残る</text>
+
+  <!-- 列 2 サーバ -->
+  <rect class="col" x="264" y="66" width="222" height="452" rx="6"/>
+  <rect class="head" x="278" y="80" width="194" height="46" rx="4"/>
+  <text class="t-head" x="292" y="102">2. サーバ</text>
+  <text class="t-sm"  x="292" y="119">部門システム、ファイル共有</text>
+  <rect class="item" x="278" y="138" width="194" height="34" rx="4"/>
+  <text class="t" x="290" y="160">追加された管理者アカウント</text>
+  <rect class="item" x="278" y="180" width="194" height="34" rx="4"/>
+  <text class="t" x="290" y="202">常駐する遠隔管理ツール</text>
+  <rect class="item" x="278" y="222" width="194" height="34" rx="4"/>
+  <text class="t" x="290" y="244">公開領域に置かれた受け口</text>
+  <rect class="item" x="278" y="264" width="194" height="34" rx="4"/>
+  <text class="t" x="290" y="286">起動時に実行される構成</text>
+  <rect class="clear" x="278" y="316" width="194" height="86" rx="4"/>
+  <text class="t-lab" x="290" y="338">消える契機</text>
+  <text class="t" x="290" y="360">そのサーバを再構築すれば消える</text>
+  <text class="t-sm" x="290" y="382">部門サーバは対象から漏れやすい</text>
+
+  <!-- 列 3 ドメイン -->
+  <rect class="col" x="498" y="66" width="222" height="452" rx="6"/>
+  <rect class="head" x="512" y="80" width="194" height="46" rx="4"/>
+  <text class="t-head" x="526" y="102">3. ドメイン（認証基盤）</text>
+  <text class="t-sm"  x="526" y="119">管理ゾーンの Active Directory</text>
+  <rect class="item" x="512" y="138" width="194" height="34" rx="4"/>
+  <text class="t" x="524" y="160">追加アカウント、グループ追加</text>
+  <rect class="item" x="512" y="180" width="194" height="34" rx="4"/>
+  <text class="t" x="524" y="202">ACL への追記、委任の設定</text>
+  <rect class="item" x="512" y="222" width="194" height="34" rx="4"/>
+  <text class="t" x="524" y="244">発行済みの証明書</text>
+  <rect class="item" x="512" y="264" width="194" height="34" rx="4"/>
+  <text class="t" x="524" y="286">署名鍵から作られたチケット</text>
+  <rect class="hard" x="512" y="316" width="194" height="86" rx="4"/>
+  <text class="t-lab" x="524" y="338">消える契機</text>
+  <text class="t" x="524" y="360">パスワードの変更では消えない</text>
+  <text class="t" x="524" y="380">鍵の二回の変更と、証明書の失効</text>
+  <text class="t-sm" x="524" y="398">一覧を出さないと、そもそも見えない</text>
+
+  <!-- 列 4 保守と機器 -->
+  <rect class="col" x="732" y="66" width="238" height="452" rx="6"/>
+  <rect class="head" x="746" y="80" width="210" height="46" rx="4"/>
+  <text class="t-head" x="760" y="102">4. 保守と医療機器</text>
+  <text class="t-sm"  x="760" y="119">医療機関の管理の外側</text>
+  <rect class="item" x="746" y="138" width="210" height="34" rx="4"/>
+  <text class="t" x="758" y="160">ベンダの遠隔保守ツール</text>
+  <rect class="item" x="746" y="180" width="210" height="34" rx="4"/>
+  <text class="t" x="758" y="202">機器に付属する端末の構成</text>
+  <rect class="item" x="746" y="222" width="210" height="34" rx="4"/>
+  <text class="t" x="758" y="244">保守回線の接続設定</text>
+  <rect class="item" x="746" y="264" width="210" height="34" rx="4"/>
+  <text class="t" x="758" y="286">承認済み構成のため触れない端末</text>
+  <rect class="never" x="746" y="316" width="210" height="86" rx="4"/>
+  <text class="t-lab" x="758" y="338">消える契機</text>
+  <text class="t" x="758" y="360">再構築の対象に入らない</text>
+  <text class="t" x="758" y="380">契約と手順の側でしか戻せない</text>
+  <text class="t-sm" x="758" y="398">ベンダと合同で確認する</text>
+
+  <!-- 共通の注記行 -->
+  <rect class="item" x="44" y="418" width="912" height="84" rx="4"/>
+  <text class="t-lab" x="58" y="440">いずれの列でも、気付ける観測点は「作られた瞬間」に寄っている</text>
+  <text class="t" x="58" y="462">自動起動とサービスの作成、アカウントの作成と特権グループへの追加、ACL と委任の変更、証明書の発行。</text>
+  <text class="t" x="58" y="484">できてしまえば正規の構成に見えるため、後から一覧を眺めても異常として立たない。</text>
+
+  <rect class="foot" x="30" y="536" width="940" height="76" rx="6"/>
+  <text class="t-head" x="46" y="560">復旧計画に、この三つの欄がないと、再構築しても戻られる</text>
+  <text class="t" x="46" y="582">① 発行済み証明書の失効　② ドメインの署名鍵の二回の変更　③ 保守経路と機器付属端末の、ベンダとの合同確認</text>
+  <text class="t-sm" x="46" y="602">診療の再開を急ぐ局面ほど、この三つが後回しになる</text>
+</svg>

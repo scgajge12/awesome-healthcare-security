@@ -284,6 +284,7 @@ Z5 は、他のゾーンと前提が違う。
 - [医療機器の検証手法](medical-devices/testing-methodology.md)：機器ゾーンでの確認のしかた
 - [HL7 v2 と FHIR の攻撃面](web-security/hl7-fhir.md)：Z4 連携ゾーンで守る対象
 - [クラウド事業者と医療](cloud/)：院内網とクラウドをつなぐ経路
+- [Windows 環境のセキュリティ](windows/)：ゾーンをまたいで認証を束ねる Active Directory と、端末側の防御
 - [診断とペネトレーションテスト](../practice/pentest/)：分離の実効性を測る検証
 - [インシデント対応と事業継続](../response/)：遮断の判断と、診療の継続
 - [セキュリティの基礎](../reference/security-basics.md#6-多層防御)：多層防御と最小権限の位置づけ

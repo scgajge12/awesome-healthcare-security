@@ -84,6 +84,7 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `docs/technology/medical-devices/` | 医療機器（IoMT、PACS）のセキュリティ |
 | `docs/technology/oss-vulnerabilities/` | OSS 医療情報システムの脆弱性 |
 | `docs/technology/web-security/` | 医療系 Web アプリケーションのセキュリティ |
+| `docs/technology/windows/` | Windows 環境のセキュリティ。起点がクライアントかサーバかを明示した攻撃シナリオ、Active Directory の攻撃面と段階的な手当、Windows アプリケーションの権限昇格とメモリ破壊、Microsoft Defender と EDR の回避、バックドアが残る場所と復旧で消えないもの。いずれも検知の観測点と対にして扱う |
 | `docs/technology/cloud/` | クラウド事業者と医療（AWS、Google Cloud、Azure、さくらインターネット） |
 | `docs/technology/dx-ax/` | 医療 DX と AX（国の基盤と接続点、医療における AI のセキュリティ） |
 | `docs/technology/digital-health/` | デジタルヘルス（規制の当たり方、攻撃面、Google のデジタルヘルス） |

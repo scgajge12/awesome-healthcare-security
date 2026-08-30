@@ -104,6 +104,32 @@ Web とドメイン、医療機器と IoMT、人と組織、制度と調達の�
 
 ---
 
+## Windows、Active Directory
+
+医療機関の端末とサーバの大半は Windows で動く。
+この領域は、**読み取りだけで所見が出る**割合が高く、設定を変えずに実施できる作業から着手できる（[Windows 環境のセキュリティ](../../technology/windows/)）。
+
+| ツール | 用途 | 段階 |
+|---|---|---|
+| [BloodHound](https://github.com/SpecterOps/BloodHound) | Active Directory のオブジェクトと権限の関係をグラフ化し、特権への到達経路を可視化する。防御側の棚卸しにも使う | 低侵襲 |
+| [PingCastle](https://www.pingcastle.com/) | Active Directory の設定を採点し、報告書を出す。経営層への説明に使える形で結果が出る | 低侵襲 |
+| [Purple Knight](https://www.semperis.com/purple-knight/) | 同上。指標ごとに、攻撃側での使われ方と是正手順が示される | 低侵襲 |
+| [Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)（Sysinternals） | アプリケーションが読み込む DLL とファイルの参照を観測する。探索順序の問題の確認に使う | 受動 |
+| [AccessChk](https://learn.microsoft.com/en-us/sysinternals/downloads/accesschk)（Sysinternals） | サービス、ファイル、レジストリの権限を一覧にする。配置に起因する権限昇格の確認に使う | 受動 |
+| [Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)（Sysinternals） | プロセスの生成、ネットワーク接続、イメージの読み込みを記録に残す。EDR を導入できない範囲の観測点を増やせる | 受動 |
+| [WinDbg](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/) | 異常終了の解析。業務を止めている不具合の切り分けにも使える | 受動 |
+| [App Control（WDAC）Wizard](https://github.com/MicrosoftDocs/WDAC-Toolkit) | 許可した場所からの実行だけを認めるポリシーを作る。監査モードで先に影響を測れる | 受動から低侵襲 |
+| [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) | 技法を単体で再現し、検知が働くかを確かめる | 侵襲 |
+
+> [!IMPORTANT]
+> グラフ化と採点の道具は、ドメインコントローラへの網羅的な問い合わせを伴う。
+> 実施の時間帯を合意し、問い合わせが認証基盤の記録に残ることを、防御側と事前に共有してほしい。
+> 技法を実行する道具（Atomic Red Team など）は、稼働中の医療情報システムでは使わず、隔離した環境に置く。
+
+技法ごとの観測点と、医療の正常系との切り分けは [検知の設計を技法単位に落とす](../../technology/detection-engineering.md)、防御機構が外されたときに残る記録は [Microsoft Defender と EDR の回避が成立する条件](../../technology/windows/defense-evasion.md) にまとめている。
+
+---
+
 ## ファームウェアと組込み機器の解析
 
 医療機器の検証では、更新ファイルやストレージから取り出したイメージを対象にする。

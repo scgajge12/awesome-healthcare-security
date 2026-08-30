@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-label="Windows 側の防御機構を六つの層に分け、それぞれが無効化されたときに外側へ残る観測点を右に並べた図。第 1 層は実行の前に止める層で、App Control、AppLocker、SmartScreen、ASR ルールが並び、実行がブロックされた記録と監査モードの記録が残る。第 2 層はスクリプトとマクロを見る層で、AMSI が PowerShell、Windows Script Host、Office の VBA、UAC の昇格を検査し、難読化されたスクリプトの実行と提供元 DLL の異常が残る。第 3 層は実行中を記録する層で、ETW、振る舞い監視、EDR のセンサが並び、センサの欠測と親子関係を説明できないプロセスが残る。第 4 層は資格情報を隔てる層で、LSA protection、Credential Guard、ASR の LSASS ルールが並び、LSASS への異常なアクセスと CodeIntegrity のイベントが残る。第 5 層はカーネルを守る層で、HVCI、脆弱なドライバのブロックリスト、保護されたプロセスが並び、既知の脆弱性を持つ署名済みドライバの読み込みが残る。第 6 層は設定を守る層で、改ざん防止と除外設定の保護が並び、改ざんの試行として管理コンソールに上がる警告が残る。下段に、回避は層ごとに別の手を要するため、どの層まで届いたかを記録に残せば次に埋める順序が決まると注記する">
+  <title>Windows の防御機構の六つの層と、無効化されたときに残る観測点</title>
+  <style>
+    .box   { fill: #ddf4ff; stroke: #316dca; stroke-width: 1.5; }
+    .note  { fill: #ffffff; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .foot  { fill: #fff8c5; stroke: #bf8700; stroke-width: 1.5; }
+    .flow  { stroke: #57606a; stroke-width: 2; fill: none; }
+    .ah    { fill: #57606a; }
+    .t-title { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 16px; font-weight: 700; }
+    .t-head  { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; font-weight: 700; }
+    .t-lab   { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 13.5px; font-weight: 700; }
+    .t       { fill: #1f2328; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 12.5px; }
+    .t-sm    { fill: #656d76; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; font-size: 11.5px; }
+    @media (prefers-color-scheme: dark) {
+      .box   { fill: #121d2f; stroke: #4184e4; }
+      .note  { fill: #0d1117; stroke: #6e7681; }
+      .foot  { fill: #341a00; stroke: #d29922; }
+      .flow  { stroke: #9198a1; }
+      .ah    { fill: #9198a1; }
+      .t-title, .t-lab, .t { fill: #e6edf3; }
+      .t-head, .t-sm { fill: #9198a1; }
+    }
+  </style>
+
+  <text class="t-title" x="30" y="30">Windows の防御機構の六つの層と、無効化されたときに残る観測点</text>
+  <text class="t-head" x="30" y="58">層と、そこに置かれている機構</text>
+  <text class="t-head" x="612" y="58">その層が破られたとき、外側に残るもの</text>
+
+  <!-- 層 1 -->
+  <rect class="box" x="30" y="70" width="530" height="92" rx="5"/>
+  <text class="t-lab" x="46" y="94">1. 実行の前に止める層</text>
+  <text class="t" x="46" y="118">App Control（WDAC）、AppLocker、SmartScreen</text>
+  <text class="t" x="46" y="140">攻撃面の削減（ASR）ルール</text>
+  <path class="flow" d="M560 116 L604 116"/>
+  <polygon class="ah" points="612,116 602,111 602,121"/>
+  <rect class="note" x="612" y="70" width="358" height="92" rx="5"/>
+  <text class="t" x="628" y="98">実行がブロックされた記録</text>
+  <text class="t" x="628" y="122">監査モードで残る、止めるはずだった実行</text>
+  <text class="t-sm" x="628" y="146">除外の追加そのものが、先行する痕跡になる</text>
+
+  <!-- 層 2 -->
+  <rect class="box" x="30" y="176" width="530" height="92" rx="5"/>
+  <text class="t-lab" x="46" y="200">2. スクリプトとマクロを見る層</text>
+  <text class="t" x="46" y="224">AMSI（PowerShell、Windows Script Host、</text>
+  <text class="t" x="46" y="246">Office の VBA、UAC の昇格）</text>
+  <path class="flow" d="M560 222 L604 222"/>
+  <polygon class="ah" points="612,222 602,217 602,227"/>
+  <rect class="note" x="612" y="176" width="358" height="92" rx="5"/>
+  <text class="t" x="628" y="204">難読化されたスクリプトの実行</text>
+  <text class="t" x="628" y="228">スクリプトブロックのログの欠落</text>
+  <text class="t-sm" x="628" y="252">検査の口を塞ぐ操作は、口の側に跡が出る</text>
+
+  <!-- 層 3 -->
+  <rect class="box" x="30" y="282" width="530" height="92" rx="5"/>
+  <text class="t-lab" x="46" y="306">3. 実行中を記録する層</text>
+  <text class="t" x="46" y="330">ETW、振る舞い監視、EDR のセンサ</text>
+  <text class="t" x="46" y="352">プロセスとネットワークの記録</text>
+  <path class="flow" d="M560 328 L604 328"/>
+  <polygon class="ah" points="612,328 602,323 602,333"/>
+  <rect class="note" x="612" y="282" width="358" height="92" rx="5"/>
+  <text class="t" x="628" y="310">センサの欠測（届かなくなった端末の一覧）</text>
+  <text class="t" x="628" y="334">親子関係を説明できないプロセスの実行</text>
+  <text class="t-sm" x="628" y="358">欠測は、管理サーバ側でしか見えない</text>
+
+  <!-- 層 4 -->
+  <rect class="box" x="30" y="388" width="530" height="92" rx="5"/>
+  <text class="t-lab" x="46" y="412">4. 資格情報を隔てる層</text>
+  <text class="t" x="46" y="436">LSA protection（RunAsPPL）、Credential Guard</text>
+  <text class="t" x="46" y="458">LSASS からの窃取を止める ASR ルール</text>
+  <path class="flow" d="M560 434 L604 434"/>
+  <polygon class="ah" points="612,434 602,429 602,439"/>
+  <rect class="note" x="612" y="388" width="358" height="92" rx="5"/>
+  <text class="t" x="628" y="416">LSASS への異常なアクセス</text>
+  <text class="t" x="628" y="440">CodeIntegrity のイベント（3033、3063）</text>
+  <text class="t-sm" x="628" y="464">機能が切られた事実自体が、最も強い指標になる</text>
+
+  <!-- 層 5 -->
+  <rect class="box" x="30" y="494" width="530" height="92" rx="5"/>
+  <text class="t-lab" x="46" y="518">5. カーネルを守る層</text>
+  <text class="t" x="46" y="542">HVCI（メモリ整合性）、保護されたプロセス</text>
+  <text class="t" x="46" y="564">脆弱なドライバのブロックリスト</text>
+  <path class="flow" d="M560 540 L604 540"/>
+  <polygon class="ah" points="612,540 602,535 602,545"/>
+  <rect class="note" x="612" y="494" width="358" height="92" rx="5"/>
+  <text class="t" x="628" y="522">署名済みだが既知の欠陥を持つドライバの読み込み</text>
+  <text class="t" x="628" y="546">ブロックリストの適用状態の差</text>
+  <text class="t-sm" x="628" y="570">古い機器の正規ドライバと見分けが付きにくい</text>
+
+  <!-- 層 6 -->
+  <rect class="box" x="30" y="600" width="530" height="92" rx="5"/>
+  <text class="t-lab" x="46" y="624">6. 設定を守る層</text>
+  <text class="t" x="46" y="648">改ざん防止（tamper protection）</text>
+  <text class="t" x="46" y="670">除外設定の保護</text>
+  <path class="flow" d="M560 646 L604 646"/>
+  <polygon class="ah" points="612,646 602,641 602,651"/>
+  <rect class="note" x="612" y="600" width="358" height="92" rx="5"/>
+  <text class="t" x="628" y="628">改ざんの試行として上がる警告</text>
+  <text class="t" x="628" y="652">管理コンソール側に残る設定変更の記録</text>
+  <text class="t-sm" x="628" y="676">端末側で消しても、管理側には残る</text>
+
+  <rect class="foot" x="30" y="706" width="940" height="40" rx="5"/>
+  <text class="t" x="46" y="732">回避は層ごとに別の手を要する。どの層まで届いたかを演習の記録に残せば、次に埋める順序が決まる</text>
+</svg>

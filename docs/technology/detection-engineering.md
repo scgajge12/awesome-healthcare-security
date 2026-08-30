@@ -230,6 +230,8 @@ ATT&CK は改訂で識別子を統合または移動することがあるため�
 - [防御プレイブック](../threats/actors/defense-playbook.md)：段階ごとの対策の順序
 - [外に出た認証情報](credential-exposure.md)：正規の資格情報による操作の見分け方
 - [ネットワークの分離](segmentation.md)：条件を置く場所としてのゾーン境界
+- [Microsoft Defender と EDR の回避が成立する条件](windows/defense-evasion.md)：防御機能が外されたときに、外側へ残る観測点
+- [Active Directory の攻撃面と、段階的な手当](windows/active-directory.md)：段ごとの観測点と、医療の正常系
 - [完全性への攻撃と患者安全](../threats/integrity-attacks.md)：値の改変を見つける設計
 - [演習シナリオのカタログ](../response/tabletop.md)：通知が判断につながるかを確かめる
 - [診断とペネトレーションテスト](../practice/pentest/)：検証の記録と防御側の記録の突き合わせ

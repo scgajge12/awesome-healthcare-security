@@ -342,6 +342,7 @@ flowchart LR
 - [ログと監視の設計](logging.md)：認証の失敗と成功を、どこに残し、どう読むか
 - [防御プレイブック](../threats/actors/defense-playbook.md)：対策の着手順序
 - [組織の脆弱性の分類](../threats/actors/organizational-vulnerabilities.md)：委託先と契約に起因する構造
+- [Active Directory の攻撃面と、段階的な手当](windows/active-directory.md)：ドメインで権限が集約される経路と、資格情報の保護
 - [患者用ポータルの脆弱性](web-security/patient-portal.md)：患者向けサービスでの認証と認可
 - [医療 DX：国の基盤と接続点](dx-ax/medical-dx.md)：HPKI と電子署名
 - [国内のガイドラインと法規制](../guidelines/japan.md)：第 7.0 版の全体像と、各編の読み分け

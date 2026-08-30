@@ -302,6 +302,21 @@ How responsibility is split across AWS, Google Cloud, Azure, and Sakura Internet
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+#### 🪟 [Windows Environment Security](docs/technology/windows/)
+
+The platform most healthcare information systems actually run on.
+Seven attack scenarios that state whether the Windows in question is a client or a server, Active Directory attack paths, privilege escalation and memory corruption in endpoint applications, Defender and EDR evasion, and where backdoors survive a rebuild.
+Each is paired with the conditions it depends on and what stays observable.
+
+- [Active Directory attack surface and staged hardening](docs/technology/windows/active-directory.md)
+- [Windows application security](docs/technology/windows/app-security.md)
+- [When Microsoft Defender and EDR evasion succeeds](docs/technology/windows/defense-evasion.md)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### 🔄 [Healthcare DX and AX](docs/technology/dx-ax/)
@@ -583,6 +598,7 @@ awesome-healthcare-security/
 │   │   ├── medical-devices/         Medical device security (IoMT, PACS)
 │   │   ├── oss-vulnerabilities/     Open source health IT vulnerabilities
 │   │   ├── web-security/            Healthcare web application security
+│   │   ├── windows/                 Windows environment security (Active Directory, Windows apps, Defender and EDR evasion)
 │   │   ├── cloud/                   Cloud providers and healthcare
 │   │   ├── dx-ax/                   Healthcare DX and AX (platforms, Digital Agency, regional networks, AI, frontline-led adoption)
 │   │   ├── digital-health/          Digital health (regulatory boundaries, attack surface, Google's digital health)

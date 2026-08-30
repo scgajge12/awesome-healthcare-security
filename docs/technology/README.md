@@ -10,6 +10,7 @@
 | [医療機器のセキュリティ](medical-devices/) | IoMT、PACS / DICOM 固有のリスクと、安全に検証するための手法 |
 | [OSS 医療情報システムの脆弱性](oss-vulnerabilities/) | 医療で使われる OSS の一覧、報告された CVE、SCA と SBOM による対処 |
 | [医療系 Web アプリのセキュリティ](web-security/) | 患者ポータル、オンライン診療で狙われやすい脆弱性と、HL7 v2 と FHIR の攻撃面 |
+| [Windows 環境のセキュリティ](windows/) | 医療機関の Windows 資産の区分、端末とサーバを分けた七つの攻撃シナリオ、Active Directory の攻撃面、Windows アプリの権限昇格とメモリ破壊、Defender と EDR の回避、バックドアが残る場所と復旧で消えないもの |
 | [クラウド事業者と医療](cloud/) | AWS、Google Cloud、Azure、さくらインターネットの責任分界と、侵害される経路 |
 | [医療 DX と AX](dx-ax/) | 国の基盤で増える接続点と、医療に AI を組み込むときの脅威 |
 | [デジタルヘルス](digital-health/) | 医療機関の外で作られる製品群。規制の当たり方の違いと、攻撃者から見た集約度 |
@@ -40,6 +41,11 @@ flowchart TD
         EHR["電子カルテ、部門システム<br>OSS を含む"]
     end
 
+    subgraph L2B["端末と認証の層"]
+        WS["業務端末、共有端末<br>部門システムのクライアント"]
+        AD["Active Directory<br>管理系のサーバ"]
+    end
+
     subgraph L3["機器の層"]
         DEV["医療機器、IoMT<br>PACS、モニタ、輸液"]
         MNT["メーカーの保守回線"]
@@ -51,12 +57,16 @@ flowchart TD
     ENG <--> EHR
     EHR <--> DEV
     MNT --> DEV
+    AD --> WS
+    AD --> EHR
+    WS --> EHR
 
     W -.- SW["web-security/"]
     C -.- SC["cloud/"]
     DX -.- SD["dx-ax/"]
     EHR -.- SO["oss-vulnerabilities/"]
     DEV -.- SM["medical-devices/"]
+    WS -.- SWIN["windows/"]
 ```
 
 **分析**：層の境界は、担当部署の境界とほぼ一致する。

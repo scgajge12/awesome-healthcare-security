@@ -149,6 +149,32 @@ flowchart LR
 
 **LOTL（Living off the Land）**：攻撃者が、標的の環境に元からある正規の管理ツールを使って活動する手口。専用のマルウェアを持ち込まないため、ファイル名やハッシュ値による検知が働きにくい。
 
+**Active Directory（AD）**：Windows 環境で、利用者、端末、権限を一元的に管理する Microsoft のディレクトリサービス。医療機関では、電子カルテ、部門システム、バックアップ、仮想化基盤の認証がここに集まる（[Active Directory の攻撃面と、段階的な手当](../technology/windows/active-directory.md)）。
+
+**LSASS（Local Security Authority Subsystem Service）**：Windows で利用者の認証を担うプロセス。認証に使う秘密を保持するため、資格情報の窃取の標的になる。
+
+**Credential Guard**：仮想化ベースのセキュリティで、NTLM のハッシュ、Kerberos の TGT、アプリケーションが保存したドメインの資格情報を隔離する Windows の機能。Active Directory のデータベースと SAM は保護しない。
+
+**LSA protection（RunAsPPL）**：保護されていないプロセスが LSA のメモリを読むことと、コードを注入することを防ぐ Windows の設定。
+
+**AMSI（Antimalware Scan Interface）**：スクリプトやマクロの内容を、端末に導入されたマルウェア対策製品へ渡して検査させる Windows のインタフェース。PowerShell、Windows Script Host、Office の VBA などが連携する。
+
+**ASR（攻撃面の削減、Attack Surface Reduction）**：悪用されやすいソフトウェアの挙動を対象に、遮断または記録を行う Microsoft Defender の規則群。遮断せずに記録だけを取る監査モードを持つ。
+
+**改ざん防止（Tamper Protection）**：セキュリティ設定の無効化と変更を防ぐ Microsoft Defender の機能。除外設定の追加も止まるため、攻撃側の操作が管理コンソール側の記録に変わる。
+
+**BYOVD（Bring Your Own Vulnerable Driver）**：既知の脆弱性を持つ正規の署名済みドライバを持ち込み、カーネルの権限を得る手口。Windows は脆弱なドライバのブロックリストで対処する（[Microsoft Defender と EDR の回避が成立する条件](../technology/windows/defense-evasion.md)）。
+
+**Kerberoasting**：サービスプリンシパル名が設定されたアカウントのチケットを要求し、そのアカウントのパスワードから導かれた鍵をオフラインで解く手法。
+
+**AD CS（Active Directory 証明書サービス）**：ドメイン内で証明書を発行する Windows の役割。テンプレートと対応づけの設定が緩いと、低い権限の利用者が別の利用者として認証できる証明書を正規の手続きで得られる。
+
+**LAPS（Local Administrator Password Solution）**：端末ごとにローカル管理者のパスワードを自動生成して管理する Windows の機能。共通パスワードによる水平展開を断つ。
+
+**OSED（Offensive Security Exploit Developer）**：OffSec の EXP-301（Windows User Mode Exploit Development）に対応する認定。Windows のユーザモードのアプリケーションで、メモリ破壊の欠陥を悪用まで持っていく手順を扱う（[Windows アプリケーションのセキュリティ](../technology/windows/app-security.md)）。
+
+**CRTE（Certified Red Team Expert）**：Altered Security の Windows Red Team Lab に対応する認定。複数のドメインとフォレストで構成された Active Directory 環境での、列挙、権限昇格、横展開、永続化と、その検知および回避を扱う。
+
 **二重恐喝（Double Extortion）**：暗号化に加えて、窃取したデータの公開を材料に金銭を要求する手口。
 
 **RaaS（Ransomware as a Service）**：ランサムウェアを開発する集団が、実行役（アフィリエイト）に提供して収益を分配する形態。
