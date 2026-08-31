@@ -301,6 +301,7 @@ How responsibility is split across AWS, Google Cloud, Azure, and Sakura Internet
 
 - [Healthcare Cloud Through MITRE ATT&CK for Cloud (AWS)](docs/technology/cloud/mitre-attack-aws.md)
 - [Healthcare Cloud Through MITRE ATT&CK for Cloud (Google Cloud)](docs/technology/cloud/mitre-attack-google-cloud.md)
+- [Healthcare Cloud Through MITRE ATT&CK for Cloud (Microsoft Azure)](docs/technology/cloud/mitre-attack-azure.md)
 
 </td>
 </tr>

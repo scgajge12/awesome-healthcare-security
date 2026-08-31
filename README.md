@@ -304,6 +304,7 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 
 - [MITRE ATT&CK for Cloud から見た医療クラウド環境（AWS 編）](docs/technology/cloud/mitre-attack-aws.md)
 - [MITRE ATT&CK for Cloud から見た医療クラウド環境（Google Cloud 編）](docs/technology/cloud/mitre-attack-google-cloud.md)
+- [MITRE ATT&CK for Cloud から見た医療クラウド環境（Microsoft Azure 編）](docs/technology/cloud/mitre-attack-azure.md)
 
 </td>
 </tr>

@@ -301,9 +301,10 @@ AWS の S3 オブジェクトロックとバックアップボールトのロッ
 
 この対応表は経路の要約である。
 戦術の流れに沿って、各段が検知から外れる条件と、対になる観測点まで落とした内容は、事業者ごとに分けて置いた。
-[AWS 編](mitre-attack-aws.md)は CloudTrail と GuardDuty を、[Google Cloud 編](mitre-attack-google-cloud.md)は Cloud Audit Logs と Security Command Center を軸にする。
-両者は同じ戦術の並びで書いてあり、同じ技術が事業者ごとにどこで記録され、どこで欠けるかを横に並べて読める。
-いずれも末尾に、患者データに触れるモデルとエージェントの悪用（AWS は Bedrock と AI Protection、Google Cloud は Vertex AI と Model Armor）を、記録と検知の観点で置いた。
+[AWS 編](mitre-attack-aws.md)は CloudTrail と GuardDuty を、[Google Cloud 編](mitre-attack-google-cloud.md)は Cloud Audit Logs と Security Command Center を、[Microsoft Azure 編](mitre-attack-azure.md)はアクティビティログと Entra ID のログ、Microsoft Defender for Cloud を軸にする。
+三者は同じ戦術の並びで書いてあり、同じ技術が事業者ごとにどこで記録され、どこで欠けるかを横に並べて読める。
+とりわけ Azure は、ID の面（Entra ID）と資源の面（Azure RBAC）が別系統に記録される点で、単一の IAM 面を持つ AWS、Google Cloud と構造が違う。
+いずれも末尾に、患者データに触れるモデルとエージェントの悪用（AWS は Bedrock と AI Protection、Google Cloud は Vertex AI と Model Armor、Azure は Azure OpenAI と Defender for AI Services）を、記録と検知の観点で置いた。
 
 ---
 
@@ -412,6 +413,7 @@ AWS の S3 オブジェクトロックとバックアップボールトのロッ
 - [海外のガイドラインと法規制](../../guidelines/global.md)
 - [MITRE ATT&CK for Cloud から見た医療クラウド環境（AWS 編）](mitre-attack-aws.md)
 - [MITRE ATT&CK for Cloud から見た医療クラウド環境（Google Cloud 編）](mitre-attack-google-cloud.md)
+- [MITRE ATT&CK for Cloud から見た医療クラウド環境（Microsoft Azure 編）](mitre-attack-azure.md)
 - [脅威アクターと TTPs](../../threats/actors/)
 - [医療系 Web アプリケーションのセキュリティ](../web-security/)
 - [Google のデジタルヘルス](../digital-health/google.md)

@@ -16,8 +16,8 @@
 > **ATT&CK のバージョン**：技術 ID は、本リポジトリの[クラウド事業者と医療](README.md#attck-との対応)および[脅威アクターと TTPs](../../threats/actors/) と揃え、従来の 14 戦術の区分で表記する。
 > ATT&CK v18 で一部の技術は再編された。該当箇所には現行の ID を併記する。
 >
-> **Google Cloud 編との関係**：戦術の並びと表の形は [Google Cloud 編](mitre-attack-google-cloud.md)と揃えてある。
-> 両者を横に並べて読むと、同じ技術が事業者ごとにどこで記録され、どこで欠けるかの差が見える。
+> **Google Cloud 編、Microsoft Azure 編との関係**：戦術の並びと表の形は [Google Cloud 編](mitre-attack-google-cloud.md)、[Microsoft Azure 編](mitre-attack-azure.md)と揃えてある。
+> 三者を横に並べて読むと、同じ技術が事業者ごとにどこで記録され、どこで欠けるかの差が見える。
 > 事業者間の差の要点は [0.3](#03-google-cloud-との違いがどこに出るか) にまとめた。
 
 > [!WARNING]
@@ -185,6 +185,7 @@ Google Cloud の Event Threat Detection は、利用者が有効化したログ�
 医療機関が両方を使っている場合、着手の順序が事業者ごとに変わる。
 
 詳細は [Google Cloud 編の 0.3](mitre-attack-google-cloud.md#03-aws-との違いがどこに出るか)に置いた。
+三者を一つの表で並べた対応は [Microsoft Azure 編の 0.3](mitre-attack-azure.md#03-aws-と-google-cloud-との違いがどこに出るか)に置いた。
 
 以降の節では、この対応を戦術ごとに具体化する。
 
@@ -1137,6 +1138,7 @@ AWS ではこの二つを別々に足せる点が、Google Cloud との構造の
 ### 関連ページ
 
 - [MITRE ATT&CK for Cloud から見た医療クラウド環境（Google Cloud 編）](mitre-attack-google-cloud.md)：同じ戦術の流れを Google Cloud で追った内容
+- [MITRE ATT&CK for Cloud から見た医療クラウド環境（Microsoft Azure 編）](mitre-attack-azure.md)：同じ戦術の流れを Azure で追った内容
 - [クラウド事業者と医療](README.md)：責任分界と、クラウド上の医療システムが侵害される経路
 - [検知の設計を技法単位に落とす](../detection-engineering.md)：観測点、条件、医療の正常系
 - [ログと監視の設計](../logging.md)：何を残すか、保存期間、読む仕組み

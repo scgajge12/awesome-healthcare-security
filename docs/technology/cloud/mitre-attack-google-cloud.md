@@ -24,8 +24,8 @@ Google Cloud では、権限の借用も秘密の取得も Data Access 監査ロ
 > **ATT&CK のバージョン**：技術 ID は、本リポジトリの[クラウド事業者と医療](README.md#attck-との対応)および[脅威アクターと TTPs](../../threats/actors/) と揃え、従来の 14 戦術の区分で表記する。
 > ATT&CK v18 で一部の技術は再編された。該当箇所には現行の ID を併記する。
 >
-> **AWS 編との関係**：戦術の並びと表の形は [AWS 編](mitre-attack-aws.md)と揃えてある。
-> 両者を横に並べて読むと、同じ技術が事業者ごとにどこで記録され、どこで欠けるかの差が見える。
+> **AWS 編、Microsoft Azure 編との関係**：戦術の並びと表の形は [AWS 編](mitre-attack-aws.md)、[Microsoft Azure 編](mitre-attack-azure.md)と揃えてある。
+> 三者を横に並べて読むと、同じ技術が事業者ごとにどこで記録され、どこで欠けるかの差が見える。
 
 > [!WARNING]
 > 本ページは、自組織の Google Cloud 環境の検知設計と、許可されたレッドチーム演習の設計に使うことを想定している。
@@ -184,6 +184,8 @@ flowchart LR
     DA --> ETD
     NW --> ETD
 ```
+
+AWS、Google Cloud、Azure の三者を一つの表で並べた対応は [Microsoft Azure 編の 0.3](mitre-attack-azure.md#03-aws-と-google-cloud-との違いがどこに出るか)に置いた。
 
 以降の節では、この対応を戦術ごとに具体化する。
 
@@ -1276,6 +1278,7 @@ Data Access 監査ログを有効にしていない環境では、`resourceName`
 ### 関連ページ
 
 - [MITRE ATT&CK for Cloud から見た医療クラウド環境（AWS 編）](mitre-attack-aws.md)：同じ戦術の流れを AWS で追った内容
+- [MITRE ATT&CK for Cloud から見た医療クラウド環境（Microsoft Azure 編）](mitre-attack-azure.md)：同じ戦術の流れを Azure で追った内容
 - [クラウド事業者と医療](README.md)：責任分界と、クラウド上の医療システムが侵害される経路
 - [検知の設計を技法単位に落とす](../detection-engineering.md)：観測点、条件、医療の正常系
 - [ログと監視の設計](../logging.md)：何を残すか、保存期間、読む仕組み
