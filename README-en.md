@@ -100,6 +100,8 @@ In both cases, encryption plus exposure is effective leverage.
 
 Attackers price a target on the probability of collecting, not on the value of the data.
 When stopped care or stopped shipment is urgent, recovery is slow, and patient safety is the hostage, the decision leans toward payment.
+In Japan the billing cycle adds to this.
+Revenue under public insurance is concentrated in reimbursement claims, so when the EHR and the medical accounting system stop together, both the claim to the insurer and the calculation at the counter stop with them (see [the reimbursement cycle](docs/threats/actors/ransomware-chain.md#診療報酬の請求サイクル)).
 That expected value is why healthcare and pharma keep getting targeted.
 
 </td>
