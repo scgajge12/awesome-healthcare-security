@@ -82,6 +82,37 @@ flowchart TD
 上の三社は医療データ形式（FHIR、DICOM）を扱うマネージドサービスを持ち、さくらインターネットは汎用の IaaS を国内で提供する形になっている。
 医療データの標準形式を扱う機能を自前で実装するか、事業者のサービスに載せるかで、責任分界の線が引かれる位置と、後述する監査ログの取り方が変わる。
 
+### 医療データ向けサービスの提供リージョン
+
+**事実**：医療データ形式を扱うマネージドサービスは、事業者ごとに提供リージョンが異なる。
+各社が公表しているエンドポイントの一覧を 2026 年 9 月 2 日に確認した結果は次のとおりである。
+
+| サービス | 東京、大阪での提供 | 公表されている提供リージョン |
+|---|---|---|
+| AWS HealthLake（FHIR） | なし | バージニア北部、オハイオ、オレゴン、ムンバイ、シドニー、カナダ中部、アイルランド、ロンドンの 8 リージョン |
+| AWS HealthImaging（DICOM） | なし | バージニア北部、オレゴン、シドニー、アイルランド、ロンドンの 5 リージョン |
+| AWS HealthOmics | 東京はワークフローのみ | 10 リージョン。うちストレージと分析のエンドポイントを持つのは 7 リージョン（バージニア北部、オレゴン、シンガポール、フランクフルト、アイルランド、ロンドン、テルアビブ）。東京、ソウル、オハイオはワークフローのみ |
+| Google Cloud Healthcare API | 東京、大阪あり | データセットの所在地に asia-northeast1（東京）と asia-northeast2（大阪）を選べる |
+| Azure Health Data Services FHIR サービス | 東京あり | 提供状況の一覧に Japan East が含まれる。Japan West は現れない |
+| Azure Health Data Services DICOM サービス | なし | 同じ一覧で DICOM サービスに印が付くのは Canada Central、East US、East US2 |
+
+出典：[AWS HealthLake のエンドポイント](https://docs.aws.amazon.com/general/latest/gr/Amazon-HealthLake.html)、[AWS HealthImaging のエンドポイント](https://docs.aws.amazon.com/general/latest/gr/healthimaging.html)、[AWS HealthOmics のエンドポイント](https://docs.aws.amazon.com/general/latest/gr/healthomics-quotas.html)、[Cloud Healthcare API のリージョン](https://docs.cloud.google.com/healthcare-api/docs/regions)、[Azure Health Data Services のリージョン別提供状況](https://learn.microsoft.com/en-us/azure/healthcare-apis/services-features-regional-availability)
+
+**分析**：HealthOmics の行は、サービス単位で「提供あり」と数えると実態を取り違える例である。
+東京にあるのはワークフローの実行基盤であり、ゲノムデータを置くストレージのエンドポイントはない。
+リージョンの一覧は、サービス名ではなく、使う API の単位で確認する必要がある。
+
+**分析**：比較表にサービス名が並んでいることと、そのサービスを国内リージョンで使えることは別である。
+医療情報を国内に置く前提を採る場合、DICOM を扱うマネージドサービスは、2026 年 9 月時点で国内リージョンから選べる事業者が限られる。
+
+**分析**：ただし、これは「その事業者では日本の医療システムを構築できない」という結論にはならない。
+FHIR サーバや PACS は、汎用の計算資源、データベース、オブジェクトストレージの上に構成できる。
+マネージドサービスを使わない構成では、責任分界の線が利用者側に寄り、標準形式の実装、監査ログの取得、可用性の確保を自組織または提供事業者が負うことになる（[責任が三層に分かれる](#責任が三層に分かれる)）。
+判断すべきは構築の可否ではなく、どちらの側に負担を寄せるかである。
+
+**分析**：提供リージョンは追加される。
+上の表は確認した時点の状態であり、選定時に見た一覧をそのまま数年後の設計根拠として使うことはできない。
+
 ---
 
 ## AWS
@@ -94,6 +125,9 @@ flowchart TD
 
 **事実**：米国の HIPAA については、ePHI を扱えるサービスの一覧（HIPAA 対象サービス）が公開されており、PHI を含む用途で使う前に AWS との BAA（Business Associate Agreement）の締結が必要とされている（[AWS HIPAA 対象サービス](https://aws.amazon.com/compliance/hipaa-eligible-services-reference/)）。
 BAA を締結しても、各サービスの設定を要件に適合させる責任は利用者に残る。
+
+**分析**：HIPAA 対象サービスであることは、日本の医療情報ガイドラインへの適合を意味しない。
+根拠となる法令も、求められる管理策も別であり、一方の一覧に載っていることを他方の説明に使うことはできない。
 
 ---
 
