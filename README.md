@@ -536,6 +536,7 @@ CISO の役割と体制、経営層への報告、成熟度の把握、予算と
 - [経営層の責任の明確化](docs/governance/executive-accountability.md)
 - [調査データから読む、備えの穴](docs/governance/readiness-gaps.md)
 - [インシデントの費用と、経営層への説明](docs/governance/cost.md)
+- [サイバー保険とリスクの移転](docs/governance/insurance.md)
 - [小規模組織で何から始めるか](docs/governance/small-organizations.md)
 
 個別のページは順次追加する。

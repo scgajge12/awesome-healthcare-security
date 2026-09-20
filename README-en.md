@@ -518,6 +518,7 @@ Who decides, and how: the CISO role and reporting lines, reporting to the board,
 - [Making executive accountability concrete](docs/governance/executive-accountability.md)
 - [Reading survey data as an attacker would](docs/governance/readiness-gaps.md)
 - [The cost of an incident, and how to explain it to the board](docs/governance/cost.md)
+- [Cyber insurance and risk transfer](docs/governance/insurance.md)
 - [Where to start with no dedicated staff](docs/governance/small-organizations.md)
 
 Individual pages are being added.
