@@ -90,6 +90,7 @@ GitHub は Markdown 中のインライン `<svg>` を除去するため、ファ
 | `docs/technology/digital-health/` | デジタルヘルス（規制の当たり方、攻撃面、Google のデジタルヘルス） |
 | `docs/technology/genomics.md` | ゲノムデータの保護（所在、二次利用、事業者が消えるときの扱い） |
 | `docs/technology/identity.md` | 認証とアクセス管理（二要素認証の要求と期限、ID の棚卸し、ブレークグラス） |
+| `docs/technology/backup.md` | バックアップと復旧の設計（戻す対象、攻撃者からの隔離、復元先、業務単位の復元試験） |
 | `docs/technology/logging.md` | ログと監視の設計（何を残すか、保存期間、読む仕組み） |
 | `docs/technology/detection-engineering.md` | 検知の設計を技法単位に落とす（観測点、条件、医療の正常系、欺瞞とカナリア） |
 | `docs/technology/credential-exposure.md` | 外に出た認証情報（流出の経路、確認の手順、失効の順序） |

@@ -414,6 +414,16 @@ Assets leaving the organization: sanitization methods, the chain of subcontracto
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+#### 💾 [Backup and Recovery Design](docs/technology/backup.md)
+
+Nine in ten victim organizations held backups; two in ten restored from them.
+What belongs in scope, how to isolate it from the attacker, where to restore to, and testing restores by business process rather than by system.
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### 🔍 [Search-Channel Poisoning](docs/technology/seo-poisoning.md)
@@ -623,6 +633,7 @@ awesome-healthcare-security/
 │   │   ├── genomics.md              Protecting genomic data (where it lives, secondary use, custodian failure)
 │   │   ├── identity.md              Identity and access management (2FA deadlines, account inventory, break-glass)
 │   │   ├── logging.md               Logging and monitoring (what to keep, retention, who reads it)
+│   │   ├── backup.md                Backup and recovery design (scope, isolation, restore target, testing)
 │   │   ├── detection-engineering.md Detection engineering (observation points, conditions, deception)
 │   │   ├── credential-exposure.md   Exposed credentials (how they leak, checking, revocation)
 │   │   ├── email-domain.md          Email and domain management (sender auth, lapsed domains, BEC)

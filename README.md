@@ -426,6 +426,16 @@ AWS、Google Cloud、Azure、さくらインターネットの責任分界と、
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+#### 💾 [バックアップと復旧の設計](docs/technology/backup.md)
+
+取得率は 9 割、復元できたのは 2 割という差がどこから生じるか。
+戻す対象の数え方、攻撃者からの隔離、復元先の確保、業務単位の復元試験。
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### 🔍 [検索経路の汚染](docs/technology/seo-poisoning.md)
@@ -645,6 +655,7 @@ awesome-healthcare-security/
 │   │   ├── genomics.md              ゲノムデータの保護（所在、二次利用、事業者が消えるときの扱い）
 │   │   ├── identity.md              認証とアクセス管理（二要素認証の期限、ID の棚卸し、ブレークグラス）
 │   │   ├── logging.md               ログと監視の設計（何を残すか、保存期間、読む仕組み）
+│   │   ├── backup.md                バックアップと復旧の設計（対象、隔離、復元先、復元試験）
 │   │   ├── detection-engineering.md 検知の設計を技法単位に落とす（観測点、条件、正常系、欺瞞）
 │   │   ├── credential-exposure.md   外に出た認証情報（流出の経路、確認、失効の順序）
 │   │   ├── email-domain.md          メールとドメインの管理（送信ドメイン認証、失効ドメイン、BEC）
