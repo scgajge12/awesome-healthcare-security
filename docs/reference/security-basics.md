@@ -1070,9 +1070,9 @@ flowchart LR
 |---|---|---|
 | [**Top 10**](https://owasp.org/Top10/) | Web アプリケーションのリスクの上位 10 種 | 発注時の共通言語、教育の入口 |
 | [**API Security Top 10**](https://owasp.org/API-Security/) | API 固有のリスク | FHIR API、患者ポータルの裏側 |
-| [**ASVS**](https://owasp.org/www-project-application-security-verification-standard/) | 検証すべき要件を段階別に列挙した標準 | 診断の範囲を契約で定義するとき |
+| [**ASVS**](https://owasp.org/projects/asvs) | 検証すべき要件を段階別に列挙した標準 | 診断の範囲を契約で定義するとき |
 | [**SAMM**](https://owasp.org/www-project-samm/) | 開発組織の成熟度モデル | ベンダの体制を評価するとき |
-| [**MASVS / MASTG**](https://owasp.org/www-project-mobile-app-security/) | モバイルアプリの検証標準と手引き | 患者向けアプリ、機器の操作アプリ |
+| [**MASVS / MASTG**](https://mas.owasp.org/) | モバイルアプリの検証標準と手引き | 患者向けアプリ、機器の操作アプリ |
 | [**Top 10 for LLM Applications**](https://genai.owasp.org/) | 生成 AI 固有のリスク | 診療支援 AI、問診チャットの評価 |
 | [**Cheat Sheet Series**](https://cheatsheetseries.owasp.org/) | 対策の実装指針 | 開発者への具体的な指示 |
 | [**ZAP**](https://www.zaproxy.org/) | Web アプリケーションの検査ツール | 検証環境での動的検査 |
@@ -1188,7 +1188,7 @@ Top 10 の上位に置かれるアクセス制御の不備は、患者ポータ�
 | 脅威モデリング | [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org/)、[LINDDUN](https://linddun.org/) |
 | 深刻度と悪用可能性 | [FIRST CVSS](https://www.first.org/cvss/)、[FIRST EPSS](https://www.first.org/epss/)、[CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) |
 | セキュア開発 | [NIST SSDF](https://csrc.nist.gov/projects/ssdf) |
-| アプリケーションセキュリティ | [OWASP](https://owasp.org/)、[OWASP Top 10](https://owasp.org/Top10/)、[OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) |
+| アプリケーションセキュリティ | [OWASP](https://owasp.org/)、[OWASP Top 10](https://owasp.org/Top10/)、[OWASP ASVS](https://owasp.org/projects/asvs) |
 | 設定基準 | [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks)、[DISA STIGs](https://public.cyber.mil/stigs/) |
 | 電子記録と電子署名 | [FDA 21 CFR Part 11](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/part-11-electronic-records-electronic-signatures-scope-and-application) |
 | 設計原則 | [The Protection of Information in Computer Systems (Saltzer & Schroeder、1975)](https://www.cs.virginia.edu/~evans/cs551/saltzer/) |
