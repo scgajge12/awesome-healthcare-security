@@ -137,6 +137,31 @@ echo "link-check: $(date '+%H:%M:%S') 開始、${#targets[@]} ファイルを確
 # - oppc.com：umc.edu と同じく自動アクセスを接続段階で弾く。OnePoint Patient Care の公式
 #   ドメインであることは、WebFetch で本文が取れること、および HHS OCR の届出と一致することで
 #   確認した。到達性が戻ったら除外を外す。
+# - priv.gc.ca：接続段階で拒否される。curl は 30 秒でタイムアウトし、WebFetch は
+#   ECONNREFUSED で止まる。union.health, kch.or.kr, drk-khg.de と同じく国外からの接続を
+#   絞っていると見られる。カナダのプライバシーコミッショナー事務局（OPC）の公式ドメインで
+#   あり、参照先はいずれも 23andMe の破産と遺伝情報の扱いに関する調査と発表である。
+#   到達性が戻ったら除外を外す。
+# - pref.nara.jp：`*.pref.nara.jp` のサーバ証明書が失効しており、lychee は
+#   「certificate is expired」で止まる。h.u-tokyo.ac.jp, miekosei.or.jp と同じく証明書側の
+#   問題で、URL の誤りではない。奈良県の公式ドメインである。証明書が更新されたら除外を外す。
+# - jpshealthnet.org：apex と www のどちらも接続を確立できない。curl は状態行を返さずに
+#   終わり、WebFetch は ECONNREFUSED で止まる。umc.edu, oppc.com と同じく自動アクセスを
+#   接続段階で弾いていると見られる。テキサス州フォートワースの公立医療システム
+#   JPS Health Network（Tarrant County Hospital District）の公式ドメインであることは、
+#   検索エンジンが /network-downtime を索引していること、および同じ告知を CBS Texas と
+#   Fort Worth Report が当事者の発表として伝えていることで確認できる。到達性が戻ったら
+#   除外を外す。
+# - cbsnews.com：自動アクセスに 406 を返す。WebFetch では本文（Hollywood Presbyterian
+#   Medical Center の身代金支払いに関する 2016 年の記事）が取れるため、URL 側の問題ではない。
+#   accept に 406 を足すと他サイトの本当の異常まで通すので、ホスト単位で除外する。
+# - insurance.ca.gov：apex と個別ページのどちらも、ブラウザ以外からの取得に 503 を返す。
+#   chc1.com と同じ挙動で、curl と WebFetch のどちらでも変わらない。カリフォルニア州保険局の
+#   公式ドメインであり、参照先は Anthem への立入検査の発表である。到達性が戻ったら除外を外す。
+# - ozarksfirst.com：自動アクセスを接続後に弾く。curl は 429、WebFetch は 403 を返す。
+#   cbsnews.com と同じく URL 側の問題ではなく、記事の存在は検索エンジンの索引で確認できる。
+#   ミズーリ州の報道サイトであり、参照先は Cedar County Memorial Hospital に対する集団訴訟の
+#   報道である。到達性が戻ったら除外を外す。
 # - github.com の stargazers：README のバッジのリンク先。スター数が 0 のリポジトリでは
 #   GitHub がこのページに 404 を返すため、リンクが正しくても失敗する。
 # - accept に 202 を含めるのは、hl7.org が自動アクセスに 202 を返すため。
@@ -191,6 +216,12 @@ lychee \
   --exclude '^https?://(www\.)?nhls\.ac\.za' \
   --exclude '^https?://(www\.)?umc\.edu' \
   --exclude '^https?://(www\.)?oppc\.com' \
+  --exclude '^https?://(www\.)?priv\.gc\.ca' \
+  --exclude '^https?://([a-z0-9-]+\.)?pref\.nara\.jp' \
+  --exclude '^https?://(www\.)?cbsnews\.com' \
+  --exclude '^https?://(www\.)?jpshealthnet\.org' \
+  --exclude '^https?://(www\.)?insurance\.ca\.gov' \
+  --exclude '^https?://(www\.)?ozarksfirst\.com' \
   --exclude '^https?://(www\.)?github\.com/[^/]+/[^/]+/stargazers/?$' \
   --max-concurrency 8 \
   --host-concurrency 1 \
