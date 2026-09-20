@@ -34,14 +34,14 @@ timeline
     2023 : Prospect Medical Holdings ほか病院系 17 : Sun Pharmaceutical Industries（製薬企業系） : MOVEit ほか医療関連事業者 16
     2024 : Ascension ほか病院系 18 : Cencora ほか製薬企業系 2 : Change Healthcare ほか医療関連事業者 19
     2025 : Kettering Health ほか病院系 56 : Inotiv ほか製薬企業系 6 : Episource ほか医療関連事業者 31
-    2026 : AnMed ほか病院系 40 : West Pharmaceutical Services ほか製薬企業系 5 : DentaQuest ほか医療関連事業者 34
+    2026 : AnMed ほか病院系 48 : West Pharmaceutical Services ほか製薬企業系 6 : DentaQuest ほか医療関連事業者 45
 ```
 
 図はサイバー攻撃の収録件数を示す。
 記憶媒体の紛失、内部不正、誤送付などの[サイバー攻撃以外の事案](../README.md#事案の類型)は、各年の履歴ページに別に収録している。
 図に現れない年は、本リポジトリに収録した事例がない年である。
 被害がなかったことを示すものではない。
-2026 年は進行中の年であり、8 月時点までの収録である。
+2026 年は進行中の年であり、9 月時点までの収録である。
 
 ## 年別ページ
 
