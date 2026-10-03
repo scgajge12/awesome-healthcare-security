@@ -65,15 +65,17 @@ timeline
 区分ごとの収録件数を国内と並べて見るときは、[インシデント事例集の年別一覧](../README.md#年別一覧)を参照してほしい。
 
 **製薬企業系の収録について**：本リポジトリは病院と製薬企業の双方を対象としている。
-海外では 2019 年以前に 2 件、2020 年に 4 件、2023 年に 1 件、2024 年に 2 件、2025 年に 6 件、2026 年に 5 件を収録した。
+海外では 2019 年以前に 2 件、2020 年に 4 件、2023 年に 1 件、2024 年に 2 件、2025 年に 6 件、2026 年に 9 件を収録した。
 2019 年以前の 2 件は、NotPetya により製造と販売が世界規模で中断した [GL-2017-04 Merck & Co.](2019-earlier.md#GL-2017-04) と、侵入を検知したうえで 1 年以上監視してから排除した [GL-2019-10 Bayer](2019-earlier.md#GL-2019-10) である。
 2020 年は、COVID-19 ワクチンの開発と審査に関わる組織が続けて狙われた年である。
 [GL-2020-20 European Medicines Agency](2020-timeline.md#GL-2020-20)では、窃取された審査文書が改変のうえ公開された。
 2024 年は、医薬品卸の [GL-2024-20 Cencora](2024-timeline.md#GL-2024-20) と、血漿を採取する [GL-2024-21 Octapharma Plasma](2024-timeline.md#GL-2024-21) で、供給の側が止まっている。
 2025 年の 6 件は次のとおりである。
 受託試験の [GL-2025-13 Inotiv](2025-timeline.md#GL-2025-13) と [GL-2025-59 Drug Safety Testing Center](2025-timeline.md#GL-2025-59)、受託製造の [GL-2025-81 CMIC CMO USA](2025-timeline.md#GL-2025-81)、放射性医薬品を製造する [GL-2025-57 Instituto de Pesquisas Energéticas e Nucleares](2025-timeline.md#GL-2025-57)、送金を詐取された [GL-2025-58 Marinomed Biotech](2025-timeline.md#GL-2025-58)、サーバ 15 台が暗号化された [GL-2025-89 M.J. Biopharm](2025-timeline.md#GL-2025-89) である。
-2026 年の 5 件は、いずれも供給または研究の側で被害が出ている。
+2026 年は、供給または研究の側で被害が出たものが目立つ。
 注射剤の容器と投与デバイスを供給する [GL-2026-43 West Pharmaceutical Services](2026-timeline.md#GL-2026-43) は世界の複数拠点で製造と入出荷が止まり、[GL-2026-45 Novo Nordisk](2026-timeline.md#GL-2026-45) は治験の被験者情報を持ち出されて 2500 万ドルを要求された。
+クラウド環境から患者の保護対象保健情報を含むデータを持ち出された [GL-2026-83 Amgen](2026-timeline.md#GL-2026-83) と、ニュージーランドの治験受託機関で Health NZ の外部にファイルが公開された [GL-2026-121 Zenith Technology](2026-timeline.md#GL-2026-121) も、研究の側の被害である。
+台湾の [GL-2026-122 藥華藥](2026-timeline.md#GL-2026-122) とマレーシアの [GL-2026-123 Duopharma Biotech](2026-timeline.md#GL-2026-123) は、取引所への開示で、事業運営への重大な影響はないと述べている。
 残る 3 件はインドの製薬企業（Glenmark Pharmaceuticals、Kopran、Granules India）で、いずれも犯行声明のみが根拠である。
 製薬企業に固有の攻撃面は [製薬企業のセキュリティ](../../../reference/pharma/) に整理している。
 

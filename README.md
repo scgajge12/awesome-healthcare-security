@@ -210,7 +210,7 @@ flowchart LR
 - [国内の事例](docs/threats/incidents/japan/)（年ごとの履歴）
 - [海外の事例](docs/threats/incidents/global/)（年ごとの履歴）
 - [年ごとの情勢](docs/threats/incidents/years/)（国内と海外を統合した集計、規制の動き）
-- 2019 年以前の履歴：[国内](docs/threats/incidents/japan/2019-earlier.md)（79 件）／[海外](docs/threats/incidents/global/2019-earlier.md)（33 件）
+- 2019 年以前の履歴：[国内](docs/threats/incidents/japan/2019-earlier.md)（77 件）／[海外](docs/threats/incidents/global/2019-earlier.md)（33 件）
 - 米国 HHS OCR 届出の全件集計（届出の分布、影響人数の上位、取得の手順）：[2025 年](docs/threats/incidents/global/2025-us-hhs.md)（795 件）／[2024 年](docs/threats/incidents/global/2024-us-hhs.md)（741 件）／[2023 年](docs/threats/incidents/global/2023-us-hhs.md)（746 件）／[2022 年](docs/threats/incidents/global/2022-us-hhs.md)（718 件）／[2021 年](docs/threats/incidents/global/2021-us-hhs.md)（715 件）／[2020 年](docs/threats/incidents/global/2020-us-hhs.md)（663 件）
 - [事例の調べ方](docs/threats/incidents/research-tips.md)（情報源、手順、落とし穴）
 - [調査報告書から攻撃の流れを復元する](docs/threats/incidents/report-reading.md)（取り出す欄、書かれていないことの扱い）
