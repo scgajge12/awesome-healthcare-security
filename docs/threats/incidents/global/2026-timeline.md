@@ -9,12 +9,12 @@
 
 | 区分 | サイバー攻撃 | その他の事案 |
 |---|---|---|
-| 病院系 | 67 | 2 |
+| 病院系 | 97 | 4 |
 | 製薬企業系 | 9 | 0 |
 | 医療関連事業者 | 57 | 5 |
 
 進行中の年である。
-本ページの収録は 2026 年 10 月 3 日時点で一次情報を確認できた事案に限り、海外で公表された医療関連の事案がこれで尽きることを示すものではない。
+本ページの収録は 2026 年 10 月 11 日時点で一次情報を確認できた事案に限り、海外で公表された医療関連の事案がこれで尽きることを示すものではない。
 米国の件数は、保健福祉省公民権局（HHS OCR）の侵害報告ポータルへ届け出られた影響人数を典拠とする。
 速報は [月報](../../../../monthly-reports/) に記録する。
 一次情報の強度が「報道のみ」の事案は、一覧表の行にとどめる。
@@ -29,6 +29,8 @@
 **分析**：8 月から 9 月にかけて公表された事案では、患者側の機能が止まる形が目立つ。[Boston Scientific](#GL-2026-95) では、植込み済みの機器は動く一方で、新たに機器を入れた患者が遠隔モニタリングを開始できない状態が約 2 週間続いた。[Luminis Health](#GL-2026-89) では救急と手術を維持したまま、電話と患者ポータルが止まっている。機器やシステムの稼働と、患者が医療につながる経路の稼働は別に数える必要がある。
 
 **分析**：9 月下旬以降に公表された事案では、診療所や病院が共通して使うソフトウェアと委託先が起点になったものが欧州と東アジアに並んだ。ポーランドでは診療所向けのソフトウェア事業者の侵害が約 2 か月で 4 件続き（[MyDr](#GL-2026-124)、[Qbusoft の Medyc](#GL-2026-125)、[Enel-Med](#GL-2026-103)、[FELG Software](#GL-2026-127)）、韓国では同じ医療ソフトウェアを使う約 20 の中小病院が同時にランサムウェアに感染したと報じられた（[GL-2026-120](#GL-2026-120)）。共通の供給元が侵害されると、利用する施設の数だけ被害が同時に及ぶ。ただし韓国の事案は、共通の経路が原因だと公表されたわけではない。
+
+**分析**：10 月上旬までに公表された事案では、診療に使うデータそのものが戻らない形が現れた。[Green Clinic](#GL-2026-136) は過去の診療記録と予約表を戻せないまま、新しい臨床システムで診療を広げようとしている。[INCAN](#GL-2026-138) は照射装置が感染していないにもかかわらず、治療計画と線量のデータが暗号化されたため放射線治療を止めた。装置や基盤が動くことと、診療に必要なデータを正しいと確かめて使えることは、別に数える必要がある。
 
 ---
 
@@ -80,10 +82,10 @@
 | [GL-2026-92](#GL-2026-92) | 2024-06 発生、2026-06 公表 | Bedfordshire Hospitals NHS Foundation Trust（英、ベッドフォードシャー） | サプライチェーン侵害（Qilin） | 検査事業者 Synnovis の侵害 | 公表なし（過去の検査記録の流出のみ） | 2024 年の攻撃に由来する影響が 2026 年も継続 | 当事者公表 |
 | GL-2026-93 | 2026-07 | Next Level Medical（米、テキサス州。予約不要の外来診療を州内 45 拠点超で運営） | 不正アクセス（データ窃取） | 未公表 | 公表なし | 診療の停止は公表されていない | 当事者公表 |
 | [GL-2026-90](#GL-2026-90) | 2026-08 | Cedar County Memorial Hospital（米、ミズーリ州エルドラドスプリングス） | ランサムウェア（Wallstreet） | 未公表 | 電子カルテと患者ポータルが停止。画像を放射線科医へ送れず、救急を一部転送 | 電子カルテの停止が **2 週間** | 当事者公表 |
-| [GL-2026-89](#GL-2026-89) | 2026-09 | Luminis Health（米、メリーランド州。2 病院と外来手術センター） | 不正アクセス | 未公表 | 電話とオンライン患者ポータル（MyChart）が停止。一部の予約を変更。救急、手術、分娩は継続 | 電話は 09-18 までに復旧。MyChart は 09-29 までに予約とメッセージが復旧。診療メモと検査結果は未反映の場合がある | 当事者公表 |
+| [GL-2026-89](#GL-2026-89) | 2026-09 | Luminis Health（米、メリーランド州。2 病院と外来手術センター） | 不正アクセス | 未公表 | 電話とオンライン患者ポータル（MyChart）が停止。一部の予約を変更。救急、手術、分娩は継続 | 電話は 09-18 までに復旧。MyChart は 09-29 までに予約とメッセージが復旧。10-08 にシステムの復旧を公表 | 当事者公表 |
 | [GL-2026-100](#GL-2026-100) | 2026-08 | JPS Health Network（米、テキサス州フォートワース。公立のセーフティネット医療システム） | 不明（当事者は不審な活動の検知のみ公表） | 未公表 | 外傷、脳卒中、心筋梗塞を含む重症の救急搬送を転送。紙運用へ切り替え。予定手術を延期 | ネットワークの計画的な停止が **11 日間**（08-03 から 08-14）。患者ポータルの復旧は 08-16 | 当事者公表 |
 | [GL-2026-101](#GL-2026-101) | 2026-08 | Health Sciences Centre、CancerCare Manitoba（加、マニトバ州ウィニペグ） | ランサムウェア | 未公表 | 臨床業務は通常どおり継続。空調、扉、エレベータの制御が影響を受けた | 空調の中央監視と職員 ID カードの発行が停止（期間は未公表） | 当事者公表 |
-| [GL-2026-91](#GL-2026-91) | 2026-09 | Nipigon District Memorial Hospital（加、オンタリオ州ニピゴン） | ランサムウェア | 未公表 | 外来の検査室と画像診断を閉鎖。待ち時間が延びた | 公表時点で復旧作業が継続 | 当事者公表 |
+| [GL-2026-91](#GL-2026-91) | 2026-09 | Nipigon District Memorial Hospital（加、オンタリオ州ニピゴン） | ランサムウェア | 未公表 | 外来の検査室と画像診断を閉鎖。待ち時間が延びた。10-01 に患者情報を含むファイルの窃取を確定 | 公表時点で復旧作業が継続 | 当事者公表 |
 | [GL-2026-119](#GL-2026-119) | 2025-11 〜 2026-03（2026-07 公表） | 国軍医務司令部のモバイル PACS（韓。軍病院 6 か所） | 不正アクセス | 外部に開放された通信ポート | 公表なし | 診療の停止は公表されていない | 報道のみ（国防部の説明を報道が引用） |
 | GL-2026-115 | 2026-01（2026-09 届出） | Modoc Medical Center（米、カリフォルニア州） | 不正アクセス（データ窃取） | 未公表 | 公表なし | 診療の停止は公表されていない | 当事者公表（カリフォルニア州司法長官への届出。通知本文は未確認。発生から届出まで約 8 か月） |
 | [GL-2026-118](#GL-2026-118) | 2026-04 | GO2 Health（豪、クイーンズランド州ブリスベン） | フィッシングによるメールボックスの不正アクセス | フィッシングメール | 公表なし | 診療の停止は公表されていない | 当事者公表（患者通知は報道経由） |
@@ -103,6 +105,36 @@
 | [GL-2026-104](#GL-2026-104) | 2026-09 公表 | Point Vision（仏。眼科診療所網）と、予約管理の委託先 | サプライチェーン侵害 | 予約管理の委託先の環境への不正アクセス | 診療記録のシステムは別で影響なし | 診療の停止は公表されていない | 当事者公表（報道経由）。規模は攻撃者の主張 |
 | [GL-2026-111](#GL-2026-111) | 2026-09 公表 | Indiana University Health（米、インディアナ州。南インディアナの画像診断センター） | サプライチェーン侵害 | ベンダが管理するレガシーシステムの未知の脆弱性（報道） | コアネットワークと電子カルテに影響なし（報道） | 未公表 | 報道のみ |
 | [GL-2026-120](#GL-2026-120) | 2026-09 | 中小病院 約 20 か所（韓。病院名は未公表） | ランサムウェア | 調査中 | 病院により差がある。一部は被害を回避 | 未公表 | 報道のみ |
+| [GL-2026-136](#GL-2026-136) | 2026-10 | Green Clinic（米、ルイジアナ州ラストン。複数診療科の診療所） | ランサムウェア（Wall Street、当事者が帰属を述べている） | 未公表 | コンピュータとネットワークの運用を全停止。電子カルテを含む多くのシステムに到達できず、診療の受入を大幅に縮小。過去の診療記録と予約表は直ちに戻らない | 10-02 から。新しい臨床システムで 10-14 に診療を広げて再開する予定 | 当事者公表（報道経由） |
+| [GL-2026-137](#GL-2026-137) | 2026-09 | Assistance Publique – Hôpitaux de Paris（AP-HP、仏、パリ） | 不正アクセス（データ窃取） | 入院患者が食事を選ぶオンラインサービス（Dedalus の食事管理ソフトウェアのモジュール） | 公表なし。当該モジュールを閉鎖 | 診療の停止は公表されていない | 当事者公表 |
+| [GL-2026-138](#GL-2026-138) | 2026-08-31 | Instituto Nacional de Cancerología（INCAN、グアテマラ、グアテマラシティ） | ランサムウェア（当事者は語を用いず、暗号化と交渉用リンクを説明） | 未公表 | 放射線治療の計画システムが暗号化され、治療中の患者 約 194 人の放射線治療を中断。照射装置は感染せず、外来は継続 | 09-04 の報道時点で放射線治療の中断が継続。再開の日付は未確認 | 当事者公表（報道経由） |
+| GL-2026-139 | 2026-08 覚知（2026-10 公表） | Hospital Israelita Albert Einstein（伯、サンパウロ） | 不正アクセス（データ窃取） | 未公表 | 診療基盤と電子カルテは通常どおり稼働（当事者） | **診療の停止なし** | 当事者公表（報道経由） |
+| GL-2026-140 | 2026-10 公表 | St Andrew's Hospital（豪、南オーストラリア州アデレード。民間病院） | 不正アクセス（データ窃取） | 未公表 | 予防のためシステムを停止 | 未公表 | 当事者公表（報道経由） |
+| GL-2026-141 | 2026-08（09-20 に通知を受けて覚知） | Hospital Clínico de la Universidad de Chile（智、サンティアゴ） | 不正アクセス（データ窃取。Direwolf が犯行を主張） | 侵害されたアカウント（報道） | 画像の外部閲覧基盤を予防のため停止（報道） | 未公表 | 報道のみ |
+| GL-2026-142 | 2026-04 ごろ（2026-08 に覚知） | Brighton East Dental Clinic（豪、ビクトリア州。歯科） | 不正アクセス（データ窃取） | ファイアウォールを経由した院内ファイルサーバへの到達 | 公表なし | 公表なし | 当事者公表 |
+| GL-2026-143 | 2026-08 公表 | The Hospital for Sick Children（SickKids、加、トロント） | 不正アクセス（職員情報） | 他組織も使う外部ソフトウェアの脆弱性 | 臨床系と患者情報は対象外。採用サイトが一時停止 | **診療の停止なし** | 当事者公表 |
+| GL-2026-144 | 2026-09 | General Santos Doctors Hospital（比、ジェネラルサントス市） | データ侵害（Rhysida が犯行を主張） | 未公表 | 公表なし | 公表なし | 報道のみ |
+| GL-2026-145 | 2026-09 末（2026-10 公表） | Institut ophtalmologique Sourdille-Atlantique（仏、サン＝テルブラン。眼科） | サプライチェーン侵害 | 旧予約委託先 Alaxione の基盤 | 現行の院内システムは対象外 | 診療の停止なし | 当事者公表 |
+| GL-2026-146 | 2026-10 | Kreiskliniken Kassel（独、ヘッセン州。ホーフガイスマーとヴォルフハーゲンの 2 拠点） | 不正アクセス（手口は調査中） | 調査中 | 受入、治療、通常業務を継続。IT の緊急時計画を発動 | **診療の停止なし**（運営者の説明） | 報道のみ |
+| GL-2026-147 | 2026-09 | Hôpital Paris Saint-Joseph（仏、パリ 14 区） | サプライチェーン侵害（データ流出） | 委託先の侵害（事業者名は未公表） | 公表なし | 公表なし | 報道のみ |
+| GL-2026-148 | 2026-08 | WindRose Health Network（米、インディアナ州。地域保健センター） | サプライチェーン侵害 | 委託先が保守に使うリモート管理ツールの未公表の脆弱性 | 電子カルテのシステムに影響なし（当事者） | 公表なし | 当事者公表（HHS OCR 届出 3 万 3158 人） |
+| GL-2026-149 | 2025-12（2026-07 届出） | Lifespan Physician Group of Massachusetts（Brown Health Medical Group-MA、米、マサチューセッツ州） | 不正アクセス | 未公表（古いファイルサーバ） | 電子カルテは対象外と説明（報道） | 公表なし | 当事者公表（HHS OCR 届出 31 万 1760 人） |
+| GL-2026-150 | 2025-11 覚知（2026-08 届出） | Boston Health Care for the Homeless Program（米、マサチューセッツ州。地域保健センター） | 不正アクセス | 未公表 | ネットワークの障害があったと説明。内容と期間は未公表 | 未公表 | 当事者公表（HHS OCR 届出 20 万 1260 人） |
+| GL-2026-151 | 2025-05（2026-07 届出） | Madera Community Hospital（米、カリフォルニア州） | 不正アクセス（ファイル取得の可能性） | 未公表 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 15 万 810 人） |
+| GL-2026-152 | 2026（2026-08 届出） | Oakdale Ear Nose & Throat（Minnesota ENT、米、ミネソタ州） | メールアカウントの侵害 | 職員のメールアカウント 6 件 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 9 万 9714 人） |
+| GL-2026-153 | 2026（2026-09 届出） | Lexington Hospital Corporation（米、テネシー州） | 不正アクセス | 未公表 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 6 万 7000 人） |
+| GL-2026-154 | 2026-04（2026-07 届出） | Arkansas Oral & Maxillofacial Surgeons（米、アーカンソー州。口腔外科） | データ窃取（PEAR が犯行を主張） | 未公表 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 6 万 4831 人） |
+| GL-2026-155 | 2026-05（2026-07 届出） | Casper Orthopedic Associates（米、ワイオミング州） | 不正アクセス（データ窃取の可能性） | 未公表 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 5 万 6197 人） |
+| GL-2026-156 | 2024-08 〜 2024-11（2026-07 届出） | Heart Care Centers of Illinois（米、イリノイ州。循環器科） | メールアカウントの侵害 | フィッシングに関連（報道） | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 5 万 2562 人） |
+| GL-2026-157 | 2026-06 覚知（2026-08 届出） | Kern Psychiatric Health and Wellness Center（米、カリフォルニア州。行動医療） | サプライチェーン侵害 | 管理会社 Genesis Healthcare Management のネットワークの侵害 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 5 万 1352 人） |
+| GL-2026-158 | 2025-09 覚知（2026-08 届出） | NFI North（米、ニューハンプシャー州。行動医療） | データ窃取 | 未公表 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 4 万 9540 人） |
+| GL-2026-159 | 2026-07 | Hawaii Family Dental（米、ハワイ州。歯科） | 不正アクセス（Qilin が主張と報道） | 侵害されたアカウント | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 4 万 5853 人） |
+| GL-2026-160 | 2026-04 覚知（2026-09 届出） | Provident Behavioral Health（米、ミズーリ州セントルイス。行動医療） | 不正アクセス | 未公表 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 2 万 5086 人） |
+| GL-2026-161 | 2026（2026-07 届出） | Alta Orthopaedics Medical Group（米） | 不正アクセス | 未公表 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 2 万 4496 人） |
+| GL-2026-162 | 2026（2026-07 届出） | Nephrology Associates（米、カンザス州。腎臓内科） | 不正アクセス | 未公表 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 2 万 4088 人） |
+| GL-2026-163 | 2026-02 覚知（2026-09 届出） | Comprehensive Orthopaedics & Musculoskeletal Care（米、コネチカット州） | 不正アクセス（Crypto24 が主張と報道） | 未公表 | 公表なし | 公表なし | 当事者公表（HHS OCR 届出 2 万 1897 人） |
+| GL-2026-164 | 2026-07 | Bacon County Health Services（米、ジョージア州アルマ） | 不正アクセス（データ窃取の可能性） | 未公表 | 診療が中断しないよう対処したと説明 | 公表なし | 当事者公表（HHS OCR 届出 501 人、暫定値） |
+| GL-2026-165 | 2026-03（2026-09 通知） | Atlantic Digestive Specialists（米、ニューハンプシャー州。消化器科） | 不正アクセス | 未公表 | 公表なし | 公表なし | 報道のみ |
 
 <a id="GL-2026-01"></a>
 
@@ -438,8 +470,8 @@ flowchart TD
 - 初期侵入経路：未公表。
 - 侵害範囲：電話システムと患者ポータル（MyChart）を含む複数のシステム。
 - 診療への影響：両病院の救急部門は開けたままとし、2 病院と外来手術センターで手術を継続した。分娩も継続している。一部の予約は日程を変更した。予約の受付は、患者が診療科へ直接電話する運用に切り替えた。
-- 業務停止期間：9 月 18 日時点で電話は全拠点で復旧した。9 月 29 日の更新までに、MyChart で予約、処方の更新依頼、提供者へのメッセージが使える状態に戻った。患者のメモ、検査結果、画像結果が MyChart にまだ表示されない場合があり、ダウンタイム中の紙の記録から順次反映している。
-- 情報流出：9 月 29 日の更新で、今回のサイバー事案は患者記録を保管するシステムに影響を与えなかったと説明している。調査は継続しており、データ窃取の有無と帰属は、確認できた範囲では公表されていない。通知が必要と判明した場合は対応するとしている。
+- 業務停止期間：9 月 18 日時点で電話は全拠点で復旧した。9 月 29 日の更新までに、MyChart で予約、処方の更新依頼、提供者へのメッセージが使える状態に戻った。10 月 8 日の更新で、システムは復旧したと公表した。ダウンタイム中の記録をシステムへ戻す作業は続いている。
+- 情報流出：9 月 29 日の更新で、今回のサイバー事案は患者記録を保管するシステムに影響を与えなかったと説明している。10 月 8 日の更新は、情報への影響と攻撃者の特定をいずれも調査中としている。通知が必要と判明した場合は対応するとしている。
 - 初動対応：外部の法律顧問とサイバーセキュリティの専門事業者とともに対応している。
 
 **分析**
@@ -451,7 +483,7 @@ flowchart TD
 
 **一次情報**
 
-- [Luminis Health Cybersecurity Incident Update](https://www.luminishealth.org/en/cybersecurity-incident-update)（Luminis Health。随時更新。本項は 2026 年 9 月 29 日時点の内容による）
+- [Luminis Health Cybersecurity Incident Update](https://www.luminishealth.org/en/cybersecurity-incident-update)（Luminis Health。随時更新。本項は 2026 年 10 月 8 日時点の内容による）
 - [Two Maryland hospitals hit by cyberattack, compromising systems](https://www.wypr.org/wypr-news/2026-09-02/two-maryland-hospitals-hit-by-cyberattack-compromising-systems)（WYPR による当事者公表の報道、2026 年 9 月 2 日）
 - [Luminis Health Working to Restore Systems After Cyberattack](https://www.hipaajournal.com/luminis-health-jeffrey-reuben-well-child-horizon-eye-care-data-breaches/)（HIPAA Journal による当事者公表の報道）
 
@@ -463,7 +495,7 @@ flowchart TD
 
 **事実**
 
-- 発生時期：2026 年 9 月 15 日の早朝に発生し、同院は同日に「コードグレー（システム障害）」を宣言した。9 月 16 日に、ランサムウェアであることを公表した。
+- 発生時期：2026 年 9 月 14 日に事案を覚知した（10 月 1 日の告知）。9 月 15 日の早朝に「コードグレー（システム障害）」を宣言し、9 月 16 日に、ランサムウェアであることを公表した。
 - 対象組織：オンタリオ州北西部ニピゴンの Nipigon District Memorial Hospital。地域の小規模病院である。
 - 攻撃種別：ランサムウェア。
 - 攻撃グループ：当事者は公表していない。
@@ -471,8 +503,8 @@ flowchart TD
 - 侵害範囲：情報システム。個人情報と個人健康情報を含みうるファイルの一部が暗号化された。
 - 診療への影響：外来の検査室と画像診断を閉鎖した。患者の待ち時間が延びた。職員は手順書に基づく手作業で運用を続けている。
 - 業務停止期間：外来の検査室と画像診断の閉鎖は、9 月 23 日の時点でも続き、「追って通知があるまで」とされている（発生から 8 日）。復旧作業は継続しており、完了は未公表である。
-- 情報流出：暗号化は確認されているが、外部への持ち出しの有無は公表されていない。
-- 初動対応：インシデント対応と事業継続の手順を起動し、外部の専門事業者と他の病院と連携して封じ込めと範囲の確認を進めている。法執行機関へ連絡した。
+- 情報流出：10 月 1 日の告知で、同院のファイル共有からファイルが盗まれたことが確定し、患者情報が含まれると公表した。電子カルテは影響を受けていない。対象は、2022 年 4 月から 2026 年 9 月の入院患者（氏名、保健カード番号、生年月日、電話番号、住所、臨床情報）、2023 年 11 月以降の救急外来の患者（上記に加え近親者の連絡先）、画像診断、理学療法、遠隔診療、介護付き住宅の外来利用者、2018 年 4 月から 2026 年 6 月に亡くなった長期療養の入所者、応募者、ボランティアと学生（犯罪歴の照会結果を含む）である。臨床情報は病歴、診断、治療計画、担当医を指す。件数は公表されていない。
+- 初動対応：インシデント対応と事業継続の手順を起動し、外部の専門事業者と他の病院と連携して封じ込めと範囲の確認を進めている。法執行機関とオンタリオ州情報プライバシーコミッショナーへ届け出た。患者へのクレジット監視の提供は、悪用の危険が低いとして行わないとしている。
 
 **分析**
 
@@ -483,6 +515,7 @@ flowchart TD
 **一次情報**
 
 - [Nipigon District Memorial Hospital](https://www.ndmh.ca/)（当事者。コードグレーの告知とサイバーセキュリティ事案の続報を公式 SNS で公表している）
+- [Important Notice Regarding Cybersecurity Incident（Word 文書）](https://www.ndmh.ca/upload/documents/cyber-incident-public-notification-includes-faq.docx)（当事者。2026 年 10 月 1 日の告知と FAQ）
 - [Cyber attack at Nipigon District Hospital](https://www.canhealth.com/2026/09/23/cyber-attack-at-nipigon-district-hospital/)（CanHealth による当事者の説明の報道、2026 年 9 月 23 日）
 - [Canada: Nipigon hospital hit by ransomware attack](https://databreaches.net/2026/09/16/canada-nipigon-hospital-hit-by-ransomware-attack/)（DataBreaches.net による当事者公表の報道、2026 年 9 月 16 日）
 
@@ -950,6 +983,7 @@ flowchart TD
 - 情報流出：氏名、生年月日、住所、メールアドレス、電話番号、社会保障番号である。人数は Point Vision から公表されていない。
 - 診療への影響：診療の停止は公表されていない。
 - 通知の出所：fuitesinfos と cyberattaque.org による患者への通知の引用。通知の原文は未確認である。
+- 同じ委託先の別の被害：2026 年 10 月に、ナント近郊の眼科 Institut ophtalmologique Sourdille-Atlantique（GL-2026-145）が、旧予約委託先の Alaxione の基盤からデータが盗まれたと自ら公表した。Point Vision の委託先が Alaxione であることは、当事者の公表では確認できていない。
 
 **報道ベース**
 
@@ -1020,6 +1054,105 @@ flowchart TD
 
 ---
 
+<a id="GL-2026-136"></a>
+
+### GL-2026-136 Green Clinic（2026 年 10 月、米）
+
+**事実**
+
+- 発生時期：2026 年 10 月 2 日（金）午前 6 時 30 分ごろに、コンピュータシステムとネットワークに影響する事案を特定した。10 月 8 日に声明を出した。
+- 対象組織：ルイジアナ州ラストンの Green Clinic。複数の診療科を持つ診療所である。
+- 攻撃種別：ランサムウェア。ネットワーク上のファイルとシステムが暗号化された。
+- 攻撃グループ：当事者が、「Wall Street」を名乗る脅威アクターまたはその関係者によるものと述べている。
+- 初期侵入経路：未公表。
+- 侵害範囲：ネットワーク全体のファイルとシステム。職員は、患者の電子カルテを含む多くの電子システムに到達できなくなった。
+- 診療への影響：特定の直後に、コンピュータとネットワークに関わる運用をすべて止めた。移行の期間中は、診療の受入能力が大幅に限られる。過去の診療記録と既存の予約表は直ちには戻らず、医師が同院での過去の記録を参照できない場合がある。診察に時間がかかり、提供できない診療もあるとしている。緊急の場合は 911 か最寄りの救急外来を利用するよう案内している。
+- 業務停止期間：10 月 2 日から。新しい臨床システムを導入し、職員の研修を経て、10 月 14 日（水）から新システムの利用と診療の拡大を始める予定である。
+- 情報流出：何の情報が不正に閲覧または取得されたかは調査中である。個人情報または保護対象保健情報に影響があれば、法令に基づき通知するとしている。
+- 初動対応：脅威の封じ込めと隔離を進め、FBI とサイバーセキュリティ・インフラストラクチャセキュリティ庁（CISA）へ通報した。
+- 患者への案内：保険証、身分証、服用中の薬の容器または一覧など、手元の医療情報を持参するよう求めている。
+
+**報道ベース**
+
+- 地元紙は、匿名の関係者の話として、影響は数万人規模に及びうること、使えるバックアップがないことを伝えている。当事者の声明では確認できない。
+- 8 月の [Cedar County Memorial Hospital](#GL-2026-90) では「Wallstreet」を名乗るグループが犯行を主張している。同じグループかどうかは確認されていない。
+
+**分析**
+
+- 復旧ではなく新しい臨床システムへの移行で診療を戻そうとしている。過去の記録と予約表が「直ちには戻らない」とされており、元のシステムとデータを短期間で戻せる見込みが立っていないことを示す。復元できるバックアップを持っていたかどうかは公表されていないが、戻せない場合の選択肢は、記録なしで新しい基盤を立ち上げることになる（[バックアップと復旧の設計](../../../technology/backup.md)）。
+- 患者に服薬の一覧や保険証の持参を求めている。診療所が持つべき情報を、患者の手元の情報で補う運用である。過去の記録を参照できない診察は、処方の重複や禁忌の見落としの危険を伴う。記録がない前提で診療を続ける手順を、ダウンタイム運用として平時に書いておく必要がある（[サイバー BCP](../../../response/bcp-cyber.md)）。
+- 特定の直後に全システムを止めている。暗号化が広がる前に止めることで被害の拡大は抑えられるが、診療の入口も同時に閉じる。止める判断の基準と、止めたあとの受入の範囲を事前に決めておけるかが、停止期間中の混乱の大きさを分ける。
+
+**一次情報**
+
+- [Green Clinic provides update following recent cybersecurity incident](https://knoe.com/2026/10/08/green-clinic-provides-update-following-recent-cybersecurity-incident)（KNOE による当事者声明の報道、2026 年 10 月 8 日）
+- [UPDATE: Green Clinic responds to cybersecurity incident](https://lincolnparishjournal.com/2026/10/08/update-green-clinic-responds-to-cybersecurity-incident/)（Lincoln Parish Journal による当事者声明の報道、2026 年 10 月 8 日）
+- [Sources: Cyberattack cripples Green Clinic operations, threatens patient records](https://lincolnparishjournal.com/2026/10/08/sources-cyberattack-cripples-green-clinic-operations-threatens-patient-records-2/)（Lincoln Parish Journal。匿名の関係者による報道）
+- 当事者のウェブサイト上の告知の原文：未確認
+
+---
+
+<a id="GL-2026-137"></a>
+
+### GL-2026-137 Assistance Publique – Hôpitaux de Paris（2026 年 9 月、仏）
+
+**事実**
+
+- 発生時期：2026 年 9 月 24 日に、食事管理ソフトウェアのデータが犯罪者のフォーラムで販売されているとの通報を受けた。侵入は通報の数日前とされ、具体的な日付は公表されていない。公表のページは 10 月 7 日に更新された。
+- 対象組織：パリ公立病院連合（AP-HP）。
+- 攻撃種別：不正アクセスによるデータ窃取。
+- 攻撃グループ：当事者は公表していない。
+- 初期侵入経路：入院中の患者が食事を選ぶオンラインサービスへの不正な侵入。対象は Dedalus が提供する食事管理ソフトウェア「SRD restauration」の一つのモジュールで、AP-HP の **23 病院**が使っている。
+- 情報流出：患者 **1015 人**の身元情報（姓、名、出生に関する情報、院内の患者識別子）。公開された内容と当該ソフトウェアの性質から、直接または間接の医療情報、行政と銀行の情報、連絡先は含まれないとしている。
+- 未確定の点：フォーラムの主張は、より多くの患者と、AP-HP の職員の利用者アカウントを含むとしており、当事者が検証している。
+- 診療への影響：公表されていない。
+- 初動対応：当該モジュールを当面閉鎖し、全利用者のパスワードを再設定した。AP-HP と供給元が、推定される脆弱性を修正した。
+- 届出：通報の翌日に告訴した。フランスの個人情報保護当局（CNIL）と、医療機関向けのサイバーセキュリティ支援窓口へ届け出た。
+
+**分析**
+
+- 侵入口は、診療系でも事務系でもなく、患者向けの食事選択のサービスである。入院患者が院外の端末から使えるように公開された機能は、外部から到達できる攻撃面になる。食事管理は臨床の周辺業務として扱われやすいが、患者の氏名と院内の識別子を持つ（[外部から見た自組織の攻撃面](../../../practice/attack-surface.md)）。
+- 一つのソフトウェアのモジュールが 23 病院で共通に使われている。共通の製品の脆弱性は、その製品を使う施設の数だけ同時に効く。本年の [Point Vision](#GL-2026-104) や Sourdille-Atlantique（GL-2026-145）の予約委託先と同じく、医療機関の外側にある共通の基盤が入口になった型である。
+- 覚知の端緒は、自組織の監視ではなく、フォーラムでの販売の通報である。持ち出された件数を、攻撃者の主張と自組織の分析とで突き合わせる段階にあり、最終的な件数は変わりうる。
+
+**一次情報**
+
+- [L'AP-HP confirme un récent vol de données issues d'un logiciel de gestion des repas et poursuit ses investigations](https://www.aphp.fr/espace-medias/liste-ressources-presse/lap-hp-confirme-un-recent-vol-de-donnees-issues-dun-logiciel)（AP-HP、2026 年 10 月 7 日更新）
+
+---
+
+<a id="GL-2026-138"></a>
+
+### GL-2026-138 INCAN（2026 年 8 月、グアテマラ）
+
+**事実**
+
+- 発生時期：2026 年 8 月 31 日（月）の朝、放射線治療の予定を組もうとした職員がシステムの不具合に気づき、データが暗号化されたとの表示を確認した。9 月 2 日に Liga Nacional contra el Cáncer が患者と家族へ公表し、9 月 3 日に記者会見を行った（報道）。
+- 対象組織：グアテマラシティのがん専門病院 Instituto Nacional de Cancerología（INCAN）。がん対策の民間団体 Liga Nacional contra el Cáncer が、同院の事案として公表と会見を行っている。
+- 攻撃種別：暗号化を伴う攻撃。攻撃者は、情報の回復を交渉するためのダークウェブのリンクを残した。当事者は「ランサムウェア」の語を使っていない。
+- 攻撃グループ：当事者は公表していない。
+- 初期侵入経路：未公表。
+- 侵害範囲：放射線治療を計画するシステム。暗号化された情報は、治療計画、線量、画像である。照射装置（リニアック）は感染していないと説明している。
+- 診療への影響：攻撃の時点で放射線治療を受けていた患者は **約 194 人**である。計画が正しく、システムが安全に動くことを確認できるまで、どの患者にも放射線治療を行わないと判断した。放射線治療、腔内照射、表在照射を中断した。5 人から 10 人は一時的に他施設で治療を受けられる可能性があるとした。
+- 業務停止期間：9 月 4 日の報道の時点で中断が続いている。再開の日付は確認できていない。
+- 情報流出：持ち出しの有無は公表されていない。
+- 初動対応：告訴し、国家文民警察と内務省の支援を受けた。内務省はサイバーセキュリティの専門家を派遣した。身代金を支払わず、交渉もしないと決め、システムの供給元と専門家の支援で復旧を進めた。
+
+**分析**
+
+- 照射装置は無事でも、治療計画が失われると照射できない。放射線治療は、患者ごとの計画と線量の記録に基づいて分割して行うため、計画のデータが正しいと確認できない限り再開できない。装置の稼働と、装置に渡すデータの完全性は別に守る必要がある（[完全性への攻撃と患者安全](../../integrity-attacks.md)）。
+- 治療の中断が、患者の治療成績に直接響く診療科である。分割照射の途中で中断すると、治療計画そのものの見直しが要る場合がある。他施設へ回せたのは 194 人のうち最大 10 人とされ、地域に代替の施設が少ない専門医療では、停止を他院で吸収できない（[基盤の構えと外部への依存](../../../response/dependencies.md)）。
+- 計画システムのデータの復元可否が、再開までの日数を決める。暗号化されたのは計画と線量と画像であり、当事者は供給元と専門家の支援で復旧を進めるとしている。部門システムのバックアップを、病院の情報システム部門と供給元のどちらが持つかを、平時に決めておく必要がある（[バックアップと復旧の設計](../../../technology/backup.md)）。
+
+**一次情報**
+
+- [Hackers secuestran información del Incán, exigen dinero y afectan radioterapias de 194 pacientes con cáncer](https://www.prensalibre.com/ciudades/guatemala-ciudades/hackers-secuestran-informacion-del-incan-exigen-dinero-y-afectan-radioterapias-de-194-pacientes-con-cancer/)（Prensa Libre による記者会見の報道、2026 年 9 月 3 日）
+- [Ataque cibernético golpea al Instituto contra el Cáncer en Guatemala: 194 pacientes, datos clínicos encriptados y un enlace en la deep web para negociar](https://www.infobae.com/guatemala/2026/09/04/ataque-cibernetico-golpea-al-instituto-contra-el-cancer-en-guatemala-194-pacientes-datos-clinicos-encriptados-y-un-enlace-en-la-deep-web-para-negociar/)（Infobae による報道、2026 年 9 月 4 日。見出しは URL から復元）
+- [Liga contra el Cáncer enfrenta incidente de ciberseguridad](https://emisorasunidas.com/nacional/2026/09/02/ciberseguridad-servicios-incan-liga-contra-el-cancer/)（Emisoras Unidas による当事者の声明の報道、2026 年 9 月 2 日）
+- 当事者の SNS の投稿の原文：未確認
+
+---
+
 ### 一覧のみで収録した病院系の事例の一次情報
 
 本文を置かず一覧のみとした事例は、次を典拠とする。
@@ -1032,6 +1165,23 @@ flowchart TD
 - **Park Place Behavioral Healthcare（GL-2026-116）**：[HIPAA Journal](https://www.hipaajournal.com/california-critical-access-hospital-cybersecurity-incident/) による整理（報道ベース）。2026 年 7 月 23 日に不審な活動を特定し、9 月 17 日に通知を始めたと伝える。当事者の通知は確認できていない
 - **Saber Healthcare Group（GL-2026-114）**：[HIPAA Journal](https://www.hipaajournal.com/data-breaches-saber-healthcare-buchalter/) による州司法長官への届出の整理（報道ベース）。2026 年 7 月 27 日に事案を特定し、8 月 19 日にサーバの審査を終え、3000 人超が対象と伝える。当事者の通知は確認できていない
 - **Primo Caredent Group（GL-2026-109）**：Il Mattino di Padova（2026 年 7 月 25 日。URL は未取得）が、会社が患者へ「支払わず、不審なメッセージに返信しない」よう警告したと報じ、LeMagIT の [Cyberhebdo（2026 年 7 月 31 日）](https://www.lemagit.fr/actualites/366646853/Cyberhebdo-du-31-juillet-2026-une-partie-de-lAngola-passe-sur-repondeur)が恐喝型の攻撃と記す。会社の告知には到達できていない
+- **2026 年 7 月から 9 月の HHS OCR 届出（GL-2026-148 から GL-2026-164）**：影響人数と届出日は [HHS OCR 侵害報告ポータル](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf)の値（2026 年 10 月 11 日取得。取得時点の最新の届出日は 9 月 21 日）による。事案の内容は次の当事者の通知と報道による。Lexington Hospital Corporation（GL-2026-153）、Alta Orthopaedics Medical Group（GL-2026-161）、Nephrology Associates（GL-2026-162）は、届出のほかに当事者の通知も報道も確認できていない
+  - WindRose Health Network（GL-2026-148）：[Notice of Data Security Incident（PDF）](https://cdn.zephyrcms.com/28272b72-f409-45c1-92d4-f2829c8df049/-/inline/yes/wind-rose-website-notice-2026-fv.pdf)（当事者）。2026 年 8 月 4 日に、委託先から、委託先が保守と接続に使うリモート管理ツールの未公表の脆弱性について連絡を受けた。第三者がこの脆弱性を使い、8 月 3 日から 4 日にサーバ 1 台へ到達したとみている。電子カルテを置くシステムには影響がない。対象ファイルには、患者の氏名、患者識別番号、医療保険の情報、受診日、医療提供者の名前が含まれる。ツールと委託先の名前は公表されていない
+  - Lifespan Physician Group of Massachusetts（GL-2026-149）：[311,000 Impacted by Brown Health Medical Group-MA Data Breach](https://www.securityweek.com/311000-impacted-by-brown-health-medical-group-ma-data-breach/)（SecurityWeek、2026 年 8 月 5 日。州への届出の報道）。2025 年 12 月に Hawthorn の拠点の古いファイルサーバへ不正にアクセスされ、2026 年 6 月 22 日に個人情報を含むファイルへの到達を確認した。電子カルテのシステムは影響を受けていない
+  - Boston Health Care for the Homeless Program（GL-2026-150）：[Notice of Data Security Incident（PDF）](https://oag.ca.gov/system/files/BHCHP%20CA%20Reg%20Notice%20Letter.docx__0.pdf)（当事者がカリフォルニア州司法長官へ提出した通知、2026 年 8 月 7 日）。2025 年 11 月 11 日にネットワークの障害を覚知し、2026 年 6 月 8 日に個人情報を含むことが判明した。患者と職員が対象である
+  - Madera Community Hospital（GL-2026-151）：[Notice of Data Breach（PDF）](https://oag.ca.gov/system/files/Madera%20Community%20Hospital%20-%20Notice%20Templates.pdf)（当事者がカリフォルニア州司法長官へ提出した通知）。2025 年 5 月下旬の 2 日間に不正なアクセスがあり、5 月 29 日に覚知した
+  - Minnesota ENT（GL-2026-152）、Arkansas Oral & Maxillofacial Surgeons（GL-2026-154）、Casper Orthopedic Associates（GL-2026-155）、Kern Psychiatric Health and Wellness Center（GL-2026-157）、NFI North（GL-2026-158）、Hawaii Family Dental（GL-2026-159）、Bacon County Health Services（GL-2026-164）：当事者の通知の写しを、集団訴訟の情報サイト classaction.org の転載で確認した（当事者のウェブサイト上の原本は未確認）。Kern Psychiatric はマサチューセッツ州への届出（[2026-1464](https://www.mass.gov/doc/2026-1464-kern-psychiatric-health-and-wellness-center-inc/download)）でも確認できる。PEAR と Qilin の犯行の主張は報道による
+  - Heart Care Centers of Illinois（GL-2026-156）：[Heart Care Centers of Illinois Discovers Historic Phishing Attack Exposed Patient Data](https://www.hipaajournal.com/heart-care-centers-of-illinois-data-breach/)（HIPAA Journal による当事者公表の報道、2026 年 7 月 23 日）。職員 1 名のメールアカウントが、2024 年 8 月 22 日から 11 月 6 日に第三者に到達されていた。記事はフィッシングに関連すると伝える。覚知は 2026 年 1 月 15 日である
+  - Provident Behavioral Health（GL-2026-160）、Comprehensive Orthopaedics & Musculoskeletal Care（GL-2026-163）、Atlantic Digestive Specialists（GL-2026-165）：HIPAA Journal の整理による（報道ベース）。Atlantic Digestive Specialists は 2026 年 3 月 16 日から 17 日に到達され、9 月 30 日から通知を始めたと伝えられ、HHS OCR の届出は取得時点で確認できない（[Casper Orthopedic Associates; Atlantic Digestive Specialists Announce Data Breaches](https://www.hipaajournal.com/casper-orthopedic-associates-atlantic-digestive-specialists-data-breaches/)、HIPAA Journal、2026 年 10 月 8 日）
+- **Hospital Israelita Albert Einstein（GL-2026-139）**：[Einstein diz que ataque hacker acessou dados de pacientes](https://sbtnews.sbt.com.br/noticia/saude/einstein-diz-que-ataque-hacker-acessou-dados-de-pacientes)（SBT News による当事者声明の報道、2026 年 10 月 8 日）。不正アクセスの疑いに対し 8 月 4 日に確認の措置を取った。患者データベースの一部が対象で、氏名、納税者番号（CPF）、生年月日を含み、処方や検査結果などの健康情報を含みうる。量の多くは単独の文書で、個人を特定できないものが多いとしている。件数は公表されていない。電子カルテを含む基盤は通常どおり稼働した。ブラジルの個人情報保護当局（ANPD）と連邦警察へ届け出て、対象者へ個別にメールで通知している。データの公開や悪用の形跡はないとしている。病院のウェブサイト上の告知と、連邦警察の発表は確認できていない
+- **St Andrew's Hospital（GL-2026-140）**：['Group of individuals' impacted by data breach at SA hospital](https://www.abc.net.au/news/2026-10-08/group-of-individuals-impacted-by-st-andrews-hospital-data-breach/107243514)（ABC による当事者の説明の報道、2026 年 10 月 8 日）。内部の調査でサーバのデータの一部がダウンロードされたことが判明し、予防のためシステムを停止した。対象は「一群の個人」とされ、人数と情報の種類は公表されていない。オーストラリア情報コミッショナー事務局（OAIC）とオーストラリアサイバーセキュリティセンター（ACSC）へ届け出た
+- **Hospital Clínico de la Universidad de Chile（GL-2026-141）**：[T13 の報道](https://www.t13.cl/noticia/nacional/hospital-clinico-chile-querella-tras-ciberataque-filtracion-informacion-confidencial-30-9-2026)（2026 年 9 月 30 日）。国家サイバーセキュリティ庁からの通知で 9 月 20 日に覚知し、病院長が刑事告訴したと伝える。画像検査の予約と保存のシステム（RIS、PACS）への不正アクセスで、国民識別番号、氏名、検査の種類と結果などが対象とされる（報道ベース）。病院の声明の原文は確認できていない
+- **Brighton East Dental Clinic（GL-2026-142）**：[Data Event Notification](https://www.bedc.com.au/di/)（当事者）。2026 年 8 月 13 日に ACSC から通報を受け、8 月 17 日に流出したデータを分析し、4 月上旬に到達されたと判断した。患者の氏名、住所、生年月日、連絡先、治療計画、口腔の X 線画像、紹介状、治療歴、民間医療保険の会員番号が対象である。OAIC、ACSC、ビクトリア州警察へ届け出た。人数は公表されていない
+- **The Hospital for Sick Children（GL-2026-143）**：[SickKids employee information impacted by cybersecurity incident](https://www.sickkids.ca/en/news/archive/2026/SickKids-employee-information-impacted-by-cybersecurity-incident/)（当事者、2026 年 8 月 20 日）。他の組織も使う外部のソフトウェアの脆弱性に関連する事案で、現職と元職の職員と応募者の個人情報が対象である。臨床系のシステムと患者情報は影響を受けていない
+- **General Santos Doctors Hospital（GL-2026-144）**：[GenSan hospital admits 'data breach' after ransomware group's claims](https://mindanews.com/top-stories/2026/09/gensan-hospital-admits-data-breach-after-ransomware-groups-claims/)（MindaNews。報道ベース）。Rhysida の犯行の主張のあとに、病院が不正アクセスとデータ侵害を認めたと伝える。病院の告知の原文は確認できていない
+- **Institut ophtalmologique Sourdille-Atlantique（GL-2026-145）**：[Information aux patients : Incident de sécurité concernant notre ancien prestataire de prise de rendez-vous en ligne (Alaxione)](https://www.sourdille-atlantique.fr/actualite/information-aux-patients-incident-de-securite-concernant-notre-ancien-prestataire-de-prise-de-rendez-vous-en-ligne-alaxione/)（当事者、2026 年 10 月）。2022 年より前にオンライン予約を使った患者の氏名、敬称、メールアドレス、電話番号、住所、生年月日と、125 人の社会保障番号が対象で、医療文書は含まれない。2022 年以降の予約基盤と現行の院内システムは対象外である。Alaxione が CNIL へ届け出た。[GL-2026-104 Point Vision](#GL-2026-104) と同じ委託先の事案である
+- **Kreiskliniken Kassel（GL-2026-146）**：[Kreiskliniken Kassel von kriminellem Cyber-Angriff getroffen](https://www.wlz-online.de/nordhessen/kreiskliniken-kassel-von-kriminellem-cyber-angriff-getroffen-94531876.html)（WLZ による運営者の説明の報道、2026 年 10 月 8 日）。連邦情報セキュリティ庁（BSI）、州のデータ保護監督官、州刑事局へ届け出て告訴したと伝える。運営者の告知の原文は確認できていない
+- **Hôpital Paris Saint-Joseph（GL-2026-147）**：[FrenchBreaches の記録](https://frenchbreaches.com/alertes/h-pital-paris-saint-joseph-mu93cn8lvv9l381ye9f)（報道ベース）。2026 年 9 月 19 日にフォーラムでデータが公開され、病院は委託先の一社がサイバー攻撃を受け、対象は患者の事務的な情報で健康、銀行、社会保障番号の情報は含まないと認めたと伝える。病院の声明の原文は確認できていない
 
 ---
 
@@ -2140,6 +2290,8 @@ flowchart TD
 | GL-2026-S05 | 2026-04 | City Health（米、カリフォルニア州） | 医療関連事業者 | 内部不正 | 過去の取引相手が電子カルテへ到達した。**6 万 5000 人**が対象 | 当事者公表（HHS OCR 届出） |
 | GL-2026-S06 | 2023 〜 2026-07 | District of Columbia Department of Health Care Finance（米、ワシントン D.C.。Medicaid の所管機関） | 医療関連事業者 | 誤送付、誤公開、操作ミス | 統計の集計報告書 2 点をウェブサイトへ公開した際、基になった個人情報が非表示のフィールドに残り、外部から取得できる状態だった。Medicaid と DC Healthcare Alliance の受給者 **39 万 9086 人**が対象で、含まれる情報は Medicaid ID、生年月日、提供者名、人種、性別、居住区、民族。氏名、社会保障番号、金融口座は含まれないと報じられる。2026 年 7 月 21 日に発見し、9 月 3 日に HHS OCR へ届け出たと報じられる（[HIPAA Journal](https://www.hipaajournal.com/district-columbia-department-health-care-finance-data-breach/)。当事者の通知と OCR のポータルは未確認） | 報道のみ |
 | GL-2026-S07 | 2026-09 | East Suffolk and North Essex NHS Foundation Trust（英） | 病院系 | 内部不正 | ある患者の診療記録が、正当な理由なく閲覧された疑いがあり、10 人の職員が停職または業務から外された。トラストが英国情報コミッショナー事務局（ICO）へ報告し、ICO が照会中である。NHS England は 2026 年 10 月 1 日に、不正閲覧の疑いがある職員を調査の間も直ちに停職とし、システムへのアクセスを止める方針を示した（[PublicTechnology](https://www.publictechnology.net/2026/10/01/health-and-social-care/nhs-england-announces-crackdown-on-staff-who-snoop-on-patient-records/)。トラストの告知は未確認） | 当事者公表（報道経由） |
+| GL-2026-S08 | 2026-07 | Northern Sydney Local Health District（豪、ニューサウスウェールズ州） | 病院系 | 内部不正 | 同地区に勤務する 59 歳の職員が、患者データに無断で到達し、ダウンロードした。7 月 22 日に警察へ通報があり、23 日に自宅を捜索して患者情報を保存したとみられる電子機器を押収し、制限されたデータへの到達の罪で逮捕、起訴した。警察は、初期の捜査ではデータは本人の範囲にとどまるとしている。件数と項目は公表されていない（[Nurse Charged by Cybercrime Squad in Data Breach Case](https://www.miragenews.com/nurse-charged-by-cybercrime-squad-in-data-1716161/)、ニューサウスウェールズ州警察の発表の転載、2026 年 7 月 25 日） | 当事者公表（警察の発表の転載） |
+| GL-2026-S09 | 2023-04 〜 2026-10 | 慶北大学校病院、忠南大学校病院、忠北大学校病院（韓） | 病院系 | 誤送付、誤公開、操作ミス | 3 病院が監査院の公共監査ポータルへ掲載した自己監査の文書 122 件が、個人情報を削除せず黒塗りを重ねただけの状態で、ログインなしにダウンロードできた。うち 11 件に患者の情報が残り、慶北大学校病院では乳がんの遺伝子検査を受けた患者 34 人の氏名と患者番号、職員の結核と HIV の曝露の記録、忠南大学校病院では患者の氏名を含む患者安全事故の報告 96 件が含まれていた。最も古い文書は 2023 年 4 月から 2026 年 10 月 3 日まで公開されていた。10 月 8 日の国政監査で指摘された（[뉴스핌](https://www.newspim.com/news/view/20261008001081)、2026 年 10 月 8 日） | 報道のみ |
 
 <a id="GL-2026-S01"></a>
 
@@ -2247,15 +2399,24 @@ flowchart TD
 | Vitex Pharmaceuticals へのランサムウェア攻撃（豪、2026 年 8 月、The Gentlemen が犯行を主張） | ビタミンと健康補助食品の受託製造業者であり、本リポジトリの[対象の区分](../README.md#対象の区分)では製薬企業に当たらない。当事者の公表資料も確認できない |
 | Services Australia のメディケア統計ポータルへの AI エージェントによる意図しない到達（豪、2026 年 6 月発生、9 月 24 日に首相が公表） | 到達したのは集計統計と内部のファイル名で、個人のメディケア記録には到達していないと当局が説明している。悪意ある攻撃ではなく、AI エージェントの意図しない挙動であり、公的医療保険の運営機関は本リポジトリの区分に当たらない |
 | CIM（Orisha Insurance の子会社、仏、2026 年 7 月 24 日に検知） | 共済と保険の契約、給付、請求を管理するソフトウェアの事業者であり、診療にも患者情報にも影響が及んだことを確認できない。補完医療保険の事務を担うが、本リポジトリの区分では医療関連事業者に当たらないと判断した |
+| Hospital de la Santa Creu i Sant Pau（西、バルセロナ。2026 年 10 月 2 日に The Gentlemen が犯行を主張） | 犯行声明と、それを伝える報道のみである。同院の「セキュリティ事案に関する情報」のページは 10 月 9 日に更新されているが、事案の記載を確認できない |
+| Quirónsalud（西。2026 年 8 月 11 日に DireWolf が犯行を主張）ほか、犯行声明のみが確認できる欧州、中南米、アジア、中東の医療機関 | リークサイトの掲載を集計するサイトの記録のみで、当事者の公表も独立した報道も確認できない。当事者の確認または報道が得られた時点で収録を判断する |
+| Fenway Health の IT システムの中断（米、ボストン、2026 年 9 月） | 予約不要の外来の中止と、電話とメッセージの遅延が報じられているが、当事者は原因をサイバー攻撃と認めておらず、告知も削除されている |
+| チョルム県の公立病院群の情報システムの停止（土、2026 年 10 月 9 日） | 外来の受付が止まったと報じられているが、原因は当局の調査中とされ、公式発表もない。報道は同じ文面で、互いに独立していない |
+| Health P.E.I. の委託先 Maximus Canada への攻撃（加、2026 年 9 月、最大約 23 万 4000 人） | 盗まれたのは 2011 年に作成された保健カードの資格管理のファイルで、診療と患者の診療情報への影響はない。州の発表の本文も確認できていない |
+| Arrowhead Regional Medical Center の情報を含む委託先の法律事務所への攻撃（米、2026 年 9 月通知） | 侵害されたのは病院ではなく法律事務所 Buchalter の環境である。委託先の侵害を委託元ごとに重ねて数えない方針（Aesto Health 経由の届出と同じ扱い）による |
+| UIC College of Medicine への犯行の主張（米、2026 年 10 月） | 大学の医学部であり、当事者は診療への影響がないと説明している |
+| 韓国の医療機関の診察室の監視カメラ映像の流出（2026 年 10 月報道） | 医療機関名が公表されていない |
+| Star Hospitals の患者記録の外部サイトへの掲載（印、ハイデラバード、2026 年 8 月報道） | 報道の事件番号が 2025 年のものであり、発生と公表の年を確認できない |
 
 ---
 
 サイバー攻撃の事例を追加するときは、[事例テンプレート](../../../reference/_templates/incident.md) をコピーし、該当する区分の節に追記してほしい。
-識別子は `GL-2026-136` から順に付ける。
+識別子は `GL-2026-166` から順に付ける。
 `GL-2026-80` と `GL-2026-94` は欠番であり、対応する事案はない。
 
 サイバー攻撃以外の事案は、[その他の事案テンプレート](../../../reference/_templates/incident-other.md) をコピーし、「その他の事案」の節に追記する。
-識別子は `GL-2026-S08` から順に付ける。
+識別子は `GL-2026-S10` から順に付ける。
 
 ---
 
